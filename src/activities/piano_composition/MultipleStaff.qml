@@ -13,7 +13,6 @@
 import QtQuick 2.12
 import GCompris 1.0
 
-import "../../core"
 import "qrc:/gcompris/src/activities/piano_composition/NoteNotations.js" as NoteNotations
 
 Item {
@@ -92,6 +91,7 @@ Item {
         contentWidth: staffColumn.width
         contentHeight: staffColumn.height + distanceBetweenStaff
         anchors.fill: parent
+        maximumFlickVelocity: activity.height
         clip: true
         Behavior on contentY {
             NumberAnimation { duration: 250 }

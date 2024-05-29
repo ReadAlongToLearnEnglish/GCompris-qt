@@ -13,7 +13,7 @@
 .import "qrc:/gcompris/src/core/core.js" as Core
 
 // Punctuation includes symbols for all writing systems
-const punctuation = "\\,|\\.|:|!|¡|;|\\?|¿|\\\"|«|»|“|”|„|؟|،|。|，|：|？|！|>|<|&|#|=|\\*"
+const punctuation = "\\,|\\.|:|!|¡|;|\\?|¿|\\\"|«|»|“|”|„|؟|،|。|，|：|？|！|>|<|&|#|=|-|–|/|\\*"
 
 const dataUrl = "qrc:/gcompris/src/activities/grammar_analysis/resource/"
 const svgUrl = dataUrl + "svg/"
@@ -138,6 +138,11 @@ function checkLevels() {
     while (level < datas["levels"].length) {
         var oneGood = false
         var exercises = datas.dataset[datas["levels"][level].exercise];
+        if(!exercises) {
+            console.warn("Grammar_analysis: dataset " + datas["levels"][level].exercise + " is not defined in the dataset section, we ignore it");
+            level++;
+            continue;
+        }
         for (var i = 0; i < exercises.length ; i++) {
             var parsed = analyzeExercise(level, exercises[i])
             if (checkExercise(parsed, translationMode)) {
@@ -172,9 +177,6 @@ function checkExercise(parsed, force = false) {
 // Keep only valid exercises except for translators
 function initExercises() {
     if (datas === null) return
-    if (grammarMode === '_classes') {
-        // Garder le premier
-    }
     items.datasetModel.clear()
     var exercises = datas.dataset[datas["levels"][items.currentLevel].exercise];
     for (var i = 0; i < exercises.length ; i++) {
@@ -205,14 +207,17 @@ function initSyntax() {
 }
 
 function initLevel() {
+    items.errorRectangle.resetState()
     items.selectedClass = 0
     items.selectedBox = 0
     items.keysOnTokens = true
     if (datas === null) return
     buildAnswer()
+    items.buttonsBlocked = false
 }
 
 function nextLevel() {
+    items.score.stopWinAnimation()
     items.currentExercise = 0
     items.currentLevel = Core.getNextLevel(items.currentLevel, numberOfLevel);
     initExercises()
@@ -220,6 +225,7 @@ function nextLevel() {
 }
 
 function previousLevel() {
+    items.score.stopWinAnimation()
     items.currentLevel = Core.getPreviousLevel(items.currentLevel, numberOfLevel);
     if (datas === null) return
     items.currentExercise = 0
@@ -228,31 +234,45 @@ function previousLevel() {
 }
 
 function nextSubLevel() {
+    if (items.currentExercise >= items.datasetModel.count) {
+        items.bonus.good("sun")
+    } else {
+        initLevel();
+    }
+}
+
+function nextSubLevelShortcut() {
     if( ++items.currentExercise >= items.datasetModel.count) {
         items.currentExercise = 0;
         nextLevel();
+    } else {
+        initLevel();
     }
-    initLevel();
 }
 
-function previousSubLevel() {
+function previousSubLevelShortcut() {
     if( --items.currentExercise < 0) {
-        items.currentExercise = 0;
         previousLevel();
+    } else {
+        initLevel();
     }
-    initLevel();
 }
 
 function checkResult() {
+    items.buttonsBlocked = true
     var ok = true
     for (var i = 0; i < items.rowAnswer.count; i++) {
         var wordCard = items.rowAnswer.itemAt(i)
         if (wordCard.expected !== "")
             ok &= (wordCard.expected === wordCard.proposition)
     }
-    if (ok) items.bonus.good("sun")
-    else {
-        items.bonus.bad("sun")
+    if (ok){
+        items.audioEffects.play("qrc:/gcompris/src/core/resource/sounds/completetask.wav")
+        items.currentExercise += 1
+        items.score.playWinAnimation()
+    } else {
+        items.audioEffects.play("qrc:/gcompris/src/core/resource/sounds/crash.wav")
+        items.errorRectangle.startAnimation()
     }
 }
 
@@ -265,14 +285,14 @@ function toArrayKeys(model, propertyName) {
 }
 
 function handleKeys(event) {
-    if (animRunning) return         // No key during animation
+    if (animRunning || items.buttonsBlocked) return         // No key during animation
     if ((event.modifiers & Qt.AltModifier) && translationMode) {
         switch (event.key) {        // sublevel navigation in translation mode
         case Qt.Key_Left:
-            previousSubLevel()
+            previousSubLevelShortcut()
             break
         case Qt.Key_Right:
-            nextSubLevel()
+            nextSubLevelShortcut()
             break
         case Qt.Key_Return:         // Switch visibility of infoView and inspector with Ctrl+Alt+Enter
             if (event.modifiers & Qt.ControlModifier) {
@@ -423,12 +443,12 @@ function analyzeExercise(level, exercise) {
     parsed.classes = parsed.answer.replace(/  +/g, ' ').split(/ /)              // Clear multiple spaces and extract classes
 
     var tempStr = parsed.sentence                                               // Work in a temporary string
-    tempStr = tempStr.replace(/([\\'|’])/g,"$1 ")                               // Single quote as word delimiter
     var parentheses = tempStr.match(/\([^\(\)]+\)/g)                            // Extract parentheses blocks in an array
     var regex = new RegExp(punctuation, "g");                                   // Build regular expression with punctuation
     tempStr = tempStr.replace(regex,' ')                                        // Punctuation is replaced by spaces
     tempStr = tempStr.replace(/ +/g, ' ').trim()                                // Clear multiple spaces
     tempStr = tempStr.replace(/\([^\(\)]+\)/g,"\t")                             // Replace parentheses blocks with a tabulation char
+    tempStr = tempStr.replace(/([\\'|’])/g,"$1 ")                               // Single quote as word delimiter
     parsed.words = tempStr.split(/ /)                                           // Cleared string can be splitted now
     if (parentheses !== null) {
         var idx = 0

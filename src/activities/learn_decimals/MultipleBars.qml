@@ -10,7 +10,6 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import "../../core"
 import "learn_decimals.js" as Activity
 
 GridView {
@@ -133,6 +132,7 @@ GridView {
                         MouseArea {
                             id: mouseArea
                             anchors.fill: parent
+                            enabled: !items.buttonsBlocked
                             onPressed: {
                                 if(items.typeResult) return;
                                 gridLayout.barClicked();

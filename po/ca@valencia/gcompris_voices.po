@@ -1,16 +1,16 @@
 # Translation of gcompris_voices.po to Catalan (Valencian)
-# Copyright (C) 2017-2023 This_file_is_part_of_KDE
+# Copyright (C) 2017-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2017, 2018, 2019, 2020, 2021.
-# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2019, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2019, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-09-27 10:59+0200\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-16 09:51+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,6 +19,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Troba els nombres que falten."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -492,6 +498,12 @@ msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr ""
 "Troba el numerador i el denominador correcte de la fracció representada"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Reproduïx i completa el model de fris."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -559,6 +571,18 @@ msgid ""
 msgstr ""
 "Guia al mastegador de números amb les tecles de fletxa cap als nombres "
 "primers i prem la barra d'espai perquè se'ls empassi."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "Troba el valor corresponent al punt indicat en la línia graduada."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Situa el valor indicat en la línia graduada."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1281,6 +1305,19 @@ msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Fes clic damunt de l'objectiu per a llançar els dards i després compta la "
 "teua puntuació final!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Crea parells de nombres iguals a deu. Selecciona un nombre en la llista i, a "
+"continuació, selecciona un punt buit d'una operació per a moure el nombre "
+"seleccionat allà. Després, selecciona el quadro de resultat per a teclejar-"
+"hi el resultat."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

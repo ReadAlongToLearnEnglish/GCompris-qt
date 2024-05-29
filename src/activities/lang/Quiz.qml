@@ -12,7 +12,6 @@
 */
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
 
 import "../../core"
 import "lang.js" as Activity
@@ -239,8 +238,15 @@ Item {
                         textLabel: translatedTxt
                         anchors.right: wordImageQuiz.visible ? wordImageQuiz.left : parent.right
                         anchors.left: parent.left
+                        audioEffects: activity.audioEffects
                         blockAllButtonClicks: quiz.buttonsBlocked
-                        onPressed: quiz.buttonsBlocked = true
+                        onPressed: {
+                            quiz.buttonsBlocked = true
+                            if(isCorrectAnswer) {
+                                score.currentSubLevel++
+                                score.playWinAnimation()
+                            }
+                        }
                         isCorrectAnswer: translatedTxt === quiz.goodWord.translatedTxt
                         onIncorrectlyPressed: {
                             // push the error to have it asked again

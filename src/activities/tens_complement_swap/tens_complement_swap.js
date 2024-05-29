@@ -1,6 +1,7 @@
 /* GCompris - tens_complement_swap.js
  *
  * SPDX-FileCopyrightText: 2022 Samarth Raj <mailforsamarth@gmail.com>
+ * SPDX-FileCopyrightText: 2024 Harsh Kumar <hadron43@yahoo.com>
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
  */
@@ -12,7 +13,6 @@ var items;
 var datasets = [];
 var currentDatasetLevel = 0;
 var numberOfDatasetLevel;
-var previousSelectedCard = undefined;
 
 function start(items_) {
     items = items_
@@ -34,7 +34,8 @@ function stop() {
 
 function initLevel() {
     clearListModels();
-    previousSelectedCard = undefined;
+    items.previousSelectedCard = undefined;
+
     for(var indexOfListModel = 0; indexOfListModel < datasets[items.currentLevel].length; indexOfListModel++) {
         var model = [];
         var valueArray = getValueArray(datasets[items.currentLevel][indexOfListModel]);
@@ -57,10 +58,21 @@ function initLevel() {
             }
             model.push(card);
         }
+
         var resultCard = {
             "type": "resultCard",
             "value": valueArray[valueArray.length - 1].toString(),
         }
+        if(items.mode === "input") {
+            resultCard = {
+                "type": "inputCard",
+                "value": "",
+                "rowNumber": indexOfListModel,
+                "selected": false,
+                "selectable": true
+            }
+        }
+
         model.push(resultCard);
         items.equations.append({
             "listmodel": model,
@@ -90,9 +102,13 @@ function getValueArray(numberArray) {
         while(numberOfPairsFilled != numberOfPairs) {
             // Get a number between 1 and 9
             var randomNumber = Math.floor(1 + Math.random() * 9);
-            if(values.indexOf(randomNumber) > -1) {
-                continue; // Avoid having twice the same numbers
+
+            // Avoid having twice the same numbers
+            // If we have more than 10 numbers, it's impossible to avoid repetition.
+            if(values.length < 10 && values.indexOf(randomNumber) > -1) {
+                continue;
             }
+
             values.push(randomNumber);
             values.push(10 - randomNumber);
             numberOfPairsFilled ++;
@@ -106,11 +122,13 @@ function getValueArray(numberArray) {
         values = numberArray.numberValue;
     }
     if(numberArray.randomizeOrder == undefined || numberArray.randomizeOrder == true) {
+        var maxNumberOfShuffles = 10;
         do {
             // Shuffle the numbers before creating the model.
             // Make sure at least the first computation is not correct to avoid having the possibility to have all good answers at start
             Core.shuffle(values);
-        } while(values[0] + values[1] == 10);
+            maxNumberOfShuffles--;
+        } while(values[0] + values[1] == 10 && maxNumberOfShuffles > 0);
     }
 
     for(var i = 0; i < numberOfPairs; i++) {
@@ -149,30 +167,31 @@ function swapCards(firstCard, secondCard) {
 
 function selectCard(currentSelectedCard) {
     items.equations.get(currentSelectedCard.rowNumber).isValidationImageVisible = false;
-    if(previousSelectedCard != undefined) {
-        if(previousSelectedCard.rowNumber == currentSelectedCard.rowNumber) {
-            swapCards(currentSelectedCard, previousSelectedCard)
+    if(items.previousSelectedCard != undefined) {
+        items.equations.get(items.previousSelectedCard.rowNumber).listmodel.get(items.previousSelectedCard.columnNumber).selected = false;
+        if(currentSelectedCard.type === "inputCard" || items.previousSelectedCard.type === "inputCard") {
+            if(items.previousSelectedCard.rowNumber == currentSelectedCard.rowNumber &&
+                items.previousSelectedCard.columnNumber == currentSelectedCard.columnNumber)
+                items.previousSelectedCard = undefined;
+            else
+                items.previousSelectedCard = currentSelectedCard;
+
+        } else {
+            items.equations.get(currentSelectedCard.rowNumber).listmodel.get(currentSelectedCard.columnNumber).selected = false;
+            if(items.previousSelectedCard.rowNumber == currentSelectedCard.rowNumber) {
+                swapCards(currentSelectedCard, items.previousSelectedCard);
+            }
+
+            items.previousSelectedCard = undefined;
         }
-        items.equations.get(currentSelectedCard.rowNumber).listmodel.get(currentSelectedCard.columnNumber).selected = false;
-        items.equations.get(previousSelectedCard.rowNumber).listmodel.get(previousSelectedCard.columnNumber).selected = false;
-        previousSelectedCard = undefined;
     }
     else {
-        previousSelectedCard = currentSelectedCard;
+        items.previousSelectedCard = currentSelectedCard;
     }
-
 }
 
 function nextLevel() {
     items.currentLevel = Core.getNextLevel(items.currentLevel, numberOfLevel);
-    initLevel();
-}
-
-function nextDatasetLevel() {
-    if(numberOfDatasetLevel <= ++currentDatasetLevel) {
-        currentDatasetLevel = 0;
-    }
-    items.currentLevel = 0;
     initLevel();
 }
 
@@ -186,12 +205,14 @@ function checkAnswer() {
     for(var indexOfRows = 0; indexOfRows < items.equations.count; indexOfRows++) {
         var numberCardCounter = 0;
         var sum = 0;
+        var totalSum = 0;
         var isRowCorrect = true;
         var currentRow = items.equations.get(indexOfRows);
         var currentEquation = currentRow.listmodel;
         for(var indexOfCards = 0; indexOfCards < currentEquation.count - 1; indexOfCards++) {
             var currentCard = currentEquation.get(indexOfCards);
             if(currentCard.type == "numberCard") {
+                totalSum += parseInt(currentCard.value);
                 if(numberCardCounter != 2) {
                     sum += parseInt(currentCard.value);
                 }
@@ -206,14 +227,17 @@ function checkAnswer() {
                 }
             }
         }
+        if(totalSum !== parseInt(currentEquation.get(currentEquation.count - 1).value))
+            isRowCorrect = false;
         currentRow.isGood = isRowCorrect;
         currentRow.isValidationImageVisible = true;
         isAllCorrect = isAllCorrect & isRowCorrect;
     }
     if(isAllCorrect) {
+        items.audioEffects.play("qrc:/gcompris/src/core/resource/sounds/completetask.wav");
         items.bonus.good("flower");
     }
     else {
-        items.bonus.bad("flower");
+        items.audioEffects.play("qrc:/gcompris/src/core/resource/sounds/crash.wav");
     }
 }

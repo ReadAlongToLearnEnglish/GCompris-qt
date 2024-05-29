@@ -104,7 +104,22 @@ endif()
 
 target_link_libraries(${GCOMPRIS_EXECUTABLE_NAME} ${used_qt_modules})
 
-GCOMPRIS_ADD_RCC(core *.qml *.js resource/*.${COMPRESSED_AUDIO} resource/*.gif resource/*.png resource/*.svg resource/*.pem resource/bonus/* resource/sounds/* resource/fonts/*.* qmldir COPYING)
+GCOMPRIS_ADD_RCC(core
+  QML_FILES
+  *.qml
+  *.js
+  RESOURCES
+  resource/*.${COMPRESSED_AUDIO}
+  resource/*.gif
+  resource/*.png
+  resource/*.svg
+  resource/*.pem
+  resource/bonus/*
+  resource/sounds/*
+  resource/fonts/*.*
+  qmldir
+  COPYING
+)
 
 # Installation
 # ============
@@ -372,7 +387,7 @@ if(WIN32)
   list(APPEND CPACK_NSIS_CREATE_ICONS_EXTRA "  CreateShortCut '$SMPROGRAMS\\\\$STARTMENU_FOLDER\\\\GCompris.lnk' '$INSTDIR\\\\bin\\\\${GCOMPRIS_EXECUTABLE_NAME}.exe' '--opengl-renderer'")
   string(REPLACE ";" "\n" CPACK_NSIS_CREATE_ICONS_EXTRA "${CPACK_NSIS_CREATE_ICONS_EXTRA}")
 else()
-  set(CPACK_PACKAGE_ICON "${PROJECT_SOURCE_DIR}/GCompris64.png")
+  set(CPACK_PACKAGE_ICON "${PROJECT_SOURCE_DIR}/images/256-apps-gcompris-qt.png")
 endif()
 
 if(APPLE)

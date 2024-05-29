@@ -10,8 +10,6 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import "../../core"
-import "learn_decimals.js" as Activity
 
 GridView {
     id: singleBar
@@ -88,7 +86,7 @@ GridView {
 
             MouseArea {
                 anchors.fill: parent
-                enabled: isAnswerRepresentation && !items.typeResult
+                enabled: isAnswerRepresentation && !items.typeResult && !items.buttonsBlocked
                 onPressed: selectedModel.remove(index)
             }
         }

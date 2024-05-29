@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# SPDX-FileCopyrightText: 2022, 2023 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-11-11 21:34+0400\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-31 21:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "ابحث عن الأعداد المفقودة."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -450,6 +456,12 @@ msgstr "اختر عدد القطع المناسب حسب المطلوب."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "جِدْ البسط والمقام الصحيحين للكسر الممثل"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "إعادة إنتاج وإكمال نموذج الزخرفة."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -516,6 +528,18 @@ msgid ""
 "space to swallow them."
 msgstr ""
 "أرشد آكل الأعداد بالأسهم إلى الأعداد الأولية ثم اضغط على مسافة لابتلاعها."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "أوجد القيمة المقابلة للمكان المحدد على الخط المتدرج."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "ضع القيمة المحددة على الخط المتدرج."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1161,6 +1185,17 @@ msgstr ""
 #, kde-format
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr "انقر فوق الهدف لإطلاق السهام ، ثم احسب نتيجتك النهائية!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"أنشئ ثنائيات من الأعداد تساوي 10. اختر عدداً، ثم اختر عددَا آخر  من نفس "
+"العملية لتُبدّل المواضع بينهما. ثم اختر صندوق النتيجة واكتب النتيجة."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

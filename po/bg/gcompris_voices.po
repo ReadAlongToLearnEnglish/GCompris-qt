@@ -1,21 +1,27 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the gcompris package.
 #
-# SPDX-FileCopyrightText: 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-12-15 20:38+0100\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-20 10:08+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Намери липсващите числа."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -476,6 +482,12 @@ msgstr "Избери подходящия брой части, както е о�
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Намери правилния числител и знаменател на представената дроб"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Възпроизведи и завърши модела на фриза."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -543,6 +555,19 @@ msgid ""
 msgstr ""
 "Насочи Гнумч цифрояда със стрелките към простите числа и натисни интервала, "
 "за да ги погълне."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr ""
+"Намери стойността, съответстваща на даденото място на градуираната линия."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Нанеси зададената стойност върху линийката."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1247,6 +1272,18 @@ msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Кликни върху мишената, за да изстреляш стреличките, след което преброй "
 "крайния резултат!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Създай двойки числа, равни на десет. Избери едно число, след това избери "
+"друго число от същата операция, за да размениш позицията им. След това "
+"избери полето за отговор, за да въведеш резултата."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

@@ -13,7 +13,6 @@
 import QtQuick 2.12
 import GCompris 1.0
 import QtGraphicalEffects 1.0
-import QtQuick.Controls 2.12
 
 import "../../core"
 import "lang.js" as Activity
@@ -106,6 +105,8 @@ Item {
         clip: true
         model: menuModel
         keyNavigationWraps: true
+        maximumFlickVelocity: activity.height
+        boundsBehavior: Flickable.StopAtBounds
         // Needed to calculate the OpacityMask offset
         // If not using OpenGL, this value is not used, so we save the calculation and set it to 1
         property real hiddenBottom: ApplicationInfo.useOpenGL ? contentHeight - height - contentY : 1

@@ -6,7 +6,6 @@
  */
 import QtQuick 2.12
 import QtQml.Models 2.12
-import QtQuick.Controls 2.12
 import GCompris 1.0
 import "../../core"
 import "tens_complement_find.js" as Activity
@@ -39,16 +38,18 @@ ActivityBase {
             id: items
             property Item main: activity.main
             property alias background: background
+            property GCSfx audioEffects: activity.audioEffects
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
             property alias cardListModel: cardListModel
             property alias holderListModel: holderListModel
             property int selectedIndex: -1
-            readonly property var levels: activity.datasetLoader.data
+            readonly property var levels: activity.datasets
             property alias okButton: okButton
             property alias score: score
             property double cardSize: Core.fitItems(numberContainerArea.width, numberContainerArea.height, 6)
             property bool isHorizontal: background.width >= background.height
+            property bool buttonsBlocked: false
         }
 
         onStart: { Activity.start(items) }
@@ -128,7 +129,8 @@ ActivityBase {
                 anchors.centerIn: parent
                 model: holderListModel
                 delegate: AnswerContainer {
-                    height: Math.min(items.cardSize, answerHolderArea.height / holderListModel.count)
+                    readonly property int minHeight: holderListModel.count == 0 ? items.cardSize : answerHolderArea.height / holderListModel.count
+                    height: Math.min(items.cardSize, minHeight)
                     width: Math.min(height * 6, ListView.view.width)
                 }
             }
@@ -145,7 +147,7 @@ ActivityBase {
                 horizontalCenter: score.horizontalCenter
             }
             sourceSize.width: 60 * ApplicationInfo.ratio
-            enabled: !bonus.isPlaying
+            enabled: !items.buttonsBlocked
             onClicked: Activity.checkAnswer()
         }
 
@@ -157,6 +159,7 @@ ActivityBase {
                 rightMargin: background.layoutMargins
                 bottomMargin: background.layoutMargins
             }
+            onStop: Activity.nextSubLevel()
         }
 
         states: [
@@ -244,7 +247,7 @@ ActivityBase {
         MouseArea {
             id: clickMask
             anchors.fill: layoutArea
-            enabled: items.bonus.isPlaying
+            enabled: items.buttonsBlocked
         }
 
         DialogChooseLevel {
@@ -288,7 +291,7 @@ ActivityBase {
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextSubLevel)
+            Component.onCompleted: win.connect(Activity.nextLevel)
         }
     }
 

@@ -9,14 +9,14 @@
 # Aurimas Černius <aurisc4@gmail.com>, 2013, 2014.
 # Mantas Kriaučiūnas <tinklas@tinklas.eu>, 2001-2021.
 # Jonas Jakštys <jonasjakstys1@gmail.com>, 2021, 2023.
-# Rolandas Jakštys <rolasorama@gmail.com>, 2021-2023.
-# Bernardas Liukaitis <BernardasL@protonmail.com>, 2021-2023.
+# Rolandas Jakštys <rolasorama@gmail.com>, 2021-2024.
+# Bernardas Liukaitis <BernardasL@protonmail.com>, 2021-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: GCompris-QT\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-20 17:06+0300\n"
+"PO-Revision-Date: 2024-05-22 21:24+0300\n"
 "Last-Translator: Rolandas Jakštys <rolandas@jakstys.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -25,10 +25,131 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Language: lt\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Qt-Contexts: true\n"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:19
+#: activities/clickanddraw/ActivityConfig.qml:21
+#: activities/drawletters/ActivityConfig.qml:21
+#: activities/drawnumbers/ActivityConfig.qml:21
+#: activities/enumerate/ActivityConfig.qml:21
+#: activities/erase/ActivityConfig.qml:21
+#: activities/erase_2clic/ActivityConfig.qml:21
+#: activities/erase_clic/ActivityConfig.qml:21
+#: activities/money/ActivityConfig.qml:21
+#: activities/money_back/ActivityConfig.qml:21
+#: activities/money_back_cents/ActivityConfig.qml:21
+#: activities/money_cents/ActivityConfig.qml:21
+#: activities/number_sequence/ActivityConfig.qml:22
+msgctxt "ActivityConfig|"
+msgid "Automatic"
+msgstr "Automatiškai"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:20
+#: activities/enumerate/ActivityConfig.qml:22
+#: activities/money/ActivityConfig.qml:22
+#: activities/money_back/ActivityConfig.qml:22
+#: activities/money_back_cents/ActivityConfig.qml:22
+#: activities/money_cents/ActivityConfig.qml:22
+msgctxt "ActivityConfig|"
+msgid "OK button"
+msgstr "Mygtukas OK"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:30
+#: activities/enumerate/ActivityConfig.qml:32
+#: activities/money/ActivityConfig.qml:32
+#: activities/money_back/ActivityConfig.qml:32
+#: activities/money_back_cents/ActivityConfig.qml:32
+#: activities/money_cents/ActivityConfig.qml:32
+msgctxt "ActivityConfig|"
+msgid "Validate answers"
+msgstr "Patvirtinti atsakymus"
+
+#. Activity title
+#: activities/adjacent_numbers/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Find the adjacent numbers"
+msgstr "Rask gretimus skaičius."
+
+#. Help title
+#: activities/adjacent_numbers/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Find the missing adjacent numbers."
+msgstr "Rask trūkstamus gretimus skaičius."
+
+#. Help goal
+#: activities/adjacent_numbers/ActivityInfo.qml:19
+msgctxt "ActivityInfo|"
+msgid "Learn to order numbers."
+msgstr "Išmok rikiuoti skaičius."
+
+#. Help manual
+#: activities/adjacent_numbers/ActivityInfo.qml:22
+msgctxt "ActivityInfo|"
+msgid "Find the requested numbers and drag them to the corresponding spot."
+msgstr "Rask skaičius ir nutempk juos į vietą"
+
+#: activities/adjacent_numbers/resource/1/Data.qml:9
+msgctxt "Data|"
+msgid "Find numbers between 1 and 10."
+msgstr "Rask skaičius tarp 1 ir 10."
+
+#: activities/adjacent_numbers/resource/2/Data.qml:9
+msgctxt "Data|"
+msgid "Find numbers between 0 and 20."
+msgstr "Rask skaičius tarp 0 ir 20."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:9
+msgctxt "Data|"
+msgid "Find numbers between 0 and 100."
+msgstr "Rask skaičius tarp 0 ir 100."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:14
+msgctxt "Data|"
+msgid "Find the next number."
+msgstr "Rask paskutinįjį skaičių."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:27
+msgctxt "Data|"
+msgid "Find the previous number."
+msgstr "Rask pirmąjį skaičių."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:40
+msgctxt "Data|"
+msgid "Find the in-between number."
+msgstr "Rask vidurinįjį skaičių."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:53
+msgctxt "Data|"
+msgid "Find the missing numbers."
+msgstr "Rask trūkstamuosius skaičius."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:66
+msgctxt "Data|"
+msgid "Find the next numbers."
+msgstr "Rask paskutiniuosius skaičius."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:79
+msgctxt "Data|"
+msgid "Find the previous numbers."
+msgstr "Rask pirmuosius skaičius."
+
+#: activities/adjacent_numbers/resource/3/Data.qml:105
+msgctxt "Data|"
+msgid "Find the in-between numbers."
+msgstr "Rask viduriniuosius skaičius."
+
+#: activities/adjacent_numbers/resource/4/Data.qml:9
+msgctxt "Data|"
+msgid "Find numbers between -10 and -1."
+msgstr "Rask skaičius tarp -10 ir -1."
+
+#: activities/adjacent_numbers/resource/5/Data.qml:9
+msgctxt "Data|"
+msgid "Find numbers between -10 and 10."
+msgstr "Rask skaičius tarp -10 ir 10."
 
 #. Activity title
 #: activities/advanced_colors/ActivityInfo.qml:15
@@ -86,11 +207,14 @@ msgstr ""
 #: activities/enumerate/ActivityInfo.qml:25
 #: activities/fifteen/ActivityInfo.qml:24
 #: activities/find_the_day/ActivityInfo.qml:25
+#: activities/frieze/ActivityInfo.qml:24
 #: activities/gnumch-equality/ActivityInfo.qml:28
 #: activities/gnumch-factors/ActivityInfo.qml:28
 #: activities/gnumch-inequality/ActivityInfo.qml:27
 #: activities/gnumch-multiples/ActivityInfo.qml:28
 #: activities/gnumch-primes/ActivityInfo.qml:28
+#: activities/graduated_line_read/ActivityInfo.qml:24
+#: activities/graduated_line_use/ActivityInfo.qml:24
 #: activities/grammar_analysis/ActivityInfo.qml:29
 #: activities/grammar_classes/ActivityInfo.qml:29
 #: activities/graph-coloring/ActivityInfo.qml:25
@@ -831,12 +955,9 @@ msgid "Learn multiplication table of 10."
 msgstr "Išmok daugybos iš 10 lentelę."
 
 #: activities/algebra_by/resource/11/Data.qml:13
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Multiplication tables from 1 to 10."
 msgctxt "Data|"
 msgid "Practice multiplication tables from 1 to 10."
-msgstr "Daugybos lentelės nuo 1 iki 10."
+msgstr "Mokykis daugybos lentelę nuo 1 iki 10."
 
 #: activities/algebra_by/resource/2/Data.qml:13
 msgctxt "Data|"
@@ -926,12 +1047,9 @@ msgid "Learn division table of 10."
 msgstr "Išmok dalybos iš 10 lentelę."
 
 #: activities/algebra_div/resource/11/Data.qml:13
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Multiplication tables from 1 to 10."
 msgctxt "Data|"
 msgid "Practice division tables from 1 to 10."
-msgstr "Daugybos lentelės nuo 1 iki 10."
+msgstr "Mokykis dalybos lentelę nuo 1 iki 10."
 
 #: activities/algebra_div/resource/2/Data.qml:13
 msgctxt "Data|"
@@ -1023,28 +1141,19 @@ msgid "Learn subtraction table of 10."
 msgstr "Išmok atimti skaičių 10."
 
 #: activities/algebra_minus/resource/11/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Subtract decimal numbers up to 1."
 msgctxt "Data|"
 msgid "Subtractions from number up to 10."
-msgstr "Dešimtainių skaičių atimtis. Skaičiai iki 1."
+msgstr "Atimtis iš skaičiaus iki 10."
 
 #: activities/algebra_minus/resource/12/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Subtract decimal numbers up to 1."
 msgctxt "Data|"
 msgid "Subtractions from number up to 20."
-msgstr "Dešimtainių skaičių atimtis. Skaičiai iki 1."
+msgstr "Atimtis iš skaičiaus iki 20."
 
 #: activities/algebra_minus/resource/13/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Subtract decimal numbers up to 1."
 msgctxt "Data|"
 msgid "Subtractions from number up to 100."
-msgstr "Dešimtainių skaičių atimtis. Skaičiai iki 1."
+msgstr "Atimtis iš skaičiaus iki 100."
 
 #: activities/algebra_minus/resource/2/Data.qml:13
 msgctxt "Data|"
@@ -1134,28 +1243,19 @@ msgid "Learn addition table of 10."
 msgstr "Išmok pridėti skaičių 10."
 
 #: activities/algebra_plus/resource/11/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Add decimal numbers up to 1."
 msgctxt "Data|"
 msgid "Additions with numbers up to 10."
-msgstr "Sudėti dešimtainius skaičius iki 1."
+msgstr "Skaičių iki 10 sudėtis."
 
 #: activities/algebra_plus/resource/12/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Add decimal numbers up to 1."
 msgctxt "Data|"
 msgid "Additions with numbers up to 15."
-msgstr "Sudėti dešimtainius skaičius iki 1."
+msgstr "Skaičių iki 15 sudėtis."
 
 #: activities/algebra_plus/resource/13/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Add stars up to 10."
 msgctxt "Data|"
 msgid "Additions with result up to 100."
-msgstr "Sumuoti žvaigždutes iki 10."
+msgstr "Sudėtis, kai suma neviršija 100."
 
 #: activities/algebra_plus/resource/2/Data.qml:13
 msgctxt "Data|"
@@ -2559,7 +2659,7 @@ msgctxt "balancebox|"
 msgid "The file '%1' is missing!<br>Falling back to builtin levels."
 msgstr "Trūksta failo „%1“!<br>Grįžtama prie įprastinių lygių."
 
-#: activities/balancebox/Balancebox.qml:72
+#: activities/balancebox/Balancebox.qml:71
 msgctxt "Balancebox|"
 msgid ""
 "You selected the user-defined level set, but you have not yet loaded any "
@@ -2568,7 +2668,7 @@ msgstr ""
 "Pasirinkai „Sukurta naudotojų“, bet nesi įkėlęs jokios savo sukurtos žaidimų "
 "dėžutės!"
 
-#: activities/balancebox/Balancebox.qml:74
+#: activities/balancebox/Balancebox.qml:73
 msgctxt "Balancebox|"
 msgid "Ok"
 msgstr "Gerai"
@@ -2836,7 +2936,7 @@ msgctxt "binary_bulb|"
 msgid "This image will help you to compute bits' value."
 msgstr "Šis paveikslėlis padės tau suskaičiuoti bitų reikšmę."
 
-#: activities/binary_bulb/BinaryBulb.qml:122
+#: activities/binary_bulb/BinaryBulb.qml:127
 #, qt-format
 msgctxt "BinaryBulb|"
 msgid "What is the binary representation of %1?"
@@ -2906,16 +3006,16 @@ msgctxt "ActivityInfo|"
 msgid "Space: open or close the braille chart"
 msgstr "Tarpas: Parodyti ar paslėpti Brailio simbolių žinyną "
 
-#: activities/braille_alphabets/braille_alphabets.js:46
-#: activities/braille_alphabets/braille_alphabets.js:56
-#: activities/braille_alphabets/braille_alphabets.js:66
-#: activities/braille_alphabets/braille_alphabets.js:76
-#: activities/braille_alphabets/braille_alphabets.js:86
+#: activities/braille_alphabets/braille_alphabets.js:43
+#: activities/braille_alphabets/braille_alphabets.js:53
+#: activities/braille_alphabets/braille_alphabets.js:63
+#: activities/braille_alphabets/braille_alphabets.js:73
+#: activities/braille_alphabets/braille_alphabets.js:83
 msgctxt "braille_alphabets|"
 msgid "Now it's a little bit harder without the reference."
 msgstr "Dabar šiek tiek sudėtingiau – be Brailio simbolių žinyno."
 
-#: activities/braille_alphabets/braille_alphabets.js:51
+#: activities/braille_alphabets/braille_alphabets.js:48
 msgctxt "braille_alphabets|"
 msgid ""
 "Look at the braille character chart and observe how similar the first and "
@@ -2924,7 +3024,7 @@ msgstr ""
 "Pažiūrėk į Brailio rašto ženklų žinyną spustelėdamas ant mėlyno brailio "
 "elemento apačioje. Atkreipk dėmesį, kokios panašios pirmos dvi eilutės."
 
-#: activities/braille_alphabets/braille_alphabets.js:61
+#: activities/braille_alphabets/braille_alphabets.js:58
 msgctxt "braille_alphabets|"
 msgid ""
 "Again, similar to the first line in the character chart but take care, the "
@@ -2933,7 +3033,7 @@ msgstr ""
 "Vėlgi, panašu į pirmąsias simbolių diagramos eilutes, tačiau nepamirškite, "
 "kad raidė „W“ buvo pridėta vėliau ir ji yra paskutinė eilutėje."
 
-#: activities/braille_alphabets/braille_alphabets.js:71
+#: activities/braille_alphabets/braille_alphabets.js:68
 msgctxt "braille_alphabets|"
 msgid "This is easy, numbers are the same as letters from A to J."
 msgstr "Tai paprasta, skaičiai tokie patys kaip raidės nuo A iki J."
@@ -2943,7 +3043,7 @@ msgctxt "FirstScreen|"
 msgid "Braille: Unlocking the Code"
 msgstr "Brailis: Atrakink kodą"
 
-#: activities/braille_alphabets/FirstScreen.qml:53
+#: activities/braille_alphabets/FirstScreen.qml:65
 msgctxt "FirstScreen|"
 msgid ""
 "The braille system is a method that is used by blind people to read and "
@@ -2952,7 +3052,7 @@ msgstr ""
 "Brailio rašto sistema – tai aklųjų ir silpnaregių žmonių naudojamas rašymo "
 "bei skaitymo būdas."
 
-#: activities/braille_alphabets/FirstScreen.qml:54
+#: activities/braille_alphabets/FirstScreen.qml:66
 msgctxt "FirstScreen|"
 msgid ""
 "Each braille character, or cell, is made up of six dot positions, arranged "
@@ -2964,7 +3064,7 @@ msgstr ""
 "stulpelyje. Kaip matai kairėje, kiekvienas taškas žymimas skaičiumi nuo 1 "
 "iki 6."
 
-#: activities/braille_alphabets/FirstScreen.qml:78
+#: activities/braille_alphabets/FirstScreen.qml:88
 msgctxt "FirstScreen|"
 msgid "When you are ready, click on me and try reproducing braille characters."
 msgstr ""
@@ -3059,13 +3159,13 @@ msgstr ""
 #: activities/calcudoku/ActivityInfo.qml:14
 msgctxt "ActivityInfo|"
 msgid "Calcudoku"
-msgstr ""
+msgstr "Calcudoku"
 
 #. Help title
 #: activities/calcudoku/ActivityInfo.qml:16
 msgctxt "ActivityInfo|"
 msgid "Solve the Calcudoku."
-msgstr ""
+msgstr "Išspręsk Calcudoku."
 
 #. Help goal
 #: activities/calcudoku/ActivityInfo.qml:19
@@ -3074,15 +3174,14 @@ msgid ""
 "Develop your logical reasoning skills: data linking, deduction and spatial "
 "location while using calculation."
 msgstr ""
+"Skaičiuodamas ugdyk savo loginio mąstymo įgūdžius: duomenų susiejimą, "
+"dedukciją ir erdvinį mąstymą."
 
 #. Help prerequisite
 #: activities/calcudoku/ActivityInfo.qml:21
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Completing the puzzle requires patience and logical ability."
 msgctxt "ActivityInfo|"
 msgid "Completing the puzzle requires patience and arithmetic abilities."
-msgstr "Dėlionę pabaigti reikia kantrybės ir loginių įgūdžių."
+msgstr "Dėlionę pabaigti reikės kantrybės ir aritmetinių gebėjimų."
 
 #. Help manual
 #: activities/calcudoku/ActivityInfo.qml:23
@@ -3095,51 +3194,45 @@ msgid ""
 "cage, when combined using the operator, must produce the result. Cages made "
 "of only one cell directly provide the number to enter."
 msgstr ""
+"Naudodamas kairįjį pelės klavišą, sudėk skaičius į kvadratėlius lentelėje. "
+"Aptvarai, pažymėti paryškintomis linijomis, turi vieną arba daugiau "
+"kvadratėlių. Sudėliok skaičius taip, kad reiškinio iš aptvaruose esančių "
+"skaičių rezultatas būtų lygus skaičiui, kuris nurodytas vieno iš langelių "
+"viršuje. Reiškinys sudaromas panaudojus langelio viršuje esantį matematinį "
+"ženklą tarp kiekvieno aptvaro skaičiaus. Joks skaičius negali pasikartoti "
+"eilutėje ar stulpelyje."
 
 #. + is the unicode character for addition mathematical operator (+)
 #: activities/calcudoku/resource/1/Data.qml:66
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Small grids with + operator."
-msgstr "Maža lentelė."
+msgstr "Maža lentelė (3×3) su sudėtimi (+)."
 
 #. + is the unicode character for addition mathematical operator (+), − for subtraction (-)
 #: activities/calcudoku/resource/2/Data.qml:14
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Small grids with + and − operators."
-msgstr "Maža lentelė."
+msgstr "Maža lentelė (3×3) su sudėtimi (+) ir atimtimi (-)."
 
 #. + is the unicode character for addition mathematical operator (+), − for subtraction (-), × for multiplication (*)
 #: activities/calcudoku/resource/3/Data.qml:14
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Small grids with +, − and × operators."
-msgstr "Maža lentelė."
+msgstr "Maža lentelė (3×3) su sudėtimi (+), atimtimi (-) ir daugyba (×)."
 
 #. + is the unicode character for addition mathematical operator (+), − for subtraction (-), × for multiplication (*)
 #: activities/calcudoku/resource/4/Data.qml:14
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Medium grids with +, − and × operators."
-msgstr "Maža lentelė."
+msgstr "Vidutinė lentelė (4×4) su sudėtimi (+), atimtimi (-) ir daugyba (×)."
 
 #. + is the unicode character for addition mathematical operator (+), − for subtraction (-), × for multiplication (*), ∕ for division (:)
 #: activities/calcudoku/resource/5/Data.qml:14
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Large grids with +, −, × and ∕ operators."
-msgstr "Maža lentelė."
+msgstr ""
+"Didelė lentelė (5×5) su sudėtimi (+), atimtimi (-), daugyba (×) ir dalyba "
+"(/)."
 
 #. Activity title
 #: activities/calendar/ActivityInfo.qml:15
@@ -3197,37 +3290,37 @@ msgctxt "ActivityInfo|"
 msgid "Space or Enter: validate your answer"
 msgstr "Tarpas ar Enter: patvirtinti atsakymą"
 
-#: activities/calendar/Calendar.qml:309
+#: activities/calendar/Calendar.qml:306
 msgctxt "Calendar|"
 msgid "Sunday"
 msgstr "Sekmadienis"
 
-#: activities/calendar/Calendar.qml:310
+#: activities/calendar/Calendar.qml:307
 msgctxt "Calendar|"
 msgid "Monday"
 msgstr "Pirmadienis"
 
-#: activities/calendar/Calendar.qml:311
+#: activities/calendar/Calendar.qml:308
 msgctxt "Calendar|"
 msgid "Tuesday"
 msgstr "Antradienis"
 
-#: activities/calendar/Calendar.qml:312
+#: activities/calendar/Calendar.qml:309
 msgctxt "Calendar|"
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
-#: activities/calendar/Calendar.qml:313
+#: activities/calendar/Calendar.qml:310
 msgctxt "Calendar|"
 msgid "Thursday"
 msgstr "Ketvirtadienis"
 
-#: activities/calendar/Calendar.qml:314
+#: activities/calendar/Calendar.qml:311
 msgctxt "Calendar|"
 msgid "Friday"
 msgstr "Penktadienis"
 
-#: activities/calendar/Calendar.qml:315
+#: activities/calendar/Calendar.qml:312
 msgctxt "Calendar|"
 msgid "Saturday"
 msgstr "Šeštadienis"
@@ -4506,22 +4599,15 @@ msgid "Then, click on the OK button to validate your answer."
 msgstr "Tada paspausk mygtuką OK, kad patvirtintum atsakymą."
 
 #: activities/chronos/ActivityInfo.qml:29
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid ""
-#| "Moon photo is copyright NASA. The space sounds come from Tuxpaint and "
-#| "Vegastrike which are released under the GPL license. The transportation "
-#| "images are copyright Franck Doucet. Dates of Transportation are based on "
-#| "those found in &lt;https://www.wikipedia.org&gt;."
 msgctxt "ActivityInfo|"
 msgid ""
 "Moon photo is copyright NASA. The transportation images are copyright Franck "
 "Doucet. Dates of Transportation are based on those found in &lt;https://www."
 "wikipedia.org&gt;."
 msgstr ""
-"Mėnulio nuotraukos iš NASA. Kosmoso garsai iš Tuxpaint ir Vegastrike "
-"žaidimų. Transporto paveikslėliai priklauso Franck Doucet. Transporto datos "
-"iš &lt;https://www.wikipedia.org&gt;."
+"Mėnulio nuotraukos autorinės teisės priklauso NASA. Transportavimo vaizdų "
+"autorinės teisės priklauso Franckui Doucetui. Transportavimo datos iš &lt;"
+"https://www.wikipedia.org&gt;."
 
 #: activities/chronos/resource/1/Data.qml:13
 msgctxt "Data|"
@@ -4641,7 +4727,7 @@ msgstr "Išdėstyk objektus pagal datą, kada dalykas buvo išrastas."
 #: activities/chronos/resource/board/board5_0.qml:33
 msgctxt "board5_0|"
 msgid "1829 Stephenson's Rocket Steam locomotive"
-msgstr "1829 Stivensono reaktyvinis garinis lokomotyvas"
+msgstr "1829 Džordžo Stivensono (George Stephenson) garvežys „Raketa“"
 
 #: activities/chronos/resource/board/board5_0.qml:41
 msgctxt "board5_0|"
@@ -4661,23 +4747,17 @@ msgstr "Transportas"
 #: activities/chronos/resource/board/board5_1.qml:39
 msgctxt "board5_1|"
 msgid "1783 Montgolfier brothers' hot air balloon"
-msgstr "1783 brolių Mongolfjė karšto oro balionas"
+msgstr "1783 brolių Mongolfjė ( Montgolfier) karšto oro balionas"
 
 #: activities/chronos/resource/board/board5_1.qml:47
-#, fuzzy
-#| msgctxt "board5_1|"
-#| msgid "1880 Clement Ader's Eole"
 msgctxt "board5_1|"
 msgid "1890 Clement Ader's Eole"
-msgstr "1880 Klemento Aderio lėktuvas Eole (Avion)"
+msgstr "1890 Klemento Aderio (Clement Ader) lėktuvas Eole"
 
 #: activities/chronos/resource/board/board5_1.qml:55
-#, fuzzy
-#| msgctxt "board5_1|"
-#| msgid "1906 Paul Cornu First helicopter flight"
 msgctxt "board5_1|"
 msgid "1907 Paul Cornu First helicopter flight"
-msgstr "1906 Paul Kornu pirmasis skrydis sraigtasparniu"
+msgstr "1907 Polo Kornu (Paul Cornu) pirmasis skrydis sraigtasparniu"
 
 #: activities/chronos/resource/board/board5_2.qml:15
 msgctxt "board5_2|"
@@ -4690,12 +4770,9 @@ msgid "1769 Cugnot's fardier"
 msgstr "1769 Kunjo (Cugnot) garinis vežimas"
 
 #: activities/chronos/resource/board/board5_2.qml:40
-#, fuzzy
-#| msgctxt "board5_2|"
-#| msgid "1880 Clement Ader's Eole"
 msgctxt "board5_2|"
 msgid "1890 Clement Ader's Eole"
-msgstr "1880 Klemento Aderio lėktuvas Eole (Avion)"
+msgstr "1890 Klemento Aderio (Clement Ader) lėktuvas Eole"
 
 #: activities/chronos/resource/board/board5_3.qml:15
 msgctxt "board5_3|"
@@ -4705,12 +4782,12 @@ msgstr "Transportas"
 #: activities/chronos/resource/board/board5_3.qml:32
 msgctxt "board5_3|"
 msgid "1783 Montgolfier brothers' hot air balloon"
-msgstr "1783 Mongolfjė brolių karšto oro balionas"
+msgstr "1783 brolių Mongolfjė ( Montgolfier) karšto oro balionas"
 
 #: activities/chronos/resource/board/board5_3.qml:40
 msgctxt "board5_3|"
 msgid "1829 Stephenson's Rocket Steam locomotive"
-msgstr "1783 Mongolfjė brolių karšto oro balionas"
+msgstr "1829 Džordžo Stivensono (George Stephenson) garvežys „Raketa“"
 
 #: activities/chronos/resource/board/board5_4.qml:15
 msgctxt "board5_4|"
@@ -4720,15 +4797,12 @@ msgstr "Transportas"
 #: activities/chronos/resource/board/board5_4.qml:39
 msgctxt "board5_4|"
 msgid "1829 Stephenson's Rocket Steam locomotive"
-msgstr "829 Stivensono reaktyvinis garinis lokomotyvas[lenta5_4]"
+msgstr "1829 Džordžo Stivensono (George Stephenson) garvežys „Raketa“"
 
 #: activities/chronos/resource/board/board5_4.qml:47
-#, fuzzy
-#| msgctxt "board5_4|"
-#| msgid "1880 Clement Ader's Eole"
 msgctxt "board5_4|"
 msgid "1890 Clement Ader's Eole"
-msgstr "1880 Klemento Aderio lėktuvas Eole (Avion)"
+msgstr "1890 Klemento Aderio (Clement Ader) lėktuvas Eole"
 
 #: activities/chronos/resource/board/board5_4.qml:55
 msgctxt "board5_4|"
@@ -4741,25 +4815,19 @@ msgid "Aviation"
 msgstr "Aviacija"
 
 #: activities/chronos/resource/board/board6_0.qml:40
-#, fuzzy
-#| msgctxt "board6_0|"
-#| msgid "1880 Clement Ader's Eole"
 msgctxt "board6_0|"
 msgid "1890 Clement Ader's Eole"
-msgstr "1880 Klemento Aderio lėktuvas Eole (Avion)"
+msgstr "1890 Klemento Aderio (Clement Ader) lėktuvas Eole"
 
 #: activities/chronos/resource/board/board6_0.qml:48
-#, fuzzy
-#| msgctxt "board6_0|"
-#| msgid "1903 The Wright brothers' Flyer III"
 msgctxt "board6_0|"
 msgid "1905 The Wright brothers' Flyer III"
-msgstr "1903 brolių Raitų skraidyklė III"
+msgstr "1905 brolių Raitų (Wright) lėktuvas Flyer III"
 
 #: activities/chronos/resource/board/board6_0.qml:56
 msgctxt "board6_0|"
 msgid "1909 Louis Bleriot crosses the English Channel"
-msgstr "1909 Luisas Bleriotas kerta Anglų (Lamanšo) sąsiaurį"
+msgstr "1909 Luisas Bleriotas (Louis Bleriot) kerta Anglų (Lamanšo) sąsiaurį"
 
 #: activities/chronos/resource/board/board6_1.qml:15
 msgctxt "board6_1|"
@@ -4769,20 +4837,18 @@ msgstr "Aviacija"
 #: activities/chronos/resource/board/board6_1.qml:39
 msgctxt "board6_1|"
 msgid "1947 Chuck Yeager breaks the sound-barrier"
-msgstr "1947 Čakas Yeageris įveikia garso greičio barjerą"
+msgstr "1947 Čakas Yeageris (Chuck Yeager) įveikia garso greičio barjerą"
 
 #: activities/chronos/resource/board/board6_1.qml:47
 msgctxt "board6_1|"
 msgid "1927 Charles Lindbergh crosses the Atlantic Ocean"
-msgstr "1927 Čarlzas Lindbergas perskrenda Atlanto vandenyną"
+msgstr ""
+"1927 Čarlzas Lindbergas (Charles Lindbergh) perskrenda Atlanto vandenyną"
 
 #: activities/chronos/resource/board/board6_1.qml:55
-#, fuzzy
-#| msgctxt "board6_1|"
-#| msgid "1934 Hélène Boucher's speed record of 444km/h"
 msgctxt "board6_1|"
 msgid "1934 Hélène Boucher's speed record of 445km/h"
-msgstr "1934 Helenos Bučer (Boucher) 444km/h greičio rekordas"
+msgstr "1934 Helenos Bučer (Hélène Boucher) 445 km/h greičio rekordas"
 
 #: activities/chronos/resource/board/board6_2.qml:15
 msgctxt "board6_2|"
@@ -4792,7 +4858,7 @@ msgstr "Automobiliai"
 #: activities/chronos/resource/board/board6_2.qml:39
 msgctxt "board6_2|"
 msgid "1878 Amédée Bollée's La Mancelle"
-msgstr "1878 Amedė Bolė namelis ant ratų"
+msgstr "1878 Amedė Bolė (Amédée Bollée) namelis ant ratų"
 
 #: activities/chronos/resource/board/board6_2.qml:47
 msgctxt "board6_2|"
@@ -4810,12 +4876,9 @@ msgid "Cars"
 msgstr "Automobiliai"
 
 #: activities/chronos/resource/board/board6_3.qml:39
-#, fuzzy
-#| msgctxt "board6_3|"
-#| msgid "1899 Renault voiturette"
 msgctxt "board6_3|"
 msgid "1898 Renault voiturette"
-msgstr "1899 Reno (Renault) automobilis-vežimaitis"
+msgstr "1898 Reno (Renault) voiturette („mažas automobilis“)"
 
 #: activities/chronos/resource/board/board6_3.qml:47
 msgctxt "board6_3|"
@@ -4901,18 +4964,6 @@ msgstr "Tab: pakartoja klausimą"
 msgctxt "ActivityInfo|"
 msgid "Click on an uppercase letter"
 msgstr "SPUSTELK IŠGIRSTĄ RAIDĘ"
-
-#: activities/clickanddraw/ActivityConfig.qml:21
-#: activities/drawletters/ActivityConfig.qml:21
-#: activities/drawnumbers/ActivityConfig.qml:21
-#: activities/enumerate/ActivityConfig.qml:21
-#: activities/erase/ActivityConfig.qml:21
-#: activities/erase_2clic/ActivityConfig.qml:21
-#: activities/erase_clic/ActivityConfig.qml:21
-#: activities/number_sequence/ActivityConfig.qml:22
-msgctxt "ActivityConfig|"
-msgid "Automatic"
-msgstr "Automatiškai"
 
 #: activities/clickanddraw/ActivityConfig.qml:22
 #: activities/drawletters/ActivityConfig.qml:22
@@ -5009,7 +5060,7 @@ msgstr "24 valandos"
 #: activities/clockgame/ActivityConfig.qml:33
 msgctxt "ActivityConfig|"
 msgid "Select a clock system"
-msgstr "Pasirink laikrodį:"
+msgstr "Pasirink laikrodį"
 
 #. Activity title
 #: activities/clockgame/ActivityInfo.qml:15
@@ -5055,12 +5106,12 @@ msgid ""
 msgstr ""
 "Trumpiausia rodyklė rodo valandas, ilgesnė – minutes, o ilgiausia – sekundes."
 
-#: activities/clockgame/Clockgame.qml:106
+#: activities/clockgame/Clockgame.qml:108
 msgctxt "Clockgame|"
 msgid "Set the watch to:"
 msgstr "Nustatyk laikrodžio rodykles:"
 
-#: activities/clockgame/Clockgame.qml:109
+#: activities/clockgame/Clockgame.qml:111
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n hour(s)"
@@ -5070,7 +5121,7 @@ msgstr[1] "%n valandos"
 msgstr[2] "%n valandų"
 msgstr[3] "%n valanda"
 
-#: activities/clockgame/Clockgame.qml:112
+#: activities/clockgame/Clockgame.qml:114
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n minute(s)"
@@ -5080,7 +5131,7 @@ msgstr[1] "%n minutės"
 msgstr[2] "%n minučių"
 msgstr[3] "%n minutė"
 
-#: activities/clockgame/Clockgame.qml:115
+#: activities/clockgame/Clockgame.qml:117
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n second(s)"
@@ -5183,62 +5234,62 @@ msgctxt "ColorMix|"
 msgid "Match the color"
 msgstr "Priderink spalvą"
 
-#: activities/color_mix/ColorMix.qml:200
+#: activities/color_mix/ColorMix.qml:201
 msgctxt "ColorMix|"
 msgid "Not enough red"
 msgstr "Per mažai raudonos"
 
-#: activities/color_mix/ColorMix.qml:202
+#: activities/color_mix/ColorMix.qml:203
 msgctxt "ColorMix|"
 msgid "Too much red"
 msgstr "Per daug raudonos"
 
-#: activities/color_mix/ColorMix.qml:205
+#: activities/color_mix/ColorMix.qml:206
 msgctxt "ColorMix|"
 msgid "Not enough green"
 msgstr "Per mažai žalios"
 
-#: activities/color_mix/ColorMix.qml:207
+#: activities/color_mix/ColorMix.qml:208
 msgctxt "ColorMix|"
 msgid "Too much green"
 msgstr "Per daug žalios"
 
-#: activities/color_mix/ColorMix.qml:210
+#: activities/color_mix/ColorMix.qml:211
 msgctxt "ColorMix|"
 msgid "Not enough blue"
 msgstr "Per mažai mėlynos"
 
-#: activities/color_mix/ColorMix.qml:212
+#: activities/color_mix/ColorMix.qml:213
 msgctxt "ColorMix|"
 msgid "Too much blue"
 msgstr "Per daug mėlynos"
 
-#: activities/color_mix/ColorMix.qml:216
+#: activities/color_mix/ColorMix.qml:217
 msgctxt "ColorMix|"
 msgid "Not enough magenta"
 msgstr "Per mažai purpurinės"
 
-#: activities/color_mix/ColorMix.qml:218
+#: activities/color_mix/ColorMix.qml:219
 msgctxt "ColorMix|"
 msgid "Too much magenta"
 msgstr "Per daug purpurinės"
 
-#: activities/color_mix/ColorMix.qml:221
+#: activities/color_mix/ColorMix.qml:222
 msgctxt "ColorMix|"
 msgid "Not enough yellow"
 msgstr "Per mažai geltonos"
 
-#: activities/color_mix/ColorMix.qml:223
+#: activities/color_mix/ColorMix.qml:224
 msgctxt "ColorMix|"
 msgid "Too much yellow"
 msgstr "Per daug geltonos"
 
-#: activities/color_mix/ColorMix.qml:226
+#: activities/color_mix/ColorMix.qml:227
 msgctxt "ColorMix|"
 msgid "Not enough cyan"
 msgstr "Per mažai žydros"
 
-#: activities/color_mix/ColorMix.qml:228
+#: activities/color_mix/ColorMix.qml:229
 msgctxt "ColorMix|"
 msgid "Too much cyan"
 msgstr "Per daug žydros"
@@ -5377,7 +5428,7 @@ msgctxt "colors|"
 msgid "Find the pink duck"
 msgstr "Surask rausvą antį"
 
-#: activities/colors/FindIt.qml:261
+#: activities/colors/FindIt.qml:260
 msgctxt "FindIt|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -5387,12 +5438,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/colors/FindIt.qml:262
+#: activities/colors/FindIt.qml:261
 msgctxt "FindIt|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/colors/FindIt.qml:263
+#: activities/colors/FindIt.qml:262
 msgctxt "FindIt|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -5567,7 +5618,7 @@ msgid "Space or Enter or Tab: select the next item"
 msgstr "Tarpas ar Enter ar Tab: pasirinkti kitą elementą"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 15–25 simple 3-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: cat;dog;win;red;yes
-#: activities/crane/crane.js:44
+#: activities/crane/crane.js:41
 msgctxt "crane|"
 msgid ""
 "cat;dog;win;red;yes;big;box;air;arm;car;bus;fun;day;eat;hat;leg;ice;old;egg"
@@ -5575,7 +5626,7 @@ msgstr ""
 "ola;abu;oho;kas;taip;lyg;tai;oras;yra;dvi;bus;jau;mes;ryk;ogi;koja;vis;iki"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 10–20 simple 4-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: blue;best;good;area
-#: activities/crane/crane.js:51
+#: activities/crane/crane.js:48
 msgctxt "crane|"
 msgid ""
 "blue;best;good;area;bell;coat;easy;farm;food;else;girl;give;hero;help;hour;"
@@ -5585,7 +5636,7 @@ msgstr ""
 "rasa;daina"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 10–20 simple 5-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: happy;child;white;apple
-#: activities/crane/crane.js:58
+#: activities/crane/crane.js:55
 msgctxt "crane|"
 msgid ""
 "happy;child;white;apple;brown;truth;fresh;green;horse;hotel;house;paper;"
@@ -5891,7 +5942,7 @@ msgctxt "AndGate|"
 msgid "A AND B"
 msgstr "A IR B"
 
-#: activities/digital_electricity/components/BcdCounter.qml:25
+#: activities/digital_electricity/components/BcdCounter.qml:24
 msgctxt "BcdCounter|"
 msgid ""
 "A BCD counter usually takes a signal generator as input. The output is a BCD "
@@ -5928,7 +5979,7 @@ msgstr ""
 "priešingu atveju bus 0. Antras – išėjime bus 1, jeigu A = B, priešingu "
 "atveju – 0. Trečias – išėjime 1, jeigu A > B, priešingu atveju 0. "
 
-#: activities/digital_electricity/components/DigitalLight.qml:21
+#: activities/digital_electricity/components/DigitalLight.qml:20
 msgctxt "DigitalLight|"
 msgid ""
 "A digital light is used to check the output of other digital components. It "
@@ -6041,7 +6092,7 @@ msgctxt "SignalGenerator|"
 msgid "%1 s"
 msgstr "%1 s"
 
-#: activities/digital_electricity/components/Switch.qml:22
+#: activities/digital_electricity/components/Switch.qml:21
 msgctxt "Switch|"
 msgid ""
 "A switch is used to connect or disconnect two terminals. If the switch is "
@@ -6568,16 +6619,6 @@ msgctxt "ActivityInfo|"
 msgid "Draw the numbers by connecting the dots in the correct order."
 msgstr "Nupiešk skaičius sujungdamas taškus teisinga tvarka."
 
-#: activities/enumerate/ActivityConfig.qml:22
-msgctxt "ActivityConfig|"
-msgid "OK button"
-msgstr "Mygtukas OK"
-
-#: activities/enumerate/ActivityConfig.qml:32
-msgctxt "ActivityConfig|"
-msgid "Validate answers"
-msgstr "Patvirtinti atsakymus"
-
 #. Activity title
 #: activities/enumerate/ActivityInfo.qml:15
 msgctxt "ActivityInfo|"
@@ -6862,7 +6903,7 @@ msgstr ""
 "Trečiame lygyje parodomas gyvūno aprašymas. Privalai paspausti ant gyvūno, "
 "kurio aprašymas jį atitinka."
 
-#: activities/explore_farm_animals/ExploreLevels.qml:305
+#: activities/explore_farm_animals/ExploreLevels.qml:335
 msgctxt "ExploreLevels|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -6872,12 +6913,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/explore_farm_animals/ExploreLevels.qml:306
+#: activities/explore_farm_animals/ExploreLevels.qml:336
 msgctxt "ExploreLevels|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/explore_farm_animals/ExploreLevels.qml:307
+#: activities/explore_farm_animals/ExploreLevels.qml:337
 msgctxt "ExploreLevels|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -8810,17 +8851,17 @@ msgstr ""
 "Tu esi baltame apskritime. Parink žodį, kuriuo reikia vadinti asmenį, esantį "
 "oranžiniame apskritime.\n"
 
-#: activities/family/Family.qml:227
+#: activities/family/Family.qml:226
 msgctxt "Family|"
 msgid "Me"
 msgstr "Aš"
 
-#: activities/family/Family.qml:250
+#: activities/family/Family.qml:249
 msgctxt "Family|"
 msgid "?"
 msgstr "?"
 
-#: activities/family/Family.qml:364
+#: activities/family/Family.qml:363
 #, qt-format
 msgctxt "Family|"
 msgid "Select one of the pairs corresponding to: %1"
@@ -9297,7 +9338,7 @@ msgid ""
 "Select the appropriate number of parts as described in the instructions."
 msgstr "Pasirink tinkamą kiekį dalių pagal nurodymus instrukcijose."
 
-#: activities/fractions_create/fractions_create.js:77
+#: activities/fractions_create/fractions_create.js:78
 msgctxt "fractions_create|"
 msgid "Find the represented fraction."
 msgstr "Surask pademonstruotą trupmeną."
@@ -9656,6 +9697,211 @@ msgstr "Surask skaitiklį ir vardiklį (su skrituliu)."
 msgctxt "Data|"
 msgid "Find numerator and denominator (with a square)."
 msgstr "Surask skaitiklį ir vardiklį (su kvadratu)."
+
+#. Activity title
+#: activities/frieze/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Frieze"
+msgstr "Ornamentas"
+
+#. Help title
+#: activities/frieze/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Reproduce and complete the frieze."
+msgstr "Atkurk ir užbaik ornamentą."
+
+#. Help goal
+#: activities/frieze/ActivityInfo.qml:19
+msgctxt "ActivityInfo|"
+msgid "Learn algorithms."
+msgstr "Išmok algoritmus."
+
+#. Help manual
+#: activities/frieze/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Reproduce the frieze on top. On some levels, you may have to complete the "
+"frieze or to reproduce it after you've memorized it."
+msgstr ""
+"Atkurk viršuje esantį ornamentą. Kai kuriuose lygiuose gali tekti jį "
+"pabaigti arba atkurti jį įsiminus."
+
+#: activities/frieze/ActivityInfo.qml:25
+msgctxt "ActivityInfo|"
+msgid "Left and right arrows: select a token"
+msgstr "Rodyklės kairėn ir dešinėn: pasirinkti ornamento elementą."
+
+#: activities/frieze/ActivityInfo.qml:26
+msgctxt "ActivityInfo|"
+msgid "Space: add selected token to the frieze"
+msgstr "Tarpas: papildyti ornamentą pasirinktu elementu."
+
+#: activities/frieze/ActivityInfo.qml:27
+msgctxt "ActivityInfo|"
+msgid "Backspace or Delete: remove last token from the frieze"
+msgstr ""
+"Backspace (panaikinti) arba Delete: išimti iš ornamento paskutinį pridėtą "
+"elementą."
+
+#: activities/frieze/ActivityInfo.qml:28
+msgctxt "ActivityInfo|"
+msgid "Enter: validate the answer"
+msgstr "Enter: patvirtinti atsakymą."
+
+#: activities/frieze/ActivityInfo.qml:29
+msgctxt "ActivityInfo|"
+msgid "Tab: switch between editing the frieze and viewing the model"
+msgstr ""
+"Tab: perjungti tarp ornamento redagavimo ir ornamento modelio peržiūros."
+
+#: activities/frieze/Frieze.qml:290
+msgctxt "Frieze|"
+msgid "I am Ready"
+msgstr "Aš pasiruošiau"
+
+#: activities/frieze/resource/1/Data.qml:28
+msgctxt "Data|"
+msgid "Copy this frieze: 2 shapes with different colors/signs."
+msgstr ""
+"Nukopijuok šį ornamentą: 2 figūros su skirtingomis spalvomis ir skirtingais "
+"ženklais."
+
+#: activities/frieze/resource/1/Data.qml:31
+#: activities/frieze/resource/4/Data.qml:17
+#: activities/frieze/resource/5/Data.qml:17
+#: activities/frieze/resource/7/Data.qml:17
+msgctxt "Data|"
+msgid "Copy this frieze."
+msgstr "Nukopijuok šį ornamentą."
+
+#: activities/frieze/resource/10/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: any combination of shapes, colors/signs and "
+"sizes."
+msgstr ""
+"Įsimink ir nukopijuok šį ornamentą: įvairių formų, spalvų, ženklų ir dydžių "
+"derinys."
+
+#: activities/frieze/resource/10/Data.qml:17
+#: activities/frieze/resource/12/Data.qml:16
+#: activities/frieze/resource/14/Data.qml:16
+#: activities/frieze/resource/3/Data.qml:17
+msgctxt "Data|"
+msgid "Remember and copy this frieze."
+msgstr "Įsimink ir nukopijuok šį ornamentą."
+
+#: activities/frieze/resource/11/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 4 and 7, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: ornamentas iš 4–7 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/11/Data.qml:16
+#: activities/frieze/resource/13/Data.qml:16
+#: activities/frieze/resource/2/Data.qml:17
+#: activities/frieze/resource/6/Data.qml:17
+#: activities/frieze/resource/8/Data.qml:17
+#: activities/frieze/resource/9/Data.qml:17
+msgctxt "Data|"
+msgid "Copy and complete this frieze."
+msgstr "Nukopijuok ir užbaik šį ornamentą."
+
+#: activities/frieze/resource/12/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: patterns between 4 and 7, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+"Įsimink ir nukopijuok šį ornamentą: ornamentas iš 4–7 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/13/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 6 and 8, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: ornamentas iš 6–8 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/14/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: patterns between 6 and 8, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+"Įsimink ir nukopijuok šį ornamentą: ornamentas iš 6–8 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/2/Data.qml:14
+msgctxt "Data|"
+msgid "Copy and complete this frieze: 2 shapes with different colors/signs."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: 2 figūros su skirtingomis spalvomis ir "
+"skirtingais ženklais."
+
+#: activities/frieze/resource/3/Data.qml:14
+msgctxt "Data|"
+msgid "Remember and copy this frieze: 2 shapes with different colors/signs."
+msgstr ""
+"Įsimink ir nukopijuok šį ornamentą: 2 figūros su skirtingomis spalvomis ir "
+"skirtingais ženklais."
+
+#: activities/frieze/resource/4/Data.qml:14
+msgctxt "Data|"
+msgid "Copy this frieze: 3 or 4 shapes with different colors/signs."
+msgstr ""
+"Nukopijuok šį ornamentą: 2 ar 3 figūros su skirtingomis spalvomis ir "
+"skirtingais ženklais."
+
+#: activities/frieze/resource/5/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy this frieze: 3 or 4 shapes with 2 sizes and potentially same colors/"
+"signs."
+msgstr ""
+"Nukopijuok šį ornamentą: 3 ar 4 figūros su dviem dydžiais ir galbūt "
+"vienodomis spalvomis bei vienodais ženklais."
+
+#: activities/frieze/resource/6/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: 3 or 4 shapes with 2 sizes and potentially "
+"same colors/signs."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: 3 ar 4 figūros su dviem dydžiais ir "
+"galbūt vienodomis spalvomis bei vienodais ženklais."
+
+#: activities/frieze/resource/7/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy this frieze: patterns between 12 and 15, any combination of shapes, "
+"colors/signs and sizes."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: ornamentas iš 12–15 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/8/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 10 and 12, any combination "
+"of shapes, colors/signs and sizes."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: ornamentas iš 10–12 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
+
+#: activities/frieze/resource/9/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 16 and 20, any combination "
+"of shapes, colors/signs and sizes."
+msgstr ""
+"Nukopijuok ir užbaik šį ornamentą: ornamentas iš 16–20 elementų, įvairių "
+"formų, spalvų, ženklų ir dydžių derinys."
 
 #. Activity title
 #: activities/geo-country/ActivityInfo.qml:19
@@ -13727,23 +13973,21 @@ msgstr "1 nėra pirminis skaičius."
 #, qt-format
 msgctxt "Warning|"
 msgid "%1 is a non-prime number, its divisors are: %2"
-msgstr ""
+msgstr "%1 nėra pirminis skaičius, jo dalikliai yra: %2"
 
 #. %1 is the number to find, %2 and %3 are two multiples of the number, %4 is a wrong number and %5 is the number to find.
 #: activities/gnumch-equality/Warning.qml:79
-#, fuzzy, qt-format
-#| msgctxt "Warning|"
-#| msgid "but %1 is not a multiple of %2."
+#, qt-format
 msgctxt "Warning|"
 msgid "Multiples of %1 include %2 or %3 but %4 is not a multiple of %5."
-msgstr "bet %1 nėra %2 kartotinis."
+msgstr "%1 kartotiniai yra %2 arba %3, bet %4 nėra %5 kartotinis."
 
 #. the first argument corresponds to a number and the second argument corresponds to its divisors formatted as an unordered html format (<ul><li>number 1</li>...</ul>
 #: activities/gnumch-equality/Warning.qml:94
 #, qt-format
 msgctxt "Warning|"
 msgid "Divisors of %1 are: %2"
-msgstr ""
+msgstr "%1 dalikliai yra: %2"
 
 #: activities/gnumch-equality/Warning.qml:124
 msgctxt "Warning|"
@@ -13923,30 +14167,221 @@ msgstr ""
 "2 × 3 =6. Taigi 6 nėra pirminis skaičius."
 
 #. Activity title
+#: activities/graduated_line_read/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Read a graduated line"
+msgstr "Pažink skalę"
+
+#. Help title
+#: activities/graduated_line_read/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Read values on a graduated line."
+msgstr "Suprask skaičių vietą skalėje"
+
+#. Help goal
+#: activities/graduated_line_read/ActivityInfo.qml:19
+msgctxt "ActivityInfo|"
+msgid "Learn to read a graduated line."
+msgstr "Suprask skalę."
+
+#. Help prerequisite
+#: activities/graduated_line_read/ActivityInfo.qml:21
+#: activities/graduated_line_use/ActivityInfo.qml:21
+msgctxt "ActivityInfo|"
+msgid "Reading and ordering numbers."
+msgstr "Skaityti ir rikiuoti skaičius."
+
+#. Help manual
+#: activities/graduated_line_read/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Use the number pad or your keyboard to enter the value corresponding to the "
+"given spot on the graduated line."
+msgstr "Įvesk skaičių, atitinkanti nurodytą tašką skalėje."
+
+#: activities/graduated_line_read/ActivityInfo.qml:25
+msgctxt "ActivityInfo|"
+msgid "Digits: enter digits"
+msgstr "Skaitmenys: įrašyti skaitmenis"
+
+#: activities/graduated_line_read/ActivityInfo.qml:26
+msgctxt "ActivityInfo|"
+msgid "Backspace: delete the last digit"
+msgstr "Backspace (panaikinti): ištrinti paskutinį įvestą skaitmenį"
+
+#: activities/graduated_line_read/ActivityInfo.qml:27
+msgctxt "ActivityInfo|"
+msgid "Delete: reset your answer"
+msgstr "Delete: ištrinti įvestą skaičių"
+
+#: activities/graduated_line_read/ActivityInfo.qml:28
+#: activities/graduated_line_use/ActivityInfo.qml:26
+msgctxt "ActivityInfo|"
+msgid "Space, Return or Enter: validate your answer"
+msgstr "Tarpas arba Enter: patvirtinti atsakymą"
+
+#: activities/graduated_line_read/graduated_line_read.js:116
+msgctxt "graduated_line_read|"
+msgid "(variable boundaries)"
+msgstr "(kintamos ribos)"
+
+#: activities/graduated_line_read/GraduatedLineRead.qml:15
+msgctxt "GraduatedLineRead|"
+msgid "Find the requested number."
+msgstr "Įvesk tinkamą skaičių."
+
+#: activities/graduated_line_read/resource/1/Data.qml:21
+msgctxt "Data|"
+msgid "Number to find between 1 and 5."
+msgstr "Skaičiai tarp 1 ir 5."
+
+#: activities/graduated_line_read/resource/2/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 1 and 7."
+msgstr "Skaičiai tarp 1 ir 7."
+
+#: activities/graduated_line_read/resource/3/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 1 and 10."
+msgstr "Skaičiai tarp 1 ir 10."
+
+#: activities/graduated_line_read/resource/4/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 20."
+msgstr "Skaičiai tarp 0 ir 20."
+
+#: activities/graduated_line_read/resource/5/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 50."
+msgstr "Skaičiai tarp 0 ir 50."
+
+#: activities/graduated_line_read/resource/6/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 100."
+msgstr "Skaičiai tarp 0 ir 100."
+
+#: activities/graduated_line_read/resource/7/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 1 000."
+msgstr "Skaičiai tarp 0 ir 1 000."
+
+#: activities/graduated_line_read/resource/8/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 10 000."
+msgstr "Skaičiai tarp 0 ir 10 000."
+
+#: activities/graduated_line_read/resource/9/Data.qml:9
+msgctxt "Data|"
+msgid "Number to find between 0 and 1 000 000."
+msgstr "Skaičiai tarp 0 ir 1 000 000."
+
+#. Activity title
+#: activities/graduated_line_use/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Use a graduated line"
+msgstr "Naudok skalę"
+
+#. Help title
+#: activities/graduated_line_use/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Place values on a graduated line."
+msgstr "Nutempk skaičius į jų vietą skalėje."
+
+#. Help goal
+#: activities/graduated_line_use/ActivityInfo.qml:19
+msgctxt "ActivityInfo|"
+msgid "Learn to use a graduated line."
+msgstr "Išmok naudotis skale."
+
+#. Help manual
+#: activities/graduated_line_use/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Use the arrows to move the cursor to the position corresponding to the given "
+"value on the graduated line."
+msgstr ""
+"Rodyklėmis perkelk žymeklį į padėtį, atitinkančią nurodytą reikšmę skalėje."
+
+#: activities/graduated_line_use/ActivityInfo.qml:25
+msgctxt "ActivityInfo|"
+msgid "Left and Right arrows: move the cursor"
+msgstr "Rodyklės kairėn ir dešinėn: perkelk žymeklį"
+
+#: activities/graduated_line_use/GraduatedLineUse.qml:10
+msgctxt "GraduatedLineUse|"
+msgid "Place the given number on the graduated line."
+msgstr "Padėk skaičių į tinkamą vietą skalėje."
+
+#: activities/graduated_line_use/resource/1/Data.qml:21
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 5."
+msgstr "Skalė nuo 1 iki 5."
+
+#: activities/graduated_line_use/resource/2/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 7."
+msgstr "Skalė nuo 1 iki 7."
+
+#: activities/graduated_line_use/resource/3/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 10."
+msgstr "Skalė nuo 1 iki 10."
+
+#: activities/graduated_line_use/resource/4/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 20."
+msgstr "Skalė nuo 0 iki 20."
+
+#: activities/graduated_line_use/resource/5/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 50."
+msgstr "Skalė nuo 0 iki 50."
+
+#: activities/graduated_line_use/resource/6/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 100."
+msgstr "Skalė nuo 0 iki 100."
+
+#: activities/graduated_line_use/resource/7/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 1 000."
+msgstr "Skalė nuo 0 iki 1 000."
+
+#: activities/graduated_line_use/resource/8/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 10 000."
+msgstr "Skalė nuo 0 iki 10 000."
+
+#: activities/graduated_line_use/resource/9/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 1 000 000."
+msgstr "Skalė nuo 0 iki 1 000 000."
+
+#. Activity title
 #: activities/grammar_analysis/ActivityInfo.qml:18
 msgctxt "ActivityInfo|"
 msgid "Grammatical analysis"
-msgstr ""
+msgstr "Kalbos dalių analizė"
 
 #. Help title
 #: activities/grammar_analysis/ActivityInfo.qml:20
 #: activities/grammar_classes/ActivityInfo.qml:20
 msgctxt "ActivityInfo|"
 msgid "Identify grammatical classes in the given sentences."
-msgstr ""
+msgstr "Nustatyk kalbos dalis sakiniuose."
 
 #. Help goal
 #: activities/grammar_analysis/ActivityInfo.qml:23
 #: activities/grammar_classes/ActivityInfo.qml:23
 msgctxt "ActivityInfo|"
 msgid "Learn to identify grammatical classes."
-msgstr ""
+msgstr "Mokykis atpažinti kalbos dalis."
 
 #. Help manual
 #: activities/grammar_analysis/ActivityInfo.qml:26
 msgctxt "ActivityInfo|"
 msgid "Assign the requested grammatical classes to the corresponding words."
-msgstr ""
+msgstr "Žodžiams priskirk kalbos dalis."
 
 #: activities/grammar_analysis/ActivityInfo.qml:27
 msgctxt "ActivityInfo|"
@@ -13954,26 +14389,27 @@ msgid ""
 "Select a grammatical class from the list, then select the box under a word "
 "and assign it the class."
 msgstr ""
+"Iš sąrašo pasirink kalbos dalį, pažymėk laukelį po žodžiu ir priskirk jam tą "
+"kalbos dalį."
 
 #: activities/grammar_analysis/ActivityInfo.qml:28
 msgctxt "ActivityInfo|"
 msgid "Leave the box blank if no class matches."
-msgstr ""
+msgstr "Palik laukelį tuščią, jei nėra tinkamos kalbos dalies."
 
 #: activities/grammar_analysis/ActivityInfo.qml:30
 #: activities/grammar_classes/ActivityInfo.qml:30
 msgctxt "ActivityInfo|"
 msgid "Up and down arrows or tabulation: switch between classes and words"
 msgstr ""
+"Rodyklės aukštyn ir žemyn arba Tab: perjungimas tarp kalbos dalių ir žodžių "
+"pasirinkimo"
 
 #: activities/grammar_analysis/ActivityInfo.qml:31
 #: activities/grammar_classes/ActivityInfo.qml:31
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Left and Right arrows: turn left and right"
 msgctxt "ActivityInfo|"
 msgid "Left and right arrows: select items in classes or words"
-msgstr "Rodyklės kairėn ir dešinėn: pasuka"
+msgstr "Rodyklės kairėn ir dešinėn: pasirink kalbos dalį arba žodį"
 
 #: activities/grammar_analysis/ActivityInfo.qml:32
 #: activities/grammar_classes/ActivityInfo.qml:32
@@ -13982,31 +14418,29 @@ msgid ""
 "Space: assign the selected class to the selected word and then select the "
 "next word"
 msgstr ""
+"Tarpas: priskirk kalbos dalį pasirinktam žodžiui ir tada pasirinkti kitą žodį"
 
 #: activities/grammar_analysis/ActivityInfo.qml:33
 #: activities/grammar_classes/ActivityInfo.qml:33
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Backspace: delete the last digit in your answer"
 msgctxt "ActivityInfo|"
 msgid "Backspace: select the previous word"
-msgstr "Backspace (panaikinti): ištrina paskutinį skaitmenį atsakyme"
+msgstr "Backspace (panaikinti): pasirink kairiau esantį žodį"
 
 #: activities/grammar_analysis/grammar_analysis.js:37
 msgctxt "grammar_analysis|"
 msgid "Grammatical analysis"
-msgstr ""
+msgstr "Kalbos dalių analizė"
 
 #: activities/grammar_analysis/grammar_analysis.js:38
 #: activities/grammar_analysis/grammar_analysis.js:48
 msgctxt "grammar_analysis|"
 msgid "Learn to identify grammatical classes."
-msgstr ""
+msgstr "Išmok pažinti kalbos dalis."
 
 #: activities/grammar_analysis/grammar_analysis.js:39
 msgctxt "grammar_analysis|"
 msgid "Find all the words corresponding to the requested grammatical classes."
-msgstr ""
+msgstr "Rask visus žodžius, atitinkančius nurodytas kalbos dalis."
 
 #: activities/grammar_analysis/grammar_analysis.js:40
 msgctxt "grammar_analysis|"
@@ -14014,21 +14448,23 @@ msgid ""
 "Select a grammatical class from the list, then select the box under a word "
 "and assign it the class."
 msgstr ""
+"Iš sąrašo pasirink kalbos dalį, pažymėk laukelį po žodžiu ir priskirk jam tą "
+"kalbos dalį."
 
 #: activities/grammar_analysis/grammar_analysis.js:41
 msgctxt "grammar_analysis|"
 msgid "Leave the box blank if no class matches."
-msgstr ""
+msgstr "Palik laukelį tuščią, jei netinka nė viena kalbos dalis."
 
 #: activities/grammar_analysis/grammar_analysis.js:47
 msgctxt "grammar_analysis|"
 msgid "Grammatical classes"
-msgstr ""
+msgstr "Kalbos dalys"
 
 #: activities/grammar_analysis/grammar_analysis.js:49
 msgctxt "grammar_analysis|"
 msgid "Find all the words corresponding to the requested grammatical class."
-msgstr ""
+msgstr "Rask visus žodžius, atitinkančius nurodytas kalbos dalis."
 
 #: activities/grammar_analysis/grammar_analysis.js:50
 msgctxt "grammar_analysis|"
@@ -14036,31 +14472,30 @@ msgid ""
 "Select the grammatical class from the list, then select the box under a word "
 "and assign it the class."
 msgstr ""
+"Iš sąrašo pasirink kalbos dalį, tada pažymėk laukelį po žodžiu ir priskirk "
+"jam tą kalbos dalį."
 
 #: activities/grammar_analysis/grammar_analysis.js:51
 msgctxt "grammar_analysis|"
 msgid "Leave the box blank if the class doesn't match."
-msgstr ""
+msgstr "Palik laukelį tuščią, jei nėra tinkamos kalbos dalies pasirinkimo."
 
-#: activities/grammar_analysis/grammar_analysis.js:401
-#, fuzzy
-#| msgctxt "Admin|"
-#| msgid "empty"
+#: activities/grammar_analysis/grammar_analysis.js:421
 msgctxt "grammar_analysis|"
 msgid "Empty"
-msgstr "tuščias"
+msgstr "Tuščia"
 
 #. Activity title
 #: activities/grammar_classes/ActivityInfo.qml:18
 msgctxt "ActivityInfo|"
 msgid "Grammatical classes"
-msgstr ""
+msgstr "Kalbos dalys"
 
 #. Help manual
 #: activities/grammar_classes/ActivityInfo.qml:26
 msgctxt "ActivityInfo|"
 msgid "Assign the requested grammatical class to the corresponding words."
-msgstr ""
+msgstr "Priskirk kalbos dalis žodžiams."
 
 #: activities/grammar_classes/ActivityInfo.qml:27
 msgctxt "ActivityInfo|"
@@ -14068,11 +14503,13 @@ msgid ""
 "Select the grammatical class from the list, then select the box under a word "
 "and assign it the class."
 msgstr ""
+"Iš sąrašo pasirink kalbos dalį, tada pažymėk laukelį po žodžiu ir priskirk "
+"jam tą kalbos dalį."
 
 #: activities/grammar_classes/ActivityInfo.qml:28
 msgctxt "ActivityInfo|"
 msgid "Leave the box blank if the class doesn't match."
-msgstr ""
+msgstr "Palik laukelį tuščią, jei kalbos dalis nesutampa."
 
 #: activities/graph-coloring/ActivityConfig.qml:21
 #: activities/superbrain/ActivityConfig.qml:21
@@ -14235,28 +14672,22 @@ msgstr ""
 #: activities/guess24/ActivityInfo.qml:14
 msgctxt "ActivityInfo|"
 msgid "Guess 24"
-msgstr ""
+msgstr "Gauk 24"
 
 #. Help title
 #: activities/guess24/ActivityInfo.qml:16
 msgctxt "ActivityInfo|"
 msgid "Calculate to find 24."
-msgstr ""
+msgstr "Suskaičiuok ir gauk 24."
 
 #. Help goal
 #: activities/guess24/ActivityInfo.qml:19
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Practice algebraic calculations with four operators."
 msgctxt "ActivityInfo|"
 msgid "Learn to calculate using the four operators."
-msgstr "Mokykis aritmetikos su keturiais matematiniais veiksmais."
+msgstr "Mokykis skaičiuoti su keturiais matematiniais veiksmais."
 
 #. Help prerequisite
 #: activities/guess24/ActivityInfo.qml:21
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Practice addition, subtraction, multiplication and division."
 msgctxt "ActivityInfo|"
 msgid ""
 "Being able to calculate using additions, subtractions, multiplications and "
@@ -14268,79 +14699,63 @@ msgstr "Mokykis sudėties, atimties, daugybos ir dalybos."
 msgctxt "ActivityInfo|"
 msgid "Use the four numbers with given operators to find 24."
 msgstr ""
+"Naudok keturis skaičius ir duotus matematinius veiksmus, kad gautum 24."
 
 #: activities/guess24/ActivityInfo.qml:25
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Arrows: navigate inside an area"
 msgctxt "ActivityInfo|"
 msgid "Arrows: navigate inside numbers and operators"
-msgstr "Rodyklės: judėti lauko viduje"
+msgstr "Rodyklės: judėk tarp skaičių ir matematinių veiksmų ženklų"
 
 #: activities/guess24/ActivityInfo.qml:26
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Space or Enter: select or place an item"
 msgctxt "ActivityInfo|"
 msgid "Space, Return or Enter: select or deselect current value or operator"
-msgstr "Tarpas ar Enter: pasirink arba padėk elementą"
+msgstr ""
+"Tarpas ar Enter: pasirink pažymėtą skaičių ar veiksmą arba atšauk pasirinkimą"
 
 #: activities/guess24/ActivityInfo.qml:27
 msgctxt "ActivityInfo|"
 msgid "Operator keys (+, -, *, /): select operator"
-msgstr ""
+msgstr "Matematinių veiksmų ženklai (+, -, *, /): pasirink veiksmą"
 
 #: activities/guess24/ActivityInfo.qml:28
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Backspace or Delete: undo"
 msgctxt "ActivityInfo|"
 msgid "Backspace or Delete: cancel last operation"
-msgstr "Backspace (panaikinti) ar Delete: atšaukia veiksmą"
+msgstr "Backspace (panaikinti) ar Delete: atšauk paskutinį veiksmą"
 
 #: activities/guess24/ActivityInfo.qml:29
 msgctxt "ActivityInfo|"
 msgid "Tabulation: switch between numbers and operators"
-msgstr ""
+msgstr "Tab: pereik tarp skaičių ir matematinių ženklų lauko"
 
-#: activities/guess24/Guess24.qml:104
+#: activities/guess24/Guess24.qml:106
 msgctxt "Guess24|"
 msgid "Use the four numbers with given operators to find 24."
-msgstr ""
+msgstr "Iš keturių skaičių ir duotų matematinių veiksmų ženklų gauk 24."
 
 #: activities/guess24/resource/1/Data.qml:13
 msgctxt "Data|"
 msgid "Solvable with + and -."
-msgstr ""
+msgstr "Išsprendžiama su + ir -."
 
 #: activities/guess24/resource/2/Data.qml:13
 msgctxt "Data|"
 msgid "Solvable with +, - and ×."
-msgstr ""
+msgstr "Išsprendžiama su +, - ir ×."
 
 #: activities/guess24/resource/3/Data.qml:13
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Multiplications."
 msgctxt "Data|"
 msgid "Multiplication required."
-msgstr "Daugybos lentelė."
+msgstr "Reikalingas daugybos veiksmas."
 
 #: activities/guess24/resource/4/Data.qml:13
-#, fuzzy
-#| msgctxt "Data|"
-#| msgid "Small grids."
 msgctxt "Data|"
 msgid "Solvable with all operators."
-msgstr "Maža lentelė."
+msgstr "Išsprendžiama su visais matematiniais veiksmais."
 
 #: activities/guess24/resource/5/Data.qml:13
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid "Divisions."
 msgctxt "Data|"
 msgid "Division required."
-msgstr "Mokėti dalybos veiksmą."
+msgstr "Reikalingas dalybos veiksmas."
 
 #: activities/guesscount/ActivityConfig.qml:27
 msgctxt "ActivityConfig|"
@@ -14397,8 +14812,8 @@ msgid ""
 "Drag the appropriate numbers and the operators to the boxes to obtain the "
 "number to guess in the instruction."
 msgstr ""
-"Nutempk tinkamus skaičius ir veiksmų ženklus į stačiakampius, kad gautum "
-"skaičių, kuris nurodytas „Rezultate“."
+"Nutempk tinkamus skaičius ir matematinių veiksmų ženklus į stačiakampius, "
+"kad gautum skaičių, kuris nurodytas „Rezultate“."
 
 #: activities/guesscount/Admin.qml:30
 #, qt-format
@@ -14406,23 +14821,17 @@ msgctxt "Admin|"
 msgid "Level %1"
 msgstr "Lygis %1"
 
-#: activities/guesscount/guesscount.js:128
+#: activities/guesscount/guesscount.js:142
 msgctxt "guesscount|"
 msgid "result is not positive integer"
 msgstr "rezultatas nėra teigiamas sveikasis skaičius"
 
-#: activities/guesscount/guesscount.js:130
+#: activities/guesscount/guesscount.js:144
 msgctxt "guesscount|"
 msgid "result is not an integer"
 msgstr "rezultatas nėra sveikasis skaičius"
 
-#: activities/guesscount/Guesscount.qml:131
-#, qt-format
-msgctxt "Guesscount|"
-msgid "%1/%2"
-msgstr "%1/%2"
-
-#: activities/guesscount/Guesscount.qml:165
+#: activities/guesscount/Guesscount.qml:155
 #, qt-format
 msgctxt "Guesscount|"
 msgid "Guesscount: %1"
@@ -14433,7 +14842,7 @@ msgctxt "OperandRow|"
 msgid "Numbers"
 msgstr "Skaičiai"
 
-#: activities/guesscount/OperatorRow.qml:42
+#: activities/guesscount/OperatorRow.qml:41
 msgctxt "OperatorRow|"
 msgid "Operators"
 msgstr "Veiksmai"
@@ -14612,12 +15021,12 @@ msgctxt "hangman|"
 msgid "Attempted: %1"
 msgstr "Bandyta: %1"
 
-#: activities/hangman/Hangman.qml:401
+#: activities/hangman/Hangman.qml:402
 msgctxt "Hangman|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "Atsiprašome, bet mes dar neturime vertimo į tavo kalbą."
 
-#: activities/hangman/Hangman.qml:402
+#: activities/hangman/Hangman.qml:403
 #, qt-format
 msgctxt "Hangman|"
 msgid ""
@@ -14628,7 +15037,7 @@ msgstr ""
 "pagerinti GCompris vertimą, prisijungdamas prie vertėjų komandos <a href="
 "\"%2\">%2</a>"
 
-#: activities/hangman/Hangman.qml:404
+#: activities/hangman/Hangman.qml:405
 msgctxt "Hangman|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -15134,9 +15543,6 @@ msgstr "Rask banžą"
 
 #: activities/instruments/instruments.js:161
 #: activities/instruments/instruments.js:206
-#, fuzzy
-#| msgctxt "instruments|"
-#| msgid "Find the bongo"
 msgctxt "instruments|"
 msgid "Find the bongos"
 msgstr "Rask bongus"
@@ -15455,7 +15861,7 @@ msgstr "Tarpas arba Enter: pasirink elementą iš sąrašo"
 
 #: activities/lang/ActivityInfo.qml:36
 msgctxt "ActivityInfo|"
-msgid "Enter: validate your answer when the OK button is visible"
+msgid "Enter: validate your answer when the OK button is visible"
 msgstr "Enter: patvirtink savo atsakymą, kai pasirodo OK mygtukas."
 
 #: activities/lang/ActivityInfo.qml:37
@@ -15464,12 +15870,12 @@ msgctxt "ActivityInfo|"
 msgid "Tab: repeat the word"
 msgstr "Tab: pakartoja žodį"
 
-#: activities/lang/Lang.qml:138
+#: activities/lang/Lang.qml:136
 msgctxt "Lang|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "Atsiprašome, bet mes neturime vertimo į tavo kalbą."
 
-#: activities/lang/Lang.qml:139
+#: activities/lang/Lang.qml:137
 #, qt-format
 msgctxt "Lang|"
 msgid ""
@@ -15480,7 +15886,7 @@ msgstr ""
 "patobulinti GCompris vertimą, prisijungdamas prie vertėjų komandos čia: <a "
 "href=\"%2\">%2</a>"
 
-#: activities/lang/Lang.qml:141
+#: activities/lang/Lang.qml:139
 msgctxt "Lang|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -15489,117 +15895,117 @@ msgstr ""
 "Šioje pamokėlėje mes naudojame anglų kalbą, tačiau tu gali pasirinkti kitą "
 "kalbą nustatymų lange."
 
-#: activities/lang/Lang.qml:189 activities/lang/Lang.qml:190
+#: activities/lang/Lang.qml:187 activities/lang/Lang.qml:188
 msgctxt "Lang|"
 msgid "other"
 msgstr "kiti"
 
-#: activities/lang/Lang.qml:191
+#: activities/lang/Lang.qml:189
 msgctxt "Lang|"
 msgid "action"
 msgstr "veiksmai"
 
-#: activities/lang/Lang.qml:191
+#: activities/lang/Lang.qml:189
 msgctxt "Lang|"
 msgid "adjective"
 msgstr "būdvardžiai"
 
-#: activities/lang/Lang.qml:192
+#: activities/lang/Lang.qml:190
 msgctxt "Lang|"
 msgid "color"
 msgstr "spalvos"
 
-#: activities/lang/Lang.qml:192
+#: activities/lang/Lang.qml:190
 msgctxt "Lang|"
 msgid "number"
 msgstr "skaičiai"
 
-#: activities/lang/Lang.qml:193
+#: activities/lang/Lang.qml:191
 msgctxt "Lang|"
 msgid "people"
 msgstr "žmonės"
 
-#: activities/lang/Lang.qml:193
+#: activities/lang/Lang.qml:191
 msgctxt "Lang|"
 msgid "bodyparts"
 msgstr "kūno dalys"
 
-#: activities/lang/Lang.qml:194
+#: activities/lang/Lang.qml:192
 msgctxt "Lang|"
 msgid "clothes"
 msgstr "drabužiai"
 
-#: activities/lang/Lang.qml:194
+#: activities/lang/Lang.qml:192
 msgctxt "Lang|"
 msgid "emotion"
 msgstr "emocijos"
 
-#: activities/lang/Lang.qml:195
+#: activities/lang/Lang.qml:193
 msgctxt "Lang|"
 msgid "job"
 msgstr "darbai"
 
-#: activities/lang/Lang.qml:195
+#: activities/lang/Lang.qml:193
 msgctxt "Lang|"
 msgid "sport"
 msgstr "sportas"
 
-#: activities/lang/Lang.qml:196
+#: activities/lang/Lang.qml:194
 msgctxt "Lang|"
 msgid "nature"
 msgstr "gamta"
 
-#: activities/lang/Lang.qml:196
+#: activities/lang/Lang.qml:194
 msgctxt "Lang|"
 msgid "animal"
 msgstr "gyvūnai"
 
-#: activities/lang/Lang.qml:197
+#: activities/lang/Lang.qml:195
 msgctxt "Lang|"
 msgid "fruit"
 msgstr "vaisiai"
 
-#: activities/lang/Lang.qml:197
+#: activities/lang/Lang.qml:195
 msgctxt "Lang|"
 msgid "plant"
 msgstr "augalai"
 
-#: activities/lang/Lang.qml:198
+#: activities/lang/Lang.qml:196
 msgctxt "Lang|"
 msgid "vegetables"
 msgstr "daržovės"
 
-#: activities/lang/Lang.qml:198
+#: activities/lang/Lang.qml:196
 msgctxt "Lang|"
 msgid "object"
 msgstr "daiktai"
 
-#: activities/lang/Lang.qml:199
+#: activities/lang/Lang.qml:197
 msgctxt "Lang|"
 msgid "construction"
 msgstr "konstrukcijos"
 
-#: activities/lang/Lang.qml:200
+#: activities/lang/Lang.qml:198
 msgctxt "Lang|"
 msgid "furniture"
 msgstr "baldai"
 
-#: activities/lang/Lang.qml:200
+#: activities/lang/Lang.qml:198
 msgctxt "Lang|"
 msgid "houseware"
 msgstr "namų apyvokos daiktai"
 
-#: activities/lang/Lang.qml:201
+#: activities/lang/Lang.qml:199
 msgctxt "Lang|"
 msgid "tool"
 msgstr "įrankiai"
 
-#: activities/lang/Lang.qml:201
+#: activities/lang/Lang.qml:199
 msgctxt "Lang|"
 msgid "food"
 msgstr "maistas"
 
-#: activities/lang/Lang.qml:202
+#: activities/lang/Lang.qml:200
 msgctxt "Lang|"
 msgid "transport"
 msgstr "transportas"
@@ -15786,31 +16192,31 @@ msgstr ""
 "sritį. Kartok šiuos veiksmus, kol apelsinų skaičius atitiks rodomą skaičių. "
 "Spustelėk mygtuką OK, taip patvirtindamas savo atsakymą."
 
-#: activities/learn_decimals/Learn_decimals.qml:115
+#: activities/learn_decimals/Learn_decimals.qml:118
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the number: %1"
 msgstr "Pavaizduok skaičių: %1"
 
-#: activities/learn_decimals/Learn_decimals.qml:116
+#: activities/learn_decimals/Learn_decimals.qml:119
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the result of: %1 + %2"
 msgstr "Pavaizduok sumą: %1 + %2"
 
-#: activities/learn_decimals/Learn_decimals.qml:117
+#: activities/learn_decimals/Learn_decimals.qml:120
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the result of: %1 - %2"
 msgstr "Parodyk skirtumą: %1 - %2"
 
-#: activities/learn_decimals/Learn_decimals.qml:118
+#: activities/learn_decimals/Learn_decimals.qml:121
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Represent the quantity: %1"
 msgstr "Pateik kiekį: %1"
 
-#: activities/learn_decimals/Learn_decimals.qml:571
+#: activities/learn_decimals/Learn_decimals.qml:576
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Enter the result: %1"
@@ -16249,7 +16655,7 @@ msgctxt "Leftright|"
 msgid "Left hand"
 msgstr "Kairė ranka"
 
-#: activities/leftright/Leftright.qml:161
+#: activities/leftright/Leftright.qml:164
 msgctxt "Leftright|"
 msgid "Right hand"
 msgstr "Dešinė ranka"
@@ -16267,12 +16673,12 @@ msgstr "Tik 5 žodžiai"
 #: activities/letter-in-word/ActivityConfig.qml:54
 msgctxt "ActivityConfig|"
 msgid "Select the case for the letters to search"
-msgstr "Pasirink didžiąsias ar mažąsias raides naudoti"
+msgstr "Pasirink didžiąsias ar mažąsias raides"
 
 #: activities/letter-in-word/ActivityConfig.qml:57
 msgctxt "ActivityConfig|"
 msgid "Mixed Case"
-msgstr "Didžiosios+mažosios raidės"
+msgstr "Didžiosios ir mažosios raidės"
 
 #: activities/letter-in-word/ActivityConfig.qml:58
 msgctxt "ActivityConfig|"
@@ -16322,12 +16728,12 @@ msgstr ""
 "Raidė matosi ant vėliavėlės, kurią tempia lėktuvas. Pasirink visus žodžius "
 "(daiktus), kurie turi tą raidę ir tada paspausk mygtuką OK."
 
-#: activities/letter-in-word/LetterInWord.qml:300
+#: activities/letter-in-word/LetterInWord.qml:310
 msgctxt "LetterInWord|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "Atsiprašome, mes dar neturime vertimo į tavo kalbą."
 
-#: activities/letter-in-word/LetterInWord.qml:301
+#: activities/letter-in-word/LetterInWord.qml:311
 #, qt-format
 msgctxt "LetterInWord|"
 msgid ""
@@ -16338,7 +16744,7 @@ msgstr ""
 "pagerinti GCompris vertimą, prisijungdamas prie vertėjų komandos <a href="
 "\"%2\">%2</a>"
 
-#: activities/letter-in-word/LetterInWord.qml:303
+#: activities/letter-in-word/LetterInWord.qml:313
 msgctxt "LetterInWord|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -16555,7 +16961,7 @@ msgstr ""
 "Brailio sistema buvo priimta kaip pasaulinis standartas. Luisas Brailis "
 "įrodė, kad turint motyvaciją, galima pasiekti neįtikėtinų dalykų."
 
-#: activities/louis-braille/ReorderList.qml:163
+#: activities/louis-braille/ReorderList.qml:164
 msgctxt "ReorderList|"
 msgid ""
 "Arrange the events in the order in which they happened. Select the line to "
@@ -16653,7 +17059,7 @@ msgid "Calculate remaining stars up to 10000 with coefficients."
 msgstr "Suskaičiuok likusias žvaigždutes, iki 10000, su koeficientais."
 
 #. text displaying coefficient with which the set of stars is to be multiplied along with multiplication symbol.
-#: activities/magic-hat-minus/StarsBar.qml:38
+#: activities/magic-hat-minus/StarsBar.qml:37
 #, qt-format
 msgctxt "StarsBar|"
 msgid "%1x"
@@ -16940,7 +17346,7 @@ msgstr ""
 "(ksilofono) plokštelių. Gali dar sykį išklausyti melodiją paspausdamas "
 "pakartojimo mygtuką."
 
-#: activities/melody/Melody.qml:280
+#: activities/melody/Melody.qml:312
 msgctxt "Melody|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -16950,12 +17356,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/melody/Melody.qml:281
+#: activities/melody/Melody.qml:313
 msgctxt "Melody|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/melody/Melody.qml:282
+#: activities/melody/Melody.qml:314
 msgctxt "Melody|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -18263,66 +18669,63 @@ msgstr "<b>Valdymas klavišais:</b>"
 #: activities/menu/ActivityInfo.qml:39
 msgctxt "ActivityInfo|"
 msgid "Ctrl+B: Show or Hide the control bar"
-msgstr "Ctrl+B Parodyti ar paslėpti valdymo mygtukų juostą"
+msgstr "Ctrl+B: Parodyti ar paslėpti valdymo mygtukų juostą"
 
 #: activities/menu/ActivityInfo.qml:40
 msgctxt "ActivityInfo|"
 msgid "Ctrl+F: Toggle full screen"
-msgstr "Ctrl+F Perjungti į viso ekrano režimą ir atvirkščiai"
+msgstr "Ctrl+F: Perjungti į viso ekrano režimą ir atvirkščiai"
 
 #: activities/menu/ActivityInfo.qml:41
 msgctxt "ActivityInfo|"
 msgid "Ctrl+S: Toggle the activity section bar"
-msgstr "Ctrl+S Parodyti ar paslėpti pamokėlių skyrių (kategorijų) juostą"
+msgstr "Ctrl+S: Parodyti ar paslėpti pamokėlių skyrių (kategorijų) juostą"
 
 #: activities/menu/BackgroundMusicList.qml:64
 msgctxt "BackgroundMusicList|"
 msgid "Background music"
 msgstr "Fono muzika"
 
-#: activities/menu/BackgroundMusicList.qml:127
+#: activities/menu/BackgroundMusicList.qml:129
 msgctxt "BackgroundMusicList|"
 msgid "Disable the background music if you don't want to play them."
 msgstr "Išjunk fono muziką, jei nenori, kad ji grotų."
 
 #. Current background music playing
-#: activities/menu/BackgroundMusicList.qml:167
+#: activities/menu/BackgroundMusicList.qml:169
 msgctxt "BackgroundMusicList|"
 msgid "Now Playing:"
 msgstr "Dabar groja:"
 
 #. Title of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:176
+#: activities/menu/BackgroundMusicList.qml:178
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Title: %1"
 msgstr "Pavadinimas: %1"
 
 #. Artist of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:185
+#: activities/menu/BackgroundMusicList.qml:187
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Artist: %1"
 msgstr "Atlikėjas: %1"
 
 #. Year of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:194
+#: activities/menu/BackgroundMusicList.qml:196
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Year: %1"
 msgstr "Metai: %1"
 
 #. Copyright of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:203
+#: activities/menu/BackgroundMusicList.qml:205
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Copyright: %1"
 msgstr "Autorinės teisės: %1"
 
 #: activities/menu/ConfigurationItem.qml:48
-#, fuzzy
-#| msgctxt "ConfigurationItem|"
-#| msgid "Difficulty filter:"
 msgctxt "ConfigurationItem|"
 msgid "Difficulty filter"
 msgstr "Sudėtingumo lygių filtras:"
@@ -18333,12 +18736,9 @@ msgid "Language selector"
 msgstr "Kalbos parinkėjas"
 
 #: activities/menu/ConfigurationItem.qml:115
-#, fuzzy
-#| msgctxt "ConfigurationItem|"
-#| msgid "Enable automatic downloads/updates of sound files"
 msgctxt "ConfigurationItem|"
 msgid "Enable automatic downloads/updates of external assets"
-msgstr "Leisti automatinius garsinių failų atsisiuntimus/atnaujinimus"
+msgstr "Leisti automatinius resursų atsisiuntimus ir atnaujinimus"
 
 #: activities/menu/ConfigurationItem.qml:145
 msgctxt "ConfigurationItem|"
@@ -18502,67 +18902,67 @@ msgctxt "Menu|"
 msgid "No"
 msgstr "Ne"
 
-#: activities/menu/Menu.qml:127
+#: activities/menu/Menu.qml:116
 msgctxt "Menu|"
 msgid "Logic"
 msgstr "Logika"
 
-#: activities/menu/Menu.qml:128
+#: activities/menu/Menu.qml:117
 msgctxt "Menu|"
 msgid "Fine Arts"
 msgstr "Dailė"
 
-#: activities/menu/Menu.qml:129
+#: activities/menu/Menu.qml:118
 msgctxt "Menu|"
 msgid "Music"
 msgstr "Muzika"
 
-#: activities/menu/Menu.qml:135
+#: activities/menu/Menu.qml:124
 msgctxt "Menu|"
 msgid "Experiment"
 msgstr "Eksperimentas"
 
-#: activities/menu/Menu.qml:136
+#: activities/menu/Menu.qml:125
 msgctxt "Menu|"
 msgid "History"
 msgstr "Istorija"
 
-#: activities/menu/Menu.qml:137
+#: activities/menu/Menu.qml:126
 msgctxt "Menu|"
 msgid "Geography"
 msgstr "Geografija"
 
-#: activities/menu/Menu.qml:147
+#: activities/menu/Menu.qml:136
 msgctxt "Menu|"
 msgid "Numeration"
 msgstr "Skaičiavimas iš eilės"
 
-#: activities/menu/Menu.qml:148
+#: activities/menu/Menu.qml:137
 msgctxt "Menu|"
 msgid "Arithmetic"
 msgstr "Aritmetika"
 
-#: activities/menu/Menu.qml:149
+#: activities/menu/Menu.qml:138
 msgctxt "Menu|"
 msgid "Measures"
 msgstr "Matavimo priemonės"
 
-#: activities/menu/Menu.qml:159
+#: activities/menu/Menu.qml:148
 msgctxt "Menu|"
 msgid "Letters"
 msgstr "Raidės"
 
-#: activities/menu/Menu.qml:160
+#: activities/menu/Menu.qml:149
 msgctxt "Menu|"
 msgid "Words"
 msgstr "Žodžiai"
 
-#: activities/menu/Menu.qml:161
+#: activities/menu/Menu.qml:150
 msgctxt "Menu|"
 msgid "Vocabulary"
 msgstr "Žodynas"
 
-#: activities/menu/Menu.qml:378
+#: activities/menu/Menu.qml:367
 msgctxt "Menu|"
 msgid ""
 "Put your favorite activities here by clicking on the sun at the top right of "
@@ -18571,12 +18971,12 @@ msgstr ""
 "Išdėliok čia dažniausiai naudojamas pamokėles, paspausdamas ant saulutės, "
 "rodomos šalia kiekvienos pamokėlės viršuje, dešinėje."
 
-#: activities/menu/Menu.qml:781
+#: activities/menu/Menu.qml:772
 msgctxt "Menu|"
 msgid "Search specific activities"
 msgstr "Rask pamokėles čia įrašydamas žodį"
 
-#: activities/menu/Menu.qml:808
+#: activities/menu/Menu.qml:799
 msgctxt "Menu|"
 msgid "Activity Settings"
 msgstr "Pamokėlės nustatymai"
@@ -18663,7 +19063,7 @@ msgid "metalpaint.wav - remixed and used when a gold nugget is collected"
 msgstr ""
 "metalpain.wav – pakoreguotas ir naudojamas, kai surenkamas aukso grynuolis"
 
-#: activities/mining/Mining.qml:407
+#: activities/mining/Mining.qml:422
 msgctxt "Mining|"
 msgid ""
 "Find the sparkle and zoom in around it. If you have a mouse, point the "
@@ -18678,22 +19078,22 @@ msgstr ""
 "arba dviem pirštais centre. Liečiamame ekrane dviem pirštais palieskite "
 "spindesį ir tuomet tolinkite pirštus vieną nuo kito."
 
-#: activities/mining/Mining.qml:418
+#: activities/mining/Mining.qml:433
 msgctxt "Mining|"
 msgid "Perfect you are zooming. Continue until you see the nugget."
 msgstr "Puiku, tu moki priartinti. Tęsk, kol rasi aukso grynuolį."
 
-#: activities/mining/Mining.qml:424
+#: activities/mining/Mining.qml:439
 msgctxt "Mining|"
 msgid "Hum, take care, you are zooming too far from the sparkle."
 msgstr "Dėmesio, tu artini per toli nuo žiburėlio."
 
-#: activities/mining/Mining.qml:430
+#: activities/mining/Mining.qml:445
 msgctxt "Mining|"
 msgid "Now you see the nugget, click on it to catch it."
 msgstr "Dabar jau matai aukso grynuolį, spausk ant jo ir pasiimsi."
 
-#: activities/mining/Mining.qml:436
+#: activities/mining/Mining.qml:451
 msgctxt "Mining|"
 msgid ""
 "Hum, you are too far from the nugget to see it. Unzoom then zoom again as "
@@ -18702,17 +19102,17 @@ msgstr ""
 "Ech, tu esi per toli nuo aukso grynuolio, kad jį pamatytumėte. Atitolink "
 "vaizdą, pamatyk žiburėlį ir vėl artink kuo arčiau jo."
 
-#: activities/mining/Mining.qml:442
+#: activities/mining/Mining.qml:457
 msgctxt "Mining|"
 msgid "Now unzoom and try to find another sparkle."
 msgstr "Dabar nutolink vaizdą, kad pamatytum kitą spindintį auksą."
 
-#: activities/mining/Mining.qml:448
+#: activities/mining/Mining.qml:463
 msgctxt "Mining|"
 msgid "Continue to unzoom until you see the sparkle."
 msgstr "Tęsk tolinimą, kol pamatysi žiburėlį."
 
-#: activities/mining/Mining.qml:454
+#: activities/mining/Mining.qml:469
 msgctxt "Mining|"
 msgid "Now you see the sparkle, go ahead, you can zoom on it."
 msgstr "Dabar jau matai žiburėlį – pirmyn, gali jį prisiartinti."
@@ -18753,12 +19153,12 @@ msgstr ""
 "nebaigtas žodis. Žodžiui pabaigti išrink trūkstamą raidę arba surink tą "
 "raidę klaviatūra."
 
-#: activities/missing-letter/MissingLetter.qml:317
+#: activities/missing-letter/MissingLetter.qml:323
 msgctxt "MissingLetter|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "Atsiprašome, mes neturime vertimo į pasirinktą kalbą."
 
-#: activities/missing-letter/MissingLetter.qml:318
+#: activities/missing-letter/MissingLetter.qml:324
 #, qt-format
 msgctxt "MissingLetter|"
 msgid ""
@@ -18769,7 +19169,7 @@ msgstr ""
 "patobulinti GCompris vertimą, prisijungdamas prie vertėjų komandos čia <a "
 "href=\"%2\">%2</a>"
 
-#: activities/missing-letter/MissingLetter.qml:320
+#: activities/missing-letter/MissingLetter.qml:326
 msgctxt "MissingLetter|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -18841,7 +19241,7 @@ msgctxt "ActivityInfo|"
 msgid "Tab: navigate between the bottom and the top areas"
 msgstr "Tab: naršyk tarp apatinio ir viršutinio laukų"
 
-#: activities/money/money.js:141
+#: activities/money/money.js:142
 msgctxt "money|"
 msgid ""
 "Click on the coins or on the notes at the bottom of the screen to pay. If "
@@ -18851,7 +19251,7 @@ msgstr ""
 "apačioje. Jei nori pašalinti monetą ar banknotą, spustelk ant jo ekrano "
 "viršuje."
 
-#: activities/money/money.js:172
+#: activities/money/money.js:173
 #, qt-format
 msgctxt "money|"
 msgid ""
@@ -19035,13 +19435,13 @@ msgstr ""
 "Kai būsi pasiruošęs, paspausk ant Tukso ir mes bendrausime Morzės abėcėlės "
 "pagalba."
 
-#: activities/morse_code/MorseCode.qml:342
+#: activities/morse_code/MorseCode.qml:352
 #, qt-format
 msgctxt "MorseCode|"
 msgid "Morse value: %1"
 msgstr "Mozės kodo reikšmė: %1"
 
-#: activities/morse_code/MorseCode.qml:343
+#: activities/morse_code/MorseCode.qml:353
 #, qt-format
 msgctxt "MorseCode|"
 msgid "Alphabet/Numeric value: %1"
@@ -19336,20 +19736,20 @@ msgctxt "ActivityInfo|"
 msgid "Identify the notes correctly and score 100% to complete a level."
 msgstr "Įvardink natas teisingai ir surink 100%, kad užbaigtum lygį."
 
-#: activities/note_names/NoteNames.qml:178
+#: activities/note_names/NoteNames.qml:177
 #, qt-format
 msgctxt "NoteNames|"
 msgid "New note: %1"
 msgstr "Naujas užrašas: %1"
 
 #. The following translation represents percentage.
-#: activities/note_names/NoteNames.qml:266
+#: activities/note_names/NoteNames.qml:265
 #, qt-format
 msgctxt "NoteNames|"
 msgid "%1%"
 msgstr "%1%"
 
-#: activities/note_names/NoteNames.qml:453
+#: activities/note_names/NoteNames.qml:452
 msgctxt "NoteNames|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -19359,12 +19759,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/note_names/NoteNames.qml:454
+#: activities/note_names/NoteNames.qml:453
 msgctxt "NoteNames|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/note_names/NoteNames.qml:455
+#: activities/note_names/NoteNames.qml:454
 msgctxt "NoteNames|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -19385,7 +19785,7 @@ msgstr ""
 #: activities/number_sequence/ActivityConfig.qml:36
 msgctxt "ActivityConfig|"
 msgid "Highlight next point"
-msgstr ""
+msgstr "Pažymėk kitą tašką"
 
 #. Activity title
 #: activities/number_sequence/ActivityInfo.qml:15
@@ -19435,25 +19835,25 @@ msgstr ""
 "paliesk vietą, kur turi skirsti sraigtasparnis. Turi arba prisiminti "
 "skaičių, kurį turi sugauti, arba pasitikrink apatiniame dešiniajame kampe."
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:36
+#: activities/numbers-odd-even/NumbersOddEven.qml:35
 msgctxt "NumbersOddEven|"
 msgid "This activity teaches about even and odd numbers."
 msgstr "Ši pamokėlė moko pažinti lyginius ir nelyginius skaičius."
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:40
-#: activities/numbers-odd-even/NumbersOddEven.qml:50
+#: activities/numbers-odd-even/NumbersOddEven.qml:39
+#: activities/numbers-odd-even/NumbersOddEven.qml:49
 msgctxt "NumbersOddEven|"
 msgid ""
 "Even numbers are numbers which leave a remainder of 0 when divided by 2."
 msgstr ""
 "Lyginiai skaičiai yra tokie, kuriuos dalijant iš 2 lieka nulinė liekana."
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:45
+#: activities/numbers-odd-even/NumbersOddEven.qml:44
 msgctxt "NumbersOddEven|"
 msgid "What is meant by remainder?"
 msgstr "Kas yra liekana?"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:54
+#: activities/numbers-odd-even/NumbersOddEven.qml:53
 msgctxt "NumbersOddEven|"
 msgid ""
 "Odd numbers are numbers which do not leave a remainder of 0 when divided by "
@@ -19461,9 +19861,9 @@ msgid ""
 msgstr ""
 "Nelyginiai skaičiai yra tokie, kurios dalijant iš 2 lieka nenulinė liekana."
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:58
-#: activities/numbers-odd-even/NumbersOddEven.qml:62
-#: activities/numbers-odd-even/NumbersOddEven.qml:66
+#: activities/numbers-odd-even/NumbersOddEven.qml:57
+#: activities/numbers-odd-even/NumbersOddEven.qml:61
+#: activities/numbers-odd-even/NumbersOddEven.qml:65
 msgctxt "NumbersOddEven|"
 msgid "Exercise to test your understanding."
 msgstr "Pasipraktikuok, kad pasitikrintum, kaip supranti."
@@ -20628,7 +21028,7 @@ msgctxt "melodies|"
 msgid "Finland"
 msgstr "Suomija"
 
-#: activities/piano_composition/MelodyList.qml:70
+#: activities/piano_composition/MelodyList.qml:69
 msgctxt "MelodyList|"
 msgid "Melodies"
 msgstr "Melodijos"
@@ -20773,13 +21173,13 @@ msgctxt "piano_composition|"
 msgid "Now you can load music and also save your compositions."
 msgstr "Dabar gali įrašyti bei įkelti savo ir kitų sukurtą muziką."
 
-#: activities/piano_composition/piano_composition.js:65
+#: activities/piano_composition/piano_composition.js:63
 #, qt-format
 msgctxt "piano_composition|"
 msgid "Error saving melody to your file (%1)"
 msgstr "Klaida įrašant melodiją tavo faile (%1)"
 
-#: activities/piano_composition/piano_composition.js:70
+#: activities/piano_composition/piano_composition.js:68
 #, qt-format
 msgctxt "piano_composition|"
 msgid "Melody saved to your file (%1)"
@@ -20836,16 +21236,26 @@ msgid "Continue"
 msgstr "Tęsti"
 
 #. Translators, C, D, E, F, G, A and B are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, C4 is a C note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:41
+#: activities/piano_composition/PianoOctaveKeyboard.qml:48
+#: activities/piano_composition/PianoOctaveKeyboard.qml:55
+#: activities/piano_composition/PianoOctaveKeyboard.qml:62
+#: activities/piano_composition/PianoOctaveKeyboard.qml:69
+#: activities/piano_composition/PianoOctaveKeyboard.qml:76
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "F%1"
+msgstr "F%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:42
 #: activities/piano_composition/PianoOctaveKeyboard.qml:49
 #: activities/piano_composition/PianoOctaveKeyboard.qml:56
 #: activities/piano_composition/PianoOctaveKeyboard.qml:63
 #: activities/piano_composition/PianoOctaveKeyboard.qml:70
-#: activities/piano_composition/PianoOctaveKeyboard.qml:77
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "F%1"
-msgstr "F%1"
+msgid "G%1"
+msgstr "G%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:43
 #: activities/piano_composition/PianoOctaveKeyboard.qml:50
@@ -20854,8 +21264,8 @@ msgstr "F%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:71
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G%1"
-msgstr "G%1"
+msgid "A%1"
+msgstr "A%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:44
 #: activities/piano_composition/PianoOctaveKeyboard.qml:51
@@ -20864,8 +21274,8 @@ msgstr "G%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:72
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "A%1"
-msgstr "A%1"
+msgid "B%1"
+msgstr "B%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:45
 #: activities/piano_composition/PianoOctaveKeyboard.qml:52
@@ -20874,8 +21284,8 @@ msgstr "A%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:73
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "B%1"
-msgstr "B%1"
+msgid "C%1"
+msgstr "C%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:46
 #: activities/piano_composition/PianoOctaveKeyboard.qml:53
@@ -20884,8 +21294,8 @@ msgstr "B%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:74
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "C%1"
-msgstr "C%1"
+msgid "D%1"
+msgstr "D%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:47
 #: activities/piano_composition/PianoOctaveKeyboard.qml:54
@@ -20894,100 +21304,90 @@ msgstr "C%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:75
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D%1"
-msgstr "D%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:48
-#: activities/piano_composition/PianoOctaveKeyboard.qml:55
-#: activities/piano_composition/PianoOctaveKeyboard.qml:62
-#: activities/piano_composition/PianoOctaveKeyboard.qml:69
-#: activities/piano_composition/PianoOctaveKeyboard.qml:76
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
 msgid "E%1"
 msgstr "E%1"
 
 #. Translators, C♯, D♯, F♯, G♯, and A♯ are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, C♯4 is a C♯ note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:81
+#: activities/piano_composition/PianoOctaveKeyboard.qml:86
+#: activities/piano_composition/PianoOctaveKeyboard.qml:91
+#: activities/piano_composition/PianoOctaveKeyboard.qml:96
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "C♯%1"
+msgstr "C♯%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:82
 #: activities/piano_composition/PianoOctaveKeyboard.qml:87
 #: activities/piano_composition/PianoOctaveKeyboard.qml:92
 #: activities/piano_composition/PianoOctaveKeyboard.qml:97
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "C♯%1"
-msgstr "C♯%1"
+msgid "D♯%1"
+msgstr "D♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:83
 #: activities/piano_composition/PianoOctaveKeyboard.qml:88
 #: activities/piano_composition/PianoOctaveKeyboard.qml:93
-#: activities/piano_composition/PianoOctaveKeyboard.qml:98
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D♯%1"
-msgstr "D♯%1"
+msgid "F♯%1"
+msgstr "F♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:84
 #: activities/piano_composition/PianoOctaveKeyboard.qml:89
 #: activities/piano_composition/PianoOctaveKeyboard.qml:94
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "F♯%1"
-msgstr "F♯%1"
+msgid "G♯%1"
+msgstr "G♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:85
 #: activities/piano_composition/PianoOctaveKeyboard.qml:90
 #: activities/piano_composition/PianoOctaveKeyboard.qml:95
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G♯%1"
-msgstr "G♯%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:86
-#: activities/piano_composition/PianoOctaveKeyboard.qml:91
-#: activities/piano_composition/PianoOctaveKeyboard.qml:96
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
 msgid "A♯%1"
 msgstr "A♯%1"
 
 #. Translators, D♭, E♭, G♭, A♭, B♭ are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, D♭4 is a D♭ note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:102
+#: activities/piano_composition/PianoOctaveKeyboard.qml:107
+#: activities/piano_composition/PianoOctaveKeyboard.qml:112
+#: activities/piano_composition/PianoOctaveKeyboard.qml:117
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "D♭%1"
+msgstr "D♭%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:103
 #: activities/piano_composition/PianoOctaveKeyboard.qml:108
 #: activities/piano_composition/PianoOctaveKeyboard.qml:113
 #: activities/piano_composition/PianoOctaveKeyboard.qml:118
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D♭%1"
-msgstr "D♭%1"
+msgid "E♭%1"
+msgstr "E♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:104
 #: activities/piano_composition/PianoOctaveKeyboard.qml:109
 #: activities/piano_composition/PianoOctaveKeyboard.qml:114
-#: activities/piano_composition/PianoOctaveKeyboard.qml:119
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "E♭%1"
-msgstr "E♭%1"
+msgid "G♭%1"
+msgstr "G♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:105
 #: activities/piano_composition/PianoOctaveKeyboard.qml:110
 #: activities/piano_composition/PianoOctaveKeyboard.qml:115
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G♭%1"
-msgstr "G♭%1"
+msgid "A♭%1"
+msgstr "A♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:106
 #: activities/piano_composition/PianoOctaveKeyboard.qml:111
 #: activities/piano_composition/PianoOctaveKeyboard.qml:116
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
-msgid "A♭%1"
-msgstr "A♭%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:107
-#: activities/piano_composition/PianoOctaveKeyboard.qml:112
-#: activities/piano_composition/PianoOctaveKeyboard.qml:117
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
 msgid "B♭%1"
@@ -21075,12 +21475,12 @@ msgctxt "ActivityInfo|"
 msgid "Backspace or Delete: undo"
 msgstr "Backspace (panaikinti) ar Delete: atšaukia veiksmą"
 
-#: activities/play_piano/PlayPiano.qml:172
+#: activities/play_piano/PlayPiano.qml:187
 msgctxt "PlayPiano|"
 msgid "Click on the piano keys that match the given notes."
 msgstr "Paspausk tuos pianino klavišus, kurie atitinka pateiktas natas."
 
-#: activities/play_piano/PlayPiano.qml:280
+#: activities/play_piano/PlayPiano.qml:300
 msgctxt "PlayPiano|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -21090,12 +21490,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/play_piano/PlayPiano.qml:281
+#: activities/play_piano/PlayPiano.qml:301
 msgctxt "PlayPiano|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/play_piano/PlayPiano.qml:282
+#: activities/play_piano/PlayPiano.qml:302
 msgctxt "PlayPiano|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -21174,7 +21574,7 @@ msgctxt "ActivityInfo|"
 msgid "Tab: Start or stop the metronome if it is visible"
 msgstr "Tab: Paleidžia ar sustabdo metronomą kai jį matai"
 
-#: activities/play_rhythm/PlayRhythm.qml:114
+#: activities/play_rhythm/PlayRhythm.qml:117
 msgctxt "PlayRhythm|"
 msgid ""
 "Use the metronome to estimate the time intervals and play the rhythm "
@@ -21183,7 +21583,7 @@ msgstr ""
 "Naudokis metronomu, kad apskaičiuotum laiko intervalus ir tinkamai sugrotum "
 "ritmą."
 
-#: activities/play_rhythm/PlayRhythm.qml:115
+#: activities/play_rhythm/PlayRhythm.qml:118
 msgctxt "PlayRhythm|"
 msgid ""
 "Follow the vertical line and click on the drum or press space key to play "
@@ -21192,7 +21592,7 @@ msgstr ""
 "Sek vertikalia linija ir spausk ant būgnelio arba spausk tarpo klavišą kad "
 "sugrotum teisingai ritmą."
 
-#: activities/play_rhythm/PlayRhythm.qml:360
+#: activities/play_rhythm/PlayRhythm.qml:376
 msgctxt "PlayRhythm|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
@@ -21202,12 +21602,12 @@ msgstr ""
 "nustatymai „Leisti pamokėles su garsu“ ar „Leisti audio efektus“ bus "
 "išjungti."
 
-#: activities/play_rhythm/PlayRhythm.qml:361
+#: activities/play_rhythm/PlayRhythm.qml:377
 msgctxt "PlayRhythm|"
 msgid "Quit"
 msgstr "Baigti"
 
-#: activities/play_rhythm/PlayRhythm.qml:362
+#: activities/play_rhythm/PlayRhythm.qml:378
 msgctxt "PlayRhythm|"
 msgid "Continue"
 msgstr "Tęsti"
@@ -21460,7 +21860,7 @@ msgstr ""
 "pasirink ją pagrindinėje / procedūroje / ciklo srityje, tada perjunk į "
 "instrukcijų sritį, pasirink naują instrukciją ir paspauskite tarpo klavišą."
 
-#: activities/programmingMaze/InstructionArea.qml:28
+#: activities/programmingMaze/InstructionArea.qml:27
 msgctxt "InstructionArea|"
 msgid "Choose the instructions"
 msgstr "Pasirink komandas"
@@ -21571,7 +21971,7 @@ msgid ""
 "label."
 msgstr ""
 "Kad persijungti tarp <b>Ciklas</b> ir <b>Pagrindinė funkcija</b> sričių ir "
-"pridėti kodą, paspausk ant <b>Ciklas</b> arba <b>Pagrindinė funkcija</b>"
+"pridėti kodą, paspausk ant <b>Ciklas</b> arba <b>Pagrindinė funkcija</b>žymę."
 
 #: activities/programmingMaze/ProgrammingMaze.qml:198
 #, qt-format
@@ -21670,7 +22070,7 @@ msgctxt "ActivityInfo|"
 msgid "Enter or Return: submit your answer"
 msgstr "Enter ar Įvedimo klavišas: pateikti atsakymą"
 
-#: activities/railroad/Railroad.qml:106
+#: activities/railroad/Railroad.qml:108
 msgctxt "Railroad|"
 msgid ""
 "Observe and remember the train before the timer ends and then drag the items "
@@ -21679,7 +22079,7 @@ msgstr ""
 "Stebėk ir įsimink traukinį prieš baigiantis laikui ir tada nutempk detales, "
 "kad sukonstruotum analogišką traukinį."
 
-#: activities/railroad/Railroad.qml:107
+#: activities/railroad/Railroad.qml:109
 msgctxt "Railroad|"
 msgid ""
 "If you forgot the model, you can click on the Hint button to view it again."
@@ -21716,7 +22116,7 @@ msgstr ""
 "Lentoje yra žodis. Žodžiai iš sąrašo pasirodys ir vėl išnyks. Ar duotas "
 "žodis buvo sąraše?"
 
-#: activities/readingh/Readingh.qml:299
+#: activities/readingh/Readingh.qml:301
 #, qt-format
 msgctxt "Readingh|"
 msgid ""
@@ -21726,12 +22126,12 @@ msgstr ""
 "<font color=\"#373737\">Patikrink, ar žodis<br/><br/></font><b><font color="
 "\"#315AAA\">%1</font></b><br/><font color=\"#373737\">buvo parodytas</font>"
 
-#: activities/readingh/Readingh.qml:351
+#: activities/readingh/Readingh.qml:353
 msgctxt "Readingh|"
 msgid "Yes, I saw it!"
 msgstr "Taip, aš jį pamačiau!"
 
-#: activities/readingh/Readingh.qml:372
+#: activities/readingh/Readingh.qml:374
 msgctxt "Readingh|"
 msgid "No, it was not there!"
 msgstr "Ne, jo ten nebuvo!"
@@ -21770,7 +22170,7 @@ msgstr "Nukopijuok piešinį"
 #: activities/redraw/ActivityInfo.qml:17
 msgctxt "ActivityInfo|"
 msgid "Draw perfectly the given image on the empty grid."
-msgstr "Tiksliai perpiešk duotą paveikslėlį tuščiuose langeliuose."
+msgstr "Tiksliai perpiešk paveikslėlį tuščiuose langeliuose."
 
 #. Help manual
 #: activities/redraw/ActivityInfo.qml:22
@@ -21882,7 +22282,7 @@ msgstr ""
 "mygtuką jam. Kad laimėtum, tau reikia įjungti visus elektrą naudojančius "
 "prietaisus, kol veikia visi generatoriai."
 
-#: activities/renewable_energy/RenewableEnergy.qml:280
+#: activities/renewable_energy/RenewableEnergy.qml:281
 msgctxt "RenewableEnergy|"
 msgid ""
 "Tux has come back from fishing on his boat. Bring the electrical system back "
@@ -21891,7 +22291,7 @@ msgstr ""
 "Tuksas grįžo iš žvejybos. Sutvarkyk elektros įrenginius, kad jo namuose "
 "užsidegtų šviesa."
 
-#: activities/renewable_energy/RenewableEnergy.qml:282
+#: activities/renewable_energy/RenewableEnergy.qml:283
 msgctxt "RenewableEnergy|"
 msgid ""
 "Click on different active elements: sun, cloud, dam, solar array, wind farm "
@@ -21901,7 +22301,7 @@ msgstr ""
 "saulės kolektorių, vėjo jėgainės ir transformatorių, kad aktyvuotum visą "
 "elektros sistemą."
 
-#: activities/renewable_energy/RenewableEnergy.qml:284
+#: activities/renewable_energy/RenewableEnergy.qml:285
 msgctxt "RenewableEnergy|"
 msgid ""
 "When the system is back up and Tux is in his home, push the light button for "
@@ -21912,14 +22312,14 @@ msgstr ""
 "mygtuką. Kad laimėtum, tau reikia įjungti visus elektrą naudojančius "
 "prietaisus, kol veikia visi generatoriai."
 
-#: activities/renewable_energy/RenewableEnergy.qml:286
+#: activities/renewable_energy/RenewableEnergy.qml:287
 msgctxt "RenewableEnergy|"
 msgid "Learn about an electrical system based on renewable energy. Enjoy."
 msgstr ""
 "Sužinok apie elektros įrenginius, kuriuos palaiko atsinaujinantys energijos "
 "šaltiniai. Mėgaukis."
 
-#: activities/renewable_energy/RenewableEnergy.qml:310
+#: activities/renewable_energy/RenewableEnergy.qml:311
 msgctxt "RenewableEnergy|"
 msgid ""
 "It is not possible to consume more electricity than what is produced. There "
@@ -22050,7 +22450,7 @@ msgstr ""
 msgctxt "ActivityInfo|"
 msgid ""
 "Learn the rules to read Roman numerals and practice converting numbers to "
-"and from arabic numerals. Click on the OK button to validate your answer."
+"and from arabic numerals. Click on the OK button to validate your answer."
 msgstr ""
 "Susipažink su romėniškų skaičių skaitymo taisyklėmis ir išmok juos pakeisti "
 "į arabiškus. Atsakymui patvirtinti spustelėk mygtuką OK."
@@ -22065,8 +22465,8 @@ msgctxt "ActivityInfo|"
 msgid "Letters: type roman numerals (with I, V, X, L, C, D and M)"
 msgstr "Raidės: įrašyk romėniškus skaičius (naudok I, V, X, L, C, D ir M)"
 
-#: activities/roman_numerals/RomanNumerals.qml:78
-#: activities/roman_numerals/RomanNumerals.qml:84
+#: activities/roman_numerals/RomanNumerals.qml:79
+#: activities/roman_numerals/RomanNumerals.qml:85
 msgctxt "RomanNumerals|"
 msgid ""
 "The roman numbers are all built out of these 7 numbers:\n"
@@ -22082,32 +22482,32 @@ msgstr ""
 "X ir L (dešimtys, 10 ir 50)\n"
 "C ir D (šimtai, 100 ir 500)"
 
-#: activities/roman_numerals/RomanNumerals.qml:79
-#: activities/roman_numerals/RomanNumerals.qml:91
-#: activities/roman_numerals/RomanNumerals.qml:103
-#: activities/roman_numerals/RomanNumerals.qml:115
-#: activities/roman_numerals/RomanNumerals.qml:127
+#: activities/roman_numerals/RomanNumerals.qml:80
+#: activities/roman_numerals/RomanNumerals.qml:92
+#: activities/roman_numerals/RomanNumerals.qml:104
+#: activities/roman_numerals/RomanNumerals.qml:116
+#: activities/roman_numerals/RomanNumerals.qml:128
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Convert the roman number %1 to arabic."
 msgstr "Užrašyk romėnišką skaičių %1 kaip arabišką."
 
-#: activities/roman_numerals/RomanNumerals.qml:85
-#: activities/roman_numerals/RomanNumerals.qml:97
-#: activities/roman_numerals/RomanNumerals.qml:109
-#: activities/roman_numerals/RomanNumerals.qml:121
-#: activities/roman_numerals/RomanNumerals.qml:133
-#: activities/roman_numerals/RomanNumerals.qml:139
-#: activities/roman_numerals/RomanNumerals.qml:145
-#: activities/roman_numerals/RomanNumerals.qml:151
-#: activities/roman_numerals/RomanNumerals.qml:157
+#: activities/roman_numerals/RomanNumerals.qml:86
+#: activities/roman_numerals/RomanNumerals.qml:98
+#: activities/roman_numerals/RomanNumerals.qml:110
+#: activities/roman_numerals/RomanNumerals.qml:122
+#: activities/roman_numerals/RomanNumerals.qml:134
+#: activities/roman_numerals/RomanNumerals.qml:140
+#: activities/roman_numerals/RomanNumerals.qml:146
+#: activities/roman_numerals/RomanNumerals.qml:152
+#: activities/roman_numerals/RomanNumerals.qml:158
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Convert the arabic number %1 to roman."
 msgstr "Užrašyk arabišką skaičių %1 kaip romėnišką."
 
-#: activities/roman_numerals/RomanNumerals.qml:90
-#: activities/roman_numerals/RomanNumerals.qml:96
+#: activities/roman_numerals/RomanNumerals.qml:91
+#: activities/roman_numerals/RomanNumerals.qml:97
 msgctxt "RomanNumerals|"
 msgid ""
 "All the units except 4 and 9 are built using sums of I and V:\n"
@@ -22120,8 +22520,8 @@ msgstr ""
 "4 ir 9 vienetai sudaromi atimant):\n"
 "IV (5-1) ir IX (10-1)."
 
-#: activities/roman_numerals/RomanNumerals.qml:102
-#: activities/roman_numerals/RomanNumerals.qml:108
+#: activities/roman_numerals/RomanNumerals.qml:103
+#: activities/roman_numerals/RomanNumerals.qml:109
 msgctxt "RomanNumerals|"
 msgid ""
 "All the tens except 40 and 90 are built using sums of X and L:\n"
@@ -22134,8 +22534,8 @@ msgstr ""
 "40 ir 90 dešimtys sudaromos atimant:\n"
 "XL (10 atėmus iš 50) ir XC (10 atėmus iš 100)."
 
-#: activities/roman_numerals/RomanNumerals.qml:114
-#: activities/roman_numerals/RomanNumerals.qml:120
+#: activities/roman_numerals/RomanNumerals.qml:115
+#: activities/roman_numerals/RomanNumerals.qml:121
 msgctxt "RomanNumerals|"
 msgid ""
 "All the hundreds except 400 and 900 are built using sums of C and D:\n"
@@ -22148,8 +22548,8 @@ msgstr ""
 "400 ir 900 šimtai susidaro atimant:\n"
 "CD (100 atėmus iš 500) ir CM (100 atėmus iš 1000)"
 
-#: activities/roman_numerals/RomanNumerals.qml:126
-#: activities/roman_numerals/RomanNumerals.qml:132
+#: activities/roman_numerals/RomanNumerals.qml:127
+#: activities/roman_numerals/RomanNumerals.qml:133
 msgctxt "RomanNumerals|"
 msgid ""
 "Sums of M are used for building thousands: M, MM, MMM.\n"
@@ -22165,7 +22565,7 @@ msgstr ""
 "reikia taip pat atlikti atimties veiksmus. Kita vertus, tokia daryba "
 "baigiasi ties romėnišku skaičiumi 3999 (MMMCMXCIX)."
 
-#: activities/roman_numerals/RomanNumerals.qml:138
+#: activities/roman_numerals/RomanNumerals.qml:139
 msgctxt "RomanNumerals|"
 msgid ""
 "Now you know the rules, you can read and write numbers in roman numerals."
@@ -22173,13 +22573,13 @@ msgstr ""
 "Dabar jau žinai taisykles, taigi gali skaityti ir rašyti skaičius "
 "romėniškais skaitmenimis."
 
-#: activities/roman_numerals/RomanNumerals.qml:367
+#: activities/roman_numerals/RomanNumerals.qml:378
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Roman value: %1"
 msgstr "Romėniškas skaičius: %1"
 
-#: activities/roman_numerals/RomanNumerals.qml:368
+#: activities/roman_numerals/RomanNumerals.qml:379
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Arabic value: %1"
@@ -23194,7 +23594,7 @@ msgctxt "Data|"
 msgid "Maximum 30 pieces of candy and 6 kids, possible rest."
 msgstr "Daugiausiai 30 saldainių, 6 vaikai, dalyba su liekana."
 
-#: activities/share/share.js:97
+#: activities/share/share.js:98
 #, qt-format
 msgctxt ""
 "share|First part of Place %n boy(s) and %n girl(s) in the center. Then split "
@@ -23206,7 +23606,7 @@ msgstr[1] "Patalpink %n berniukus "
 msgstr[2] "Patalpink %n berniukų "
 msgstr[3] "Patalpink %n berniuką "
 
-#: activities/share/share.js:101
+#: activities/share/share.js:102
 #, qt-format
 msgctxt ""
 "share|Second part of Place %n boy(s) and %n girl(s) in the center. Then "
@@ -23218,7 +23618,7 @@ msgstr[1] "ir %n mergaites į pagrindinę sritį. "
 msgstr[2] "ir %n mergaičių į pagrindinę sritį. "
 msgstr[3] "ir %n mergaitę į pagrindinę sritį. "
 
-#: activities/share/share.js:105
+#: activities/share/share.js:106
 #, qt-format
 msgctxt ""
 "share|Third part of Place %n boy(s) and %n girl(s) in the center. Then split "
@@ -23230,7 +23630,7 @@ msgstr[1] "Tada padalink jiems %n saldainius po lygiai."
 msgstr[2] "Tada padalink jiems %n saldainių po lygiai."
 msgstr[3] "Tuomet padalink jiems %n saldainį po lygiai."
 
-#: activities/share/Share.qml:340
+#: activities/share/Share.qml:348
 #, qt-format
 msgctxt "Share|"
 msgid "You can't put more than %1 pieces of candy in the same rectangle"
@@ -24487,25 +24887,25 @@ msgid "How large is Neptune compared to other planets in the Solar System?"
 msgstr ""
 "Kokio dydžio yra Neptūnas palyginus su kitomis Saulės sistemos planetomis?"
 
-#: activities/solar_system/QuizScreen.qml:199
+#: activities/solar_system/QuizScreen.qml:201
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "Accuracy: %1%"
 msgstr "Tikslumas: %1%"
 
-#: activities/solar_system/QuizScreen.qml:239
+#: activities/solar_system/QuizScreen.qml:241
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "%1%"
 msgstr "%1%"
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "Your final score is: <font color=\"#3bb0de\">%1%</font>.<br><br>%2"
 msgstr "Tavo galutinis balas yra:<font color=\"#3bb0de\">%1%</font>.<br><br>%2"
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 msgctxt "QuizScreen|"
 msgid ""
 "You should score above 90% to become a Solar System expert!<br>Retry to test "
@@ -24516,7 +24916,7 @@ msgstr ""
 "<br>Bandyk dar kartą patikrinti savo žinias arba pasipraktikuok mokymosi "
 "veiksenoje, kad daugiau išmoktum apie Saulės sistemą."
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 msgctxt "QuizScreen|"
 msgid ""
 "Great! You can replay the assessment to test your knowledge on more "
@@ -24525,7 +24925,7 @@ msgstr ""
 "Puiku! Tu gali dar kartą pakartoti testą, kad patikrintum savo žinias kitais "
 "klausimais."
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -24541,17 +24941,17 @@ msgstr ""
 "Testavimo veiksena</b> – čia tu turėsi atsakyti į klausimus ir pasitikrinsi "
 "savo žinias apie Saulės sistemą."
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 msgctxt "SolarSystem|"
 msgid "Assessment"
 msgstr "Įvertinimas"
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 msgctxt "SolarSystem|"
 msgid "Learning"
 msgstr "Mokymasis"
 
-#: activities/solar_system/SolarSystem.qml:163
+#: activities/solar_system/SolarSystem.qml:164
 msgctxt "SolarSystem|"
 msgid ""
 "Click on the Sun or any planet to reveal questions. Each question has 4 "
@@ -24560,7 +24960,7 @@ msgstr ""
 "Paspausk ant Saulės ar bet kurios planetos ir pamatysi klausimus. Kiekvienas "
 "klausimas turės keturis atsakymų variantus, iš kurių vienas yra teisingas."
 
-#: activities/solar_system/SolarSystem.qml:164
+#: activities/solar_system/SolarSystem.qml:165
 msgctxt "SolarSystem|"
 msgid ""
 "After a planet is clicked, the Closeness meter at the bottom-right corner of "
@@ -24574,7 +24974,7 @@ msgstr ""
 "duoda 1%. Bandyk vėl, kol pasieksi 100%, sekdamas tikslumo matuoklio "
 "rodmenis, arba spustelk ant užuominos (patarimo) mygtuko."
 
-#: activities/solar_system/SolarSystem.qml:169
+#: activities/solar_system/SolarSystem.qml:170
 msgctxt "SolarSystem|"
 msgid ""
 "There are 20 questions initially with 4 options each. The progress bar at "
@@ -24584,7 +24984,7 @@ msgstr ""
 "Pažangos juosta ekrano dešinės apačioje rodo tau tavo surinktą procentinį "
 "balą."
 
-#: activities/solar_system/SolarSystem.qml:170
+#: activities/solar_system/SolarSystem.qml:171
 msgctxt "SolarSystem|"
 msgid ""
 "If your answer is correct, your score increases.<br>If your answer is wrong, "
@@ -24598,7 +24998,7 @@ msgstr ""
 "<br>Daugiausiai bus užduoti 25 klausimai, po kurių nebebus užduodama "
 "papildomų klausimų."
 
-#: activities/solar_system/SolarSystem.qml:171
+#: activities/solar_system/SolarSystem.qml:172
 msgctxt "SolarSystem|"
 msgid ""
 "You should score above 90% to pass the assessment and become a Solar System "
@@ -24607,7 +25007,7 @@ msgstr ""
 "Tu turėtum surinkti virš 90%, kad išlaikytum testą ir taptum Saulės sistemos "
 "ekspertu!"
 
-#: activities/solar_system/SolarSystem.qml:353
+#: activities/solar_system/SolarSystem.qml:354
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -24617,7 +25017,7 @@ msgstr ""
 "1. Kuo <b>toliau</b> planeta yra nuo Saulės, tuo <b>žemesnė</b> jos "
 "temperatūra.<br><font color=\"#3bb0de\">%1</font>"
 
-#: activities/solar_system/SolarSystem.qml:354
+#: activities/solar_system/SolarSystem.qml:355
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -24628,7 +25028,7 @@ msgstr ""
 "<br><font color=\"#3bb0de\">%1</font>"
 
 #. find an equivalent rhyme in your language where the first letter of each word corresponds to the first letter of the planet in proper sequence
-#: activities/solar_system/SolarSystem.qml:357
+#: activities/solar_system/SolarSystem.qml:358
 msgctxt "SolarSystem|"
 msgid ""
 "3. Always remember this rhyme to learn the position of planets, examine the "
@@ -24640,12 +25040,12 @@ msgstr ""
 "<b>S</b>varbu <b>U</b>žtikt <b>N</b>aujų planetų.<br><font color=\"#3bb0de\">"
 "%1</font>"
 
-#: activities/solar_system/SolarSystem.qml:359
+#: activities/solar_system/SolarSystem.qml:360
 msgctxt "SolarSystem|"
 msgid "Hint"
 msgstr "Užuomina"
 
-#: activities/solar_system/SolarSystem.qml:367
+#: activities/solar_system/SolarSystem.qml:368
 msgctxt "SolarSystem|"
 msgid "View the solar system"
 msgstr "Pažvelk į Saulės sistemą"
@@ -24795,7 +25195,7 @@ msgid ""
 "Press the + button to increase the velocity, or the - button to decrease the "
 "velocity."
 msgstr ""
-"Spustelk „+“ piktogramą šalia variklio, kad padidintum greitį bei „- “, kad "
+"Spustelk „+“ piktogramą šalia variklio, kad padidintum greitį bei „-“, kad "
 "sumažintum."
 
 #: activities/submarine/submarine.js:27
@@ -24928,11 +25328,6 @@ msgstr "Dėlionę pabaigti reikia kantrybės ir loginių įgūdžių."
 
 #. Help manual
 #: activities/sudoku/ActivityInfo.qml:24
-#, fuzzy
-#| msgctxt "ActivityInfo|"
-#| msgid ""
-#| "Select a number or a symbol on the left and click on its target position. "
-#| "GCompris will not let you enter invalid answer."
 msgctxt "ActivityInfo|"
 msgid ""
 "Select a number or a symbol in the list and click on its target position. "
@@ -25010,12 +25405,12 @@ msgstr ""
 "pažymimi kaip einamieji ir būsimi spėjimai, kol nenuimsi nuo jų žymes dukart "
 "juos paspausdamas ar patapšnodamas."
 
-#: activities/superbrain/Superbrain.qml:139
+#: activities/superbrain/Superbrain.qml:141
 msgctxt "Superbrain|"
 msgid "This item is well placed."
 msgstr "Šis objektas padėtas į tinkamą vietą."
 
-#: activities/superbrain/Superbrain.qml:141
+#: activities/superbrain/Superbrain.qml:143
 msgctxt "Superbrain|"
 msgid "This item is misplaced."
 msgstr "Šis objektas čia netinka."
@@ -25140,6 +25535,68 @@ msgid "Maximum value: 500000."
 msgstr "Didžiausia reikšmė: 500000."
 
 #. Activity title
+#: activities/tens_complement_calculate/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Calculate with ten's complement"
+msgstr "Skaičiuok su dešimties dėmenimis"
+
+#. Help title
+#: activities/tens_complement_calculate/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid ""
+"Swap the numbers to create pairs equal to ten and input the answer of the "
+"final sum."
+msgstr ""
+"Apkeisk skaičius, kad sukurtum poras, lygias dešimt, ir įvesk atsakymą – "
+"galutinę sumą."
+
+#. Help goal
+#: activities/tens_complement_calculate/ActivityInfo.qml:19
+msgctxt "ActivityInfo|"
+msgid ""
+"Learn to use ten's complement to optimize the order of numbers in an "
+"operation and calculate the result."
+msgstr ""
+"Išmok naudoti dešimties dėmenis, kad supaprastintum skaičių išdėstymą "
+"veiksme, ir suskaičiuok."
+
+#. Help prerequisite
+#: activities/tens_complement_calculate/ActivityInfo.qml:21
+#: activities/tens_complement_swap/ActivityInfo.qml:21
+msgctxt "ActivityInfo|"
+msgid "Numbers from 1 to 30 and additions."
+msgstr "Skaičiai nuo 1 iki 30 ir sudėties veiksmai."
+
+#. Help manual
+#: activities/tens_complement_calculate/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Create pairs of numbers equal to ten within each parentheses. Select a "
+"number, then select another number of the same operation to swap their "
+"position. On each line, input the final sum in last box. When all the lines "
+"are completed, press the OK button to validate the answers. If some answers "
+"are incorrect, a cross icon will appear on the corresponding lines. Correct "
+"the errors, then press the OK button again."
+msgstr ""
+"Sukurk poras skaičių, lygių dešimt. Pasirinkęs vieną skaičių, pasirink kitą "
+"to paties veiksmo skaičių, kad apkeistum juos vietomis. Kiekvienoje eilutėje "
+"paskutiniame laukelyje įvesk galutinę sumą. Kai visos eilutės bus užbaigtos, "
+"paspausk „OK“ mygtuką, kad pateiktum savo atsakymus. Jeigu kai kurie "
+"atsakymai bus neteisingi, bus parodytas kryžiukas prie atitinkamos eilutės. "
+"Ištaisęs klaidas, gali vėl paspausti „OK“ mygtuką."
+
+#: activities/tens_complement_calculate/resource/1/Data.qml:36
+msgctxt "Data|"
+msgid "1 pair to make from 3 numbers."
+msgstr "1 pora iš 3 skaičių."
+
+#: activities/tens_complement_calculate/resource/2/Data.qml:9
+#: activities/tens_complement_swap/resource/2/Data.qml:9
+msgctxt "Data|"
+msgid "2 pairs to make from 5 numbers."
+msgstr "2 poros iš 5 skaičių."
+
+#. Activity title
 #: activities/tens_complement_find/ActivityInfo.qml:14
 msgctxt "ActivityInfo|"
 msgid "Find ten's complement"
@@ -25226,12 +25683,6 @@ msgstr ""
 "Išmok naudoti dešimties dėmenis, kad supaprastintum skaičių išdėstymą "
 "veiksme."
 
-#. Help prerequisite
-#: activities/tens_complement_swap/ActivityInfo.qml:21
-msgctxt "ActivityInfo|"
-msgid "Numbers from 1 to 30 and additions."
-msgstr "Skaičiai nuo 1 iki 30 ir sudėties veiksmai."
-
 #. Help manual
 #: activities/tens_complement_swap/ActivityInfo.qml:23
 msgctxt "ActivityInfo|"
@@ -25252,11 +25703,6 @@ msgstr ""
 msgctxt "Data|"
 msgid "2 pairs to make from 4 numbers."
 msgstr "2 poros iš 4 skaičių."
-
-#: activities/tens_complement_swap/resource/2/Data.qml:9
-msgctxt "Data|"
-msgid "2 pairs to make from 5 numbers."
-msgstr "2 poros iš 5 skaičių."
 
 #: activities/tens_complement_swap/resource/3/Data.qml:9
 msgctxt "Data|"
@@ -25426,7 +25872,7 @@ msgstr ""
 "ir atliekų šalinimo stoties, kad iš naujo aktyvuotum visą vandens sistemą. "
 "Kuomet sistema veikia, o Tuksas yra duše – nuspausk jam dušo mygtuką."
 
-#: activities/watercycle/Watercycle.qml:81
+#: activities/watercycle/Watercycle.qml:80
 msgctxt "Watercycle|"
 msgid ""
 "The sun is the main component of the water cycle. Click on the sun to start "
@@ -25435,12 +25881,12 @@ msgstr ""
 "Saulė yra pagrindinis vandens ciklo elementas. Paspausk ant saulės, "
 "norėdamas įjungti vandens apytakos ratą."
 
-#: activities/watercycle/Watercycle.qml:82
+#: activities/watercycle/Watercycle.qml:81
 msgctxt "Watercycle|"
 msgid "As the sun rises, the water of the sea starts heating and evaporates."
 msgstr "Kuomet saulė pakyla, jūros vanduo pradeda šilti ir garuoti."
 
-#: activities/watercycle/Watercycle.qml:83
+#: activities/watercycle/Watercycle.qml:82
 msgctxt "Watercycle|"
 msgid ""
 "Water vapor condenses to form clouds and when clouds become heavy, it rains. "
@@ -25449,7 +25895,7 @@ msgstr ""
 "Vandens garai kondensuojasi, suformuodami debesis. Kai šie debesys tampa "
 "sunkūs, pradeda lyti. Paspausk ant debesies."
 
-#: activities/watercycle/Watercycle.qml:84
+#: activities/watercycle/Watercycle.qml:83
 msgctxt "Watercycle|"
 msgid ""
 "The rain causes rivers to swell up and this water is transported to us via "
@@ -25459,7 +25905,7 @@ msgstr ""
 "Lietus priverčia upes patvinti, o vandens bokštų siurbliai šį vandenį "
 "susiurbia. Paspausk ant vandens siurblio, ir  tiek vandenį gyventojams."
 
-#: activities/watercycle/Watercycle.qml:86
+#: activities/watercycle/Watercycle.qml:85
 msgctxt "Watercycle|"
 msgid ""
 "See the tower filled with water. Activate the sewage treatment station by "
@@ -25468,18 +25914,18 @@ msgstr ""
 "Pažiūrėk į bokštą, pripildytą vandens. Aktyvuok atliekų tvarkymo stotį "
 "paspausdamas ant jos."
 
-#: activities/watercycle/Watercycle.qml:87
+#: activities/watercycle/Watercycle.qml:86
 msgctxt "Watercycle|"
 msgid "Great, click on the shower, as Tux arrives home."
 msgstr "Puiku. Paspausk ant dušo, Tuksui atvykus į namus."
 
-#: activities/watercycle/Watercycle.qml:88
+#: activities/watercycle/Watercycle.qml:87
 msgctxt "Watercycle|"
 msgid ""
 "Fantastic, you have completed the water cycle. You can continue playing."
 msgstr "Nuostabu, tu užbaigei vandens apytakos ratą! Gali žaisti toliau."
 
-#: activities/watercycle/Watercycle.qml:115
+#: activities/watercycle/Watercycle.qml:114
 msgctxt "Watercycle|"
 msgid ""
 "The water cycle (also known as the hydrologic cycle) is the journey water "
@@ -25491,7 +25937,7 @@ msgstr ""
 "atgalios. Saulės šiluma teikia energiją, kurios dėka vanduo išgaruoja iš "
 "vandens telkinių, tokių kaip vandenynai."
 
-#: activities/watercycle/Watercycle.qml:118
+#: activities/watercycle/Watercycle.qml:117
 msgctxt "Watercycle|"
 msgid ""
 "Plants also lose water to the air through transpiration. The water vapor "
@@ -25503,7 +25949,7 @@ msgstr ""
 "Kai debesys susitinka su vėsiu oru, susidaro krituliai, kurie iškrenta "
 "lietumi."
 
-#: activities/watercycle/Watercycle.qml:121
+#: activities/watercycle/Watercycle.qml:120
 msgctxt "Watercycle|"
 msgid ""
 "Some of the water is trapped between rock or clay layers, called "
@@ -25514,7 +25960,7 @@ msgstr ""
 "gruntiniu vandeniu. Tačiau daugiausiai vandens nuteka, ir galiausiai jis per "
 "upes vėl grįžta į jūras."
 
-#: activities/watercycle/Watercycle.qml:123
+#: activities/watercycle/Watercycle.qml:122
 msgctxt "Watercycle|"
 msgid ""
 "Your goal is to complete the water cycle before Tux reaches home. Click on "
@@ -25559,36 +26005,51 @@ msgid "Type the complete word as it falls, before it reaches the ground."
 msgstr ""
 "Su klaviatūra surink krentantį žodį, kol jis dar nenusileido ant žemės."
 
-#: core/ChangeLog.qml:30 core/ChangeLog.qml:58 core/ChangeLog.qml:93
-#: core/ChangeLog.qml:96 core/ChangeLog.qml:102
+#: core/ChangeLog.qml:30 core/ChangeLog.qml:36 core/ChangeLog.qml:65
+#: core/ChangeLog.qml:100 core/ChangeLog.qml:103 core/ChangeLog.qml:109
 msgctxt "ChangeLog|"
 msgid "Many usability improvements"
 msgstr "Daug įvairių pagerinimų"
 
-#: core/ChangeLog.qml:31 core/ChangeLog.qml:39 core/ChangeLog.qml:46
-#: core/ChangeLog.qml:59 core/ChangeLog.qml:77 core/ChangeLog.qml:92
-#: core/ChangeLog.qml:97 core/ChangeLog.qml:103
-msgctxt "ChangeLog|"
-msgid "Many new images"
-msgstr "Daug naujų paveikslėlių"
-
-#: core/ChangeLog.qml:32 core/ChangeLog.qml:40 core/ChangeLog.qml:47
-#: core/ChangeLog.qml:60 core/ChangeLog.qml:98 core/ChangeLog.qml:104
+#: core/ChangeLog.qml:31 core/ChangeLog.qml:38 core/ChangeLog.qml:47
+#: core/ChangeLog.qml:54 core/ChangeLog.qml:67 core/ChangeLog.qml:105
+#: core/ChangeLog.qml:111
 msgctxt "ChangeLog|"
 msgid "Many bug fixes"
 msgstr "Daug klaidų pataisymų."
 
-#: core/ChangeLog.qml:37
+#: core/ChangeLog.qml:35
+msgctxt "ChangeLog|"
+msgid "Translations added for Bulgarian, Galician and Swahili"
+msgstr "Pridėti vertimai į bulgarų, galų ir suahilių kalbas."
+
+#: core/ChangeLog.qml:37 core/ChangeLog.qml:46 core/ChangeLog.qml:53
+#: core/ChangeLog.qml:66 core/ChangeLog.qml:84 core/ChangeLog.qml:99
+#: core/ChangeLog.qml:104 core/ChangeLog.qml:110
+msgctxt "ChangeLog|"
+msgid "Many new images"
+msgstr "Daug naujų paveikslėlių"
+
+#: core/ChangeLog.qml:39
+msgctxt "ChangeLog|"
+msgid ""
+"New command-line option to directly start an activity at a specific level (--"
+"start-level level, to be used with --launch activity)"
+msgstr ""
+"Nauja komandinės eilutės parinktis  (--start-level lygis, naudojama su --"
+"launch pamokėlė), skirta paleisti GCompris pamokėlę tam tikrame lygyje"
+
+#: core/ChangeLog.qml:44
 msgctxt "ChangeLog|"
 msgid "Translations added for Arabic and Esperanto"
 msgstr "Pridėti vertimai į arabų ir esperanto kalbas"
 
-#: core/ChangeLog.qml:38 core/ChangeLog.qml:45
+#: core/ChangeLog.qml:45 core/ChangeLog.qml:52
 msgctxt "ChangeLog|"
 msgid "Many translation updates"
 msgstr "Daug vertimo atnaujinimų."
 
-#: core/ChangeLog.qml:44
+#: core/ChangeLog.qml:51
 msgctxt "ChangeLog|"
 msgid ""
 "New command-line option (--difficulty {value|min-max}) to start GCompris at "
@@ -25597,22 +26058,22 @@ msgstr ""
 "Nauja komandinės eilutės parinktis (--difficulty {value|min-max}), skirta "
 "paleisti GCompris tam tikrame lygyje"
 
-#: core/ChangeLog.qml:51
+#: core/ChangeLog.qml:58
 msgctxt "ChangeLog|"
 msgid "Fix issue in comparator activity"
 msgstr "Ištaisyta klaida pamokėlėje „Palygink skaičius“"
 
-#: core/ChangeLog.qml:55
+#: core/ChangeLog.qml:62
 msgctxt "ChangeLog|"
 msgid "Map of Spain added for geography activity"
 msgstr "Pridėtas Ispanijos žemėlapis geografijos pamokėlėse"
 
-#: core/ChangeLog.qml:56
+#: core/ChangeLog.qml:63
 msgctxt "ChangeLog|"
 msgid "Voices added for Ukrainian"
 msgstr "Pridėtas ukrainiečių kalbos įgarsinimas"
 
-#: core/ChangeLog.qml:57
+#: core/ChangeLog.qml:64
 msgctxt "ChangeLog|"
 msgid ""
 "New command-line option to list all the activities and start on a specific "
@@ -25621,7 +26082,7 @@ msgstr ""
 "Naujas pasirinkimas komandinėje eilutėje norint gauti visų pamokėlių sąrašą "
 "ir konkrečiai pradėti vieną iš jų"
 
-#: core/ChangeLog.qml:64
+#: core/ChangeLog.qml:71
 msgctxt "ChangeLog|"
 msgid ""
 "Reduce the size of the packages for all platforms and of the external word "
@@ -25629,32 +26090,32 @@ msgid ""
 msgstr ""
 "Sumažintas visų platformų pakuočių ir išorinių žodžių vaizdų rinkinio dydis"
 
-#: core/ChangeLog.qml:65
+#: core/ChangeLog.qml:72
 msgctxt "ChangeLog|"
 msgid "Improve images quality in several activities"
 msgstr "Keliose veiklose pagerinta vaizdų kokybė"
 
-#: core/ChangeLog.qml:66
+#: core/ChangeLog.qml:73
 msgctxt "ChangeLog|"
 msgid "Fix some transitions in renewable_energy/watercycle on some platforms"
 msgstr ""
 "Kai kuriose platformose pataisyti kai kurie perėjimai atsinaujinanti "
 "energija / vandens ciklas"
 
-#: core/ChangeLog.qml:67
+#: core/ChangeLog.qml:74
 msgctxt "ChangeLog|"
 msgid "Fix dead keys ignored on Linux for typing activities"
 msgstr ""
 "Pataisyti neaktyvūs klavišai, kurie buvo ignoruojami Linux rašymo pamokėlėse"
 
-#: core/ChangeLog.qml:68
+#: core/ChangeLog.qml:75
 msgctxt "ChangeLog|"
 msgid "Fix level reset when changing level manually in Logical associations"
 msgstr ""
 "Pataisytas lygio atstatymas rankiniu būdu keičiant lygį loginiuose "
 "susiejimuose"
 
-#: core/ChangeLog.qml:72
+#: core/ChangeLog.qml:79
 msgctxt "ChangeLog|"
 msgid ""
 "Fix Alphabet sequence, Even and odd numbers and Numbers in order activities"
@@ -25662,102 +26123,102 @@ msgstr ""
 "Pataisyta abėcėlės seka, lyginių ir nelyginių skaičius bei skaičių rūšiavimo "
 "pamokėlėse"
 
-#: core/ChangeLog.qml:76 core/ChangeLog.qml:84
+#: core/ChangeLog.qml:83 core/ChangeLog.qml:91
 msgctxt "ChangeLog|"
 msgid "Several bug fixes"
 msgstr "Ištaisyta keletas klaidų"
 
-#: core/ChangeLog.qml:78
+#: core/ChangeLog.qml:85
 msgctxt "ChangeLog|"
 msgid "Translation updated for Russian"
 msgstr "Atnaujintas vertimas į rusų kalbą."
 
-#: core/ChangeLog.qml:79
+#: core/ChangeLog.qml:86
 msgctxt "ChangeLog|"
 msgid "New voices for Norwegian Nynorsk"
 msgstr "Naujas Norvegų Nynorsk įgarsinimas"
 
-#: core/ChangeLog.qml:83
+#: core/ChangeLog.qml:90
 msgctxt "ChangeLog|"
 msgid "Translations added for Breton, Czech and Macedonian"
 msgstr "Pridėtas vertimas į bretonų, čekų ir makedoniečių kalbas."
 
-#: core/ChangeLog.qml:88
+#: core/ChangeLog.qml:95
 msgctxt "ChangeLog|"
 msgid "Translation added for Azerbaijani"
 msgstr "Pridėtas vertimas į azerbaidžaniečių kalbą."
 
-#: core/ChangeLog.qml:89
+#: core/ChangeLog.qml:96
 msgctxt "ChangeLog|"
 msgid "New maps and update of the maps for geography activities"
 msgstr "Nauji ir atnaujinti žemėlapiai geografijos pamokėlėse"
 
-#: core/ChangeLog.qml:90
+#: core/ChangeLog.qml:97
 msgctxt "ChangeLog|"
 msgid ""
 "New dataset containing loops operations for programming maze, and make "
 "tutorial images translated"
 msgstr "Naujas duomenų rinkinys, su ciklo operacijomis programuoti labirintą"
 
-#: core/ChangeLog.qml:91
+#: core/ChangeLog.qml:98
 msgctxt "ChangeLog|"
 msgid ""
 "Addition of a level to teach voltage source loop in analog electricity "
 "activity"
 msgstr "Nauji lygiai  mokytis analoginės elektros grandinių"
 
-#: core/ChangeLog.qml:101
+#: core/ChangeLog.qml:108
 msgctxt "ChangeLog|"
 msgid "New Activity Settings menu, with dataset selection"
 msgstr "Naujas pamokėlės nustatymų langas su duomenų pasirinkimu"
 
-#: core/ChangeLog.qml:107
+#: core/ChangeLog.qml:114
 msgctxt "ChangeLog|"
 msgid "New sub-categories to organize activities"
 msgstr "Naujos pakategorės, skirtos sisteminti pamokėlėms"
 
-#: core/ChangeLog.qml:108
+#: core/ChangeLog.qml:115
 msgctxt "ChangeLog|"
 msgid "Translation added for Macedonian."
 msgstr "Pridėtas vertimas į makedoniečių kalbą."
 
-#: core/ChangeLog.qml:109
+#: core/ChangeLog.qml:116
 msgctxt "ChangeLog|"
 msgid "New activities Programming Maze and Baby Tangram"
 msgstr "Naujos pamokėlės Programavimo Labirintas ir Mažoji Tangrama"
 
-#: core/ChangeLog.qml:110
+#: core/ChangeLog.qml:117
 msgctxt "ChangeLog|"
 msgid "New background music and volume settings."
 msgstr "Nauji foninės muzikos ir garso nustatymai."
 
-#: core/ChangeLog.qml:111
+#: core/ChangeLog.qml:118
 msgctxt "ChangeLog|"
 msgid "New speed setting in several activities."
 msgstr "Nauji greičio nustatymai kai kuriose pamokėlėse."
 
-#: core/ChangeLog.qml:112
+#: core/ChangeLog.qml:119
 msgctxt "ChangeLog|"
 msgid "New option in chess to display captured pieces."
 msgstr "Nauja galimybė šachmatų žaidime, rodanti nukirstas figūras."
 
-#: core/ChangeLog.qml:113
+#: core/ChangeLog.qml:120
 msgctxt "ChangeLog|"
 msgid "New images in Colors, Advanced colors and Target game."
 msgstr ""
 "Nauji paveikslėliai Spalvų, Ypatingų spalvų bei Taikinio (Target) žaidimams."
 
-#: core/ChangeLog.qml:114
+#: core/ChangeLog.qml:121
 msgctxt "ChangeLog|"
 msgid "New voices for US English."
 msgstr "Nauji įgarsinimai amerikiečių anglų kalba."
 
-#: core/ChangeLog.qml:115 core/ChangeLog.qml:123
+#: core/ChangeLog.qml:122 core/ChangeLog.qml:130
 msgctxt "ChangeLog|"
 msgid "Many little fixes and improvements."
 msgstr "Daugybė smulkių pataisymų ir pagerinimų."
 
-#: core/ChangeLog.qml:116
+#: core/ChangeLog.qml:123
 msgctxt "ChangeLog|"
 msgid ""
 "Translation updated for multiple languages (Breton, Brazilian Portuguese, "
@@ -25766,19 +26227,19 @@ msgstr ""
 "Atnaujintas vertimas į daugybę kalbų (bretonų, brazilišką portugalų, "
 "suomių...)"
 
-#: core/ChangeLog.qml:117
+#: core/ChangeLog.qml:124
 msgctxt "ChangeLog|"
 msgid "Add Russian dataset for Click on letter activity."
 msgstr ""
 "Pridėtas rusiškų raidžių ir garsų rinkinys pamokėlėms „Spustelk ant "
 "išgirstos raidės“."
 
-#: core/ChangeLog.qml:118
+#: core/ChangeLog.qml:125
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in Dutch."
 msgstr "Kalbos pamokėlė jau yra ir olandų kalba."
 
-#: core/ChangeLog.qml:119
+#: core/ChangeLog.qml:126
 msgctxt "ChangeLog|"
 msgid ""
 "Merge Norwegian counties Nord-Trøndelag and Sør-Trøndelag into Trøndelag in "
@@ -25787,17 +26248,17 @@ msgstr ""
 "Sujungtos Norvegų apygardos Nord- Trøndelag ir Sør-Trøndelag į vieną "
 "apygardą geo-šalies pamokos metu."
 
-#: core/ChangeLog.qml:120
+#: core/ChangeLog.qml:127
 msgctxt "ChangeLog|"
 msgid "Fix in braille activities where the cells start at 1, not 0."
 msgstr "Taisymai brailio pamokėlėse, kur elementas prasideda ties 1, ne 0."
 
-#: core/ChangeLog.qml:121
+#: core/ChangeLog.qml:128
 msgctxt "ChangeLog|"
 msgid "Translation added for Basque, Hungarian and Malayalam."
 msgstr "Pridėtį vertimai į baskų, malajalių ir vengrų kalbas."
 
-#: core/ChangeLog.qml:122
+#: core/ChangeLog.qml:129
 msgctxt "ChangeLog|"
 msgid ""
 "Loading/saving of creations (Baby Wordprocessor, Balance Box and Piano "
@@ -25806,47 +26267,47 @@ msgstr ""
 "Sukurtų darbų įkėlimas/įrašymas (Tekstų rašyklė, Svarstyklės ir Pianino "
 "kompozicija)."
 
-#: core/ChangeLog.qml:123
+#: core/ChangeLog.qml:130
 msgctxt "ChangeLog|"
 msgid "Translations added for Scottish Gaelic."
 msgstr "Pridėtas vertimas į škotų galų kalbą."
 
-#: core/ChangeLog.qml:124
+#: core/ChangeLog.qml:131
 msgctxt "ChangeLog|"
 msgid "License page added in configuration."
 msgstr "Nustatymuose pridėtas licencijos puslapis."
 
-#: core/ChangeLog.qml:124
+#: core/ChangeLog.qml:131
 msgctxt "ChangeLog|"
 msgid "Multiple changes on layouts to improve the ergonomy."
 msgstr "Patogesnis langų išdėstymas."
 
-#: core/ChangeLog.qml:125
+#: core/ChangeLog.qml:132
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in Polish, Swedish and Ukrainian."
 msgstr "Kalbos pamokėlė jau pateikiama lenkų, švedų bei ukrainiečių kalbomis."
 
-#: core/ChangeLog.qml:126
+#: core/ChangeLog.qml:133
 msgctxt "ChangeLog|"
 msgid "Search feature."
 msgstr "Paieškos galimybė."
 
-#: core/ChangeLog.qml:127
+#: core/ChangeLog.qml:134
 msgctxt "ChangeLog|"
 msgid "A Changelog."
 msgstr "Patobulinimų žurnalas."
 
-#: core/ChangeLog.qml:128
+#: core/ChangeLog.qml:135
 msgctxt "ChangeLog|"
 msgid "Many little fixes."
 msgstr "Daug nedidelių pataisymų."
 
-#: core/ChangeLog.qml:128
+#: core/ChangeLog.qml:135
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in French."
 msgstr "Kalbos pamokėlė jau pateikiama ir prancūzų kalba."
 
-#: core/ChangeLog.qml:129
+#: core/ChangeLog.qml:136
 msgctxt "ChangeLog|"
 msgid ""
 "Adding a loading overlay to let the user know that some actions are taking "
@@ -25856,7 +26317,7 @@ msgstr ""
 "kurie veiksmai (pvz., pamokėlės įkėlimas) ir kad jie gali užtrukti keletą "
 "sekundžių."
 
-#: core/ChangeLog.qml:129
+#: core/ChangeLog.qml:136
 msgctxt "ChangeLog|"
 msgid ""
 "Translations added for: Catalan (Valencian), Chinese Traditional, Finnish "
@@ -25865,12 +26326,12 @@ msgstr ""
 "Pridėti vertimai į šias kalbas: katalonų (Valensijos) tradicinę kinų, suomių "
 "(išversta 92%), rusų (išversta 98%), slovakų ( išversta 92%), turkų."
 
-#: core/ChangeLog.qml:130
+#: core/ChangeLog.qml:137
 msgctxt "ChangeLog|"
 msgid "Translations added for: Slovenian, German, Galician."
 msgstr "Pridėti vertimai į: slovėnų, vokiečių, galų kalbas."
 
-#: core/ChangeLog.qml:184
+#: core/ChangeLog.qml:191
 #, qt-format
 msgctxt "ChangeLog|"
 msgid "Version %1:"
@@ -25891,12 +26352,9 @@ msgstr ""
 "sistemoje."
 
 #: core/core.js:225
-#, fuzzy
-#| msgctxt "core|"
-#| msgid "For downloading the needed sound files go to the preferences dialog."
 msgctxt "core|"
 msgid "For downloading the needed sound files go to the Configuration dialog."
-msgstr "Reikiamus garsų failus gali atsisiųsti GCompris nustatymuose."
+msgstr "Reikiamus garsų failus gali atsisiųsti GCompris nustatymų lange."
 
 #: core/core.js:257
 msgctxt "core|"
@@ -26036,16 +26494,7 @@ msgstr ""
 "žyma."
 
 #: core/DialogAbout.qml:105
-#, fuzzy, qt-format
-#| msgctxt "DialogAbout|"
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!<br /><br />Visit <a href=\"%1\">%1</a> for information on some "
-#| "projects in which you can participate.<br /><br />If you need more "
-#| "information or documentation, then a visit to <a href=\"%2\">%2</a> will "
-#| "provide you with what you need."
+#, qt-format
 msgctxt "DialogAbout|"
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -26130,17 +26579,17 @@ msgctxt "DialogChooseLevel|"
 msgid "Options"
 msgstr "Parametrai"
 
-#: core/DialogChooseLevel.qml:343
+#: core/DialogChooseLevel.qml:344
 msgctxt "DialogChooseLevel|"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: core/DialogChooseLevel.qml:351
+#: core/DialogChooseLevel.qml:352
 msgctxt "DialogChooseLevel|"
 msgid "Save"
 msgstr "Įrašyti"
 
-#: core/DialogChooseLevel.qml:365
+#: core/DialogChooseLevel.qml:366
 msgctxt "DialogChooseLevel|"
 msgid "Save and start"
 msgstr "Įrašyti ir pradėti"
@@ -26236,50 +26685,50 @@ msgctxt "DownloadDialog|"
 msgid "Your local data files are up-to-date."
 msgstr "GCompris vidiniai duomenų failai yra atnaujinti."
 
-#: core/DownloadManager.cpp:113
+#: core/DownloadManager.cpp:123
 msgctxt "QObject|"
 msgid "Download cancelled by user"
 msgstr "Atsisiuntimas atšauktas naudotojo"
 
-#: core/DownloadManager.cpp:324
+#: core/DownloadManager.cpp:338
 msgctxt "QObject|"
 msgid "Could not create resource path"
 msgstr "Negalima sukurti išteklių adreso"
 
-#: core/DownloadManager.cpp:331
+#: core/DownloadManager.cpp:345
 #, qt-format
 msgctxt "QObject|"
 msgid "Could not open target file %1"
 msgstr "Negalima atidaryti adresato failo %1"
 
-#: core/DownloadManager.cpp:684
+#: core/DownloadManager.cpp:714
 msgctxt "QObject|"
 msgid "Invalid format of Contents file"
 msgstr "Neteisingas Turinio failo formatas"
 
-#: core/DownloadManager.cpp:706
+#: core/DownloadManager.cpp:736
 #, qt-format
 msgctxt "QObject|"
 msgid "The url %1 does not exist."
 msgstr "URL %1 neegzistuoja."
 
-#: core/DownloadManager.cpp:719
+#: core/DownloadManager.cpp:749
 #, qt-format
 msgctxt "QObject|"
 msgid "Checksum of downloaded file does not match: %1"
 msgstr "Atsisiųstų failų kontrolinė suma nesutampa: %1"
 
-#: core/DownloadManager.cpp:741
+#: core/DownloadManager.cpp:771
 #, qt-format
 msgctxt "QObject|"
 msgid "No voices found for %1."
-msgstr ""
+msgstr "%1 įgarsinimas nerastas."
 
-#: core/DownloadManager.cpp:746
+#: core/DownloadManager.cpp:776
 #, qt-format
 msgctxt "QObject|"
 msgid "No data found for %1."
-msgstr ""
+msgstr "%1 duomenys nerasti."
 
 #: core/GCCreationHandler.qml:134
 #, qt-format
@@ -26334,12 +26783,12 @@ msgctxt "GCCreationHandler|"
 msgid "Save"
 msgstr "Įrašyti"
 
-#: core/GCCreationHandler.qml:324
+#: core/GCCreationHandler.qml:325
 msgctxt "GCCreationHandler|"
 msgid "Load"
 msgstr "Įkelti"
 
-#: core/GCCreationHandler.qml:334
+#: core/GCCreationHandler.qml:335
 msgctxt "GCCreationHandler|"
 msgid "Delete"
 msgstr "Pašalinti"
@@ -26458,16 +26907,17 @@ msgid ""
 "Specify on which level to start the activity. Only used when --launch option "
 "is used."
 msgstr ""
+"Nurodyk, kuriame lygyje pradėti pamokėlę. Naudojama tik tada, kai naudojama "
+"parinktis --launch."
 
 #: core/main.qml:269
-#, fuzzy
-#| msgctxt "main|"
-#| msgid "Do you want to download the following external assets?"
 msgctxt "main|"
 msgid ""
 "Do you want to automatically download or update the following external "
 "assets when starting GCompris?"
-msgstr "Ar norite atsisiųsti šiuos resursus?"
+msgstr ""
+"Ar norite automatiškai atsisiųsti ar atnaujinti šiuos resursus, kai "
+"paleidžiate GCompris?"
 
 #: core/main.qml:271
 msgctxt "main|"
@@ -26505,20 +26955,13 @@ msgid "You are running GCompris for the first time."
 msgstr "Pirmą kartą paleidote GCompris programą."
 
 #: core/main.qml:324
-#, fuzzy
-#| msgctxt "main|"
-#| msgid ""
-#| "You should verify that your application settings especially your language "
-#| "is set correctly, and that all language specific sound files are "
-#| "installed. You can do this in the Preferences Dialog."
 msgctxt "main|"
 msgid ""
 "You should verify that your application settings especially your language is "
 "set correctly. You can do this in the Configuration dialog."
 msgstr ""
 "Patikrinkite, ar GCompris programos nustatymai, ypač kalbos nustatymai, yra "
-"tinkami. Ar įdiegti reikiami įgarsinimo failai norimoms kalboms? Tai galite "
-"atlikti „Nustatymų“ lange."
+"tinkami. Tai galite atlikti „Nustatymų“ lange."
 
 #: core/main.qml:326
 msgctxt "main|"
@@ -26542,16 +26985,15 @@ msgid ""
 "Some activities have new dataset available. Do you want to reset their "
 "dataset selection?"
 msgstr ""
+"Kai kurioms pamokėlėms duomenų rinkiniai atnaujinti. Ar norite iš naujo "
+"nustatyti jų duomenų rinkinio pasirinkimą?"
 
 #: core/main.qml:389
 msgctxt "main|"
 msgid "Apply"
-msgstr ""
+msgstr "Taikyti"
 
 #: core/main.qml:390
-#, fuzzy
-#| msgctxt "DialogChooseLevel|"
-#| msgid "Cancel"
 msgctxt "main|"
 msgid "Cancel"
 msgstr "Atsisakyti"
@@ -26561,25 +27003,46 @@ msgctxt "ReadyButton|"
 msgid "I am Ready"
 msgstr "Aš pasirengęs"
 
-#: core/Tutorial.qml:139
+#: core/Tutorial.qml:145
 msgctxt "Tutorial|"
 msgid "Previous"
 msgstr "Atgal"
 
-#: core/Tutorial.qml:159
+#: core/Tutorial.qml:165
 msgctxt "Tutorial|"
 msgid "Next"
 msgstr "Pirmyn"
 
-#: core/Tutorial.qml:178
+#: core/Tutorial.qml:184
 msgctxt "Tutorial|"
 msgid "Skip"
 msgstr "Praleisti"
 
-#: core/Tutorial.qml:178
+#: core/Tutorial.qml:184
 msgctxt "Tutorial|"
 msgid "Start"
 msgstr "Pradėti"
+
+#~ msgctxt "Data|"
+#~ msgid "Copy and complete this frieze"
+#~ msgstr "Nukopijuok ir užbaik šį ornamentą."
+
+#~ msgctxt "Data|"
+#~ msgid "Copy this frieze: any combination of shapes, colors/signs and sizes."
+#~ msgstr ""
+#~ "Nukopijuok šį ornamentą: įvairių formų, spalvų, ženklų ir dydžių derinys."
+
+#~ msgctxt "Data|"
+#~ msgid ""
+#~ "Copy and complete this frieze: any combination of shapes, colors/signs "
+#~ "and sizes."
+#~ msgstr ""
+#~ "Nukopijuok ir užbaik šį ornamentą: įvairių formų, spalvų, ženklų ir "
+#~ "dydžių derinys."
+
+#~ msgctxt "Data|"
+#~ msgid "Find the missing numbers"
+#~ msgstr "Rask trūkstamuosius skaičius."
 
 #~ msgctxt "board5_2|"
 #~ msgid "1791 Comte de Sivrac's Celerifere"
@@ -26604,6 +27067,10 @@ msgstr "Pradėti"
 #~ msgctxt "Warning|"
 #~ msgid "and %1 are the divisors of %2."
 #~ msgstr "ir %1 yra %2 daliklis."
+
+#~ msgctxt "Guesscount|"
+#~ msgid "%1/%2"
+#~ msgstr "%1/%2"
 
 #, fuzzy
 #~| msgctxt "ActivityInfo|"
@@ -26674,10 +27141,6 @@ msgstr "Pradėti"
 #~ msgctxt "Data|"
 #~ msgid "Find denominator (with a rectangle)."
 #~ msgstr "Devyni akmenukai (su draugu)"
-
-#~ msgctxt "ActivityInfo|"
-#~ msgid "Learn digits"
-#~ msgstr "Išmok skaičiuoti"
 
 #~ msgctxt "board1|"
 #~ msgid "The horse goes 'neigh! neigh!'. Horses usually sleep standing up."

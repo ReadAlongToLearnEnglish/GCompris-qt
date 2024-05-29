@@ -104,12 +104,13 @@ Rectangle {
 
             Flickable {
                 id: flick
-                flickDeceleration: 1500
                 anchors.margins: 10 * ApplicationInfo.ratio
                 anchors.fill: parent
                 contentWidth: textContent.contentWidth
                 contentHeight: iconImage.height + button0.height + textContent.contentHeight + 70 * ApplicationInfo.ratio
                 flickableDirection: Flickable.VerticalFlick
+                maximumFlickVelocity: dialogBackground.height
+                boundsBehavior: Flickable.StopAtBounds
                 clip: true
 
                 GCButton {
@@ -141,7 +142,7 @@ Rectangle {
 
                 GCText {
                     id: textContent
-                    text: style + "<body>" + content + "</body>"
+                    text: instructionStyle + "<body>" + content + "</body>"
                     width: flick.width
                     height: flick.height - button0.height
                     anchors.top: iconImage.bottom
@@ -149,7 +150,7 @@ Rectangle {
                     fontSize: regularSize
                     wrapMode: TextEdit.Wrap
                     textFormat: TextEdit.RichText
-                    property string style: "<head><style>A {color: #191919;}</style></head>"
+                    readonly property string instructionStyle: "<head><style>A {color: #191919;}</style></head>"
                 }
             }
             // The scroll buttons

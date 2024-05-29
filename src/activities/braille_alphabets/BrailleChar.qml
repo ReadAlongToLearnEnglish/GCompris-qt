@@ -9,7 +9,6 @@
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
-import "braille_alphabets.js" as Activity
 import "../../core"
 import GCompris 1.0
 
@@ -146,6 +145,7 @@ Item {
                 GCText {
                     id: numtext
                     text: clickable ? modelData+1 : ""
+                    color: "#2a2a2a"
                     anchors.left: index >= 3 ? incircle1.right : undefined
                     anchors.right: index < 3 ? incircle1.left : undefined
                     anchors.verticalCenter: incircle1.verticalCenter
@@ -158,7 +158,7 @@ Item {
 
                 MouseArea {
                     id : mouse1
-                    enabled: clickable && !(bonus.isPlaying || score.isWinAnimationPlaying) ? true : false
+                    enabled: clickable && !items.buttonsBlocked ? true : false
                     anchors.fill: parent
                     hoverEnabled: true
                     onEntered: incircle1.border.width = brailleCharItem.thickBorder

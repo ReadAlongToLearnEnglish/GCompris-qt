@@ -27,51 +27,10 @@ Rectangle {
 
     function select() {
         if(Activity.dayOfWeekSelected === Activity.correctAnswer["dayOfWeek"]) {
-            particles.burst(40)
-            animWin.start()
-            Activity.checkAnswer()
+            particles.burst(40);
+            animWin.start();
         }
-        else {
-            crossAnim.start()
-        }
-    }
-
-    Image {
-        id: cross
-        z: 10
-        source: "qrc:/gcompris/src/core/resource/cancel.svg"
-        sourceSize.width: choiceBox.height
-        sourceSize.height: choiceBox.height
-        anchors.centerIn: parent
-        height: 0
-        width: cross.height
-        opacity: 1
-        property int size: parent.height
-    }
-
-    SequentialAnimation {
-        id: crossAnim
-        ParallelAnimation {
-            PropertyAnimation {
-                target: cross
-                property: "height"
-                duration: 300
-                from: 0
-                to: choiceBox.height
-                easing.type: Easing.InOutQuad
-            }
-        }
-        PauseAnimation { duration: 800 }
-        ParallelAnimation {
-            PropertyAnimation {
-                target: cross
-                property: "height"
-                duration: 300
-                from: choiceBox.height
-                to: 0
-                easing.type: Easing.InOutQuad
-            }
-        }
+        Activity.checkAnswer();
     }
 
     ParticleSystemStarLoader {
@@ -95,14 +54,12 @@ Rectangle {
         id: mouseArea
         anchors.fill: parent
         onClicked: {
-            if(!questionDelay.running) {
                 Activity.dayOfWeekSelected = dayIndex
                 select()
                 choiceBox.scale = 1
-            }
         }
         hoverEnabled: true
-        enabled: !crossAnim.running && !animWin.running
+        enabled: !items.buttonsBlocked
         onEntered: choiceBox.scale = 1.1
         onExited: choiceBox.scale = 1
     }

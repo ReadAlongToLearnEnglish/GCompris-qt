@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-12-09 09:27\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-04-22 16:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -16,6 +16,12 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/gcompris/gcompris_voices.pot\n"
 "X-Crowdin-File-ID: 6174\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -435,6 +441,12 @@ msgstr "按照说明中的说明选择适当数量的部件。"
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "找到所表示分数的正确分子和分母"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr ""
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -492,6 +504,18 @@ msgid ""
 "Guide the number eater with the arrow keys to the prime numbers and press "
 "space to swallow them."
 msgstr "用箭头键将吃数狂引导到质数，然后按空格键吞下它们。"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr ""
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1115,6 +1139,15 @@ msgstr "单击每个对象以获得相同的图形。您可以通过单击箭头
 #, kde-format
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr "单击目标发射飞镖，然后计算你的最终得分！"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

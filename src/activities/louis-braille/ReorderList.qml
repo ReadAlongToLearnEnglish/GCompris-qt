@@ -12,7 +12,6 @@ import QtQuick 2.12
 import GCompris 1.0
 
 import "../../core"
-import "louis-braille.js" as Activity
 
 Rectangle {
     id: wholeBody
@@ -145,6 +144,8 @@ Rectangle {
         spacing: 5 * ApplicationInfo.ratio
         delegate: listElement
         interactive: true
+        maximumFlickVelocity: activity.height
+        boundsBehavior: Flickable.StopAtBounds
         // setting huge cacheBuffer is needed to make sure hidden children are not discarded...
         cacheBuffer: 100000
         clip: true

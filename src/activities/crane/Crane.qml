@@ -50,6 +50,7 @@ ActivityBase {
             id: items
             property Item main: activity.main
             property alias background: background
+            property GCSfx audioEffects: activity.audioEffects
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
             property alias board: board
@@ -59,16 +60,17 @@ ActivityBase {
             property alias gridRepeater: gridRepeater
             property alias showGrid1: showGrid1
             property alias score: score
-            property int selected
+            property alias selector: selector
+            property int selected: -1
             property int columns
             property int rows
             property bool ok: true
             property int sensivity: 80
-            property bool gameFinished: false
             property bool pieceIsMoving: false
-            readonly property var levels: activity.datasetLoader.data
+            readonly property var levels: activity.datasets
             property double gridBaseWidth: items.board.width / items.columns
             property double gridBaseHeight: items.board.height / items.rows
+            property bool buttonsBlocked: false
         }
 
         onStart: { Activity.start(items) }
@@ -78,7 +80,10 @@ ActivityBase {
         property bool inLine: true
 
         Keys.onPressed: {
-            if (event.key === Qt.Key_Left){
+            if (items.buttonsBlocked){
+                return
+            }
+            else if (event.key === Qt.Key_Left){
                 Activity.move("left")
                 left.opacity = 0.6
             }
@@ -122,6 +127,7 @@ ActivityBase {
             anchors.fill: layoutArea
             property int startX;
             property int startY;
+            enabled: !items.buttonsBlocked
 
             onPressed: {
                 startX = mouse.x;
@@ -204,7 +210,6 @@ ActivityBase {
 
                     property alias anim: anim
                     property int distance
-                    property int indexChange
                     property int startPoint
                     property string animationProperty
                     property int _index: index // make current index accessible from outside
@@ -216,8 +221,8 @@ ActivityBase {
                         PropertyAction { target: figure; property: "opacity"; value: 0 }
                         NumberAnimation { target: figure; property: figure.animationProperty; from: figure.startPoint + distance; to: figure.startPoint; duration: 0; }
                         PropertyAction { target: figure; property: "opacity"; value: 1 }
-                        PropertyAction { target: items.answerRepeater.itemAt(items.selected + indexChange); property: "source"; value: figure.source }
-                        PropertyAction { target: items.answerRepeater.itemAt(items.selected + indexChange); property: "initialIndex"; value: figure.initialIndex }
+                        PropertyAction { target: items.answerRepeater.itemAt(items.selected); property: "source"; value: figure.source }
+                        PropertyAction { target: items.answerRepeater.itemAt(items.selected); property: "initialIndex"; value: figure.initialIndex }
                         PropertyAction { target: figure; property: "initialIndex"; value: -1 }
                         PropertyAction { target: figure; property: "source"; value: "" }
                         PropertyAction { target: items; property: "ok"; value: "true"}
@@ -227,6 +232,7 @@ ActivityBase {
 
                     MouseArea {
                         anchors.fill: parent
+                        enabled: !items.buttonsBlocked
 
                         // Swipe effect
                         property int startX;
@@ -251,21 +257,50 @@ ActivityBase {
         }
 
         Image {
-            id: selected
+            id: selector
             source: activity.dataSetUrl+"selected.svg"
             sourceSize.width: width
             sourceSize.height: height
             width: items.gridBaseWidth
             height: items.gridBaseHeight
             opacity: 1
+            state: "uninitialized"
 
-            property var newCoord: answerRepeater.itemAt(items.selected)
-            x: newCoord.x + board.x
-            y: newCoord.y + board.y
+            x: 0
+            y: 0
             z: 100
 
             Behavior on x { NumberAnimation { duration: 200 } }
             Behavior on y { NumberAnimation { duration: 200 } }
+
+            states: [
+                State {
+                    name: "uninitialized"
+                    PropertyChanges {
+                        target: selector
+                        x: 0
+                        y: 0
+                    }
+                    PropertyChanges {
+                        target: cable
+                        height: 0
+                        x: 0
+                    }
+                },
+                State {
+                    name: "initialized"
+                    PropertyChanges {
+                        target: selector
+                        x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x : 0
+                        y: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y : 0
+                    }
+                    PropertyChanges {
+                        target: cable
+                        height: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y - crane_top.y : 0
+                        x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x + items.gridBaseWidth / 2 : 0
+                    }
+                }
+            ]
 
         }
 
@@ -436,13 +471,11 @@ ActivityBase {
             id: cable
             color: "#373737"
             width: 5
-            height: convert.y + board.y - crane_top.y
-            x: convert.x + board.x + items.gridBaseWidth / 2
+            height: 0
+            x: 0
             z: 3
             anchors.top: crane_top.top
             anchors.topMargin: 10
-
-            property var convert: answerRepeater.itemAt(items.selected)
 
             Behavior on x { NumberAnimation { duration: 200 } }
             Behavior on height { NumberAnimation { duration: 200 } }
@@ -553,7 +586,7 @@ ActivityBase {
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextSubLevel)
+            Component.onCompleted: win.connect(Activity.nextLevel)
         }
 
         Score {
@@ -561,6 +594,7 @@ ActivityBase {
             visible: true
             anchors.right: modelBoardBg.right
             anchors.margins: 5 * ApplicationInfo.ratio
+            onStop: { Activity.nextSubLevel() }
         }
     }
 

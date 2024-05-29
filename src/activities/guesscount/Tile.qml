@@ -9,7 +9,6 @@
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
-import "guesscount.js" as Activity
 import "../../core"
 
 MouseArea {
@@ -21,6 +20,7 @@ MouseArea {
     height: root.height
     anchors.centerIn: parent
     drag.target: tile
+    enabled: !items.solved
     onReleased: {
         parent = tile.Drag.target != null ? tile.Drag.target : root
         tile.Drag.drop()

@@ -12,14 +12,13 @@
 import QtQuick 2.12
 import GCompris 1.0
 
-import "../../core"
 import "gravity.js" as Activity
 
 Image {
     id: planet
     asynchronous: true
-    sourceSize.width: undefined
-    sourceSize.height: undefined
+    sourceSize.width: 0
+    sourceSize.height: 0
     z: 5
     y: height * -2
     x: leftSide ? width * -0.5 : parent.width - width * 0.5 
@@ -42,8 +41,8 @@ Image {
     Image {
         id: gravityImage
         asynchronous: true
-        sourceSize.width: undefined
-        sourceSize.height: undefined
+        sourceSize.width: 0
+        sourceSize.height: 0
         source: Activity.url + "gravity.svg"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter

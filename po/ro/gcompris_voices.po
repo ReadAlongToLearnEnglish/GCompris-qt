@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
 "PO-Revision-Date: 2023-06-01 16:26+0200\n"
 "Last-Translator: Horia PELLE <horricane@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 2.0\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -489,6 +495,12 @@ msgstr "Selectează numărul potrivit de părți, conform instrucțiunilor."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Află numitorul și numărătorul corect al fracției reprezentate."
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr ""
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -557,6 +569,18 @@ msgid ""
 msgstr ""
 "Ghidează-l pe Mâncăciosul Numerelor cu tastele săgeți, către numerele prime, "
 "și apasă tasta spațiu pentru a le înghiți."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr ""
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1268,6 +1292,20 @@ msgstr ""
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Fă clic pe țintă pentru a lansa săgeți, apoi calculează-ți scorul final."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Create pairs of numbers equal to ten. Select a number, then select "
+#| "another number of the same operation to swap their position."
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Creează perechi de numere cu suma egală cu 10. Selectează un număr, apoi "
+"selectează alt număr al aceleiași operații pentru a le schimba poziția."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

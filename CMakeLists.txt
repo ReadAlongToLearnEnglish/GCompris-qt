@@ -19,8 +19,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # enable qml debugging for DEBUG builds:
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
 
-set(GCOMPRIS_MAJOR_VERSION 3)
-set(GCOMPRIS_MINOR_VERSION 3)
+set(GCOMPRIS_MAJOR_VERSION 4)
+set(GCOMPRIS_MINOR_VERSION 1)
 set(GCOMPRIS_PATCH_VERSION 0)
 
 if("${CMAKE_ANDROID_ARCH}" STREQUAL "arm64")
@@ -178,6 +178,8 @@ set(GRAPHICAL_RENDERER "auto" CACHE STRING "Policy for choosing the renderer bac
 if(CMAKE_HOST_APPLE)
   set(_bundle_bin gcompris-qt.app/Contents/MacOS)
   set(_data_dest_dir bin/${_bundle_bin}/../Resources)
+elseif(HAIKU)
+  set(_data_dest_dir data/Qt5/${GCOMPRIS_EXECUTABLE_NAME})
 else()
   set(_data_dest_dir share/${GCOMPRIS_EXECUTABLE_NAME})
 endif()

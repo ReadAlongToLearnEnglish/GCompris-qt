@@ -33,7 +33,7 @@ ActivityBase {
             id: items
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
-            readonly property var levels: activity.datasetLoader.data
+            readonly property var levels: activity.datasets
             property GCSfx audioEffects: activity.audioEffects
             property alias score: score
             property int checkState: -1
@@ -41,6 +41,8 @@ ActivityBase {
             property string questionText: ""
             property alias positionModels: positionModels
             property var view: items.currentLevel % 2 !== 0 ? answerViews : positionViews
+            property bool buttonsBlocked: false
+            property alias errorRectangle: errorRectangle
         }
 
         Component.onCompleted: {
@@ -50,9 +52,9 @@ ActivityBase {
         onStart: { Activity.start(items) }
         onStop: { Activity.stop() }
 
-        Keys.enabled: !bonus.isPlaying
+        Keys.enabled: !items.buttonsBlocked
         Keys.onPressed: {
-            if(event.key === Qt.Key_Space || event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
+            if((event.key === Qt.Key_Space || event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && items.view.currentItem !== null) {
                 Activity.verifyAnswer()
                 event.accepted = true
             }
@@ -164,7 +166,7 @@ ActivityBase {
                         id: textArea
                         anchors.fill: parent
                         onClicked: selectCurrentItem()
-                        enabled: !bonus.isPlaying
+                        enabled: !items.buttonsBlocked
                     }
 
                     function selectCurrentItem() {
@@ -219,7 +221,7 @@ ActivityBase {
                         id: mouseArea
                         anchors.fill: parent
                         onClicked: selectCurrentItem()
-                        enabled: !bonus.isPlaying
+                        enabled: !items.buttonsBlocked
                         hoverEnabled: true
                     }
 
@@ -265,6 +267,27 @@ ActivityBase {
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
                 color: "white"
+            }
+        }
+        
+        ErrorRectangle {
+            id: errorRectangle
+            radius: 15
+            imageSize: okButton.width
+
+            function releaseControls() { items.buttonsBlocked = false; }
+
+            function startAnimation() {
+                errorRectangle.width = items.view.currentItem.width;
+                errorRectangle.height = items.view.currentItem.height;
+                if (answerViews.visible) {
+                    errorRectangle.x = answerViews.x + items.view.currentItem.x;
+                    errorRectangle.y = answerViews.y + items.view.currentItem.y;
+                } else {
+                    errorRectangle.x = positionViews.x + items.view.currentItem.x;
+                    errorRectangle.y = positionViews.y + items.view.currentItem.y;
+                }
+                errorAnimation.restart();
             }
         }
 
@@ -321,14 +344,12 @@ ActivityBase {
             width: (background.height - bar.height * 1.2) * 0.15
             sourceSize.width: width
             onClicked: Activity.verifyAnswer()
-            mouseArea.enabled: !bonus.isPlaying
+            mouseArea.enabled: !items.buttonsBlocked
         }
 
         Bonus {
             id: bonus
-            Component.onCompleted: {
-                win.connect(Activity.nextSubLevel)
-            }
+            onWin: Activity.nextLevel()
         }
 
         Score {
@@ -338,6 +359,7 @@ ActivityBase {
             anchors.top: background.top
             anchors.topMargin: parent.height * 0.01
             anchors.bottom: undefined
+            onStop: Activity.nextSubLevel()
         }
     }
 }

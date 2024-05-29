@@ -1,22 +1,28 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Pablo <parodper@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-09-30 12:55+0200\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-16 23:40+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.0\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Atopa os números que faltan."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -470,6 +476,12 @@ msgstr "Escolle o número de partes axeitado segundo as instrucións."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Atopa o denominador e numerador correctos para a fracción representada"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Reproduce e completa o modelo de fresco."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -537,6 +549,18 @@ msgid ""
 msgstr ""
 "Guía o comedor de números coas teclas de frecha aos números primos "
 "necesarios e preme espazo para tragalos."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "Atopa o valor que corresponde ao punto indicado na liña graduada."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Coloca o valor indicado na liña graduada."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1238,6 +1262,18 @@ msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Preme o destino para tirar dardos, e a continuación conta a túa puntuación "
 "final!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Crea pares de números cuxa suma sexa 10. Escolle un número, e despois "
+"escolle outro número da mesma operación para intercambialos. A continuación "
+"selecciona a caixa do resultado ou teclea o resultado."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

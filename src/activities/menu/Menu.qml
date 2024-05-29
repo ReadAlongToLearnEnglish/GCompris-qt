@@ -99,17 +99,6 @@ ActivityBase {
                 );
     }
 
-    Connections {
-        // At the launch of the application, box2d check is performed after we
-        // first initialize the menu. This connection is to refresh
-        // automatically the menu at start.
-        target: ApplicationInfo
-        onIsBox2DInstalledChanged: {
-            ActivityInfoTree.filterByTag(activity.currentTag, currentCategory)
-            ActivityInfoTree.filterEnabledActivities()
-        }
-    }
-
     // @cond INTERNAL_DOCS
     property string url: "qrc:/gcompris/src/activities/menu/resource/"
     property var sections: [
@@ -472,6 +461,8 @@ ActivityBase {
             clip: true
             model: ActivityInfoTree.menuTree
             keyNavigationWraps: true
+            maximumFlickVelocity: activity.height
+            boundsBehavior: Flickable.StopAtBounds
             property int spacing: 10
             // Needed to calculate the OpacityMask offset
             // If not using OpenGL, this value is not used, so we save the calculation and set it to 1

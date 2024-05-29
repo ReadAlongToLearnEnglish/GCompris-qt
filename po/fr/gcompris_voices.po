@@ -1,12 +1,12 @@
 # Jazeix Johnny <jazeix@gmail.com>, 2017.
 # Timothée Giet <animtim@gmail.com>, 2020.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021, 2022.
 # charruau <echarruau@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris voices\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
 "PO-Revision-Date: 2023-01-02 12:18+0100\n"
 "Last-Translator: charruau <echarruau@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -17,11 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.12.0\n"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Trouve les nombres manquants."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
 #, kde-format
 msgid "click on the required color"
-msgstr "Clique sur la couleur inscrite."
+msgstr "Clique sur la couleur affichée."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "algebra_by"
 #: activities/algebra_by/ActivityInfo.qml:18
@@ -489,6 +495,12 @@ msgstr "Choisis le bon nombre de parts demandé par la consigne."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Trouve le numérateur et le dénominateur de la fraction présentée."
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr ""
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -557,6 +569,18 @@ msgid ""
 msgstr ""
 "Guide le croqueur vers les nombres premiers demandés pour qu'il puisse les "
 "croquer."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr ""
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1267,6 +1291,21 @@ msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Lance les fléchettes sur la cible puis indique la somme des résultats "
 "obtenus."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Create pairs of numbers equal to ten. Select a number, then select "
+#| "another number of the same operation to swap their position."
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Crée des paires de nombres égaux à dix. Sélectionnez un nombre, puis "
+"sélectionne un autre nombre de la même opération pour permuter leurs "
+"positions."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

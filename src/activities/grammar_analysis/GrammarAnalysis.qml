@@ -9,7 +9,6 @@
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
-import QtQuick.Controls 2.12
 import GCompris 1.0
 
 import "../../core"
@@ -55,6 +54,9 @@ ActivityBase {
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
             property alias locale: background.locale
+            property alias score: score
+            property GCSfx audioEffects: activity.audioEffects
+            property bool buttonsBlocked: false
             // Qml models
             property alias syntaxModel: syntaxModel
             property alias datasetModel: datasetModel
@@ -64,6 +66,7 @@ ActivityBase {
             property alias wordsFlow: wordsFlow
             property alias rowAnswer: rowAnswer
             property alias gridGoalTokens: gridGoalTokens
+            property alias errorRectangle: errorRectangle
             // Activity parameters
             property int selectedClass: 0
             property int selectedBox: 0
@@ -151,7 +154,7 @@ ActivityBase {
         Item {
             id: mainArea
             anchors.top: parent.top
-            anchors.bottom: okButton.top
+            anchors.bottom: scoreButtonContainer.top
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.margins: background.baseMargins
@@ -262,6 +265,13 @@ ActivityBase {
                                 }
                             }
                         }
+                        ErrorRectangle {
+                            id: errorRectangle
+                            anchors.fill: parent
+                            radius: parent.radius
+                            imageSize: okButton.width
+                            function releaseControls() { items.buttonsBlocked = false; }
+                        }
                     }
                     GCText {        // Error text
                         id: errors
@@ -272,6 +282,11 @@ ActivityBase {
                         anchors.horizontalCenter:  parent.horizontalCenter
                     }
                 }
+            }
+            MouseArea {
+                // used to block all mouse input on activity interface execpt the OK button
+                anchors.fill: parent
+                enabled: items.buttonsBlocked
             }
         }
 
@@ -315,51 +330,61 @@ ActivityBase {
             onHomeClicked: activity.home()
         }
 
-        BarButton {
-            id: okButton
-            source: "qrc:/gcompris/src/core/resource/bar_ok.svg"
-            width: 60 * ApplicationInfo.ratio
+        Item {
+            id: scoreButtonContainer
             visible: !tutorialScreen.visible
-            anchors.right: parent.right
+            width: score.width + background.baseMargins + okButton.width
+            height: okButton.height
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: background.bottom
-            anchors.rightMargin: background.baseMargins
             anchors.bottomMargin: 1.5 * bar.height
-            sourceSize.width: width
-            onClicked: Activity.checkResult()
-            mouseArea.enabled: !bonus.isPlaying
-        }
 
-        Score {
-            id: score
-            numberOfSubLevels: items.datasetModel.count
-            currentSubLevel: items.currentExercise + 1
-            anchors.right: okButton.left
-            anchors.rightMargin: background.baseMargins
-            anchors.verticalCenter: okButton.verticalCenter
-            anchors.bottom: undefined
-            anchors.top: undefined
-            anchors.left: undefined
-            visible: !tutorialScreen.visible
+            BarButton {
+                id: okButton
+                source: "qrc:/gcompris/src/core/resource/bar_ok.svg"
+                width: 60 * ApplicationInfo.ratio
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                sourceSize.width: width
+                onClicked: Activity.checkResult()
+                mouseArea.enabled: !items.buttonsBlocked
+            }
+
+            Score {
+                id: score
+                numberOfSubLevels: items.datasetModel.count
+                currentSubLevel: items.currentExercise
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.margins: 0
+                anchors.bottom: undefined
+                anchors.top: undefined
+                anchors.right: undefined
+                visible: !tutorialScreen.visible
+                onStop: Activity.nextSubLevel()
+            }
         }
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextSubLevel)
+            Component.onCompleted: win.connect(Activity.nextLevel)
         }
 
+        // Needed to get keyboard focus on Tutorial
+        Keys.forwardTo: tutorialSection
         Keys.onPressed: Activity.handleKeys(event)
 
         //--- Debugging zone.
         Text {
             id: hideDebug
             text: "Alt+Left and Alt+Right to change exercise\nCtrl+Alt+Return to flip debug informations"
-            anchors.top: okButton.bottom
+            anchors.top: scoreButtonContainer.bottom
             anchors.right: parent.right
             visible: translationMode
         }
         Column {
             id: infoView
-            anchors.bottom: okButton.bottom
+            anchors.bottom: scoreButtonContainer.bottom
             visible: items.debugActive
             spacing: 5
             Text {

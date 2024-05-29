@@ -2,11 +2,11 @@
  *
  * SPDX-FileCopyrightText: 2022 Samarth Raj <mailforsamarth@gmail.com>
  * SPDX-FileCopyrightText: 2022 Timothée Giet <animtim@gmail.com>
+ * SPDX-FileCopyrightText: 2024 Harsh Kumar <hadron43@yahoo.com>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
 import QtQml.Models 2.12
-import QtQuick.Controls 2.12
 
 import GCompris 1.0
 import "../../core"
@@ -18,6 +18,9 @@ ActivityBase {
 
     onStart: focus = true
     onStop: {}
+
+    // Mode : swap | input
+    property string mode: "swap"
 
     pageComponent: Image {
         id: background
@@ -40,11 +43,15 @@ ActivityBase {
             id: items
             property Item main: activity.main
             property alias background: background
+            property GCSfx audioEffects: activity.audioEffects
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
             property alias equations: equations
-            readonly property var levels: activity.datasetLoader.data
+            readonly property var levels: activity.datasets
             property bool isHorizontal: background.width >= background.height
+            property alias numPad: numPad
+            property var previousSelectedCard: undefined
+            readonly property string mode: activity.mode
         }
 
         onStart: { Activity.start(items) }
@@ -54,7 +61,14 @@ ActivityBase {
         Keys.onPressed: {
             if(event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 okButton.clicked();
+            } else if(activity.mode === "input" && !bonus.isPlaying) {
+                numPad.updateAnswer(event.key, true);
             }
+        }
+
+        Keys.onReleased: {
+            if(activity.mode === "input" && !bonus.isPlaying)
+                numPad.updateAnswer(event.key, false);
         }
 
         Item {
@@ -62,8 +76,8 @@ ActivityBase {
             anchors.top: parent.top
             anchors.bottom: bar.top
             anchors.bottomMargin: bar.height * 0.2
-            anchors.left: parent.left
-            anchors.right: parent.right
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: numPad.visible ? (parent.width - 2 * numPad.columnWidth) : parent.width
 
             ListModel {
                 id: equations
@@ -109,6 +123,25 @@ ActivityBase {
                 onClicked: Activity.checkAnswer()
             }
 
+        }
+
+        NumPad {
+            id: numPad
+            maxDigit: 2
+            widthRatio: 12
+            visible: activity.mode === "input" && ApplicationSettings.isVirtualKeyboard
+            enableInput: (items.previousSelectedCard && items.previousSelectedCard.type === "inputCard") ? true : false
+            onAnswerChanged: {
+                if(items.previousSelectedCard && items.previousSelectedCard.type === "inputCard") {
+                    items.equations.get(items.previousSelectedCard.rowNumber).listmodel.get(items.previousSelectedCard.columnNumber).value = answer;
+                }
+            }
+        }
+
+        MouseArea {
+            id: clickMask
+            anchors.fill: layoutArea
+            enabled: bonus.isPlaying
         }
 
         DialogChooseLevel {

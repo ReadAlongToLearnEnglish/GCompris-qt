@@ -1,16 +1,16 @@
 # Translation for gcompris_voices.po to Euskara/Basque (eu).
-# Copyright (C) 2019-2023 This file is copyright:
+# Copyright (C) 2019-2024 This file is copyright:
 # This file is distributed under the same license as the gcompris package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-09-28 18:22+0200\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-05-12 18:57+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Aurkitu falta diren zenbakiak."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -475,6 +481,12 @@ msgstr "AukeratuAukeratu, jarraibideetan azaldu bezala, atal kopuru egokia."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Aurkitu irudikatutako zatikiaren zenbakitzaile eta izendatzaile egokia"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Frisoko eredua kopiatu eta osatu."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -542,6 +554,18 @@ msgid ""
 msgstr ""
 "Gida ezazu zenbaki jalea teklatuko gezien bidez zenbaki lehenetara eta "
 "sakatu zuriune barra haiek irensteko."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "Aurkitu graduatutako lerroan emandako lekuari dagokion balioa."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Ipini emandako balioa graduatutako lerroan."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1245,6 +1269,18 @@ msgstr ""
 "Egin klik jomugan dardoak jaurtitzeko, ondoren zenbatu zure amaierako "
 "puntuazioa!"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Sortu batura hamar duten zenbaki bikoteak. Hautatu zenbaki bat, ondoren "
+"hautatu eragiketa bereko beste zenbaki bat bien kokalekuak trukatzeko. "
+"Ondoren, hautatu emaitzaren laukia emaitza tekleatzeko."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17
 #, kde-format
@@ -1252,8 +1288,8 @@ msgid ""
 "Create pairs of numbers equal to ten. Select a number in the list, then "
 "select an empty spot of an operation to move the selected number there."
 msgstr ""
-"Sortu hamarren berdinak diren zenbaki bikoteak. Hautatu zerrendako zenbaki "
-"bat, ondoren hautatu eragiketa baten leku huts bat hautatutako zenbakia hara "
+"Sortu batura hamar duten zenbaki bikoteak. Hautatu zerrendako zenbaki bat, "
+"ondoren hautatu eragiketa baten leku huts bat hautatutako zenbakia hara "
 "eramateko."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_swap"
@@ -1263,7 +1299,7 @@ msgid ""
 "Create pairs of numbers equal to ten. Select a number, then select another "
 "number of the same operation to swap their position."
 msgstr ""
-"Sortu hamarren berdinak diren zenbaki bikoteak. Hautatu zenbaki bat, ondoren "
+"Sortu batura hamar duten zenbaki bikoteak. Hautatu zenbaki bat, ondoren "
 "hautatu eragiketa bereko beste zenbaki bat bien kokalekuak trukatzeko."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_use"

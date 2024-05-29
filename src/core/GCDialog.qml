@@ -164,7 +164,8 @@ Rectangle {
 
             Flickable {
                 id: instructionFlick
-                flickDeceleration: 1500
+                maximumFlickVelocity: gcdialog.height
+                boundsBehavior: Flickable.StopAtBounds
                 anchors.fill: parent
                 anchors.margins: gcdialog.baseMargins
                 flickableDirection: Flickable.VerticalFlick
@@ -180,9 +181,9 @@ Rectangle {
                     width: instructionFlick.width
                     wrapMode: TextEdit.WordWrap
                     textFormat: TextEdit.RichText
-                    text: style + "<body>" + textIn + "</body>"
+                    text: instructionStyle + "<body>" + textIn + "</body>"
                     property string textIn
-                    property string style: "<HEAD><STYLE type='text/css'>A {color: #191919;}</STYLE></HEAD>"
+                    readonly property string instructionStyle: "<head><style type='text/css'>a {color: #191919;}</style></head>"
                 }
                 Loader {
                     id: extraLoader

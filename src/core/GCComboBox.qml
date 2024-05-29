@@ -8,7 +8,6 @@
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
-import QtQuick.Controls 2.12
 import GCompris 1.0
 
 /**
@@ -284,6 +283,8 @@ Item {
             height: popup.height - headerDescription.height - 20 * ApplicationInfo.ratio
             currentIndex: gccombobox.currentIndex
             flickableDirection: Flickable.VerticalFlick
+            maximumFlickVelocity: gccombobox.height
+            boundsBehavior: Flickable.StopAtBounds
             clip: true
             cellWidth: width / numberOfColumns
             cellHeight: elementHeight

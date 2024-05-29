@@ -11,7 +11,6 @@
  */
 import QtQuick 2.12
 import QtQml.Models 2.12
-import QtQuick.Controls 2.12
 
 import GCompris 1.0
 import "../../core/core.js" as Core
@@ -83,6 +82,8 @@ Rectangle {
             height: parent.height
             clip: true
             flickableDirection: Flickable.VerticalFlick 
+            maximumFlickVelocity: activity.height
+            boundsBehavior: Flickable.StopAtBounds
             contentWidth: originListView.width + 2*0.01 * placeholderDropArea.width
             contentHeight: originListView.height + 2*0.01 * placeholderDropArea.width
 

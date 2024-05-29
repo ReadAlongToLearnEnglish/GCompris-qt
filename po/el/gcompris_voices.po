@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
 "PO-Revision-Date: 2023-03-19 19:26+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.2.2\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -488,6 +494,12 @@ msgstr ""
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Βρες τον σωστό αριθμητή και παρονομαστή του κλάσματος που βλέπεις."
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr ""
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -555,6 +567,18 @@ msgid ""
 msgstr ""
 "Οδήγησε με τα βελάκια το φαγάνα των αριθμών στους πρώτους αριθμούς και "
 "πάτησε το κενό για να τους καταπιεί."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr ""
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr ""
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1266,6 +1290,21 @@ msgstr ""
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr ""
 "Κάνε κλικ στο στόχο για να πετάξεις βελάκια και υπολόγισε το τελικό σκορ!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Create pairs of numbers equal to ten. Select a number, then select "
+#| "another number of the same operation to swap their position."
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Δημιούργησε ζευγάρια αριθμών ίσα με δέκα. Επίλεξε έναν αριθμό και στη "
+"συνέχεια επίλεξε έναν άλλο αριθμό της ίδιας αριθμητικής πράξης για "
+"ανταλλάξεις τη θέση τους."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

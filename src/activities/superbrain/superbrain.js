@@ -13,7 +13,6 @@
 .import "qrc:/gcompris/src/core/core.js" as Core
 
 var maxLevel = 8;
-var currentSubLevel = 0;
 var maxSubLevel = 6;
 var items;
 var baseUrl = "qrc:/gcompris/src/activities/graph-coloring/resource/shapes/";
@@ -64,7 +63,7 @@ var STATUS_CORRECT = 2;
 function start(items_) {
     items = items_;
     items.currentLevel = Core.getInitialLevel(maxLevel);
-    currentSubLevel = 0;
+    items.score.currentSubLevel = 0;
     initLevel();
 }
 
@@ -72,14 +71,9 @@ function stop() {
 }
 
 function initLevel() {
-    if (currentSubLevel == 0) {
-        // init level
-    }
-
     // init sublevel
     ackColors = new Array(levels[items.currentLevel].numberOfPieces);
     items.score.numberOfSubLevels = maxSubLevel;
-    items.score.currentSubLevel = currentSubLevel + 1;
     var selectedColors = new Array(maxColors);
     solution = new Array(levels[items.currentLevel].numberOfPieces);
     for (var i = 0; i < maxColors; ++i)
@@ -107,10 +101,10 @@ function initLevel() {
     // add first guess row:
     items.guessModel.clear();
     appendGuessRow();
+    items.buttonsBlocked = false;
 }
 
-function appendGuessRow()
-{
+function appendGuessRow() {
     var guessRow = new Array();
     for (var i = 0; i < levels[items.currentLevel].numberOfPieces; ++i) {
         var col =
@@ -129,8 +123,7 @@ function appendGuessRow()
     items.currentRepeater.model = obj.guess;
 }
 
-function ackColor(column, colIndex)
-{
+function ackColor(column, colIndex) {
     ackColors[column] = (ackColors[column] == colIndex) ?  undefined : colIndex;
     for (var i = 0; i < items.guessModel.count; i++) {
         var obj = items.guessModel.get(i).guess.get(column);
@@ -140,40 +133,50 @@ function ackColor(column, colIndex)
     items.currentRepeater.model.get(column).isAcked = (ackColors[column] !== undefined);
 }
 
-function checkGuess()
-{
-    var remainingIndeces = solution.slice();
+function checkGuess() {
     var obj = items.guessModel.get(0);
     var correctCount = 0;
     var misplacedCount = 0;
+
+    // these will be used to check for mismatches later
+    var remainingIndices = [];  // stores indices where mismatches can happen
+    var remainingColors = [];   // stores the solution values at those indices
+
     // check for exact matches first:
     for (var i = 0; i < levels[items.currentLevel].numberOfPieces; i++) {
         var guessIndex = obj.guess.get(i).colIndex;
         var newStatus;
         if (solution[i] == guessIndex) {
             // correct
-            remainingIndeces.splice(remainingIndeces.indexOf(guessIndex), 1);
             if (levels[items.currentLevel].help)
                 obj.guess.setProperty(i, "status", STATUS_CORRECT);
             correctCount++;
         }
+        else {
+            remainingIndices.push(i);
+            remainingColors.push(solution[i]);
+        }
     }
     obj.result = ({ correct: correctCount });
-    if (remainingIndeces.length == 0) {
-        items.bonus.good("smiley");
+    if (remainingIndices.length == 0) {
+        items.buttonsBlocked = true;
+        items.score.currentSubLevel += 1;
+        items.score.playWinAnimation();
+        items.audioEffects.play("qrc:/gcompris/src/core/resource/sounds/completetask.wav");
     }
 
-    for (var i = 0; i < levels[items.currentLevel].numberOfPieces; i++) {
-        if (obj.guess.get(i).status == STATUS_CORRECT)
-            continue;
-        var guessIndex = obj.guess.get(i).colIndex;
+    for (var i = 0; i < remainingIndices.length; i++) {
+        var index = remainingIndices[i];
+        var guessIndex = obj.guess.get(index).colIndex;
         var newStatus = STATUS_UNKNOWN;
-        if (solution.indexOf(guessIndex) != -1 &&
-                remainingIndeces.indexOf(guessIndex) != -1) {
+        if (remainingColors.indexOf(guessIndex) != -1) {
             // misplaced
-            remainingIndeces.splice(remainingIndeces.indexOf(guessIndex), 1);
             if (levels[items.currentLevel].help)
-                obj.guess.setProperty(i, "status", STATUS_MISPLACED);
+                obj.guess.setProperty(index, "status", STATUS_MISPLACED);
+
+            // remove guessIndex from remainingColors, so that multiple mismatches are not reported
+            remainingColors.splice(remainingColors.indexOf(guessIndex), 1)
+
             misplacedCount++;
         }
     }
@@ -183,20 +186,22 @@ function checkGuess()
 }
 
 function nextLevel() {
+    items.score.stopWinAnimation();
     items.currentLevel = Core.getNextLevel(items.currentLevel, maxLevel);
-    currentSubLevel = 0;
+    items.score.currentSubLevel = 0;
     initLevel();
 }
 
 function previousLevel() {
+    items.score.stopWinAnimation();
     items.currentLevel = Core.getPreviousLevel(items.currentLevel, maxLevel);
-    currentSubLevel = 0;
+    items.score.currentSubLevel = 0;
     initLevel();
 }
 
 function nextSubLevel() {
-    if(++currentSubLevel >= maxSubLevel) {
-        nextLevel();
+    if(items.score.currentSubLevel >= maxSubLevel) {
+        items.bonus.good("smiley");
     }
     else {
         initLevel();

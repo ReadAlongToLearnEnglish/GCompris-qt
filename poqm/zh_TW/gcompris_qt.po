@@ -1,12 +1,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2015, 2016, 2020, 2021, 2022, 2023.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-01-21 22:30+0800\n"
-"Last-Translator: Franklin Weng <franklin@goodhorse.idv.tw>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-05-08 13:01+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +15,176 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_TW\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.04.70\n"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:19
+#: activities/clickanddraw/ActivityConfig.qml:21
+#: activities/drawletters/ActivityConfig.qml:21
+#: activities/drawnumbers/ActivityConfig.qml:21
+#: activities/enumerate/ActivityConfig.qml:21
+#: activities/erase/ActivityConfig.qml:21
+#: activities/erase_2clic/ActivityConfig.qml:21
+#: activities/erase_clic/ActivityConfig.qml:21
+#: activities/money/ActivityConfig.qml:21
+#: activities/money_back/ActivityConfig.qml:21
+#: activities/money_back_cents/ActivityConfig.qml:21
+#: activities/money_cents/ActivityConfig.qml:21
+#: activities/number_sequence/ActivityConfig.qml:22
+msgctxt "ActivityConfig|"
+msgid "Automatic"
+msgstr "自動"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:20
+#: activities/enumerate/ActivityConfig.qml:22
+#: activities/money/ActivityConfig.qml:22
+#: activities/money_back/ActivityConfig.qml:22
+#: activities/money_back_cents/ActivityConfig.qml:22
+#: activities/money_cents/ActivityConfig.qml:22
+msgctxt "ActivityConfig|"
+msgid "OK button"
+msgstr "「確定」鍵"
+
+#: activities/adjacent_numbers/ActivityConfig.qml:30
+#: activities/enumerate/ActivityConfig.qml:32
+#: activities/money/ActivityConfig.qml:32
+#: activities/money_back/ActivityConfig.qml:32
+#: activities/money_back_cents/ActivityConfig.qml:32
+#: activities/money_cents/ActivityConfig.qml:32
+msgctxt "ActivityConfig|"
+msgid "Validate answers"
+msgstr "檢查答案"
+
+#. Activity title
+#: activities/adjacent_numbers/ActivityInfo.qml:14
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "ActivityInfo|"
+msgid "Find the adjacent numbers"
+msgstr "找出這兩個數字。"
+
+#. Help title
+#: activities/adjacent_numbers/ActivityInfo.qml:16
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "ActivityInfo|"
+msgid "Find the missing adjacent numbers."
+msgstr "找出這兩個數字。"
+
+#. Help goal
+#: activities/adjacent_numbers/ActivityInfo.qml:19
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Learn about prime numbers."
+msgctxt "ActivityInfo|"
+msgid "Learn to order numbers."
+msgstr "學習何謂質數。"
+
+#. Help manual
+#: activities/adjacent_numbers/ActivityInfo.qml:22
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Compare the numbers and choose the corresponding sign."
+msgctxt "ActivityInfo|"
+msgid "Find the requested numbers and drag them to the corresponding spot."
+msgstr "比較數字，並選擇相關的記號。"
+
+#: activities/adjacent_numbers/resource/1/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Find numbers between 1 and 10."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/adjacent_numbers/resource/2/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Find numbers between 0 and 20."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Find numbers between 0 and 100."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:14
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the next number."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:27
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the previous number."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:40
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the in-between number."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:53
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the missing numbers."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:66
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the next numbers."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:79
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the previous numbers."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/3/Data.qml:105
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Find both numbers."
+msgctxt "Data|"
+msgid "Find the in-between numbers."
+msgstr "找出這兩個數字。"
+
+#: activities/adjacent_numbers/resource/4/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Find numbers between -10 and -1."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/adjacent_numbers/resource/5/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Find numbers between -10 and 10."
+msgstr "%1 到 %2 之間的數字。"
 
 #. Activity title
 #: activities/advanced_colors/ActivityInfo.qml:15
@@ -72,11 +242,14 @@ msgstr ""
 #: activities/enumerate/ActivityInfo.qml:25
 #: activities/fifteen/ActivityInfo.qml:24
 #: activities/find_the_day/ActivityInfo.qml:25
+#: activities/frieze/ActivityInfo.qml:24
 #: activities/gnumch-equality/ActivityInfo.qml:28
 #: activities/gnumch-factors/ActivityInfo.qml:28
 #: activities/gnumch-inequality/ActivityInfo.qml:27
 #: activities/gnumch-multiples/ActivityInfo.qml:28
 #: activities/gnumch-primes/ActivityInfo.qml:28
+#: activities/graduated_line_read/ActivityInfo.qml:24
+#: activities/graduated_line_use/ActivityInfo.qml:24
 #: activities/grammar_analysis/ActivityInfo.qml:29
 #: activities/grammar_classes/ActivityInfo.qml:29
 #: activities/graph-coloring/ActivityInfo.qml:25
@@ -2429,14 +2602,14 @@ msgctxt "balancebox|"
 msgid "The file '%1' is missing!<br>Falling back to builtin levels."
 msgstr "找不到檔案 '%1'！<br/>將回到內建關卡。"
 
-#: activities/balancebox/Balancebox.qml:72
+#: activities/balancebox/Balancebox.qml:71
 msgctxt "Balancebox|"
 msgid ""
 "You selected the user-defined level set, but you have not yet loaded any "
 "user level!"
 msgstr "您選擇了使用者自訂的關卡集，但尚未載入任何關卡！"
 
-#: activities/balancebox/Balancebox.qml:74
+#: activities/balancebox/Balancebox.qml:73
 msgctxt "Balancebox|"
 msgid "Ok"
 msgstr "確定"
@@ -2686,7 +2859,7 @@ msgctxt "binary_bulb|"
 msgid "This image will help you to compute bits' value."
 msgstr "這張圖片會協助您計算位元的值。"
 
-#: activities/binary_bulb/BinaryBulb.qml:122
+#: activities/binary_bulb/BinaryBulb.qml:127
 #, qt-format
 msgctxt "BinaryBulb|"
 msgid "What is the binary representation of %1?"
@@ -2753,30 +2926,30 @@ msgctxt "ActivityInfo|"
 msgid "Space: open or close the braille chart"
 msgstr "空白鍵：開啟或關閉點字圖表"
 
-#: activities/braille_alphabets/braille_alphabets.js:46
-#: activities/braille_alphabets/braille_alphabets.js:56
-#: activities/braille_alphabets/braille_alphabets.js:66
-#: activities/braille_alphabets/braille_alphabets.js:76
-#: activities/braille_alphabets/braille_alphabets.js:86
+#: activities/braille_alphabets/braille_alphabets.js:43
+#: activities/braille_alphabets/braille_alphabets.js:53
+#: activities/braille_alphabets/braille_alphabets.js:63
+#: activities/braille_alphabets/braille_alphabets.js:73
+#: activities/braille_alphabets/braille_alphabets.js:83
 msgctxt "braille_alphabets|"
 msgid "Now it's a little bit harder without the reference."
 msgstr "現在沒有點字圖表，可能會困難一點。"
 
-#: activities/braille_alphabets/braille_alphabets.js:51
+#: activities/braille_alphabets/braille_alphabets.js:48
 msgctxt "braille_alphabets|"
 msgid ""
 "Look at the braille character chart and observe how similar the first and "
 "second lines are."
 msgstr "觀察點字圖表，比較第一與第二行的相似處。"
 
-#: activities/braille_alphabets/braille_alphabets.js:61
+#: activities/braille_alphabets/braille_alphabets.js:58
 msgctxt "braille_alphabets|"
 msgid ""
 "Again, similar to the first line in the character chart but take care, the "
 "'W' letter was added afterward."
 msgstr "再一次的，如同點字圖表中的第一行，但是要注意 'W' 字母被加在後面。"
 
-#: activities/braille_alphabets/braille_alphabets.js:71
+#: activities/braille_alphabets/braille_alphabets.js:68
 msgctxt "braille_alphabets|"
 msgid "This is easy, numbers are the same as letters from A to J."
 msgstr "這很簡單，數字就跟字母 A 到 J 一樣。"
@@ -2786,14 +2959,14 @@ msgctxt "FirstScreen|"
 msgid "Braille: Unlocking the Code"
 msgstr "布拉耶點字法：解碼"
 
-#: activities/braille_alphabets/FirstScreen.qml:53
+#: activities/braille_alphabets/FirstScreen.qml:65
 msgctxt "FirstScreen|"
 msgid ""
 "The braille system is a method that is used by blind people to read and "
 "write."
 msgstr "布拉耶點字系統是一個用於盲人識字、寫字的方法。"
 
-#: activities/braille_alphabets/FirstScreen.qml:54
+#: activities/braille_alphabets/FirstScreen.qml:66
 msgctxt "FirstScreen|"
 msgid ""
 "Each braille character, or cell, is made up of six dot positions, arranged "
@@ -2803,7 +2976,7 @@ msgstr ""
 "每一個布拉耶點字法的字元是由六個點的位置不同所構成，每個字是由二乘三個點所組"
 "成。就像左手邊看到的，每個點被定為數字1到6。"
 
-#: activities/braille_alphabets/FirstScreen.qml:78
+#: activities/braille_alphabets/FirstScreen.qml:88
 msgctxt "FirstScreen|"
 msgid "When you are ready, click on me and try reproducing braille characters."
 msgstr "當您準備好後，請按我來練習點字。"
@@ -3030,37 +3203,37 @@ msgctxt "ActivityInfo|"
 msgid "Space or Enter: validate your answer"
 msgstr "空白鍵或 Enter：送出您的答案"
 
-#: activities/calendar/Calendar.qml:309
+#: activities/calendar/Calendar.qml:306
 msgctxt "Calendar|"
 msgid "Sunday"
 msgstr "星期日"
 
-#: activities/calendar/Calendar.qml:310
+#: activities/calendar/Calendar.qml:307
 msgctxt "Calendar|"
 msgid "Monday"
 msgstr "星期一"
 
-#: activities/calendar/Calendar.qml:311
+#: activities/calendar/Calendar.qml:308
 msgctxt "Calendar|"
 msgid "Tuesday"
 msgstr "星期二"
 
-#: activities/calendar/Calendar.qml:312
+#: activities/calendar/Calendar.qml:309
 msgctxt "Calendar|"
 msgid "Wednesday"
 msgstr "星期三"
 
-#: activities/calendar/Calendar.qml:313
+#: activities/calendar/Calendar.qml:310
 msgctxt "Calendar|"
 msgid "Thursday"
 msgstr "星期四"
 
-#: activities/calendar/Calendar.qml:314
+#: activities/calendar/Calendar.qml:311
 msgctxt "Calendar|"
 msgid "Friday"
 msgstr "星期五"
 
-#: activities/calendar/Calendar.qml:315
+#: activities/calendar/Calendar.qml:312
 msgctxt "Calendar|"
 msgid "Saturday"
 msgstr "星期六"
@@ -4677,18 +4850,6 @@ msgctxt "ActivityInfo|"
 msgid "Click on an uppercase letter"
 msgstr "在大寫字母上按一下"
 
-#: activities/clickanddraw/ActivityConfig.qml:21
-#: activities/drawletters/ActivityConfig.qml:21
-#: activities/drawnumbers/ActivityConfig.qml:21
-#: activities/enumerate/ActivityConfig.qml:21
-#: activities/erase/ActivityConfig.qml:21
-#: activities/erase_2clic/ActivityConfig.qml:21
-#: activities/erase_clic/ActivityConfig.qml:21
-#: activities/number_sequence/ActivityConfig.qml:22
-msgctxt "ActivityConfig|"
-msgid "Automatic"
-msgstr "自動"
-
 #: activities/clickanddraw/ActivityConfig.qml:22
 #: activities/drawletters/ActivityConfig.qml:22
 #: activities/drawnumbers/ActivityConfig.qml:22
@@ -4825,26 +4986,26 @@ msgid ""
 "and the longest hand indicates the seconds."
 msgstr "最短的指針表示小時，長一點的表示分鐘，最長的指針則表示秒。"
 
-#: activities/clockgame/Clockgame.qml:106
+#: activities/clockgame/Clockgame.qml:108
 msgctxt "Clockgame|"
 msgid "Set the watch to:"
 msgstr "將錶設定成："
 
-#: activities/clockgame/Clockgame.qml:109
+#: activities/clockgame/Clockgame.qml:111
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n hour(s)"
 msgid_plural "%n hour(s)"
 msgstr[0] "%n 小時"
 
-#: activities/clockgame/Clockgame.qml:112
+#: activities/clockgame/Clockgame.qml:114
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n minute(s)"
 msgid_plural "%n minute(s)"
 msgstr[0] "%n 分"
 
-#: activities/clockgame/Clockgame.qml:115
+#: activities/clockgame/Clockgame.qml:117
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n second(s)"
@@ -4936,62 +5097,62 @@ msgctxt "ColorMix|"
 msgid "Match the color"
 msgstr "比對顏色"
 
-#: activities/color_mix/ColorMix.qml:200
+#: activities/color_mix/ColorMix.qml:201
 msgctxt "ColorMix|"
 msgid "Not enough red"
 msgstr "紅色不夠"
 
-#: activities/color_mix/ColorMix.qml:202
+#: activities/color_mix/ColorMix.qml:203
 msgctxt "ColorMix|"
 msgid "Too much red"
 msgstr "紅色太多"
 
-#: activities/color_mix/ColorMix.qml:205
+#: activities/color_mix/ColorMix.qml:206
 msgctxt "ColorMix|"
 msgid "Not enough green"
 msgstr "綠色不夠"
 
-#: activities/color_mix/ColorMix.qml:207
+#: activities/color_mix/ColorMix.qml:208
 msgctxt "ColorMix|"
 msgid "Too much green"
 msgstr "綠色太多"
 
-#: activities/color_mix/ColorMix.qml:210
+#: activities/color_mix/ColorMix.qml:211
 msgctxt "ColorMix|"
 msgid "Not enough blue"
 msgstr "藍色不夠"
 
-#: activities/color_mix/ColorMix.qml:212
+#: activities/color_mix/ColorMix.qml:213
 msgctxt "ColorMix|"
 msgid "Too much blue"
 msgstr "藍色太多"
 
-#: activities/color_mix/ColorMix.qml:216
+#: activities/color_mix/ColorMix.qml:217
 msgctxt "ColorMix|"
 msgid "Not enough magenta"
 msgstr "品紅色不夠"
 
-#: activities/color_mix/ColorMix.qml:218
+#: activities/color_mix/ColorMix.qml:219
 msgctxt "ColorMix|"
 msgid "Too much magenta"
 msgstr "品紅色太多"
 
-#: activities/color_mix/ColorMix.qml:221
+#: activities/color_mix/ColorMix.qml:222
 msgctxt "ColorMix|"
 msgid "Not enough yellow"
 msgstr "黃色不夠"
 
-#: activities/color_mix/ColorMix.qml:223
+#: activities/color_mix/ColorMix.qml:224
 msgctxt "ColorMix|"
 msgid "Too much yellow"
 msgstr "黃色太多"
 
-#: activities/color_mix/ColorMix.qml:226
+#: activities/color_mix/ColorMix.qml:227
 msgctxt "ColorMix|"
 msgid "Not enough cyan"
 msgstr "青色不夠"
 
-#: activities/color_mix/ColorMix.qml:228
+#: activities/color_mix/ColorMix.qml:229
 msgctxt "ColorMix|"
 msgid "Too much cyan"
 msgstr "青色太多"
@@ -5126,19 +5287,19 @@ msgctxt "colors|"
 msgid "Find the pink duck"
 msgstr "找出粉紅色鴨子"
 
-#: activities/colors/FindIt.qml:261
+#: activities/colors/FindIt.qml:260
 msgctxt "FindIt|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/colors/FindIt.qml:262
+#: activities/colors/FindIt.qml:261
 msgctxt "FindIt|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/colors/FindIt.qml:263
+#: activities/colors/FindIt.qml:262
 msgctxt "FindIt|"
 msgid "Continue"
 msgstr "繼續"
@@ -5303,7 +5464,7 @@ msgid "Space or Enter or Tab: select the next item"
 msgstr "空白鍵、Tab 鍵或 Enter：選擇下一個物品"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 15–25 simple 3-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: cat;dog;win;red;yes
-#: activities/crane/crane.js:44
+#: activities/crane/crane.js:41
 msgctxt "crane|"
 msgid ""
 "cat;dog;win;red;yes;big;box;air;arm;car;bus;fun;day;eat;hat;leg;ice;old;egg"
@@ -5311,7 +5472,7 @@ msgstr ""
 "cat;dog;win;red;yes;big;box;air;arm;car;bus;fun;day;eat;hat;leg;ice;old;egg"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 10–20 simple 4-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: blue;best;good;area
-#: activities/crane/crane.js:51
+#: activities/crane/crane.js:48
 msgctxt "crane|"
 msgid ""
 "blue;best;good;area;bell;coat;easy;farm;food;else;girl;give;hero;help;hour;"
@@ -5321,7 +5482,7 @@ msgstr ""
 "sand;song"
 
 #. Translators: NOTE: Word list for crane activity. Translate this into a list of 10–20 simple 5-letter words separated by semi-colons. The words can only contain lowercase ASCII letters (a–z). Example: happy;child;white;apple
-#: activities/crane/crane.js:58
+#: activities/crane/crane.js:55
 msgctxt "crane|"
 msgid ""
 "happy;child;white;apple;brown;truth;fresh;green;horse;hotel;house;paper;"
@@ -5612,7 +5773,7 @@ msgctxt "AndGate|"
 msgid "A AND B"
 msgstr "A AND B"
 
-#: activities/digital_electricity/components/BcdCounter.qml:25
+#: activities/digital_electricity/components/BcdCounter.qml:24
 msgctxt "BcdCounter|"
 msgid ""
 "A BCD counter usually takes a signal generator as input. The output is a BCD "
@@ -5644,7 +5805,7 @@ msgstr ""
 "比較器（Comparator）用兩個數字 A 跟 B 做為輸入，並輸出三個值。第一個值為 1 表"
 "示 A < B，第二個值為 1 表示 A = B，第三個值為 1 則表示 A > B。"
 
-#: activities/digital_electricity/components/DigitalLight.qml:21
+#: activities/digital_electricity/components/DigitalLight.qml:20
 msgctxt "DigitalLight|"
 msgid ""
 "A digital light is used to check the output of other digital components. It "
@@ -5750,7 +5911,7 @@ msgctxt "SignalGenerator|"
 msgid "%1 s"
 msgstr "%1 秒"
 
-#: activities/digital_electricity/components/Switch.qml:22
+#: activities/digital_electricity/components/Switch.qml:21
 msgctxt "Switch|"
 msgid ""
 "A switch is used to connect or disconnect two terminals. If the switch is "
@@ -6214,16 +6375,6 @@ msgctxt "ActivityInfo|"
 msgid "Draw the numbers by connecting the dots in the correct order."
 msgstr "將點點以正確的順序連起來變成數字。"
 
-#: activities/enumerate/ActivityConfig.qml:22
-msgctxt "ActivityConfig|"
-msgid "OK button"
-msgstr "「確定」鍵"
-
-#: activities/enumerate/ActivityConfig.qml:32
-msgctxt "ActivityConfig|"
-msgid "Validate answers"
-msgstr "檢查答案"
-
 #. Activity title
 #: activities/enumerate/ActivityInfo.qml:15
 msgctxt "ActivityInfo|"
@@ -6475,19 +6626,19 @@ msgid ""
 msgstr ""
 "第三關中，會隨機出現不同的文字敘述，你必須點擊該敘述所描述的是哪一種動物。"
 
-#: activities/explore_farm_animals/ExploreLevels.qml:305
+#: activities/explore_farm_animals/ExploreLevels.qml:335
 msgctxt "ExploreLevels|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/explore_farm_animals/ExploreLevels.qml:306
+#: activities/explore_farm_animals/ExploreLevels.qml:336
 msgctxt "ExploreLevels|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/explore_farm_animals/ExploreLevels.qml:307
+#: activities/explore_farm_animals/ExploreLevels.qml:337
 msgctxt "ExploreLevels|"
 msgid "Continue"
 msgstr "繼續"
@@ -8284,17 +8435,17 @@ msgstr ""
 "配偶。\n"
 "您是白色圈圈裡的人。回答橘色圈圈裡的人您應該要怎麼稱呼。\n"
 
-#: activities/family/Family.qml:227
+#: activities/family/Family.qml:226
 msgctxt "Family|"
 msgid "Me"
 msgstr "我"
 
-#: activities/family/Family.qml:250
+#: activities/family/Family.qml:249
 msgctxt "Family|"
 msgid "?"
 msgstr "?"
 
-#: activities/family/Family.qml:364
+#: activities/family/Family.qml:363
 #, qt-format
 msgctxt "Family|"
 msgid "Select one of the pairs corresponding to: %1"
@@ -8767,7 +8918,7 @@ msgid ""
 "Select the appropriate number of parts as described in the instructions."
 msgstr "依照說明指示選擇適當的分數。"
 
-#: activities/fractions_create/fractions_create.js:77
+#: activities/fractions_create/fractions_create.js:78
 msgctxt "fractions_create|"
 msgid "Find the represented fraction."
 msgstr "找出適當的分數。"
@@ -9123,6 +9274,202 @@ msgstr "用圓餅來找出分母與分子。"
 msgctxt "Data|"
 msgid "Find numerator and denominator (with a square)."
 msgstr "用方塊來找出分母與分子。"
+
+#. Activity title
+#: activities/frieze/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Frieze"
+msgstr ""
+
+#. Help title
+#: activities/frieze/ActivityInfo.qml:16
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Reproduce the given tower."
+msgctxt "ActivityInfo|"
+msgid "Reproduce and complete the frieze."
+msgstr "重組河內塔。"
+
+#. Help goal
+#: activities/frieze/ActivityInfo.qml:19
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Learn digits"
+msgctxt "ActivityInfo|"
+msgid "Learn algorithms."
+msgstr "學習數字"
+
+#. Help manual
+#: activities/frieze/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Reproduce the frieze on top. On some levels, you may have to complete the "
+"frieze or to reproduce it after you've memorized it."
+msgstr ""
+
+#: activities/frieze/ActivityInfo.qml:25
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Left and Right arrows: select a symbol button"
+msgctxt "ActivityInfo|"
+msgid "Left and right arrows: select a token"
+msgstr "左、右鍵：選擇比較符號"
+
+#: activities/frieze/ActivityInfo.qml:26
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Space: select an item"
+msgctxt "ActivityInfo|"
+msgid "Space: add selected token to the frieze"
+msgstr "空白鍵：選擇一個字母"
+
+#: activities/frieze/ActivityInfo.qml:27
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Backspace or Delete: undo"
+msgctxt "ActivityInfo|"
+msgid "Backspace or Delete: remove last token from the frieze"
+msgstr "返回或刪除鍵：復原-"
+
+#: activities/frieze/ActivityInfo.qml:28
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Enter: validate your answer"
+msgctxt "ActivityInfo|"
+msgid "Enter: validate the answer"
+msgstr "Enter 鍵：檢查您的答案"
+
+#: activities/frieze/ActivityInfo.qml:29
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Space: switch between invisible and visible modes"
+msgctxt "ActivityInfo|"
+msgid "Tab: switch between editing the frieze and viewing the model"
+msgstr "空白鍵：切換可見與不可見模式"
+
+#: activities/frieze/Frieze.qml:290
+#, fuzzy
+#| msgctxt "ReadyButton|"
+#| msgid "I am Ready"
+msgctxt "Frieze|"
+msgid "I am Ready"
+msgstr "我準備好了"
+
+#: activities/frieze/resource/1/Data.qml:28
+msgctxt "Data|"
+msgid "Copy this frieze: 2 shapes with different colors/signs."
+msgstr ""
+
+#: activities/frieze/resource/1/Data.qml:31
+#: activities/frieze/resource/4/Data.qml:17
+#: activities/frieze/resource/5/Data.qml:17
+#: activities/frieze/resource/7/Data.qml:17
+msgctxt "Data|"
+msgid "Copy this frieze."
+msgstr ""
+
+#: activities/frieze/resource/10/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: any combination of shapes, colors/signs and "
+"sizes."
+msgstr ""
+
+#: activities/frieze/resource/10/Data.qml:17
+#: activities/frieze/resource/12/Data.qml:16
+#: activities/frieze/resource/14/Data.qml:16
+#: activities/frieze/resource/3/Data.qml:17
+msgctxt "Data|"
+msgid "Remember and copy this frieze."
+msgstr ""
+
+#: activities/frieze/resource/11/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 4 and 7, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/11/Data.qml:16
+#: activities/frieze/resource/13/Data.qml:16
+#: activities/frieze/resource/2/Data.qml:17
+#: activities/frieze/resource/6/Data.qml:17
+#: activities/frieze/resource/8/Data.qml:17
+#: activities/frieze/resource/9/Data.qml:17
+msgctxt "Data|"
+msgid "Copy and complete this frieze."
+msgstr ""
+
+#: activities/frieze/resource/12/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: patterns between 4 and 7, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/13/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 6 and 8, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/14/Data.qml:13
+msgctxt "Data|"
+msgid ""
+"Remember and copy this frieze: patterns between 6 and 8, any combination of "
+"shapes, colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/2/Data.qml:14
+msgctxt "Data|"
+msgid "Copy and complete this frieze: 2 shapes with different colors/signs."
+msgstr ""
+
+#: activities/frieze/resource/3/Data.qml:14
+msgctxt "Data|"
+msgid "Remember and copy this frieze: 2 shapes with different colors/signs."
+msgstr ""
+
+#: activities/frieze/resource/4/Data.qml:14
+msgctxt "Data|"
+msgid "Copy this frieze: 3 or 4 shapes with different colors/signs."
+msgstr ""
+
+#: activities/frieze/resource/5/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy this frieze: 3 or 4 shapes with 2 sizes and potentially same colors/"
+"signs."
+msgstr ""
+
+#: activities/frieze/resource/6/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: 3 or 4 shapes with 2 sizes and potentially "
+"same colors/signs."
+msgstr ""
+
+#: activities/frieze/resource/7/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy this frieze: patterns between 12 and 15, any combination of shapes, "
+"colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/8/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 10 and 12, any combination "
+"of shapes, colors/signs and sizes."
+msgstr ""
+
+#: activities/frieze/resource/9/Data.qml:14
+msgctxt "Data|"
+msgid ""
+"Copy and complete this frieze: patterns between 16 and 20, any combination "
+"of shapes, colors/signs and sizes."
+msgstr ""
 
 #. Activity title
 #: activities/geo-country/ActivityInfo.qml:19
@@ -10424,7 +10771,7 @@ msgstr "Asturias"
 #: activities/geo-country/resource/board/board18_0.qml:92
 msgctxt "board18_0|"
 msgid "Basque Country"
-msgstr "Basque Country"
+msgstr "巴斯克地區"
 
 #. Autonomous communities of Spain: La Rioja
 #: activities/geo-country/resource/board/board18_0.qml:99
@@ -13368,6 +13715,268 @@ msgstr ""
 "族成員，因此 6 不是質數。"
 
 #. Activity title
+#: activities/graduated_line_read/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Read a graduated line"
+msgstr ""
+
+#. Help title
+#: activities/graduated_line_read/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Read values on a graduated line."
+msgstr ""
+
+#. Help goal
+#: activities/graduated_line_read/ActivityInfo.qml:19
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Learn the water cycle."
+msgctxt "ActivityInfo|"
+msgid "Learn to read a graduated line."
+msgstr "學習水循環系統。"
+
+#. Help prerequisite
+#: activities/graduated_line_read/ActivityInfo.qml:21
+#: activities/graduated_line_use/ActivityInfo.qml:21
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Even and odd numbers"
+msgctxt "ActivityInfo|"
+msgid "Reading and ordering numbers."
+msgstr "偶數與奇數"
+
+#. Help manual
+#: activities/graduated_line_read/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Use the number pad or your keyboard to enter the value corresponding to the "
+"given spot on the graduated line."
+msgstr ""
+
+#: activities/graduated_line_read/ActivityInfo.qml:25
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Digits: enter a number"
+msgctxt "ActivityInfo|"
+msgid "Digits: enter digits"
+msgstr "數字鍵：輸入數字"
+
+#: activities/graduated_line_read/ActivityInfo.qml:26
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Backspace: delete the last digit in your answer"
+msgctxt "ActivityInfo|"
+msgid "Backspace: delete the last digit"
+msgstr "返回鍵：刪除前一個輸入的數字"
+
+#: activities/graduated_line_read/ActivityInfo.qml:27
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Digits: type your answer"
+msgctxt "ActivityInfo|"
+msgid "Delete: reset your answer"
+msgstr "數字鍵：輸入答案"
+
+#: activities/graduated_line_read/ActivityInfo.qml:28
+#: activities/graduated_line_use/ActivityInfo.qml:26
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Space or Enter: validate your answer"
+msgctxt "ActivityInfo|"
+msgid "Space, Return or Enter: validate your answer"
+msgstr "空白鍵或 Enter：送出您的答案"
+
+#: activities/graduated_line_read/graduated_line_read.js:116
+msgctxt "graduated_line_read|"
+msgid "(variable boundaries)"
+msgstr ""
+
+#: activities/graduated_line_read/GraduatedLineRead.qml:15
+#, fuzzy
+#| msgctxt "advanced_colors|"
+#| msgid "Find the rust butterfly"
+msgctxt "GraduatedLineRead|"
+msgid "Find the requested number."
+msgstr "尋找鐵鏽色的蝴蝶"
+
+#: activities/graduated_line_read/resource/1/Data.qml:21
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 1 and 5."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/2/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 1 and 7."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/3/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 1 and 10."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/4/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 20."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/5/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 50."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/6/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 100."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/7/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 1 000."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/8/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 10 000."
+msgstr "%1 到 %2 之間的數字。"
+
+#: activities/graduated_line_read/resource/9/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Numbers between %1 and %2."
+msgctxt "Data|"
+msgid "Number to find between 0 and 1 000 000."
+msgstr "%1 到 %2 之間的數字。"
+
+#. Activity title
+#: activities/graduated_line_use/ActivityInfo.qml:14
+msgctxt "ActivityInfo|"
+msgid "Use a graduated line"
+msgstr ""
+
+#. Help title
+#: activities/graduated_line_use/ActivityInfo.qml:16
+msgctxt "ActivityInfo|"
+msgid "Place values on a graduated line."
+msgstr ""
+
+#. Help goal
+#: activities/graduated_line_use/ActivityInfo.qml:19
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Learn how to use a calendar."
+msgctxt "ActivityInfo|"
+msgid "Learn to use a graduated line."
+msgstr "學習有效地運用日曆。"
+
+#. Help manual
+#: activities/graduated_line_use/ActivityInfo.qml:23
+msgctxt "ActivityInfo|"
+msgid ""
+"Use the arrows to move the cursor to the position corresponding to the given "
+"value on the graduated line."
+msgstr ""
+
+#: activities/graduated_line_use/ActivityInfo.qml:25
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Left and Right arrows: move the spaceship"
+msgctxt "ActivityInfo|"
+msgid "Left and Right arrows: move the cursor"
+msgstr "左、右鍵：移動太空船"
+
+#: activities/graduated_line_use/GraduatedLineUse.qml:10
+msgctxt "GraduatedLineUse|"
+msgid "Place the given number on the graduated line."
+msgstr ""
+
+#: activities/graduated_line_use/resource/1/Data.qml:21
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Ascending order, 5 defined numbers between 1 and 5."
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 5."
+msgstr "順向排序，1 到 5 之間 5 個數字。"
+
+#: activities/graduated_line_use/resource/2/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Guess a number between 1 and %1."
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 7."
+msgstr "猜一個 1 到 %1 之間的數字。"
+
+#: activities/graduated_line_use/resource/3/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Guess a number between 1 and %1."
+msgctxt "Data|"
+msgid "Graduation to find between 1 and 10."
+msgstr "猜一個 1 到 %1 之間的數字。"
+
+#: activities/graduated_line_use/resource/4/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Result between 20 and 29."
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 20."
+msgstr "運算結果在 20 到 29 之間。"
+
+#: activities/graduated_line_use/resource/5/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Result between 30 and 50."
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 50."
+msgstr "運算結果在 30 到 50 之間。"
+
+#: activities/graduated_line_use/resource/6/Data.qml:9
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "Result between 30 and 50."
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 100."
+msgstr "運算結果在 30 到 50 之間。"
+
+#: activities/graduated_line_use/resource/7/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 1 000."
+msgstr ""
+
+#: activities/graduated_line_use/resource/8/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 10 000."
+msgstr ""
+
+#: activities/graduated_line_use/resource/9/Data.qml:9
+msgctxt "Data|"
+msgid "Graduation to find between 0 and 1 000 000."
+msgstr ""
+
+#. Activity title
 #: activities/grammar_analysis/ActivityInfo.qml:18
 msgctxt "ActivityInfo|"
 msgid "Grammatical analysis"
@@ -13487,7 +14096,7 @@ msgctxt "grammar_analysis|"
 msgid "Leave the box blank if the class doesn't match."
 msgstr ""
 
-#: activities/grammar_analysis/grammar_analysis.js:401
+#: activities/grammar_analysis/grammar_analysis.js:421
 #, fuzzy
 #| msgctxt "Admin|"
 #| msgid "empty"
@@ -13729,7 +14338,7 @@ msgctxt "ActivityInfo|"
 msgid "Tabulation: switch between numbers and operators"
 msgstr ""
 
-#: activities/guess24/Guess24.qml:104
+#: activities/guess24/Guess24.qml:106
 msgctxt "Guess24|"
 msgid "Use the four numbers with given operators to find 24."
 msgstr ""
@@ -13828,23 +14437,17 @@ msgctxt "Admin|"
 msgid "Level %1"
 msgstr "第 %1 級"
 
-#: activities/guesscount/guesscount.js:128
+#: activities/guesscount/guesscount.js:142
 msgctxt "guesscount|"
 msgid "result is not positive integer"
 msgstr "結果不是正整數"
 
-#: activities/guesscount/guesscount.js:130
+#: activities/guesscount/guesscount.js:144
 msgctxt "guesscount|"
 msgid "result is not an integer"
 msgstr "結果不是整數"
 
-#: activities/guesscount/Guesscount.qml:131
-#, qt-format
-msgctxt "Guesscount|"
-msgid "%1/%2"
-msgstr "%1/%2"
-
-#: activities/guesscount/Guesscount.qml:165
+#: activities/guesscount/Guesscount.qml:155
 #, qt-format
 msgctxt "Guesscount|"
 msgid "Guesscount: %1"
@@ -13855,7 +14458,7 @@ msgctxt "OperandRow|"
 msgid "Numbers"
 msgstr "數字"
 
-#: activities/guesscount/OperatorRow.qml:42
+#: activities/guesscount/OperatorRow.qml:41
 msgctxt "OperatorRow|"
 msgid "Operators"
 msgstr "運算符"
@@ -14029,12 +14632,12 @@ msgctxt "hangman|"
 msgid "Attempted: %1"
 msgstr "嘗試次數：%1"
 
-#: activities/hangman/Hangman.qml:401
+#: activities/hangman/Hangman.qml:402
 msgctxt "Hangman|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "抱歉，目前還沒有您的語言的翻譯。"
 
-#: activities/hangman/Hangman.qml:402
+#: activities/hangman/Hangman.qml:403
 #, qt-format
 msgctxt "Hangman|"
 msgid ""
@@ -14044,7 +14647,7 @@ msgstr ""
 "GCompris 由 KDE 社群開發。您可以加入 <a href=\"%2\">%2</a> 翻譯團隊來翻譯 "
 "GCompris"
 
-#: activities/hangman/Hangman.qml:404
+#: activities/hangman/Hangman.qml:405
 msgctxt "Hangman|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -14840,8 +15443,11 @@ msgid "Space or Enter: select an item from the list"
 msgstr "空白鍵或 Enter：從清單中選取"
 
 #: activities/lang/ActivityInfo.qml:36
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Enter: validate your answer when the OK button is visible"
 msgctxt "ActivityInfo|"
-msgid "Enter: validate your answer when the OK button is visible"
+msgid "Enter: validate your answer when the OK button is visible"
 msgstr "Enter 鍵：在「確定」鍵亮起時檢查您的答案"
 
 #: activities/lang/ActivityInfo.qml:37
@@ -14850,12 +15456,12 @@ msgctxt "ActivityInfo|"
 msgid "Tab: repeat the word"
 msgstr "Tab 鍵：重聽一次單字"
 
-#: activities/lang/Lang.qml:138
+#: activities/lang/Lang.qml:136
 msgctxt "Lang|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "抱歉，目前還沒有您的語言的翻譯。"
 
-#: activities/lang/Lang.qml:139
+#: activities/lang/Lang.qml:137
 #, qt-format
 msgctxt "Lang|"
 msgid ""
@@ -14865,124 +15471,124 @@ msgstr ""
 "GCompris 由 KDE 社群開發。您可以加入 <a href=\"%2\">%2</a> 翻譯團隊來翻譯 "
 "GCompris"
 
-#: activities/lang/Lang.qml:141
+#: activities/lang/Lang.qml:139
 msgctxt "Lang|"
 msgid ""
 "We switched to English for this activity but you can select another language "
 "in the configuration dialog."
 msgstr "我們將此活動切換為英文，但您可以在設定對話框中選擇另一個語言。"
 
-#: activities/lang/Lang.qml:189 activities/lang/Lang.qml:190
+#: activities/lang/Lang.qml:187 activities/lang/Lang.qml:188
 msgctxt "Lang|"
 msgid "other"
 msgstr "其它"
 
-#: activities/lang/Lang.qml:191
+#: activities/lang/Lang.qml:189
 msgctxt "Lang|"
 msgid "action"
 msgstr "動作"
 
-#: activities/lang/Lang.qml:191
+#: activities/lang/Lang.qml:189
 msgctxt "Lang|"
 msgid "adjective"
 msgstr "形容詞"
 
-#: activities/lang/Lang.qml:192
+#: activities/lang/Lang.qml:190
 msgctxt "Lang|"
 msgid "color"
 msgstr "顏色"
 
-#: activities/lang/Lang.qml:192
+#: activities/lang/Lang.qml:190
 msgctxt "Lang|"
 msgid "number"
 msgstr "數字"
 
-#: activities/lang/Lang.qml:193
+#: activities/lang/Lang.qml:191
 msgctxt "Lang|"
 msgid "people"
 msgstr "人物"
 
-#: activities/lang/Lang.qml:193
+#: activities/lang/Lang.qml:191
 msgctxt "Lang|"
 msgid "bodyparts"
 msgstr "身體部位"
 
-#: activities/lang/Lang.qml:194
+#: activities/lang/Lang.qml:192
 msgctxt "Lang|"
 msgid "clothes"
 msgstr "衣服"
 
-#: activities/lang/Lang.qml:194
+#: activities/lang/Lang.qml:192
 msgctxt "Lang|"
 msgid "emotion"
 msgstr "表情"
 
-#: activities/lang/Lang.qml:195
+#: activities/lang/Lang.qml:193
 msgctxt "Lang|"
 msgid "job"
 msgstr "工作"
 
-#: activities/lang/Lang.qml:195
+#: activities/lang/Lang.qml:193
 msgctxt "Lang|"
 msgid "sport"
 msgstr "運動"
 
-#: activities/lang/Lang.qml:196
+#: activities/lang/Lang.qml:194
 msgctxt "Lang|"
 msgid "nature"
 msgstr "自然"
 
-#: activities/lang/Lang.qml:196
+#: activities/lang/Lang.qml:194
 msgctxt "Lang|"
 msgid "animal"
 msgstr "動物"
 
-#: activities/lang/Lang.qml:197
+#: activities/lang/Lang.qml:195
 msgctxt "Lang|"
 msgid "fruit"
 msgstr "水果"
 
-#: activities/lang/Lang.qml:197
+#: activities/lang/Lang.qml:195
 msgctxt "Lang|"
 msgid "plant"
 msgstr "植物"
 
-#: activities/lang/Lang.qml:198
+#: activities/lang/Lang.qml:196
 msgctxt "Lang|"
 msgid "vegetables"
 msgstr "蔬菜"
 
-#: activities/lang/Lang.qml:198
+#: activities/lang/Lang.qml:196
 msgctxt "Lang|"
 msgid "object"
 msgstr "物件"
 
-#: activities/lang/Lang.qml:199
+#: activities/lang/Lang.qml:197
 msgctxt "Lang|"
 msgid "construction"
 msgstr "建築"
 
-#: activities/lang/Lang.qml:200
+#: activities/lang/Lang.qml:198
 msgctxt "Lang|"
 msgid "furniture"
 msgstr "家具"
 
-#: activities/lang/Lang.qml:200
+#: activities/lang/Lang.qml:198
 msgctxt "Lang|"
 msgid "houseware"
 msgstr "家居用品"
 
-#: activities/lang/Lang.qml:201
+#: activities/lang/Lang.qml:199
 msgctxt "Lang|"
 msgid "tool"
 msgstr "工具"
 
-#: activities/lang/Lang.qml:201
+#: activities/lang/Lang.qml:199
 msgctxt "Lang|"
 msgid "food"
 msgstr "食物"
 
-#: activities/lang/Lang.qml:202
+#: activities/lang/Lang.qml:200
 msgctxt "Lang|"
 msgid "transport"
 msgstr "交通運輸"
@@ -15149,31 +15755,31 @@ msgstr ""
 "在下方數好橘色小點，然後把它拖到上方空白處，直到上方的橘點數可以表示所要求的"
 "數量。然後按下 OK 來檢查答案。"
 
-#: activities/learn_decimals/Learn_decimals.qml:115
+#: activities/learn_decimals/Learn_decimals.qml:118
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the number: %1"
 msgstr "請排出數字：%1"
 
-#: activities/learn_decimals/Learn_decimals.qml:116
+#: activities/learn_decimals/Learn_decimals.qml:119
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the result of: %1 + %2"
 msgstr "請排出計算結果：%1 + %2"
 
-#: activities/learn_decimals/Learn_decimals.qml:117
+#: activities/learn_decimals/Learn_decimals.qml:120
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Display the result of: %1 - %2"
 msgstr "請排出計算結果：%1 - %2"
 
-#: activities/learn_decimals/Learn_decimals.qml:118
+#: activities/learn_decimals/Learn_decimals.qml:121
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Represent the quantity: %1"
 msgstr "請排出數量：%1"
 
-#: activities/learn_decimals/Learn_decimals.qml:571
+#: activities/learn_decimals/Learn_decimals.qml:576
 #, qt-format
 msgctxt "Learn_decimals|"
 msgid "Enter the result: %1"
@@ -15589,7 +16195,7 @@ msgctxt "Leftright|"
 msgid "Left hand"
 msgstr "左手"
 
-#: activities/leftright/Leftright.qml:161
+#: activities/leftright/Leftright.qml:164
 msgctxt "Leftright|"
 msgid "Right hand"
 msgstr "右手"
@@ -15660,12 +16266,12 @@ msgid ""
 msgstr ""
 "飛機上的旗子會顯示一個字母。選擇所有包含該字母的單字，然後按下「確定」鍵。"
 
-#: activities/letter-in-word/LetterInWord.qml:300
+#: activities/letter-in-word/LetterInWord.qml:310
 msgctxt "LetterInWord|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "抱歉，目前還沒有您的語言的翻譯。"
 
-#: activities/letter-in-word/LetterInWord.qml:301
+#: activities/letter-in-word/LetterInWord.qml:311
 #, qt-format
 msgctxt "LetterInWord|"
 msgid ""
@@ -15675,7 +16281,7 @@ msgstr ""
 "GCompris 由 KDE 社群開發。您可以加入 <a href=\"%2\">%2</a> 翻譯團隊來翻譯 "
 "GCompris"
 
-#: activities/letter-in-word/LetterInWord.qml:303
+#: activities/letter-in-word/LetterInWord.qml:313
 msgctxt "LetterInWord|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -15878,7 +16484,7 @@ msgstr ""
 "布拉耶系統被接受成為全世界的標準。Louis Braille 證明了只要您願意，不管您的情"
 "況如何，都能做了不起的事。"
 
-#: activities/louis-braille/ReorderList.qml:163
+#: activities/louis-braille/ReorderList.qml:164
 msgctxt "ReorderList|"
 msgid ""
 "Arrange the events in the order in which they happened. Select the line to "
@@ -15972,7 +16578,7 @@ msgid "Calculate remaining stars up to 10000 with coefficients."
 msgstr "計算最多 10000 個星星並帶係數。"
 
 #. text displaying coefficient with which the set of stars is to be multiplied along with multiplication symbol.
-#: activities/magic-hat-minus/StarsBar.qml:38
+#: activities/magic-hat-minus/StarsBar.qml:37
 #, qt-format
 msgctxt "StarsBar|"
 msgid "%1x"
@@ -16239,19 +16845,19 @@ msgstr ""
 "聽聽聲音播放的順序，然後在木琴上依序敲出正確的音。您可以點擊重複按鍵再聽一"
 "次。"
 
-#: activities/melody/Melody.qml:280
+#: activities/melody/Melody.qml:312
 msgctxt "Melody|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/melody/Melody.qml:281
+#: activities/melody/Melody.qml:313
 msgctxt "Melody|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/melody/Melody.qml:282
+#: activities/melody/Melody.qml:314
 msgctxt "Melody|"
 msgid "Continue"
 msgstr "繼續"
@@ -17530,40 +18136,40 @@ msgctxt "BackgroundMusicList|"
 msgid "Background music"
 msgstr "背景音樂"
 
-#: activities/menu/BackgroundMusicList.qml:127
+#: activities/menu/BackgroundMusicList.qml:129
 msgctxt "BackgroundMusicList|"
 msgid "Disable the background music if you don't want to play them."
 msgstr "如果不想聽的話可以關掉背景音樂。"
 
 #. Current background music playing
-#: activities/menu/BackgroundMusicList.qml:167
+#: activities/menu/BackgroundMusicList.qml:169
 msgctxt "BackgroundMusicList|"
 msgid "Now Playing:"
 msgstr "現正播放："
 
 #. Title of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:176
+#: activities/menu/BackgroundMusicList.qml:178
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Title: %1"
 msgstr "曲名：%1"
 
 #. Artist of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:185
+#: activities/menu/BackgroundMusicList.qml:187
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Artist: %1"
 msgstr "演出者：%1"
 
 #. Year of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:194
+#: activities/menu/BackgroundMusicList.qml:196
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Year: %1"
 msgstr "年份：%1"
 
 #. Copyright of the current background music playing
-#: activities/menu/BackgroundMusicList.qml:203
+#: activities/menu/BackgroundMusicList.qml:205
 #, qt-format
 msgctxt "BackgroundMusicList|"
 msgid "Copyright: %1"
@@ -17751,79 +18357,79 @@ msgctxt "Menu|"
 msgid "No"
 msgstr "否"
 
-#: activities/menu/Menu.qml:127
+#: activities/menu/Menu.qml:116
 msgctxt "Menu|"
 msgid "Logic"
 msgstr "邏輯"
 
-#: activities/menu/Menu.qml:128
+#: activities/menu/Menu.qml:117
 msgctxt "Menu|"
 msgid "Fine Arts"
 msgstr "精緻藝術"
 
-#: activities/menu/Menu.qml:129
+#: activities/menu/Menu.qml:118
 msgctxt "Menu|"
 msgid "Music"
 msgstr "音樂"
 
-#: activities/menu/Menu.qml:135
+#: activities/menu/Menu.qml:124
 msgctxt "Menu|"
 msgid "Experiment"
 msgstr "實驗"
 
-#: activities/menu/Menu.qml:136
+#: activities/menu/Menu.qml:125
 msgctxt "Menu|"
 msgid "History"
 msgstr "歷史"
 
-#: activities/menu/Menu.qml:137
+#: activities/menu/Menu.qml:126
 msgctxt "Menu|"
 msgid "Geography"
 msgstr "地理"
 
-#: activities/menu/Menu.qml:147
+#: activities/menu/Menu.qml:136
 msgctxt "Menu|"
 msgid "Numeration"
 msgstr "計數"
 
-#: activities/menu/Menu.qml:148
+#: activities/menu/Menu.qml:137
 msgctxt "Menu|"
 msgid "Arithmetic"
 msgstr "運算"
 
-#: activities/menu/Menu.qml:149
+#: activities/menu/Menu.qml:138
 msgctxt "Menu|"
 msgid "Measures"
 msgstr "測量"
 
-#: activities/menu/Menu.qml:159
+#: activities/menu/Menu.qml:148
 msgctxt "Menu|"
 msgid "Letters"
 msgstr "字母"
 
-#: activities/menu/Menu.qml:160
+#: activities/menu/Menu.qml:149
 msgctxt "Menu|"
 msgid "Words"
 msgstr "單字"
 
-#: activities/menu/Menu.qml:161
+#: activities/menu/Menu.qml:150
 msgctxt "Menu|"
 msgid "Vocabulary"
 msgstr "字彙"
 
-#: activities/menu/Menu.qml:378
+#: activities/menu/Menu.qml:367
 msgctxt "Menu|"
 msgid ""
 "Put your favorite activities here by clicking on the sun at the top right of "
 "that activity."
 msgstr "只要選擇每個活動右上方的太陽，就可以把您最喜歡的活動放在這裡。"
 
-#: activities/menu/Menu.qml:781
+#: activities/menu/Menu.qml:772
 msgctxt "Menu|"
 msgid "Search specific activities"
 msgstr "搜尋特定的活動"
 
-#: activities/menu/Menu.qml:808
+#: activities/menu/Menu.qml:799
 msgctxt "Menu|"
 msgid "Activity Settings"
 msgstr "活動設定"
@@ -17901,7 +18507,7 @@ msgctxt "ActivityInfo|"
 msgid "metalpaint.wav - remixed and used when a gold nugget is collected"
 msgstr "metalpaint.wav - 金塊被收集時"
 
-#: activities/mining/Mining.qml:407
+#: activities/mining/Mining.qml:422
 msgctxt "Mining|"
 msgid ""
 "Find the sparkle and zoom in around it. If you have a mouse, point the "
@@ -17914,22 +18520,22 @@ msgstr ""
 "軌跡板，則將游標指過去然後在右方區域用一根指頭拖曳，或是用兩根指頭從中間拖"
 "曳。在觸控面板上，用兩根指頭往不同方向滑過去。"
 
-#: activities/mining/Mining.qml:418
+#: activities/mining/Mining.qml:433
 msgctxt "Mining|"
 msgid "Perfect you are zooming. Continue until you see the nugget."
 msgstr "很好，您會放大了。繼續直到看到金塊為止。"
 
-#: activities/mining/Mining.qml:424
+#: activities/mining/Mining.qml:439
 msgctxt "Mining|"
 msgid "Hum, take care, you are zooming too far from the sparkle."
 msgstr "唔，小心一點，您放得太遠了。"
 
-#: activities/mining/Mining.qml:430
+#: activities/mining/Mining.qml:445
 msgctxt "Mining|"
 msgid "Now you see the nugget, click on it to catch it."
 msgstr "看到金塊了沒？點擊就可以收集金塊了。"
 
-#: activities/mining/Mining.qml:436
+#: activities/mining/Mining.qml:451
 msgctxt "Mining|"
 msgid ""
 "Hum, you are too far from the nugget to see it. Unzoom then zoom again as "
@@ -17937,17 +18543,17 @@ msgid ""
 msgstr ""
 "唔，您離金塊太遠了所以看不到它。把畫面縮小，然後再放大接近直到看到閃光為止。"
 
-#: activities/mining/Mining.qml:442
+#: activities/mining/Mining.qml:457
 msgctxt "Mining|"
 msgid "Now unzoom and try to find another sparkle."
 msgstr "現在縮小畫面，找另一個金塊。"
 
-#: activities/mining/Mining.qml:448
+#: activities/mining/Mining.qml:463
 msgctxt "Mining|"
 msgid "Continue to unzoom until you see the sparkle."
 msgstr "繼續縮小直到看到閃光為止。"
 
-#: activities/mining/Mining.qml:454
+#: activities/mining/Mining.qml:469
 msgctxt "Mining|"
 msgid "Now you see the sparkle, go ahead, you can zoom on it."
 msgstr "看到閃光了沒？過去放大吧！"
@@ -17987,12 +18593,12 @@ msgstr ""
 "在主要區域中會顯示一張圖片，而在圖片下方會印出一個不完整的字。請選擇缺少的字"
 "母，或是在鍵盤上輸入，來完成這個字。"
 
-#: activities/missing-letter/MissingLetter.qml:317
+#: activities/missing-letter/MissingLetter.qml:323
 msgctxt "MissingLetter|"
 msgid "We are sorry, we don't have yet a translation for your language."
 msgstr "抱歉，目前還沒有您的語言的翻譯。"
 
-#: activities/missing-letter/MissingLetter.qml:318
+#: activities/missing-letter/MissingLetter.qml:324
 #, qt-format
 msgctxt "MissingLetter|"
 msgid ""
@@ -18002,7 +18608,7 @@ msgstr ""
 "GCompris 由 KDE 社群開發。您可以加入 <a href=\"%2\">%2</a> 翻譯團隊來翻譯 "
 "GCompris"
 
-#: activities/missing-letter/MissingLetter.qml:320
+#: activities/missing-letter/MissingLetter.qml:326
 msgctxt "MissingLetter|"
 msgid ""
 "We switched to English for this activity but you can select another language "
@@ -18070,7 +18676,7 @@ msgctxt "ActivityInfo|"
 msgid "Tab: navigate between the bottom and the top areas"
 msgstr "Tab 鍵：切換到上下區域"
 
-#: activities/money/money.js:141
+#: activities/money/money.js:142
 msgctxt "money|"
 msgid ""
 "Click on the coins or on the notes at the bottom of the screen to pay. If "
@@ -18079,7 +18685,7 @@ msgstr ""
 "利用按下螢幕底部的硬幣或紙鈔來付錢。如果您想要移除某個硬幣或紙鈔，就在螢幕頂"
 "端區域它們的上方按一下。"
 
-#: activities/money/money.js:172
+#: activities/money/money.js:173
 #, qt-format
 msgctxt "money|"
 msgid ""
@@ -18250,13 +18856,13 @@ msgctxt "FirstScreen|"
 msgid "When you are ready, click on Tux and we will converse in Morse code."
 msgstr "當您準備好後，請點擊小企鵝，我們來用摩斯電碼來交談。"
 
-#: activities/morse_code/MorseCode.qml:342
+#: activities/morse_code/MorseCode.qml:352
 #, qt-format
 msgctxt "MorseCode|"
 msgid "Morse value: %1"
 msgstr "摩斯碼：%1"
 
-#: activities/morse_code/MorseCode.qml:343
+#: activities/morse_code/MorseCode.qml:353
 #, qt-format
 msgctxt "MorseCode|"
 msgid "Alphabet/Numeric value: %1"
@@ -18536,32 +19142,32 @@ msgctxt "ActivityInfo|"
 msgid "Identify the notes correctly and score 100% to complete a level."
 msgstr "正確指出音符，達到 100% 分後即完成關卡。"
 
-#: activities/note_names/NoteNames.qml:178
+#: activities/note_names/NoteNames.qml:177
 #, qt-format
 msgctxt "NoteNames|"
 msgid "New note: %1"
 msgstr "新的音符：%1"
 
 #. The following translation represents percentage.
-#: activities/note_names/NoteNames.qml:266
+#: activities/note_names/NoteNames.qml:265
 #, qt-format
 msgctxt "NoteNames|"
 msgid "%1%"
 msgstr "%1%"
 
-#: activities/note_names/NoteNames.qml:453
+#: activities/note_names/NoteNames.qml:452
 msgctxt "NoteNames|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/note_names/NoteNames.qml:454
+#: activities/note_names/NoteNames.qml:453
 msgctxt "NoteNames|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/note_names/NoteNames.qml:455
+#: activities/note_names/NoteNames.qml:454
 msgctxt "NoteNames|"
 msgid "Continue"
 msgstr "繼續"
@@ -18627,33 +19233,33 @@ msgstr ""
 "直接點取目標也可以。至於要抓哪些數字，您要嘛就靠記憶力，不然也可以偷偷看右下"
 "角。"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:36
+#: activities/numbers-odd-even/NumbersOddEven.qml:35
 msgctxt "NumbersOddEven|"
 msgid "This activity teaches about even and odd numbers."
 msgstr "這個遊戲可以學習何謂奇數與偶數。"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:40
-#: activities/numbers-odd-even/NumbersOddEven.qml:50
+#: activities/numbers-odd-even/NumbersOddEven.qml:39
+#: activities/numbers-odd-even/NumbersOddEven.qml:49
 msgctxt "NumbersOddEven|"
 msgid ""
 "Even numbers are numbers which leave a remainder of 0 when divided by 2."
 msgstr "偶數是指除以 2 餘數是 0 的數字。"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:45
+#: activities/numbers-odd-even/NumbersOddEven.qml:44
 msgctxt "NumbersOddEven|"
 msgid "What is meant by remainder?"
 msgstr "什麼是餘數？"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:54
+#: activities/numbers-odd-even/NumbersOddEven.qml:53
 msgctxt "NumbersOddEven|"
 msgid ""
 "Odd numbers are numbers which do not leave a remainder of 0 when divided by "
 "2."
 msgstr "奇數是指除以 2 餘數不是 0 的數字。"
 
-#: activities/numbers-odd-even/NumbersOddEven.qml:58
-#: activities/numbers-odd-even/NumbersOddEven.qml:62
-#: activities/numbers-odd-even/NumbersOddEven.qml:66
+#: activities/numbers-odd-even/NumbersOddEven.qml:57
+#: activities/numbers-odd-even/NumbersOddEven.qml:61
+#: activities/numbers-odd-even/NumbersOddEven.qml:65
 msgctxt "NumbersOddEven|"
 msgid "Exercise to test your understanding."
 msgstr "測試您的理解程度的練習。"
@@ -19762,7 +20368,7 @@ msgctxt "melodies|"
 msgid "Finland"
 msgstr "芬蘭"
 
-#: activities/piano_composition/MelodyList.qml:70
+#: activities/piano_composition/MelodyList.qml:69
 msgctxt "MelodyList|"
 msgid "Melodies"
 msgstr "旋律"
@@ -19903,13 +20509,13 @@ msgctxt "piano_composition|"
 msgid "Now you can load music and also save your compositions."
 msgstr "您現在可以載入音樂跟儲存您作的曲子。"
 
-#: activities/piano_composition/piano_composition.js:65
+#: activities/piano_composition/piano_composition.js:63
 #, qt-format
 msgctxt "piano_composition|"
 msgid "Error saving melody to your file (%1)"
 msgstr "儲存旋律到檔案（%1）時發生錯誤"
 
-#: activities/piano_composition/piano_composition.js:70
+#: activities/piano_composition/piano_composition.js:68
 #, qt-format
 msgctxt "piano_composition|"
 msgid "Melody saved to your file (%1)"
@@ -19963,16 +20569,26 @@ msgid "Continue"
 msgstr "繼續"
 
 #. Translators, C, D, E, F, G, A and B are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, C4 is a C note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:41
+#: activities/piano_composition/PianoOctaveKeyboard.qml:48
+#: activities/piano_composition/PianoOctaveKeyboard.qml:55
+#: activities/piano_composition/PianoOctaveKeyboard.qml:62
+#: activities/piano_composition/PianoOctaveKeyboard.qml:69
+#: activities/piano_composition/PianoOctaveKeyboard.qml:76
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "F%1"
+msgstr "F%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:42
 #: activities/piano_composition/PianoOctaveKeyboard.qml:49
 #: activities/piano_composition/PianoOctaveKeyboard.qml:56
 #: activities/piano_composition/PianoOctaveKeyboard.qml:63
 #: activities/piano_composition/PianoOctaveKeyboard.qml:70
-#: activities/piano_composition/PianoOctaveKeyboard.qml:77
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "F%1"
-msgstr "F%1"
+msgid "G%1"
+msgstr "G%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:43
 #: activities/piano_composition/PianoOctaveKeyboard.qml:50
@@ -19981,8 +20597,8 @@ msgstr "F%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:71
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G%1"
-msgstr "G%1"
+msgid "A%1"
+msgstr "A%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:44
 #: activities/piano_composition/PianoOctaveKeyboard.qml:51
@@ -19991,8 +20607,8 @@ msgstr "G%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:72
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "A%1"
-msgstr "A%1"
+msgid "B%1"
+msgstr "B%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:45
 #: activities/piano_composition/PianoOctaveKeyboard.qml:52
@@ -20001,8 +20617,8 @@ msgstr "A%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:73
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "B%1"
-msgstr "B%1"
+msgid "C%1"
+msgstr "C%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:46
 #: activities/piano_composition/PianoOctaveKeyboard.qml:53
@@ -20011,8 +20627,8 @@ msgstr "B%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:74
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "C%1"
-msgstr "C%1"
+msgid "D%1"
+msgstr "D%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:47
 #: activities/piano_composition/PianoOctaveKeyboard.qml:54
@@ -20021,100 +20637,90 @@ msgstr "C%1"
 #: activities/piano_composition/PianoOctaveKeyboard.qml:75
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D%1"
-msgstr "D%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:48
-#: activities/piano_composition/PianoOctaveKeyboard.qml:55
-#: activities/piano_composition/PianoOctaveKeyboard.qml:62
-#: activities/piano_composition/PianoOctaveKeyboard.qml:69
-#: activities/piano_composition/PianoOctaveKeyboard.qml:76
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
 msgid "E%1"
 msgstr "E%1"
 
 #. Translators, C♯, D♯, F♯, G♯, and A♯ are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, C♯4 is a C♯ note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:81
+#: activities/piano_composition/PianoOctaveKeyboard.qml:86
+#: activities/piano_composition/PianoOctaveKeyboard.qml:91
+#: activities/piano_composition/PianoOctaveKeyboard.qml:96
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "C♯%1"
+msgstr "C♯%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:82
 #: activities/piano_composition/PianoOctaveKeyboard.qml:87
 #: activities/piano_composition/PianoOctaveKeyboard.qml:92
 #: activities/piano_composition/PianoOctaveKeyboard.qml:97
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "C♯%1"
-msgstr "C♯%1"
+msgid "D♯%1"
+msgstr "D♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:83
 #: activities/piano_composition/PianoOctaveKeyboard.qml:88
 #: activities/piano_composition/PianoOctaveKeyboard.qml:93
-#: activities/piano_composition/PianoOctaveKeyboard.qml:98
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D♯%1"
-msgstr "D♯%1"
+msgid "F♯%1"
+msgstr "F♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:84
 #: activities/piano_composition/PianoOctaveKeyboard.qml:89
 #: activities/piano_composition/PianoOctaveKeyboard.qml:94
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "F♯%1"
-msgstr "F♯%1"
+msgid "G♯%1"
+msgstr "G♯%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:85
 #: activities/piano_composition/PianoOctaveKeyboard.qml:90
 #: activities/piano_composition/PianoOctaveKeyboard.qml:95
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G♯%1"
-msgstr "G♯%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:86
-#: activities/piano_composition/PianoOctaveKeyboard.qml:91
-#: activities/piano_composition/PianoOctaveKeyboard.qml:96
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
 msgid "A♯%1"
 msgstr "A♯%1"
 
 #. Translators, D♭, E♭, G♭, A♭, B♭ are the note notations in English musical notation system. The numbers in the arguments represents the octave number of the note. For instance, D♭4 is a D♭ note in the 4th octave.
+#: activities/piano_composition/PianoOctaveKeyboard.qml:102
+#: activities/piano_composition/PianoOctaveKeyboard.qml:107
+#: activities/piano_composition/PianoOctaveKeyboard.qml:112
+#: activities/piano_composition/PianoOctaveKeyboard.qml:117
+#, qt-format
+msgctxt "PianoOctaveKeyboard|"
+msgid "D♭%1"
+msgstr "D♭%1"
+
 #: activities/piano_composition/PianoOctaveKeyboard.qml:103
 #: activities/piano_composition/PianoOctaveKeyboard.qml:108
 #: activities/piano_composition/PianoOctaveKeyboard.qml:113
 #: activities/piano_composition/PianoOctaveKeyboard.qml:118
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "D♭%1"
-msgstr "D♭%1"
+msgid "E♭%1"
+msgstr "E♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:104
 #: activities/piano_composition/PianoOctaveKeyboard.qml:109
 #: activities/piano_composition/PianoOctaveKeyboard.qml:114
-#: activities/piano_composition/PianoOctaveKeyboard.qml:119
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "E♭%1"
-msgstr "E♭%1"
+msgid "G♭%1"
+msgstr "G♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:105
 #: activities/piano_composition/PianoOctaveKeyboard.qml:110
 #: activities/piano_composition/PianoOctaveKeyboard.qml:115
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
-msgid "G♭%1"
-msgstr "G♭%1"
+msgid "A♭%1"
+msgstr "A♭%1"
 
 #: activities/piano_composition/PianoOctaveKeyboard.qml:106
 #: activities/piano_composition/PianoOctaveKeyboard.qml:111
 #: activities/piano_composition/PianoOctaveKeyboard.qml:116
-#, qt-format
-msgctxt "PianoOctaveKeyboard|"
-msgid "A♭%1"
-msgstr "A♭%1"
-
-#: activities/piano_composition/PianoOctaveKeyboard.qml:107
-#: activities/piano_composition/PianoOctaveKeyboard.qml:112
-#: activities/piano_composition/PianoOctaveKeyboard.qml:117
 #, qt-format
 msgctxt "PianoOctaveKeyboard|"
 msgid "B♭%1"
@@ -20195,24 +20801,24 @@ msgctxt "ActivityInfo|"
 msgid "Backspace or Delete: undo"
 msgstr "返回或刪除鍵：復原-"
 
-#: activities/play_piano/PlayPiano.qml:172
+#: activities/play_piano/PlayPiano.qml:187
 msgctxt "PlayPiano|"
 msgid "Click on the piano keys that match the given notes."
 msgstr "點擊符合此樂符的鋼琴琴鍵。"
 
-#: activities/play_piano/PlayPiano.qml:280
+#: activities/play_piano/PlayPiano.qml:300
 msgctxt "PlayPiano|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/play_piano/PlayPiano.qml:281
+#: activities/play_piano/PlayPiano.qml:301
 msgctxt "PlayPiano|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/play_piano/PlayPiano.qml:282
+#: activities/play_piano/PlayPiano.qml:302
 msgctxt "PlayPiano|"
 msgid "Continue"
 msgstr "繼續"
@@ -20290,33 +20896,33 @@ msgctxt "ActivityInfo|"
 msgid "Tab: Start or stop the metronome if it is visible"
 msgstr "Tab：啟動或停止節拍器"
 
-#: activities/play_rhythm/PlayRhythm.qml:114
+#: activities/play_rhythm/PlayRhythm.qml:117
 msgctxt "PlayRhythm|"
 msgid ""
 "Use the metronome to estimate the time intervals and play the rhythm "
 "correctly."
 msgstr "用節拍器來估計間隔時間並正確地打節拍。"
 
-#: activities/play_rhythm/PlayRhythm.qml:115
+#: activities/play_rhythm/PlayRhythm.qml:118
 msgctxt "PlayRhythm|"
 msgid ""
 "Follow the vertical line and click on the drum or press space key to play "
 "the rhythm correctly."
 msgstr "跟著垂直線，在鼓上點擊或按空白鍵來正確地打出節拍。"
 
-#: activities/play_rhythm/PlayRhythm.qml:360
+#: activities/play_rhythm/PlayRhythm.qml:376
 msgctxt "PlayRhythm|"
 msgid ""
 "This activity requires sound, so it will play some sounds even if the audio "
 "voices or effects are disabled in the main configuration."
 msgstr "這個遊戲需要播放聲音，所以即使您設定關閉聲音或音效，它還是會播出聲音。"
 
-#: activities/play_rhythm/PlayRhythm.qml:361
+#: activities/play_rhythm/PlayRhythm.qml:377
 msgctxt "PlayRhythm|"
 msgid "Quit"
 msgstr "離開"
 
-#: activities/play_rhythm/PlayRhythm.qml:362
+#: activities/play_rhythm/PlayRhythm.qml:378
 msgctxt "PlayRhythm|"
 msgid "Continue"
 msgstr "繼續"
@@ -20553,7 +21159,7 @@ msgstr ""
 "要修正主程式/副程式/迴圈區中的指令，先選擇區域，然後切換到指令區，選擇新的指"
 "令，再按下空白鍵。"
 
-#: activities/programmingMaze/InstructionArea.qml:28
+#: activities/programmingMaze/InstructionArea.qml:27
 msgctxt "InstructionArea|"
 msgid "Choose the instructions"
 msgstr "選取指令"
@@ -20748,14 +21354,14 @@ msgctxt "ActivityInfo|"
 msgid "Enter or Return: submit your answer"
 msgstr "Enter 或 Return 鍵：送出您的答案"
 
-#: activities/railroad/Railroad.qml:106
+#: activities/railroad/Railroad.qml:108
 msgctxt "Railroad|"
 msgid ""
 "Observe and remember the train before the timer ends and then drag the items "
 "to set up a similar train."
 msgstr "在時限前觀察並記住火車的組合，然後重新組出正確的火車。"
 
-#: activities/railroad/Railroad.qml:107
+#: activities/railroad/Railroad.qml:109
 msgctxt "Railroad|"
 msgid ""
 "If you forgot the model, you can click on the Hint button to view it again."
@@ -20790,7 +21396,7 @@ msgstr ""
 "在看板上方有個單字。然後會有一串單字出現一下並消失。上方的單字有出現在這一串"
 "單字中嗎？"
 
-#: activities/readingh/Readingh.qml:299
+#: activities/readingh/Readingh.qml:301
 #, qt-format
 msgctxt "Readingh|"
 msgid ""
@@ -20800,12 +21406,12 @@ msgstr ""
 "<font color=\"#373737\">看看單字<br/></font><b><font color=\"#315AAA\">%1</"
 "font></b><br/><font color=\"#373737\">是否有出現</font>"
 
-#: activities/readingh/Readingh.qml:351
+#: activities/readingh/Readingh.qml:353
 msgctxt "Readingh|"
 msgid "Yes, I saw it!"
 msgstr "有，我看到了！"
 
-#: activities/readingh/Readingh.qml:372
+#: activities/readingh/Readingh.qml:374
 msgctxt "Readingh|"
 msgid "No, it was not there!"
 msgstr "沒有，不在那裡！"
@@ -20948,14 +21554,14 @@ msgstr ""
 "力系統。當系統完成準備並讓小企鵝回到家，幫牠按下燈的開關。您必須在發電的系統"
 "都啟動後，打開所有的電器才能過關。"
 
-#: activities/renewable_energy/RenewableEnergy.qml:280
+#: activities/renewable_energy/RenewableEnergy.qml:281
 msgctxt "RenewableEnergy|"
 msgid ""
 "Tux has come back from fishing on his boat. Bring the electrical system back "
 "up so he can have light in his home."
 msgstr "小企鵝剛從船上釣完魚回到家。請將電力系統準備好讓牠可以沖個澡。"
 
-#: activities/renewable_energy/RenewableEnergy.qml:282
+#: activities/renewable_energy/RenewableEnergy.qml:283
 msgctxt "RenewableEnergy|"
 msgid ""
 "Click on different active elements: sun, cloud, dam, solar array, wind farm "
@@ -20964,7 +21570,7 @@ msgstr ""
 "點擊不同的元素：太陽、雲、水壩、太陽能板，風力發電場與變壓器等，來啟動整個電"
 "力系統。"
 
-#: activities/renewable_energy/RenewableEnergy.qml:284
+#: activities/renewable_energy/RenewableEnergy.qml:285
 msgctxt "RenewableEnergy|"
 msgid ""
 "When the system is back up and Tux is in his home, push the light button for "
@@ -20974,12 +21580,12 @@ msgstr ""
 "當系統完成準備並讓小企鵝回到家，幫牠按下燈的開關。您必須在發電的系統都啟動"
 "後，打開所有的電器才能過關。"
 
-#: activities/renewable_energy/RenewableEnergy.qml:286
+#: activities/renewable_energy/RenewableEnergy.qml:287
 msgctxt "RenewableEnergy|"
 msgid "Learn about an electrical system based on renewable energy. Enjoy."
 msgstr "學習運用可再造能源來建立電力系統。"
 
-#: activities/renewable_energy/RenewableEnergy.qml:310
+#: activities/renewable_energy/RenewableEnergy.qml:311
 msgctxt "RenewableEnergy|"
 msgid ""
 "It is not possible to consume more electricity than what is produced. There "
@@ -21096,10 +21702,15 @@ msgstr ""
 "常用方式。 該系統中的數字由拉丁字母的字母組合表示。"
 
 #: activities/roman_numerals/ActivityInfo.qml:23
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid ""
+#| "Learn the rules to read Roman numerals and practice converting numbers to "
+#| "and from arabic numerals. Click on the OK button to validate your answer."
 msgctxt "ActivityInfo|"
 msgid ""
 "Learn the rules to read Roman numerals and practice converting numbers to "
-"and from arabic numerals. Click on the OK button to validate your answer."
+"and from arabic numerals. Click on the OK button to validate your answer."
 msgstr ""
 "學習閱讀羅馬數值系統的規則，練習從阿拉伯數字轉換為羅馬數字。按下「確定」鍵來"
 "查看您的答案是否正確。"
@@ -21114,8 +21725,8 @@ msgctxt "ActivityInfo|"
 msgid "Letters: type roman numerals (with I, V, X, L, C, D and M)"
 msgstr "字母鍵：輸入羅馬數字（I, V, X, L, C, D 與 M）"
 
-#: activities/roman_numerals/RomanNumerals.qml:78
-#: activities/roman_numerals/RomanNumerals.qml:84
+#: activities/roman_numerals/RomanNumerals.qml:79
+#: activities/roman_numerals/RomanNumerals.qml:85
 msgctxt "RomanNumerals|"
 msgid ""
 "The roman numbers are all built out of these 7 numbers:\n"
@@ -21133,32 +21744,32 @@ msgstr ""
 "還有 M（千位數，表示 1000）。\n"
 "有一件有趣的事情是，在羅馬數字系統中沒有 0 這個數字。"
 
-#: activities/roman_numerals/RomanNumerals.qml:79
-#: activities/roman_numerals/RomanNumerals.qml:91
-#: activities/roman_numerals/RomanNumerals.qml:103
-#: activities/roman_numerals/RomanNumerals.qml:115
-#: activities/roman_numerals/RomanNumerals.qml:127
+#: activities/roman_numerals/RomanNumerals.qml:80
+#: activities/roman_numerals/RomanNumerals.qml:92
+#: activities/roman_numerals/RomanNumerals.qml:104
+#: activities/roman_numerals/RomanNumerals.qml:116
+#: activities/roman_numerals/RomanNumerals.qml:128
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Convert the roman number %1 to arabic."
 msgstr "將羅馬數字 %1 改用阿拉伯數字來表示。"
 
-#: activities/roman_numerals/RomanNumerals.qml:85
-#: activities/roman_numerals/RomanNumerals.qml:97
-#: activities/roman_numerals/RomanNumerals.qml:109
-#: activities/roman_numerals/RomanNumerals.qml:121
-#: activities/roman_numerals/RomanNumerals.qml:133
-#: activities/roman_numerals/RomanNumerals.qml:139
-#: activities/roman_numerals/RomanNumerals.qml:145
-#: activities/roman_numerals/RomanNumerals.qml:151
-#: activities/roman_numerals/RomanNumerals.qml:157
+#: activities/roman_numerals/RomanNumerals.qml:86
+#: activities/roman_numerals/RomanNumerals.qml:98
+#: activities/roman_numerals/RomanNumerals.qml:110
+#: activities/roman_numerals/RomanNumerals.qml:122
+#: activities/roman_numerals/RomanNumerals.qml:134
+#: activities/roman_numerals/RomanNumerals.qml:140
+#: activities/roman_numerals/RomanNumerals.qml:146
+#: activities/roman_numerals/RomanNumerals.qml:152
+#: activities/roman_numerals/RomanNumerals.qml:158
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Convert the arabic number %1 to roman."
 msgstr "將阿拉伯數字 %1 改用羅馬數字來表示。"
 
-#: activities/roman_numerals/RomanNumerals.qml:90
-#: activities/roman_numerals/RomanNumerals.qml:96
+#: activities/roman_numerals/RomanNumerals.qml:91
+#: activities/roman_numerals/RomanNumerals.qml:97
 msgctxt "RomanNumerals|"
 msgid ""
 "All the units except 4 and 9 are built using sums of I and V:\n"
@@ -21171,8 +21782,8 @@ msgstr ""
 "而 4 跟 9 則用減法來表示：\n"
 "IV（表示 5 - 1）跟 IX（表示 10 - 1）。"
 
-#: activities/roman_numerals/RomanNumerals.qml:102
-#: activities/roman_numerals/RomanNumerals.qml:108
+#: activities/roman_numerals/RomanNumerals.qml:103
+#: activities/roman_numerals/RomanNumerals.qml:109
 msgctxt "RomanNumerals|"
 msgid ""
 "All the tens except 40 and 90 are built using sums of X and L:\n"
@@ -21185,8 +21796,8 @@ msgstr ""
 "而 40 跟 90 則是用減法來表示：\n"
 "XL（表示 50 - 10）跟 XC（表示 100 - 10）。"
 
-#: activities/roman_numerals/RomanNumerals.qml:114
-#: activities/roman_numerals/RomanNumerals.qml:120
+#: activities/roman_numerals/RomanNumerals.qml:115
+#: activities/roman_numerals/RomanNumerals.qml:121
 msgctxt "RomanNumerals|"
 msgid ""
 "All the hundreds except 400 and 900 are built using sums of C and D:\n"
@@ -21199,8 +21810,8 @@ msgstr ""
 "400 跟 900 則是用減法來表示：\n"
 "CD（表示 500 - 100）跟 CM（表示 1000 - 100）。"
 
-#: activities/roman_numerals/RomanNumerals.qml:126
-#: activities/roman_numerals/RomanNumerals.qml:132
+#: activities/roman_numerals/RomanNumerals.qml:127
+#: activities/roman_numerals/RomanNumerals.qml:133
 msgctxt "RomanNumerals|"
 msgid ""
 "Sums of M are used for building thousands: M, MM, MMM.\n"
@@ -21214,19 +21825,19 @@ msgstr ""
 "的個位數、十位數或百位數。在 4 跟 9 的狀況您必須用減法。換句話說，羅馬數字表"
 "示法最大只能表達到 3999（MMMCMXCIX）。"
 
-#: activities/roman_numerals/RomanNumerals.qml:138
+#: activities/roman_numerals/RomanNumerals.qml:139
 msgctxt "RomanNumerals|"
 msgid ""
 "Now you know the rules, you can read and write numbers in roman numerals."
 msgstr "現在您知道規則了，可以用羅馬數字表示法來讀寫數字了。"
 
-#: activities/roman_numerals/RomanNumerals.qml:367
+#: activities/roman_numerals/RomanNumerals.qml:378
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Roman value: %1"
 msgstr "羅馬數字：%1"
 
-#: activities/roman_numerals/RomanNumerals.qml:368
+#: activities/roman_numerals/RomanNumerals.qml:379
 #, qt-format
 msgctxt "RomanNumerals|"
 msgid "Arabic value: %1"
@@ -22179,7 +22790,7 @@ msgctxt "Data|"
 msgid "Maximum 30 pieces of candy and 6 kids, possible rest."
 msgstr "最多 30 顆糖與 6 個小孩，可能有剩餘。"
 
-#: activities/share/share.js:97
+#: activities/share/share.js:98
 #, qt-format
 msgctxt ""
 "share|First part of Place %n boy(s) and %n girl(s) in the center. Then split "
@@ -22188,7 +22799,7 @@ msgid "Place %n boy(s) "
 msgid_plural "Place %n boy(s) "
 msgstr[0] "把 %n 個男孩 "
 
-#: activities/share/share.js:101
+#: activities/share/share.js:102
 #, qt-format
 msgctxt ""
 "share|Second part of Place %n boy(s) and %n girl(s) in the center. Then "
@@ -22197,7 +22808,7 @@ msgid "and %n girl(s) in the center. "
 msgid_plural "and %n girl(s) in the center. "
 msgstr[0] "跟 %n 個女孩放在中間。 "
 
-#: activities/share/share.js:105
+#: activities/share/share.js:106
 #, qt-format
 msgctxt ""
 "share|Third part of Place %n boy(s) and %n girl(s) in the center. Then split "
@@ -22206,7 +22817,7 @@ msgid "Then split %n pieces of candy equally between them."
 msgid_plural "Then split %n pieces of candy equally between them."
 msgstr[0] "然後公平地將 %n 顆糖果分配給他們。"
 
-#: activities/share/Share.qml:340
+#: activities/share/Share.qml:348
 #, qt-format
 msgctxt "Share|"
 msgid "You can't put more than %1 pieces of candy in the same rectangle"
@@ -23450,25 +24061,25 @@ msgctxt "Dataset|"
 msgid "How large is Neptune compared to other planets in the Solar System?"
 msgstr "海王星的大小在太陽系中的排行第幾？"
 
-#: activities/solar_system/QuizScreen.qml:199
+#: activities/solar_system/QuizScreen.qml:201
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "Accuracy: %1%"
 msgstr "精確度：%1%"
 
-#: activities/solar_system/QuizScreen.qml:239
+#: activities/solar_system/QuizScreen.qml:241
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "%1%"
 msgstr "%1%"
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 #, qt-format
 msgctxt "QuizScreen|"
 msgid "Your final score is: <font color=\"#3bb0de\">%1%</font>.<br><br>%2"
 msgstr "您最終的分數為：<font color=\"#3bb0de\">%1%</font>。<br/><br/>%2"
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 msgctxt "QuizScreen|"
 msgid ""
 "You should score above 90% to become a Solar System expert!<br>Retry to test "
@@ -23478,14 +24089,14 @@ msgstr ""
 "您答對 90% 以上，就是太陽系的專家了！<br>您可以多試幾次，或是在一般模式中學習"
 "關於太陽系的知識。"
 
-#: activities/solar_system/QuizScreen.qml:274
+#: activities/solar_system/QuizScreen.qml:276
 msgctxt "QuizScreen|"
 msgid ""
 "Great! You can replay the assessment to test your knowledge on more "
 "questions."
 msgstr "太棒了！您可以重複玩測驗模式，用更多問題來測驗您的知識。"
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -23499,17 +24110,17 @@ msgstr ""
 "在設定視窗中切換：<br/><b>1. 學習模式</b>—在這個模式中您可以玩跟學習太陽系相"
 "關的知識。<br/><b>2. 測驗模式</b>—在這個模式中您可以測驗您對太陽系的瞭解。"
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 msgctxt "SolarSystem|"
 msgid "Assessment"
 msgstr "測驗模式"
 
-#: activities/solar_system/SolarSystem.qml:159
+#: activities/solar_system/SolarSystem.qml:160
 msgctxt "SolarSystem|"
 msgid "Learning"
 msgstr "學習模式"
 
-#: activities/solar_system/SolarSystem.qml:163
+#: activities/solar_system/SolarSystem.qml:164
 msgctxt "SolarSystem|"
 msgid ""
 "Click on the Sun or any planet to reveal questions. Each question has 4 "
@@ -23517,7 +24128,7 @@ msgid ""
 msgstr ""
 "點擊太陽或任何行星就會出現問題。每個問題有四個選項，其中一個是完全正確的。"
 
-#: activities/solar_system/SolarSystem.qml:164
+#: activities/solar_system/SolarSystem.qml:165
 msgctxt "SolarSystem|"
 msgid ""
 "After a planet is clicked, the Closeness meter at the bottom-right corner of "
@@ -23530,14 +24141,14 @@ msgstr ""
 "為 1%。跟著指標嘗試，直到貼近程度為 100%。如果提示圖示出現，可以點擊提示來尋"
 "求正確答案。"
 
-#: activities/solar_system/SolarSystem.qml:169
+#: activities/solar_system/SolarSystem.qml:170
 msgctxt "SolarSystem|"
 msgid ""
 "There are 20 questions initially with 4 options each. The progress bar at "
 "the bottom right of the screen shows your percentage score."
 msgstr "有 20 個問題，每個問題有四個選項。右下角的進度條表示您分數的百分比。"
 
-#: activities/solar_system/SolarSystem.qml:170
+#: activities/solar_system/SolarSystem.qml:171
 msgctxt "SolarSystem|"
 msgid ""
 "If your answer is correct, your score increases.<br>If your answer is wrong, "
@@ -23548,14 +24159,14 @@ msgstr ""
 "如果您的答案是正確的，就會得分。<br>如果您的答案是錯誤的，會扣分，並且會在後"
 "面再詢問一次沒有答對的問題。<br>最多會問 25 個問題。"
 
-#: activities/solar_system/SolarSystem.qml:171
+#: activities/solar_system/SolarSystem.qml:172
 msgctxt "SolarSystem|"
 msgid ""
 "You should score above 90% to pass the assessment and become a Solar System "
 "expert!"
 msgstr "您要得到 90% 以上才能通過測驗模式，變成太陽系專家！"
 
-#: activities/solar_system/SolarSystem.qml:353
+#: activities/solar_system/SolarSystem.qml:354
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -23565,7 +24176,7 @@ msgstr ""
 "1. 行星離太陽越<b>遠</b>，它的溫度就會越<b>低</b>。<br/><font color=\"#3bb0de"
 "\">%1</font>"
 
-#: activities/solar_system/SolarSystem.qml:354
+#: activities/solar_system/SolarSystem.qml:355
 #, qt-format
 msgctxt "SolarSystem|"
 msgid ""
@@ -23576,7 +24187,7 @@ msgstr ""
 "font>"
 
 #. find an equivalent rhyme in your language where the first letter of each word corresponds to the first letter of the planet in proper sequence
-#: activities/solar_system/SolarSystem.qml:357
+#: activities/solar_system/SolarSystem.qml:358
 msgctxt "SolarSystem|"
 msgid ""
 "3. Always remember this rhyme to learn the position of planets, examine the "
@@ -23584,12 +24195,12 @@ msgid ""
 "b>other <b>J</b>ust <b>S</b>erved <b>U</b>s <b>N</b>oodles.<br>"
 msgstr "3. 太陽系行星記憶法：水金地火木土天海<br>"
 
-#: activities/solar_system/SolarSystem.qml:359
+#: activities/solar_system/SolarSystem.qml:360
 msgctxt "SolarSystem|"
 msgid "Hint"
 msgstr "提示"
 
-#: activities/solar_system/SolarSystem.qml:367
+#: activities/solar_system/SolarSystem.qml:368
 msgctxt "SolarSystem|"
 msgid "View the solar system"
 msgstr "查看太陽系"
@@ -23914,12 +24525,12 @@ msgstr ""
 "示為「正確」。標記過的項目會在目前或之後猜測時自動選取，除非您再次雙擊或點擊"
 "以解除此標記。"
 
-#: activities/superbrain/Superbrain.qml:139
+#: activities/superbrain/Superbrain.qml:141
 msgctxt "Superbrain|"
 msgid "This item is well placed."
 msgstr "這個項目擺對了。"
 
-#: activities/superbrain/Superbrain.qml:141
+#: activities/superbrain/Superbrain.qml:143
 msgctxt "Superbrain|"
 msgid "This item is misplaced."
 msgstr "這個項目擺錯了。"
@@ -24038,6 +24649,84 @@ msgid "Maximum value: 500000."
 msgstr "最大值：500000。"
 
 #. Activity title
+#: activities/tens_complement_calculate/ActivityInfo.qml:14
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Use ten's complement"
+msgctxt "ActivityInfo|"
+msgid "Calculate with ten's complement"
+msgstr "使用十的補數"
+
+#. Help title
+#: activities/tens_complement_calculate/ActivityInfo.qml:16
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid "Swap the numbers to create pairs equal to ten."
+msgctxt "ActivityInfo|"
+msgid ""
+"Swap the numbers to create pairs equal to ten and input the answer of the "
+"final sum."
+msgstr "交換數字來建立加起來等於十的兩個數字。"
+
+#. Help goal
+#: activities/tens_complement_calculate/ActivityInfo.qml:19
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid ""
+#| "Learn to use ten's complement to optimize the order of numbers in an "
+#| "operation."
+msgctxt "ActivityInfo|"
+msgid ""
+"Learn to use ten's complement to optimize the order of numbers in an "
+"operation and calculate the result."
+msgstr "學習使用十的補數來最佳化運算中數字的順序。"
+
+#. Help prerequisite
+#: activities/tens_complement_calculate/ActivityInfo.qml:21
+#: activities/tens_complement_swap/ActivityInfo.qml:21
+msgctxt "ActivityInfo|"
+msgid "Numbers from 1 to 30 and additions."
+msgstr "從 1 到 30 的數字與加法。"
+
+#. Help manual
+#: activities/tens_complement_calculate/ActivityInfo.qml:23
+#, fuzzy
+#| msgctxt "ActivityInfo|"
+#| msgid ""
+#| "Create pairs of numbers equal to ten within each parentheses. Select a "
+#| "number, then select another number of the same operation to swap their "
+#| "position. When all the lines are completed, press the OK button to "
+#| "validate the answers. If some answers are incorrect, a cross icon will "
+#| "appear on the corresponding lines. Correct the errors, then press the OK "
+#| "button again."
+msgctxt "ActivityInfo|"
+msgid ""
+"Create pairs of numbers equal to ten within each parentheses. Select a "
+"number, then select another number of the same operation to swap their "
+"position. On each line, input the final sum in last box. When all the lines "
+"are completed, press the OK button to validate the answers. If some answers "
+"are incorrect, a cross icon will appear on the corresponding lines. Correct "
+"the errors, then press the OK button again."
+msgstr ""
+"在每個括號內建立一對加起來等於 10 的數字。選擇一個數字，再選擇另一個相同等式"
+"中的數字來調換他們的位置。 完成所有行後，按下「確定」以驗證答案。 如果某些答"
+"案不正確，相應行上會出現叉叉。更正錯誤，然後再次按「確定」鍵。"
+
+#: activities/tens_complement_calculate/resource/1/Data.qml:36
+#, fuzzy
+#| msgctxt "Data|"
+#| msgid "2 pairs to make from 4 numbers."
+msgctxt "Data|"
+msgid "1 pair to make from 3 numbers."
+msgstr "4 個數字組成兩對。"
+
+#: activities/tens_complement_calculate/resource/2/Data.qml:9
+#: activities/tens_complement_swap/resource/2/Data.qml:9
+msgctxt "Data|"
+msgid "2 pairs to make from 5 numbers."
+msgstr "5 個數字組成兩對。"
+
+#. Activity title
 #: activities/tens_complement_find/ActivityInfo.qml:14
 msgctxt "ActivityInfo|"
 msgid "Find ten's complement"
@@ -24118,12 +24807,6 @@ msgid ""
 "operation."
 msgstr "學習使用十的補數來最佳化運算中數字的順序。"
 
-#. Help prerequisite
-#: activities/tens_complement_swap/ActivityInfo.qml:21
-msgctxt "ActivityInfo|"
-msgid "Numbers from 1 to 30 and additions."
-msgstr "從 1 到 30 的數字與加法。"
-
 #. Help manual
 #: activities/tens_complement_swap/ActivityInfo.qml:23
 msgctxt "ActivityInfo|"
@@ -24142,11 +24825,6 @@ msgstr ""
 msgctxt "Data|"
 msgid "2 pairs to make from 4 numbers."
 msgstr "4 個數字組成兩對。"
-
-#: activities/tens_complement_swap/resource/2/Data.qml:9
-msgctxt "Data|"
-msgid "2 pairs to make from 5 numbers."
-msgstr "5 個數字組成兩對。"
 
 #: activities/tens_complement_swap/resource/3/Data.qml:9
 msgctxt "Data|"
@@ -24309,26 +24987,26 @@ msgstr ""
 "點擊不同的元素：太陽、雲、幫浦站與水處理站等，以便完成整個水循環系統。當系統"
 "完成並且小企鵝進來後，按下水的開關。"
 
-#: activities/watercycle/Watercycle.qml:81
+#: activities/watercycle/Watercycle.qml:80
 msgctxt "Watercycle|"
 msgid ""
 "The sun is the main component of the water cycle. Click on the sun to start "
 "the water cycle."
 msgstr "太陽是整個水循環系統中的主要元素。點擊太陽來開始水循環。"
 
-#: activities/watercycle/Watercycle.qml:82
+#: activities/watercycle/Watercycle.qml:81
 msgctxt "Watercycle|"
 msgid "As the sun rises, the water of the sea starts heating and evaporates."
 msgstr "太陽升起時，海裡的水會開始被加熱而蒸發。"
 
-#: activities/watercycle/Watercycle.qml:83
+#: activities/watercycle/Watercycle.qml:82
 msgctxt "Watercycle|"
 msgid ""
 "Water vapor condenses to form clouds and when clouds become heavy, it rains. "
 "Click on the cloud."
 msgstr "水蒸氣凝結成雲。當雲變重之後，就會下雨，點擊雲看看。"
 
-#: activities/watercycle/Watercycle.qml:84
+#: activities/watercycle/Watercycle.qml:83
 msgctxt "Watercycle|"
 msgid ""
 "The rain causes rivers to swell up and this water is transported to us via "
@@ -24337,25 +25015,25 @@ msgid ""
 msgstr ""
 "下雨後會讓河流水漲，而這些水透過幫浦系統進到水塔中。點擊幫浦來將水抽到水塔。"
 
-#: activities/watercycle/Watercycle.qml:86
+#: activities/watercycle/Watercycle.qml:85
 msgctxt "Watercycle|"
 msgid ""
 "See the tower filled with water. Activate the sewage treatment station by "
 "clicking on it."
 msgstr "當水塔裝滿水比後，點擊污水處理站來啟動。"
 
-#: activities/watercycle/Watercycle.qml:87
+#: activities/watercycle/Watercycle.qml:86
 msgctxt "Watercycle|"
 msgid "Great, click on the shower, as Tux arrives home."
 msgstr "很好，小企鵝回家後，按下水開關讓牠洗個澡。"
 
-#: activities/watercycle/Watercycle.qml:88
+#: activities/watercycle/Watercycle.qml:87
 msgctxt "Watercycle|"
 msgid ""
 "Fantastic, you have completed the water cycle. You can continue playing."
 msgstr "太棒了，您完成了整個水循環系統。您可以繼續玩。"
 
-#: activities/watercycle/Watercycle.qml:115
+#: activities/watercycle/Watercycle.qml:114
 msgctxt "Watercycle|"
 msgid ""
 "The water cycle (also known as the hydrologic cycle) is the journey water "
@@ -24365,7 +25043,7 @@ msgstr ""
 "水循環（或稱水文循環）就是水從陸地到天空再回到陸地上的過程。太陽的熱提供了水"
 "蒸發需要的能量。"
 
-#: activities/watercycle/Watercycle.qml:118
+#: activities/watercycle/Watercycle.qml:117
 msgctxt "Watercycle|"
 msgid ""
 "Plants also lose water to the air through transpiration. The water vapor "
@@ -24375,7 +25053,7 @@ msgstr ""
 "植物也會將水排出到空氣中。水蒸氣會冷卻，凝結成小水滴形成雲。當雲遇上更冷的空"
 "氣，就會形成降水，也就是下雨。"
 
-#: activities/watercycle/Watercycle.qml:121
+#: activities/watercycle/Watercycle.qml:120
 msgctxt "Watercycle|"
 msgid ""
 "Some of the water is trapped between rock or clay layers, called "
@@ -24385,7 +25063,7 @@ msgstr ""
 "有些水會留在岩石層或土層，稱為地下水。但大部份的水最後都會經由河流回到大海"
 "中。"
 
-#: activities/watercycle/Watercycle.qml:123
+#: activities/watercycle/Watercycle.qml:122
 msgctxt "Watercycle|"
 msgid ""
 "Your goal is to complete the water cycle before Tux reaches home. Click on "
@@ -24426,277 +25104,292 @@ msgctxt "ActivityInfo|"
 msgid "Type the complete word as it falls, before it reaches the ground."
 msgstr "在單字掉到地面以前輸入完整的單字。"
 
-#: core/ChangeLog.qml:30 core/ChangeLog.qml:58 core/ChangeLog.qml:93
-#: core/ChangeLog.qml:96 core/ChangeLog.qml:102
+#: core/ChangeLog.qml:30 core/ChangeLog.qml:36 core/ChangeLog.qml:65
+#: core/ChangeLog.qml:100 core/ChangeLog.qml:103 core/ChangeLog.qml:109
 msgctxt "ChangeLog|"
 msgid "Many usability improvements"
 msgstr "許多功能上的改進"
 
-#: core/ChangeLog.qml:31 core/ChangeLog.qml:39 core/ChangeLog.qml:46
-#: core/ChangeLog.qml:59 core/ChangeLog.qml:77 core/ChangeLog.qml:92
-#: core/ChangeLog.qml:97 core/ChangeLog.qml:103
-msgctxt "ChangeLog|"
-msgid "Many new images"
-msgstr "新增許多圖片"
-
-#: core/ChangeLog.qml:32 core/ChangeLog.qml:40 core/ChangeLog.qml:47
-#: core/ChangeLog.qml:60 core/ChangeLog.qml:98 core/ChangeLog.qml:104
+#: core/ChangeLog.qml:31 core/ChangeLog.qml:38 core/ChangeLog.qml:47
+#: core/ChangeLog.qml:54 core/ChangeLog.qml:67 core/ChangeLog.qml:105
+#: core/ChangeLog.qml:111
 msgctxt "ChangeLog|"
 msgid "Many bug fixes"
 msgstr "許多小修正"
 
-#: core/ChangeLog.qml:37
+#: core/ChangeLog.qml:35
+msgctxt "ChangeLog|"
+msgid "Translations added for Bulgarian, Galician and Swahili"
+msgstr "新增翻譯：保加利亞語、加利西亞語、斯瓦西里語"
+
+#: core/ChangeLog.qml:37 core/ChangeLog.qml:46 core/ChangeLog.qml:53
+#: core/ChangeLog.qml:66 core/ChangeLog.qml:84 core/ChangeLog.qml:99
+#: core/ChangeLog.qml:104 core/ChangeLog.qml:110
+msgctxt "ChangeLog|"
+msgid "Many new images"
+msgstr "新增許多圖片"
+
+#: core/ChangeLog.qml:39
 #, fuzzy
 #| msgctxt "ChangeLog|"
-#| msgid "Translation added for Azerbaijani"
+#| msgid ""
+#| "New command-line option (--difficulty {value|min-max}) to start GCompris "
+#| "at specific difficulty"
+msgctxt "ChangeLog|"
+msgid ""
+"New command-line option to directly start an activity at a specific level (--"
+"start-level level, to be used with --launch activity)"
+msgstr "新增命令列參數 --difficulty 以指定的難度啟動活動"
+
+#: core/ChangeLog.qml:44
 msgctxt "ChangeLog|"
 msgid "Translations added for Arabic and Esperanto"
-msgstr "新增亞塞拜然翻譯。"
+msgstr "新增阿拉伯語及世界語翻譯"
 
-#: core/ChangeLog.qml:38 core/ChangeLog.qml:45
+#: core/ChangeLog.qml:45 core/ChangeLog.qml:52
 msgctxt "ChangeLog|"
 msgid "Many translation updates"
 msgstr "更新許多翻譯。"
 
-#: core/ChangeLog.qml:44
+#: core/ChangeLog.qml:51
 msgctxt "ChangeLog|"
 msgid ""
 "New command-line option (--difficulty {value|min-max}) to start GCompris at "
 "specific difficulty"
 msgstr "新增命令列參數 --difficulty 以指定的難度啟動活動"
 
-#: core/ChangeLog.qml:51
+#: core/ChangeLog.qml:58
 msgctxt "ChangeLog|"
 msgid "Fix issue in comparator activity"
 msgstr "修正「比較器」活動中的錯誤"
 
-#: core/ChangeLog.qml:55
+#: core/ChangeLog.qml:62
 msgctxt "ChangeLog|"
 msgid "Map of Spain added for geography activity"
 msgstr "地理活動新增西班牙地圖"
 
-#: core/ChangeLog.qml:56
+#: core/ChangeLog.qml:63
 msgctxt "ChangeLog|"
 msgid "Voices added for Ukrainian"
-msgstr "新增烏克蘭發音"
+msgstr "新增烏克蘭語發音"
 
-#: core/ChangeLog.qml:57
+#: core/ChangeLog.qml:64
 msgctxt "ChangeLog|"
 msgid ""
 "New command-line option to list all the activities and start on a specific "
 "one"
 msgstr "新增命令列參數列出所有的活動並啟動特定活動"
 
-#: core/ChangeLog.qml:64
+#: core/ChangeLog.qml:71
 msgctxt "ChangeLog|"
 msgid ""
 "Reduce the size of the packages for all platforms and of the external word "
 "images set"
 msgstr "降低所有平台上套件還有外部單字影像集的大小"
 
-#: core/ChangeLog.qml:65
+#: core/ChangeLog.qml:72
 msgctxt "ChangeLog|"
 msgid "Improve images quality in several activities"
 msgstr "在一些活動中改善影像品質。"
 
-#: core/ChangeLog.qml:66
+#: core/ChangeLog.qml:73
 msgctxt "ChangeLog|"
 msgid "Fix some transitions in renewable_energy/watercycle on some platforms"
 msgstr "修正某些平台上水循環活動的問題"
 
-#: core/ChangeLog.qml:67
+#: core/ChangeLog.qml:74
 msgctxt "ChangeLog|"
 msgid "Fix dead keys ignored on Linux for typing activities"
 msgstr "修正 Linux 版中打字活動某些鍵被忽略的問題"
 
-#: core/ChangeLog.qml:68
+#: core/ChangeLog.qml:75
 msgctxt "ChangeLog|"
 msgid "Fix level reset when changing level manually in Logical associations"
 msgstr "修正邏輯相關活動中手動變更關卡時重置的問題"
 
-#: core/ChangeLog.qml:72
+#: core/ChangeLog.qml:79
 msgctxt "ChangeLog|"
 msgid ""
 "Fix Alphabet sequence, Even and odd numbers and Numbers in order activities"
 msgstr ""
 "修正排序活動中「排列字母順序」、「數字排序」、「奇數與偶數」等活動的錯誤"
 
-#: core/ChangeLog.qml:76 core/ChangeLog.qml:84
+#: core/ChangeLog.qml:83 core/ChangeLog.qml:91
 msgctxt "ChangeLog|"
 msgid "Several bug fixes"
 msgstr "許多小修正"
 
-#: core/ChangeLog.qml:78
+#: core/ChangeLog.qml:85
 msgctxt "ChangeLog|"
 msgid "Translation updated for Russian"
 msgstr "更新俄文翻譯。"
 
-#: core/ChangeLog.qml:79
+#: core/ChangeLog.qml:86
 msgctxt "ChangeLog|"
 msgid "New voices for Norwegian Nynorsk"
 msgstr "新增挪威語音。"
 
-#: core/ChangeLog.qml:83
+#: core/ChangeLog.qml:90
 msgctxt "ChangeLog|"
 msgid "Translations added for Breton, Czech and Macedonian"
 msgstr "新增捷克、馬其頓等翻譯。"
 
-#: core/ChangeLog.qml:88
+#: core/ChangeLog.qml:95
 msgctxt "ChangeLog|"
 msgid "Translation added for Azerbaijani"
-msgstr "新增亞塞拜然翻譯。"
+msgstr "新增亞塞拜然語翻譯。"
 
-#: core/ChangeLog.qml:89
+#: core/ChangeLog.qml:96
 msgctxt "ChangeLog|"
 msgid "New maps and update of the maps for geography activities"
 msgstr "地理活動新增與更新地圖"
 
-#: core/ChangeLog.qml:90
+#: core/ChangeLog.qml:97
 msgctxt "ChangeLog|"
 msgid ""
 "New dataset containing loops operations for programming maze, and make "
 "tutorial images translated"
 msgstr "程式遊戲中新增包含迴圈操作的資料集，並將教學圖片做為可翻譯"
 
-#: core/ChangeLog.qml:91
+#: core/ChangeLog.qml:98
 msgctxt "ChangeLog|"
 msgid ""
 "Addition of a level to teach voltage source loop in analog electricity "
 "activity"
 msgstr "類比電路中新增教導電壓來源迴路的關卡"
 
-#: core/ChangeLog.qml:101
+#: core/ChangeLog.qml:108
 msgctxt "ChangeLog|"
 msgid "New Activity Settings menu, with dataset selection"
 msgstr "新增活動設定選單，可以選擇資料集"
 
-#: core/ChangeLog.qml:107
+#: core/ChangeLog.qml:114
 msgctxt "ChangeLog|"
 msgid "New sub-categories to organize activities"
 msgstr "增加新的子類別"
 
-#: core/ChangeLog.qml:108
+#: core/ChangeLog.qml:115
 msgctxt "ChangeLog|"
 msgid "Translation added for Macedonian."
 msgstr "新增馬其頓翻譯。"
 
-#: core/ChangeLog.qml:109
+#: core/ChangeLog.qml:116
 msgctxt "ChangeLog|"
 msgid "New activities Programming Maze and Baby Tangram"
 msgstr "新增寫程式與重組形狀遊戲"
 
-#: core/ChangeLog.qml:110
+#: core/ChangeLog.qml:117
 msgctxt "ChangeLog|"
 msgid "New background music and volume settings."
 msgstr "新增背景音樂與音量設定。"
 
-#: core/ChangeLog.qml:111
+#: core/ChangeLog.qml:118
 msgctxt "ChangeLog|"
 msgid "New speed setting in several activities."
 msgstr "在一些活動中新增速度設定。"
 
-#: core/ChangeLog.qml:112
+#: core/ChangeLog.qml:119
 msgctxt "ChangeLog|"
 msgid "New option in chess to display captured pieces."
 msgstr "西洋棋遊戲中新增選項顯示被吃掉的子。"
 
-#: core/ChangeLog.qml:113
+#: core/ChangeLog.qml:120
 msgctxt "ChangeLog|"
 msgid "New images in Colors, Advanced colors and Target game."
 msgstr "在「認識顏色」、「認識更多的顏色」與「射飛鏢」等遊戲加上新圖片。"
 
-#: core/ChangeLog.qml:114
+#: core/ChangeLog.qml:121
 msgctxt "ChangeLog|"
 msgid "New voices for US English."
 msgstr "新增美式英文語音。"
 
-#: core/ChangeLog.qml:115 core/ChangeLog.qml:123
+#: core/ChangeLog.qml:122 core/ChangeLog.qml:130
 msgctxt "ChangeLog|"
 msgid "Many little fixes and improvements."
 msgstr "許多小修正與改進。"
 
-#: core/ChangeLog.qml:116
+#: core/ChangeLog.qml:123
 msgctxt "ChangeLog|"
 msgid ""
 "Translation updated for multiple languages (Breton, Brazilian Portuguese, "
 "Finnish...)."
 msgstr "更新多個語言翻譯。"
 
-#: core/ChangeLog.qml:117
+#: core/ChangeLog.qml:124
 msgctxt "ChangeLog|"
 msgid "Add Russian dataset for Click on letter activity."
 msgstr "字母遊戲新增俄文資料集。"
 
-#: core/ChangeLog.qml:118
+#: core/ChangeLog.qml:125
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in Dutch."
 msgstr "語言遊戲現在可以用荷蘭文進行。"
 
-#: core/ChangeLog.qml:119
+#: core/ChangeLog.qml:126
 msgctxt "ChangeLog|"
 msgid ""
 "Merge Norwegian counties Nord-Trøndelag and Sør-Trøndelag into Trøndelag in "
 "geo-country activity."
 msgstr "在地理國家遊戲中將 Nord-Trøndelag 與 Sør-Trøndelag 併入 Trøndelag 中。"
 
-#: core/ChangeLog.qml:120
+#: core/ChangeLog.qml:127
 msgctxt "ChangeLog|"
 msgid "Fix in braille activities where the cells start at 1, not 0."
 msgstr "修正布拉耶遊戲中的問題。"
 
-#: core/ChangeLog.qml:121
+#: core/ChangeLog.qml:128
 msgctxt "ChangeLog|"
 msgid "Translation added for Basque, Hungarian and Malayalam."
-msgstr "增加 Basque、匈牙利語、馬來語的翻譯。"
+msgstr "增加巴斯克語、匈牙利語、馬拉雅拉姆語的翻譯。"
 
-#: core/ChangeLog.qml:122
+#: core/ChangeLog.qml:129
 msgctxt "ChangeLog|"
 msgid ""
 "Loading/saving of creations (Baby Wordprocessor, Balance Box and Piano "
 "Composition)."
 msgstr "載入/儲存創作（從小寶寶的文書處理器、平衡盒、鋼琴作曲家等遊戲）"
 
-#: core/ChangeLog.qml:123
+#: core/ChangeLog.qml:130
 msgctxt "ChangeLog|"
 msgid "Translations added for Scottish Gaelic."
 msgstr "增加 Scottish Gaelic 的翻譯。"
 
-#: core/ChangeLog.qml:124
+#: core/ChangeLog.qml:131
 msgctxt "ChangeLog|"
 msgid "License page added in configuration."
 msgstr "在設定中加入授權頁。"
 
-#: core/ChangeLog.qml:124
+#: core/ChangeLog.qml:131
 msgctxt "ChangeLog|"
 msgid "Multiple changes on layouts to improve the ergonomy."
 msgstr "對佈局進行多項更改，以改善人體工學。"
 
-#: core/ChangeLog.qml:125
+#: core/ChangeLog.qml:132
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in Polish, Swedish and Ukrainian."
-msgstr "Lang activity now available in Polish, Swedish and Ukrainian."
+msgstr "語言活動現在提供波蘭語、瑞典語及烏克蘭語。"
 
-#: core/ChangeLog.qml:126
+#: core/ChangeLog.qml:133
 msgctxt "ChangeLog|"
 msgid "Search feature."
 msgstr "搜尋功能。"
 
-#: core/ChangeLog.qml:127
+#: core/ChangeLog.qml:134
 msgctxt "ChangeLog|"
 msgid "A Changelog."
 msgstr "變更紀錄。"
 
-#: core/ChangeLog.qml:128
+#: core/ChangeLog.qml:135
 msgctxt "ChangeLog|"
 msgid "Many little fixes."
 msgstr "許多小修正。"
 
-#: core/ChangeLog.qml:128
+#: core/ChangeLog.qml:135
 msgctxt "ChangeLog|"
 msgid "Lang activity now available in French."
 msgstr "語言遊戲現在可以用法文進行。"
 
-#: core/ChangeLog.qml:129
+#: core/ChangeLog.qml:136
 msgctxt "ChangeLog|"
 msgid ""
 "Adding a loading overlay to let the user know that some actions are taking "
@@ -24705,7 +25398,7 @@ msgstr ""
 "加上一個載入的進度條，讓使用者知道正在進行一些事情（像是載入遊戲），可能要花"
 "上一些時間。"
 
-#: core/ChangeLog.qml:129
+#: core/ChangeLog.qml:136
 msgctxt "ChangeLog|"
 msgid ""
 "Translations added for: Catalan (Valencian), Chinese Traditional, Finnish "
@@ -24714,12 +25407,12 @@ msgstr ""
 "新增翻譯包括：加泰羅尼亞語、正體中文、芬蘭語、俄羅斯語、斯洛伐克語、土耳其語"
 "等等。"
 
-#: core/ChangeLog.qml:130
+#: core/ChangeLog.qml:137
 msgctxt "ChangeLog|"
 msgid "Translations added for: Slovenian, German, Galician."
-msgstr "增加新語言的翻譯：斯洛伐尼亞、德文、加利西亞"
+msgstr "增加新語言的翻譯：斯洛維尼亞語、德文、加利西亞"
 
-#: core/ChangeLog.qml:184
+#: core/ChangeLog.qml:191
 #, qt-format
 msgctxt "ChangeLog|"
 msgid "Version %1:"
@@ -24790,8 +25483,8 @@ msgstr "版權"
 msgctxt "DialogAbout|"
 msgid "translator-credits"
 msgstr ""
-"趙惟倫 <william.chao@ossii.com.tw>, 2005Franklin Weng <franklin@goodhorse."
-"idv.tw>, 2015"
+"趙惟倫 <william.chao@ossii.com.tw>, 2005.\n"
+"Franklin Weng <franklin@goodhorse.idv.tw>, 2015."
 
 #: core/DialogAbout.qml:55
 #, qt-format
@@ -24865,16 +25558,7 @@ msgstr ""
 "以用此系統來回報您的建議。請將嚴重性設為「希望清單」（Wishlist）即可。"
 
 #: core/DialogAbout.qml:105
-#, fuzzy, qt-format
-#| msgctxt "DialogAbout|"
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!<br /><br />Visit <a href=\"%1\">%1</a> for information on some "
-#| "projects in which you can participate.<br /><br />If you need more "
-#| "information or documentation, then a visit to <a href=\"%2\">%2</a> will "
-#| "provide you with what you need."
+#, qt-format
 msgctxt "DialogAbout|"
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -24885,11 +25569,11 @@ msgid ""
 "documentation, then a visit to <a href=\"%2\">%2</a> will provide you with "
 "what you need."
 msgstr ""
-"您不需要是軟體工程師也可以加入 KDE 開發團隊。您可以加入翻譯團隊來翻譯程式的介"
-"面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。<br /"
-"><br /> 請參考 <a href=\"%1\">%1</a>　上的資訊看看您能幫上什麼忙。<br /><br /"
-"> 如果您需要更多資訊或文件，請參考 <a href=\"%2\">%2</a> 上面也許有一些能幫忙"
-"您的資訊。"
+"您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
+"的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
+"<br /><br />請參考 <a href=\"%1\">%1</a> 上的資訊看看您能幫上什麼忙。<br /"
+"><br />如果您需要更多資訊或文件，請參考 <a href=\"%2\">%2</a> 上面也許有一些"
+"能幫助您的資訊。"
 
 #: core/DialogAbout.qml:122
 #, qt-format
@@ -24952,17 +25636,17 @@ msgctxt "DialogChooseLevel|"
 msgid "Options"
 msgstr "選項"
 
-#: core/DialogChooseLevel.qml:343
+#: core/DialogChooseLevel.qml:344
 msgctxt "DialogChooseLevel|"
 msgid "Cancel"
 msgstr "取消"
 
-#: core/DialogChooseLevel.qml:351
+#: core/DialogChooseLevel.qml:352
 msgctxt "DialogChooseLevel|"
 msgid "Save"
 msgstr "儲存"
 
-#: core/DialogChooseLevel.qml:365
+#: core/DialogChooseLevel.qml:366
 msgctxt "DialogChooseLevel|"
 msgid "Save and start"
 msgstr "儲存並開始"
@@ -25058,46 +25742,46 @@ msgctxt "DownloadDialog|"
 msgid "Your local data files are up-to-date."
 msgstr "您的本地端資料檔已更新。"
 
-#: core/DownloadManager.cpp:113
+#: core/DownloadManager.cpp:123
 msgctxt "QObject|"
 msgid "Download cancelled by user"
 msgstr "使用者中止下載"
 
-#: core/DownloadManager.cpp:324
+#: core/DownloadManager.cpp:338
 msgctxt "QObject|"
 msgid "Could not create resource path"
 msgstr "無法建立資源路徑"
 
-#: core/DownloadManager.cpp:331
+#: core/DownloadManager.cpp:345
 #, qt-format
 msgctxt "QObject|"
 msgid "Could not open target file %1"
 msgstr "無法開啟目標檔案 %1"
 
-#: core/DownloadManager.cpp:684
+#: core/DownloadManager.cpp:714
 msgctxt "QObject|"
 msgid "Invalid format of Contents file"
 msgstr "Contents 檔格式錯誤"
 
-#: core/DownloadManager.cpp:706
+#: core/DownloadManager.cpp:736
 #, qt-format
 msgctxt "QObject|"
 msgid "The url %1 does not exist."
 msgstr "網址 %1 不存在。"
 
-#: core/DownloadManager.cpp:719
+#: core/DownloadManager.cpp:749
 #, qt-format
 msgctxt "QObject|"
 msgid "Checksum of downloaded file does not match: %1"
 msgstr "下載檔案的檢查碼不正確：%1"
 
-#: core/DownloadManager.cpp:741
+#: core/DownloadManager.cpp:771
 #, qt-format
 msgctxt "QObject|"
 msgid "No voices found for %1."
 msgstr ""
 
-#: core/DownloadManager.cpp:746
+#: core/DownloadManager.cpp:776
 #, qt-format
 msgctxt "QObject|"
 msgid "No data found for %1."
@@ -25156,12 +25840,12 @@ msgctxt "GCCreationHandler|"
 msgid "Save"
 msgstr "儲存"
 
-#: core/GCCreationHandler.qml:324
+#: core/GCCreationHandler.qml:325
 msgctxt "GCCreationHandler|"
 msgid "Load"
 msgstr "載入"
 
-#: core/GCCreationHandler.qml:334
+#: core/GCCreationHandler.qml:335
 msgctxt "GCCreationHandler|"
 msgid "Delete"
 msgstr "刪除"
@@ -25362,12 +26046,9 @@ msgstr ""
 #: core/main.qml:389
 msgctxt "main|"
 msgid "Apply"
-msgstr ""
+msgstr "套用"
 
 #: core/main.qml:390
-#, fuzzy
-#| msgctxt "DialogChooseLevel|"
-#| msgid "Cancel"
 msgctxt "main|"
 msgid "Cancel"
 msgstr "取消"
@@ -25377,25 +26058,36 @@ msgctxt "ReadyButton|"
 msgid "I am Ready"
 msgstr "我準備好了"
 
-#: core/Tutorial.qml:139
+#: core/Tutorial.qml:145
 msgctxt "Tutorial|"
 msgid "Previous"
 msgstr "前一個"
 
-#: core/Tutorial.qml:159
+#: core/Tutorial.qml:165
 msgctxt "Tutorial|"
 msgid "Next"
 msgstr "下一個"
 
-#: core/Tutorial.qml:178
+#: core/Tutorial.qml:184
 msgctxt "Tutorial|"
 msgid "Skip"
 msgstr "略過"
 
-#: core/Tutorial.qml:178
+#: core/Tutorial.qml:184
 msgctxt "Tutorial|"
 msgid "Start"
 msgstr "開始"
+
+#, fuzzy
+#~| msgctxt "Data|"
+#~| msgid "Find both numbers."
+#~ msgctxt "Data|"
+#~ msgid "Find the missing numbers"
+#~ msgstr "找出這兩個數字。"
+
+#~ msgctxt "Guesscount|"
+#~ msgid "%1/%2"
+#~ msgstr "%1/%2"
 
 #~ msgctxt "board5_2|"
 #~ msgid "1791 Comte de Sivrac's Celerifere"
@@ -25652,10 +26344,6 @@ msgstr "開始"
 #~ "綿羊是一種哺乳動物，身上有一大團羊毛。牠通常被放牧在農場中，而牠身上的羊"
 #~ "毛、牠的肉跟牠的奶對我們都很有益處。羊毛剃下來之後，可以拿來做衣服、毛毯等"
 #~ "等許多東西。"
-
-#~ msgctxt "ActivityInfo|"
-#~ msgid "Learn digits"
-#~ msgstr "學習數字"
 
 #~ msgctxt "ActivityInfo|"
 #~ msgid ""

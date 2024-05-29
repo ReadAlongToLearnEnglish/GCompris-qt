@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: gcompris_voices\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-09-27 12:47+0300\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-04-23 00:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,8 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-POOTLE-MTIME: 1497539875.000000\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Eksik sayıları bul."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -297,13 +303,13 @@ msgstr ""
 #: activities/color_mix/ActivityInfo.qml:18
 #, kde-format
 msgid "Match the color by moving the sliders on the tubes of paint"
-msgstr "Boya tüpleri üzerindeki kaydırıcıları hareket ettirerek rengi eşleştir"
+msgstr "Boya tüpleri üzerindeki sürgüleri sürerek rengi eşleştir"
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "color_mix_light"
 #: activities/color_mix_light/ActivityInfo.qml:18
 #, kde-format
 msgid "Match the color by moving the sliders on the torches"
-msgstr "Meşalelerin üzerindeki kaydırıcıları hareket ettirerek rengi eşleştir"
+msgstr "Meşalelerin üzerindeki sürgüleri sürerek rengi eşleştir"
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "colors"
 #: activities/colors/ActivityInfo.qml:18
@@ -461,6 +467,12 @@ msgstr "Yönergelerde açıklandığı biçimde uygun parça sayısını seç."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Belirtilen kesrin doğru payını ve paydasını bul"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Friz modelini yeniden oluştur ve tamamla."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -528,6 +540,18 @@ msgid ""
 msgstr ""
 "Sayı yiyiciyi ok düğmeleriyle asal sayılara yönlendir ve onları yutmak için "
 "boşluk düğmesine bas."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "Dereceli çizgide verilen noktaya karşılık gelen değeri bul."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Verilen değeri dereceli çizgiye yerleştir."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1207,6 +1231,18 @@ msgstr ""
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr "Dartları atmak için hedefe tıkla, ardından bitiş puanını say!"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"On sayısına eşit sayı çiftleri oluştur. Bir numara seç, ardından konumlarını "
+"değiştirmek için aynı işlemin başka bir numarasını seç. Sonra, sonucu yazmak "
+"için sonuç kutusunu seç."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17
 #, kde-format
@@ -1274,6 +1310,3 @@ msgstr ""
 #, kde-format
 msgid "Type the words on your keyboard before they reach the ground."
 msgstr "Sözcükler yere ulaşmadan önce onları klavyende yaz."
-
-#~ msgid "put here in comment the text for the intro voice"
-#~ msgstr "giriş sesi açıklamasını buraya koy"

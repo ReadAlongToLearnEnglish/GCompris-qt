@@ -60,13 +60,13 @@ Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
 <date
->6 de juny de 2023</date>
+>23 de maig de 2024</date>
 
 <!--version information of the application and kde this documentation is valid for.
 for example 'xx.yy.zz'
 -->
 <releaseinfo
->3.3</releaseinfo>
+>4.1</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -110,7 +110,7 @@ for example 'xx.yy.zz'
 <para
 >El &gcompris; està disponible en els sistemes operatius següents: &GNU;/&Linux;, &BSD;, MacOSX i Android. Es requereix una targeta 3D amb implementació de l'<emphasis
 >OpenGL 2.1</emphasis
-> o superior. És obligatori una profunditat de color de 32 bits</para>
+> o superior. És obligatori una profunditat de color de 32 bits.</para>
 </sect1>
 
 <sect1 id="installation">
@@ -630,7 +630,7 @@ for example 'xx.yy.zz'
 <para
 >&gcompris; </para>
 <para
->Copyright del programa 2000-2023 Timothée Giet i altres </para>
+>Copyright del programa 2000-2024 Timothée Giet i altres </para>
 
 <para
 >Traductor de la documentació: &credits.Antoni.Bella;</para

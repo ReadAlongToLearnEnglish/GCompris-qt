@@ -7,7 +7,7 @@ msgstr ""
 "X-Language: en\n"
 "X-Qt-Contexts: true\n"
 
-#: ../activities/clockgame/Clockgame.qml:109
+#: ../activities/clockgame/Clockgame.qml:111
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n hour(s)"
@@ -15,7 +15,7 @@ msgid_plural "%n hour(s)"
 msgstr[0] "%n hour"
 msgstr[1] "%n hours"
 
-#: ../activities/clockgame/Clockgame.qml:112
+#: ../activities/clockgame/Clockgame.qml:114
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n minute(s)"
@@ -23,7 +23,7 @@ msgid_plural "%n minute(s)"
 msgstr[0] "%n minute"
 msgstr[1] "%n minutes"
 
-#: ../activities/clockgame/Clockgame.qml:115
+#: ../activities/clockgame/Clockgame.qml:117
 #, qt-format
 msgctxt "Clockgame|"
 msgid "%n second(s)"
@@ -31,7 +31,7 @@ msgid_plural "%n second(s)"
 msgstr[0] "%n second"
 msgstr[1] "%n seconds"
 
-#: ../activities/share/share.js:97
+#: ../activities/share/share.js:98
 #, qt-format
 msgctxt ""
 "share|First part of Place %n boy(s) and %n girl(s) in the center. Then split "
@@ -41,7 +41,7 @@ msgid_plural "Place %n boy(s) "
 msgstr[0] "\"Place %n boy \""
 msgstr[1] "\"Place %n boys \""
 
-#: ../activities/share/share.js:101
+#: ../activities/share/share.js:102
 #, qt-format
 msgctxt ""
 "share|Second part of Place %n boy(s) and %n girl(s) in the center. Then "
@@ -51,7 +51,7 @@ msgid_plural "and %n girl(s) in the center. "
 msgstr[0] "\"and %n girl in the center. \""
 msgstr[1] "\"and %n girls in the center. \""
 
-#: ../activities/share/share.js:105
+#: ../activities/share/share.js:106
 #, qt-format
 msgctxt ""
 "share|Third part of Place %n boy(s) and %n girl(s) in the center. Then split "

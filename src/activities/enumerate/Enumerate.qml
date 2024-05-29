@@ -113,9 +113,11 @@ ActivityBase {
             property alias instruction: instruction
             property string instructionText: ""
             property alias score: score
+            property alias errorRectangle: errorRectangle
             property GCSfx audioEffects: activity.audioEffects
-            readonly property var levels: activity.datasetLoader.data.length !== 0 ? activity.datasetLoader.data : null
+            readonly property var levels: activity.datasets.length !== 0 ? activity.datasets : null
             property int mode: 1 // default is automatic
+            property bool buttonsBlocked: false
         }
 
         DropArea {
@@ -180,10 +182,18 @@ ActivityBase {
             }
         }
 
+        ErrorRectangle {
+            id: errorRectangle
+            anchors.fill: answer
+            imageSize: okButton.width
+            function releaseControls() { items.buttonsBlocked = false; }
+        }
+
         VirtualKeyboard {
             id: keyboard
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
+            enabled: visible && !items.buttonsBlocked
 
             function populate() {
                 layout = [ [
@@ -235,7 +245,7 @@ ActivityBase {
             anchors.verticalCenter: okButton.verticalCenter
             anchors.right: okButton.visible ? okButton.left : background.right
             anchors.rightMargin: 10 * ApplicationInfo.ratio
-            onStop: Activity.initSubLevel()
+            onStop: Activity.nextSubLevel()
         }
 
         DialogHelp {
@@ -261,7 +271,7 @@ ActivityBase {
 
         BarButton {
             id: okButton
-            enabled: items.mode === 2
+            enabled: items.mode === 2 && !items.buttonsBlocked
             visible: items.mode === 2
             anchors {
                 bottom: bar.top

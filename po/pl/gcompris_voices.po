@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Grzegorz Koryga <rehork@tutamail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
-"PO-Revision-Date: 2023-09-30 11:32+0200\n"
+"POT-Creation-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-23 11:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "adjacent_numbers"
+#: activities/adjacent_numbers/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the missing numbers."
+msgstr "Znajdź brakujące liczby."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "advanced_colors"
 #: activities/advanced_colors/ActivityInfo.qml:18
@@ -222,13 +228,13 @@ msgid ""
 msgstr ""
 "Jesteś odpowiedzialny za blokadę i musisz pomóc Tuksowi przejść. Klikaj na "
 "zawory, aby spowodować spadek lub wzrost w poziomie wody. Klikaj na zapory, "
-"aby otworzyć lub zamknąć droge."
+"aby otworzyć lub zamknąć drogę."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "categorization"
 #: activities/categorization/ActivityInfo.qml:18
 #, kde-format
 msgid "Categorize the items into the correct group"
-msgstr "Przypisz elementy do poprawnej grupy"
+msgstr "Przypisz rzeczy do poprawnej grupy"
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "checkers"
 #: activities/checkers/ActivityInfo.qml:18
@@ -466,6 +472,12 @@ msgstr "Wybierz odpowiednią liczbę części zgodnie z opisem w instrukcji."
 msgid "Find the correct numerator and denominator of the represented fraction"
 msgstr "Znajdź właściwy licznik i mianownik przedstawionego ułamka"
 
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "frieze"
+#: activities/frieze/ActivityInfo.qml:17
+#, kde-format
+msgid "Reproduce and complete the frieze model."
+msgstr "Odtwórz i uzupełnij model frieze."
+
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "geo-country"
 #: activities/geo-country/ActivityInfo.qml:22
 #, kde-format
@@ -533,6 +545,18 @@ msgid ""
 msgstr ""
 "Naprowadź żarłacza liczb, przy użyciu klawiszy strzałek, na liczby pierwsze "
 "i naciśnij klawisz spacji, aby je pożarł."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_read"
+#: activities/graduated_line_read/ActivityInfo.qml:17
+#, kde-format
+msgid "Find the value corresponding to the given spot on the graduated line."
+msgstr "Znajdź wartość odpowiadającą danemu miejscu na linijce."
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "graduated_line_use"
+#: activities/graduated_line_use/ActivityInfo.qml:17
+#, kde-format
+msgid "Place the given value on the graduated line."
+msgstr "Umieść daną wartość na linijce."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_classes"
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "grammar_analysis"
@@ -1221,6 +1245,18 @@ msgstr ""
 #, kde-format
 msgid "Click on the target to launch darts, then count your final score!"
 msgstr "Kliknij na celu, aby rzucić lotkę, a następnie zlicz punkty!"
+
+#. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_calculate"
+#: activities/tens_complement_calculate/ActivityInfo.qml:17
+#, kde-format
+msgid ""
+"Create pairs of numbers equal to ten. Select a number, then select another "
+"number of the same operation to swap their position. Then, select the result "
+"box to type the result."
+msgstr ""
+"Twórz pary liczb równe dziesięciu. Wybierz liczbę, następnie kolejną do tego "
+"samego działania, aby zamienić je miejscami. Następnie zaznacz pole wyniku, "
+"aby go tam wpisać."
 
 #. i18n: intro voices, see GCompris-voices/README.md - activity: "tens_complement_find"
 #: activities/tens_complement_find/ActivityInfo.qml:17

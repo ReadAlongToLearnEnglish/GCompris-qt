@@ -10,7 +10,6 @@
 import QtQuick 2.12
 import GCompris 1.0
 import QtQml.Models 2.12
-import QtQuick.Controls 2.12
 
 import "../../core"
 import "comparator.js" as Activity
@@ -47,7 +46,8 @@ ActivityBase {
             property alias background: background
             property int currentLevel: activity.currentLevel
             property alias bonus: bonus
-            readonly property var levels: activity.datasetLoader.data
+            property GCSfx audioEffects: activity.audioEffects
+            readonly property var levels: activity.datasets
             property alias dataListModel: dataListModel
             property int selectedLine: -1
             property int spacingOfElement: 20 * ApplicationInfo.ratio
@@ -55,6 +55,7 @@ ActivityBase {
             property int numberOfRowsCompleted: 0
             property alias score: score
             property bool horizontalLayout: layoutArea.width >= layoutArea.height
+            property bool buttonsBlocked: false
         }
 
         onStart: { Activity.start(items) }
@@ -77,6 +78,8 @@ ActivityBase {
 
         Keys.enabled: !bonus.isPlaying
         Keys.onPressed: {
+            if(items.buttonsBlocked)
+                return;
             switch(event.key) {
                 case Qt.Key_Less:
                 event.accepted = true;
@@ -282,6 +285,7 @@ ActivityBase {
             anchors.rightMargin: background.layoutMargins
             anchors.bottomMargin: background.layoutMargins
             anchors.horizontalCenterOffset: layoutArea.width * 0.375
+            onStop: Activity.nextSubLevel()
         }
 
         states: [
@@ -323,6 +327,12 @@ ActivityBase {
             }
         ]
 
+        MouseArea {
+            id: inputLock
+            anchors.fill: layoutArea
+            enabled: items.buttonsBlocked
+        }
+
         Bar {
             id: bar
             level: items.currentLevel + 1
@@ -340,7 +350,7 @@ ActivityBase {
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextSubLevel)
+            Component.onCompleted: win.connect(Activity.nextLevel)
         }
     }
 }

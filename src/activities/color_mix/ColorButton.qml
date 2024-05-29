@@ -9,7 +9,6 @@
 */
 import QtQuick 2.12
 
-import "../../core"
 
 Item {
     id: button
@@ -32,6 +31,7 @@ Item {
     MouseArea {
         id: mouseArea
         anchors.centerIn: parent
+        enabled: !items.buttonsBlocked
         height: 2.3 * parent.height
         width: 2.3 * parent.width
         hoverEnabled: true

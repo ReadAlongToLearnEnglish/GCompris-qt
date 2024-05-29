@@ -26,10 +26,17 @@ QtObject {
      *
      */
     property var changelog: [
+            { "versionCode": 40100, "content": [
+                qsTr("Many usability improvements"),
+                qsTr("Many bug fixes")
+                ]
+            },
             { "versionCode": 40000, "content": [
+                qsTr("Translations added for Bulgarian, Galician and Swahili"),
                 qsTr("Many usability improvements"),
                 qsTr("Many new images"),
-                qsTr("Many bug fixes")
+                qsTr("Many bug fixes"),
+                qsTr("New command-line option to directly start an activity at a specific level (--start-level level, to be used with --launch activity)")
                 ],
               "newDatasets": ["algebra_by", "algebra_plus", "algebra_minus", "algebra_div"]
             },

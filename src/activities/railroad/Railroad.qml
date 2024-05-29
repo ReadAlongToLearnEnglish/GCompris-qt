@@ -46,12 +46,14 @@ ActivityBase {
             property int currentLevel: activity.currentLevel 
             property alias bonus: bonus
             property alias score: score
+            property GCSfx audioEffects: activity.audioEffects
             property alias trainAnimationTimer: trainAnimationTimer
             property alias sampleList: sampleList
             property alias listModel: listModel
             property alias answerZone: answerZone
             property alias animateFlow: animateFlow
             property alias introMessage: introMessage
+            property alias errorRectangle: errorRectangle
             property bool memoryMode: false
             property bool mouseEnabled: true
             property bool controlsEnabled: false
@@ -528,6 +530,14 @@ ActivityBase {
             }
         }
 
+        ErrorRectangle {
+            id: errorRectangle
+            anchors.fill: topDisplayArea
+            z: score.z
+            imageSize: okButton.width
+            function releaseControls() { items.mouseEnabled = true; }
+        }
+
         // Answer Submission button
         BarButton {
             id: okButton
@@ -538,6 +548,7 @@ ActivityBase {
             sourceSize.height: height
             anchors.top: score.top
             z: score.z
+            enabled: items.mouseEnabled
             anchors {
                 right: score.left
                 rightMargin: 10
@@ -549,7 +560,7 @@ ActivityBase {
             onClicked: {
                 if(trainAnimationTimer.running || animateFlow.running)
                     bar.hintClicked();
-                else if(listModel.count > 0 && items.mouseEnabled && visible)
+                else if(listModel.count > 0 && visible)
                     Activity.checkAnswer();
             }
         }
@@ -569,6 +580,7 @@ ActivityBase {
             anchors.leftMargin: 10 * ApplicationInfo.ratio
             anchors.bottom: undefined
             anchors.left: undefined
+            onStop: Activity.nextSubLevel()
         }
 
         Bar {
@@ -605,7 +617,7 @@ ActivityBase {
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextSubLevel)
+            onWin: Activity.nextLevel()
         }
     }
 }

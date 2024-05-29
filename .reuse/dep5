@@ -18,7 +18,7 @@ Copyright: 2016 Timothée Giet
 License: CC-BY-SA-4.0
 
 Files: android/configAndroid*.json.cmake
-Copyright: 2016 Johnny Jzaeix
+Copyright: 2016 Johnny Jazeix
 License: BSD-3-Clause
 
 Files: docs/docbook/index.docbook
@@ -37,7 +37,7 @@ License: CC-BY-SA-4.0
 Files: docs/Doxyfile.local
 Copyright: 2015 Holger Kaelberer
 License: CC0-1.0
- 
+
 Files: docs/manual-general
 Copyright: 2018 Timothée Giet
 License: CC0-1.0
@@ -54,7 +54,7 @@ Files: fastlane/metadata/android/*.txt
 Copyright: 2022 Johnny Jazeix
 License: CC0-1.0
 
-Files: logo.png GCompris64.png
+Files: logo.png
 Copyright: 2016 Timothée Giet
 License: CC-BY-SA-4.0
 
@@ -1007,7 +1007,7 @@ Copyright: NONE
 License: CC0-1.0
 
 Files: src/activities/click_on_letter/resource/levels-ar.json
-Copyright: 2023 Zayed Al-Saidi 
+Copyright: 2023 Zayed Al-Saidi
 License: CC0-1.0
 
 Files: src/activities/click_on_letter/resource/levels-be.json
@@ -1375,9 +1375,9 @@ License: CC-BY-3.0
 Comment: cropping of https://commons.wikimedia.org/wiki/File:Hylobates_lar_-_Kaeng_Krachan_WB.jpg
 
 Files: src/activities/erase/resource/giraffe.webp
-Copyright: 2006 Sergio Cambelo
-License: Unlicense
-Comment: cropping, sharpening of https://commons.wikimedia.org/wiki/File:Giraffe.JPG
+Copyright: 2020 Reinhard Berlin
+License: CC0-1.0
+Comment: cropping of https://commons.wikimedia.org/wiki/File:RB_20200115_Murchison_Falls_1-92.jpg
 
 Files: src/activities/erase/resource/goat.webp
 Copyright: 2014 JoachimKohlerBremen
@@ -1982,6 +1982,10 @@ Files: src/activities/fractions_*/*.svg
 Copyright: 2022 Timothée Giet
 License: CC-BY-SA-4.0
 
+Files: src/activities/frieze/*.svg src/activities/frieze/resources/svg/*.svg
+Copyright: 2024 Timothée Giet
+License: CC-BY-SA-4.0
+
 Files: src/activities/geo-country/geo-country.svg
 Copyright: 2021 Timothée Giet
 License: CC-BY-SA-4.0
@@ -2254,6 +2258,14 @@ Files: src/activities/gnumch-equality/resource/eat.wav
 Copyright: 2000-2008 Bruno Coudoin and others
 License: GPL-3.0-only
 
+Files: src/activities/graduated_line_read/*.svg
+Copyright: 2024 Timothée Giet
+License: CC-BY-SA-4.0
+
+Files: src/activities/graduated_line_use/*.svg
+Copyright: 2024 Timothée Giet
+License: CC-BY-SA-4.0
+
 Files: src/activities/grammar_analysis/*.svg
 Copyright: 2023 Timothée Giet
 License: CC-BY-SA-4.0
@@ -2270,16 +2282,109 @@ Files: src/activities/grammar_analysis/examples/*.json
 Copyright: 2023 Bruno Anselme
 License: CC-BY-SA-4.0
 
+Files: src/activities/grammar_analysis/resource/grammar_analysis-ar.json
+Copyright: 2024 Taha Zerrouki
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-br.json
+Copyright: 2024 Envel Kervoas
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-ca.json
+Copyright: 2024 Josep M. Ferrer
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-cs.json
+Copyright: 2024 Jan Papež
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-el.json
+Copyright: 2024 Yannis Kaskamanidis
+License: CC-BY-SA-4.0
+
 Files: src/activities/grammar_analysis/resource/grammar_analysis-en.json
 Copyright: 2023 Emmanuel Charruau
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-fr.json
+Copyright: 2024 Emmanuel Charruau
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-hr.json
+Copyright: 2023 Igor Dobrača
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-hu.json
+Copyright: 2024 István Lipták
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-lt.json
+Copyright: 2024 Rolandas Jakštys
+           2024 Bernardas Liukaitis
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-ml.json
+Copyright: 2024 Divakaran Payyan Kandanchirakkal
+           2024 Aiswarya Kaitheri Kandoth
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_analysis/resource/grammar_analysis-ro.json
+Copyright: 2024 Horia Pelle
 License: CC-BY-SA-4.0
 
 Files: src/activities/grammar_classes/*.svg
 Copyright: 2023 Timothée Giet
 License: CC-BY-SA-4.0
 
+Files: src/activities/grammar_classes/resource/grammar_classes-ar.json
+Copyright: 2024 Taha Zerrouki
+           2024 Zayed Al-Saidi
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-br.json
+Copyright: 2024 Envel Kervoas
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-ca.json
+Copyright: 2024 Josep M. Ferrer
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-cs.json
+Copyright: 2024 Jan Papež
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-el.json
+Copyright: 2024 Yannis Kaskamanidis
+License: CC-BY-SA-4.0
+
 Files: src/activities/grammar_classes/resource/grammar_classes-en.json
 Copyright: 2023 Emmanuel Charruau
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-fr.json
+Copyright: 2024 Emmanuel Charruau
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-hr.json
+Copyright: 2023 Igor Dobrača
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-hu.json
+Copyright: 2024 István Lipták
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-lt.json
+Copyright: 2024 Rolandas Jakštys
+           2024 Bernardas Liukaitis
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-ml.json
+Copyright: 2024 Divakaran Payyan Kandanchirakkal
+           2024 Aiswarya Kaitheri Kandoth
+License: CC-BY-SA-4.0
+
+Files: src/activities/grammar_classes/resource/grammar_classes-ro.json
+Copyright: 2024 Horia Pelle
 License: CC-BY-SA-4.0
 
 Files: src/activities/graph-coloring/graph-coloring.svg
@@ -2523,7 +2628,7 @@ Copyright: 2019 Vit Pelcak
 License: CC0-1.0
 
 Files: src/activities/lang/resource/content-da.json
-Copyright: 2020 schlander 
+Copyright: 2020 schlander
 License: CC0-1.0
 
 Files: src/activities/lang/resource/content-de.json
@@ -2680,6 +2785,10 @@ Files: src/activities/lang/resource/content-sv.json
 Copyright: 2019 Stefan Asserhäll
 License: CC0-1.0
 
+Files: src/activities/lang/resource/content-sw.json
+Copyright: 2024 Godlove Kyando
+License: CC0-1.0
+
 Files: src/activities/lang/resource/content-tr.json
 Copyright: 2020 Filiz Alver
            2022 Emir SARI
@@ -2785,7 +2894,7 @@ License: GPL-2.0-or-later
 Comment: File from TuxPaint (https://sourceforge.net/p/tuxpaint/tuxpaint/ci/master/tree/magic/sounds/). metalpaint.wav has been remixed by Bruno Coudoin to pickaxe.ogg
 
 Files: src/activities/mining/resource/realrainbow.wav
-Copyright: 2007 William Kendrick 
+Copyright: 2007 William Kendrick
 License: GPL-2.0-or-later
 Comment: File from TuxPaint (https://sourceforge.net/p/tuxpaint/tuxpaint/ci/master/tree/magic/sounds/)
 
@@ -3283,7 +3392,7 @@ License: CC-BY-SA-4.0
 Comment: based on http://openclipart.org/detail/16504/castle-by-ibinbin
 
 Files: src/activities/wordsgame/resource/default-af.json
-Copyright: 2011 friedelwolff 
+Copyright: 2011 friedelwolff
 License: CC0-1.0
 
 Files: src/activities/wordsgame/resource/default-ar.json
@@ -3592,3 +3701,7 @@ License: GPL-3.0-or-later
 Files: tools/menus/resource/*.svg
 Copyright: 2000-2008 Bruno Coudoin
 License: GPL-3.0-only
+
+Files: src/activities/adjacent_numbers/adjacent_numbers.svg
+Copyright: 2024 Timothée Giet
+License: CC-BY-SA-4.0
