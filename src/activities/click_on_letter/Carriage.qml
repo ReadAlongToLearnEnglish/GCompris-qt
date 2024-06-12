@@ -12,7 +12,7 @@
 
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 import "../../core"
 import "click_on_letter.js" as Activity
 
@@ -121,9 +121,10 @@ Item {
         states: State {
             name: "scaled"; when: mouseArea.containsMouse
             PropertyChanges {
-                target: carriageItem
-                scale: /*carriageImage.scale * */ 1.2
-                z: 2
+                carriageItem {
+                    scale: /*carriageImage.scale * */ 1.2
+                    z: 2
+                }
             }
         }
 

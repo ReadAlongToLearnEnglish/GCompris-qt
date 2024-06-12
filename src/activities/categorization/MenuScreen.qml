@@ -12,7 +12,7 @@
 */
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 
 import "../../core"
 import "categorization.js" as Activity
@@ -52,7 +52,7 @@ Image {
     }
 
     Keys.enabled: (items.mode == "expert") ? false : true
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         if(event.key === Qt.Key_Space) {
             menuGrid.currentItem.selectCurrentItem()
             event.accepted = true
@@ -83,7 +83,7 @@ Image {
         }
     }
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         keyboardMode = true
         event.accepted = false
     }

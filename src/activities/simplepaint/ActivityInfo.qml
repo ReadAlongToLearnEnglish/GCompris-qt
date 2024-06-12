@@ -12,12 +12,12 @@ ActivityInfo {
   icon: "simplepaint/simplepaint.svg"
   author: "Bruno Coudoin &lt;bruno.coudoin@gcompris.net&gt;"
   //: Activity title
-  title: qsTr("A simple drawing activity")
+  title: qsTr("Draw in a grid")
   //: Help title
   description: qsTr("Create your own drawing.")
   // intro: "Select a color and paint the rectangles as you like to create a drawing."
   //: Help goal
-  goal: qsTr("Enhance creative skills.")
+  goal: qsTr("Express your creativity through drawing.")
   prerequisite: ""
   //: Help manual
   manual: qsTr("Select a color and paint the rectangles as you like to create a drawing.") + ("<br><br>") +

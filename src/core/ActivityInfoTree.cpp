@@ -17,9 +17,8 @@
 #include <QStandardPaths>
 #include <QCoreApplication>
 #include <QTextStream>
+#include <QLatin1StringView>
 
-QString ActivityInfoTree::m_startingActivity = "";
-int ActivityInfoTree::m_startingLevel = -1;
 ActivityInfoTree *ActivityInfoTree::m_instance = nullptr;
 
 ActivityInfoTree::ActivityInfoTree(QObject *parent) :
@@ -153,16 +152,21 @@ void ActivityInfoTree::sortByDifficultyThenName(bool emitChanged)
 // The level is also filtered based on the global property
 void ActivityInfoTree::filterByTag(const QString &tag, const QString &category, bool emitChanged)
 {
+    using namespace Qt::Literals::StringLiterals;
+
     m_menuTree.clear();
     // https://www.kdab.com/goodbye-q_foreach/, for loops on QList may cause detach
     const auto constMenuTreeFull = m_menuTreeFull;
+    const bool isAllTag = (tag == "all"_L1);
+    const bool isFavoriteTag = (tag == "favorite"_L1);
     for (const auto &activity: constMenuTreeFull) {
         // filter on category if given else on tag
         /* clang-format off */
-        if(((!category.isEmpty() && activity->section().indexOf(category) != -1) ||
-            (category.isEmpty() && activity->section().indexOf(tag) != -1) ||
-            tag == "all" ||
-            (tag == "favorite" && activity->favorite())) &&
+        if((isAllTag ||
+            (isFavoriteTag && activity->favorite()) ||
+            (!category.isEmpty() && activity->section().indexOf(category) != -1) ||
+            (category.isEmpty() && activity->section().indexOf(tag) != -1)
+            ) &&
             (activity->maximalDifficulty() >= ApplicationSettings::getInstance()->filterLevelMin() &&
              activity->minimalDifficulty() <= ApplicationSettings::getInstance()->filterLevelMax())) {
             m_menuTree.push_back(activity);
@@ -176,18 +180,14 @@ void ActivityInfoTree::filterByTag(const QString &tag, const QString &category, 
 
 void ActivityInfoTree::filterByDifficulty(quint32 levelMin, quint32 levelMax)
 {
-    auto it = std::remove_if(m_menuTree.begin(), m_menuTree.end(),
-                             [&](const ActivityInfo *activity) {
+    m_menuTree.removeIf([&](const ActivityInfo *activity) {
                                  return activity->minimalDifficulty() < levelMin || activity->maximalDifficulty() > levelMax;
                              });
-    m_menuTree.erase(it, m_menuTree.end());
 }
 
 void ActivityInfoTree::filterEnabledActivities(bool emitChanged)
 {
-    auto it = std::remove_if(m_menuTree.begin(), m_menuTree.end(),
-                             [](const ActivityInfo *activity) { return !activity->enabled(); });
-    m_menuTree.erase(it, m_menuTree.end());
+    m_menuTree.removeIf([](const ActivityInfo *activity) { return !activity->enabled(); });
     if (emitChanged)
         Q_EMIT menuTreeChanged();
 }
@@ -264,7 +264,7 @@ void ActivityInfoTree::exportAsSQL()
 void ActivityInfoTree::listActivities()
 {
     QTextStream qtOut(stdout);
-    const QStringList list = ActivityInfoTree::getActivityList();
+    const QStringList list = getActivityList();
     for (const QString &activity: list) {
         qtOut << activity << '\n';
     }
@@ -290,30 +290,29 @@ QStringList ActivityInfoTree::getActivityList()
     return list;
 }
 
-QObject *ActivityInfoTree::menuTreeProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+void ActivityInfoTree::initialize(QQmlEngine *engine)
 {
-    Q_UNUSED(scriptEngine)
-
-    ActivityInfoTree *menuTree = getInstance();
     QQmlComponent componentRoot(engine,
                                 QUrl("qrc:/gcompris/src/activities/menu/ActivityInfo.qml"));
     QObject *objectRoot = componentRoot.create();
-    menuTree->setRootMenu(qobject_cast<ActivityInfo *>(objectRoot));
+    setRootMenu(qobject_cast<ActivityInfo *>(objectRoot));
 
     const QStringList activities = getActivityList();
     QString startingActivity = m_startingActivity;
     for (const QString &line: activities) {
         QString url = QString("qrc:/gcompris/src/activities/%1/ActivityInfo.qml").arg(line);
+#ifdef WITH_RCC
         if (!QResource::registerResource(
                 ApplicationInfo::getFilePath(line + ".rcc")))
             qDebug() << "Failed to load the resource file " << line + ".rcc";
+#endif
 
         QQmlComponent activityComponentRoot(engine, QUrl(url));
         QObject *activityObjectRoot = activityComponentRoot.create();
         if (activityObjectRoot != nullptr) {
             ActivityInfo *activityInfo = qobject_cast<ActivityInfo *>(activityObjectRoot);
             activityInfo->fillDatasets(engine);
-            menuTree->menuTreeAppend(activityInfo);
+            menuTreeAppend(activityInfo);
 
             // Check if the activity is the one we want to start in and set the full name
             if (!startingActivity.isEmpty() && startingActivity == line) {
@@ -333,19 +332,28 @@ QObject *ActivityInfoTree::menuTreeProvider(QQmlEngine *engine, QJSEngine *scrip
         m_startingActivity = startingActivity;
     }
 
-    menuTree->filterByTag("favorite");
-    menuTree->filterEnabledActivities();
+    filterByTag("favorite");
+    filterEnabledActivities();
+}
+
+QObject *ActivityInfoTree::menuTreeProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine)
+
+    ActivityInfoTree *menuTree = getInstance();
+    menuTree->initialize(engine);
     return menuTree;
 }
 
 void ActivityInfoTree::registerResources()
 {
+#ifdef WITH_RCC
     if (!QResource::registerResource(ApplicationInfo::getFilePath("core.rcc")))
         qDebug() << "Failed to load the resource file " << ApplicationInfo::getFilePath("core.rcc");
 
     if (!QResource::registerResource(ApplicationInfo::getFilePath("menu.rcc")))
         qDebug() << "Failed to load the resource file menu.rcc";
-
+#endif
     if (!QResource::registerResource(ApplicationInfo::getFilePath("activities.rcc")))
         qDebug() << "Failed to load the resource file activities.rcc";
 }
@@ -355,11 +363,7 @@ void ActivityInfoTree::filterBySearch(const QString &text)
     m_menuTree.clear();
     if (!text.trimmed().isEmpty()) {
         // perform search on each word entered in the searchField
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
         const QStringList wordsList = text.split(' ', Qt::SkipEmptyParts);
-#else
-        const QStringList wordsList = text.split(' ', QString::SkipEmptyParts);
-#endif
         for (const QString &searchTerm: wordsList) {
             const QString trimmedText = searchTerm.trimmed();
             const auto &constMenuTreeFull = m_menuTreeFull;
@@ -408,14 +412,15 @@ QVariantList ActivityInfoTree::allCharacters()
             }
         }
     }
+    QVariantList keyboardCharacters;
     for (const QChar &letters: keyboardChars) {
-        m_keyboardCharacters.push_back(letters);
+        keyboardCharacters.push_back(letters);
     }
-    std::sort(m_keyboardCharacters.begin(), m_keyboardCharacters.end(), [](const QVariant &v1, const QVariant &v2) {
+    std::sort(keyboardCharacters.begin(), keyboardCharacters.end(), [](const QVariant &v1, const QVariant &v2) {
         return ApplicationInfo::getInstance()->localeCompare(v1.toString(), v2.toString()) < 0;
     });
 
-    return m_keyboardCharacters;
+    return keyboardCharacters;
 }
 
 #include "moc_ActivityInfoTree.cpp"

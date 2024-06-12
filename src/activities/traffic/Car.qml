@@ -36,10 +36,10 @@ Item {
         mode = parent.mode
         connection.target = parent
     }
-    // Connect the jamGrid.mode to car.mode to automatically change the wrapped object
+    // Connect the jamGridContainer.mode to car.mode to automatically change the wrapped object
     Connections {
         id: connection
-        onModeChanged: {
+        function onModeChanged() {
             car.mode = parent.mode;
         }
     }
@@ -73,7 +73,7 @@ Item {
             width: parent.width
             height: parent.height
             
-            border.width: 2
+            border.width: ApplicationInfo.ratio
             border.color: "white"
             
             MultiPointTouchArea {

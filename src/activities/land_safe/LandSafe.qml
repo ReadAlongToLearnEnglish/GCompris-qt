@@ -27,8 +27,8 @@ ActivityBase {
     }
     onStop: inForeground = false;
 
-    Keys.onPressed: Activity.processKeyPress(event);
-    Keys.onReleased: Activity.processKeyRelease(event);
+    Keys.onPressed: (event) => { Activity.processKeyPress(event); }
+    Keys.onReleased: (event) => { Activity.processKeyRelease(event); }
 
     onWidthChanged: if (inForeground)
                         Activity.initLevel();
@@ -48,7 +48,7 @@ ActivityBase {
         signal start
         signal stop
 
-        function changeZoom(newZoom)
+        function changeZoom(newZoom: double)
         {
             var dZoom = newZoom / items.zoom;
             var curAltReal = Activity.getAltitudeReal();
@@ -83,7 +83,7 @@ ActivityBase {
         }
 
         // Needed to get keyboard focus on IntroMessage
-        Keys.forwardTo: intro
+        Keys.forwardTo: [intro]
 
         // Add here the QML items you need to access in javascript
         QtObject {
@@ -122,7 +122,7 @@ ActivityBase {
             property double gravity: 0.0
             property double scale: background.height / 400
             property double zoom: 1.0
-            property bool onScreenControls: /* items.world.running && */ ApplicationInfo.isMobile
+            property bool onScreenControls: /* items.world.running && */ true
         }
 
         onStart: { Activity.start(items) }
@@ -228,7 +228,7 @@ ActivityBase {
                                    applyForces();   // "rotation" mode
 
             // decompose a force/acceleration vector v using angle into x/y components
-            function decomposeVector(v, angle) {
+            function decomposeVector(v: real, angle: real) {
                 return Qt.point(v * Math.sin(Activity.degToRad(angle)), // x-component
                                 v * Math.cos(Activity.degToRad(items.rocket.rotation)));  // y-component
             }
@@ -289,7 +289,7 @@ ActivityBase {
                     height: rocket.height
                     rotation: rocketBody.rotation
 
-                    onBeginContact: {
+                    onBeginContact: (other) => {
                         //console.log("XXX beginning contact with " + other.getBody().target.collisionName + " abs v=" + Math.abs(items.lastVelocity) + + " maxV=" + Activity.maxLandingVelocity);
                         if (other.getBody().target === landing &&
                                 Math.abs(items.lastVelocity) <= Activity.maxLandingVelocity &&
@@ -298,7 +298,7 @@ ActivityBase {
                         else // ground
                             Activity.finishLevel(false); // crash
                     }
-//                    onEndContact: console.log("XXX ending contact with " + other.getBody().target.collisionName);
+//                    onEndContact:  (other) => console.log("XXX ending contact with " + other.getBody().target.collisionName);
                 }
             }
 

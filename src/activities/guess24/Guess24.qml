@@ -86,7 +86,7 @@ ActivityBase {
 
         ListModel {
             id: cardsModel
-            function randPosition() { return (Math.floor(Math.random() * count)) }                                      // choose a random position
+            function randPosition(): real { return (Math.floor(Math.random() * count)) }                                // choose a random position
             function shuffleModel() { for (var i = 0 ; i < count; i++) { move(randPosition(), randPosition(), 1) } }    // shuffle elements
         }
 
@@ -215,22 +215,25 @@ ActivityBase {
                     State {
                         name: "moveto"
                         PropertyChanges {
-                            target: animationCard
-                            visible: true
-                            x: items.cardsBoard.currentItem.x
-                            y: items.cardsBoard.currentItem.y
+                            animationCard {
+                                visible: true
+                                x: items.cardsBoard.currentItem.x
+                                y: items.cardsBoard.currentItem.y
+                            }
                         }
                     },
                     State {
                         name: "wait"
                         PropertyChanges {
-                            target: animationCard
-                            visible: true
+                            animationCard {
+                                visible: true
+                            }
                         }
                         PropertyChanges {
-                            target: animationCardBg
-                            color: "tomato"
-                            border.color: "tomato"
+                            animationCardBg {
+                                color: "tomato"
+                                border.color: "tomato"
+                            }
                         }
                     }
                 ]
@@ -480,6 +483,6 @@ ActivityBase {
             Component.onCompleted: win.connect(Activity.nextLevel)
         }
 
-        Keys.onPressed: Activity.handleKeys(event)
+        Keys.onPressed: (event) => { Activity.handleKeys(event) }
     }
 }

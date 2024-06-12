@@ -10,7 +10,7 @@
 
 import QtQuick 2.12
 import GCompris 1.0
-import QtMultimedia 5.12
+import QtMultimedia
 
 import "../../core"
 import "qrc:/gcompris/src/core/core.js" as Core
@@ -134,8 +134,8 @@ Item {
             Connections {
                 target: DownloadManager
 
-                onDownloadFinished: voicesRow.localeChanged()
-                onResourceRegistered: voicesRow.localeChanged()
+                function onDownloadFinished() { voicesRow.localeChanged() }
+                function onResourceRegistered() { voicesRow.localeChanged() }
             }
 
             GCDialogCheckBox {
@@ -243,9 +243,9 @@ Item {
                 height: parent.height
                 width: parent.width - 35 * ApplicationInfo.ratio
                 text: {
-                    if(backgroundMusic.playbackState !== Audio.PlayingState || backgroundMusic.muted)
+                    if(backgroundMusic.playbackState !== MediaPlayer.PlayingState || backgroundMusic.muted)
                         return qsTr("Not playing")
-                    else if (backgroundMusic.metaDataMusic[0] !== undefined)
+                    else if (backgroundMusic.metaDataMusic[0] !== "")
                         return (qsTr("Title: %1  Artist: %2").arg(backgroundMusic.metaDataMusic[0]).arg(backgroundMusic.metaDataMusic[1]))
                     else if (String(backgroundMusic.source).slice(0, 37) === "qrc:/gcompris/src/core/resource/intro")
                         return qsTr("Introduction music")
@@ -260,7 +260,7 @@ Item {
                 source: "qrc:/gcompris/src/core/resource/bar_next.svg"
                 height: 30 * ApplicationInfo.ratio
                 sourceSize.width: height
-                visible: (backgroundMusic.playbackState === Audio.PlayingState && !backgroundMusic.muted)
+                visible: (backgroundMusic.playbackState === MediaPlayer.PlayingState && !backgroundMusic.muted)
                 MouseArea {
                     anchors.fill: parent
                     enabled: parent.visible
@@ -289,8 +289,8 @@ Item {
 
         Connections {
             target: DownloadManager
-            onDownloadFinished: wordsetBox.updateStatus()
-            onBackgroundMusicRegistered: {
+            function onDownloadFinished() { wordsetBox.updateStatus() }
+            function onBackgroundMusicRegistered() {
                 allBackgroundMusic = ApplicationInfo.getBackgroundMusicFromRcc()
                 if(filteredBackgroundMusic.length === 0) {
                     filteredBackgroundMusic = allBackgroundMusic
@@ -453,7 +453,7 @@ Item {
     property int minFilter
     property int maxFilter
 
-    function extractMusicNameFromPath(musicPath) {
+    function extractMusicNameFromPath(musicPath: string) {
         var musicDirectoryPath = ApplicationInfo.getAudioFilePath("backgroundMusic/")
         var musicName = String(musicPath)
         musicName = musicName.slice(musicDirectoryPath.length, musicName.length)
@@ -617,7 +617,7 @@ Item {
         { text: qsTr("All lowercase"), value: Font.AllLowercase }
     ]
 
-    function isFilteredBackgroundMusicChanged() {
+    function isFilteredBackgroundMusicChanged(): bool {
         initialFilteredMusic = ApplicationSettings.filteredBackgroundMusic
         if(initialFilteredMusic.length !== filteredBackgroundMusic.length)
             return true
@@ -628,7 +628,7 @@ Item {
         return false
     }
 
-    function hasConfigChanged() {
+    function hasConfigChanged(): bool {
         return (ApplicationSettings.locale !== dialogConfig.languages[languageBox.currentIndex].locale ||
         (ApplicationSettings.sectionVisible != sectionVisible) ||
         (ApplicationSettings.exitConfirmation != exitConfirmation) ||

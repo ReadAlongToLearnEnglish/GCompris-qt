@@ -32,7 +32,7 @@ ActivityBase {
         property bool isColorTab: true
         property bool spaceIsPressed: false
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             items.keyboardControls = true;
 
             if(event.key === Qt.Key_Up) {
@@ -105,7 +105,7 @@ ActivityBase {
             }
         }
 
-        Keys.onReleased: {
+        Keys.onReleased: (event) => {
             if(event.key === Qt.Key_Space || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                 spaceIsPressed = false;
             }
@@ -179,12 +179,12 @@ ActivityBase {
 
         MultiPointTouchArea {
             anchors.fill: parent
-            onPressed: {
+            onPressed: (touchPoints) => {
                 items.keyboardControls = false;
                 isColorTab = false;
                 checkTouchPoint(touchPoints);
             }
-            onTouchUpdated: checkTouchPoint(touchPoints);
+            onTouchUpdated: (touchPoints) => checkTouchPoint(touchPoints);
         }
 
         function checkTouchPoint(touchPoints) {
@@ -286,32 +286,36 @@ ActivityBase {
                                 name: "notclicked"
                                 when: !rect.iAmSelected && !mouseArea.containsMouse
                                 PropertyChanges {
-                                    target: rect
-                                    scale: 0.8
+                                    rect {
+                                        scale: 0.8
+                                    }
                                 }
                             },
                             State {
                                 name: "clicked"
                                 when: mouseArea.pressed
                                 PropertyChanges {
-                                    target: rect
-                                    scale: 0.7
+                                    rect {
+                                        scale: 0.7
+                                    }
                                 }
                             },
                             State {
                                 name: "hover"
                                 when: mouseArea.containsMouse
                                 PropertyChanges {
-                                    target: rect
-                                    scale: 1.1
+                                    rect {
+                                        scale: 1.1
+                                    }
                                 }
                             },
                             State {
                                 name: "selected"
                                 when: rect.iAmSelected
                                 PropertyChanges {
-                                    target: rect
-                                    scale: 1
+                                    rect {
+                                        scale: 1
+                                    }
                                 }
                             }
                         ]

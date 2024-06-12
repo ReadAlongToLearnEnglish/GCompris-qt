@@ -10,7 +10,7 @@
 import QtQuick 2.12
 import GCompris 1.0
 import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12
+import QtQuick.Controls.Basic
 import "qrc:/gcompris/src/core/core.js" as Core
 
 /**
@@ -286,16 +286,18 @@ Item {
                 name: "button1Selected"
                 when: backgroundButton.selected
                 PropertyChanges {
-                    target: buttonSelector
-                    anchors.fill: backgroundButton
+                    buttonSelector {
+                        anchors.fill: backgroundButton
+                    }
                 }
             },
             State {
                 name: "button2Selected"
                 when: abortButton.selected
                 PropertyChanges {
-                    target: buttonSelector
-                    anchors.fill: abortButton
+                    buttonSelector {
+                        anchors.fill: abortButton
+                    }
                 }
             }
         ]
@@ -308,7 +310,7 @@ Item {
             abortButton.clicked();
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         if(event.key === Qt.Key_Up || event.key === Qt.Key_Left) {
             if(abortButton.visible && !backgroundButton.selected && !abortButton.selected) {
                 abortButton.selected = true;
@@ -342,7 +344,7 @@ Item {
         }
     }
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         if(event.key === Qt.Key_Back) {
             if(backgroundButtonVisible)
                 backgroundButton.clicked();
@@ -355,7 +357,7 @@ Item {
     Connections {
         target: DownloadManager
 
-        onError: {
+        function onError(code, msg) {
             //console.warn("DownloadDialog: DM reports error: " + code + ": " + msg);
             downloadDialog.finished();
             if (downloadDialog.reportError
@@ -374,14 +376,14 @@ Item {
             }
         }
 
-        onDownloadProgress: downloadDialogProgress.value = 100 * bytesReceived / bytesTotal;
+        function onDownloadProgress(bytesReceived, bytesTotal) { downloadDialogProgress.value = 100 * bytesReceived / bytesTotal; }
 
-        onDownloadStarted: {
+        function onDownloadStarted(resource) {
             //console.log("dialog: DM reports started: " + resource);
             downloadDialogProgress.value = 0;
         }
 
-        onAllDownloadsFinished: {
+        function onAllDownloadsFinished(code) {
             //console.log("dialog: DM all reports finished");
             downloadDialog.finished();
             if (downloadDialog.reportSuccess
@@ -410,7 +412,7 @@ Item {
                 downloadDialog.shutdown();
         }
 
-        onDownloadFinished: {
+        function onDownloadFinished(code) {
             //console.log("dialog: DM reports finished: " + code);
         }
     }

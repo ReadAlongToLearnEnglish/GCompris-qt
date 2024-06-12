@@ -114,7 +114,7 @@ ActivityBase {
 
             model: containerModel
 
-            function getItemAtIndex(i) {
+            function getItemAtIndex(i: int) {
                 var xi = (i % items.columns) * cellWidth + anchors.margins
                 var yi = (i / items.columns) * cellHeight + anchors.margins
                 return itemAt(xi, yi)
@@ -268,7 +268,7 @@ ActivityBase {
         }
 
         Keys.enabled: !items.blockClicks
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             background.keyNavigationVisible = true
             if(event.key === Qt.Key_Left) {
                 do {

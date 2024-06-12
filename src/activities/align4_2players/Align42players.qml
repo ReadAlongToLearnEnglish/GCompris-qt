@@ -33,6 +33,8 @@ ActivityBase {
         signal start
         signal stop
 
+        property bool horizontalLayout: layoutArea1.width >  layoutArea1.height
+
         Component.onCompleted: {
             activity.start.connect(start)
             activity.stop.connect(stop)
@@ -43,6 +45,8 @@ ActivityBase {
             id: items
             property Item main: activity.main
             property alias background: background
+            property int baseMargins: 10 * ApplicationInfo.ratio
+            property int smallMargins: 5 * ApplicationInfo.ratio
             property alias fallingPiece: fallingPiece
             property alias pieces: pieces
             property alias dynamic: dynamic
@@ -55,7 +59,8 @@ ActivityBase {
             property alias columns: grid.columns
             property alias rows: grid.rows
             property alias trigTuxMove: trigTuxMove
-            property int cellSize: background.width <= background.height ? (background.width / (columns + 3)) : (background.height / (rows + 4))
+            property int cellSize: background.horizontalLayout ? layoutArea1.height / (grid.rows + 1) - smallMargins :
+                    Math.min(layoutArea2.width / grid.columns, layoutArea2.height / (grid.rows + 1)) - smallMargins
             property bool gameDone: false
             property int counter
             property int nextPlayerStart: 1
@@ -64,7 +69,7 @@ ActivityBase {
         onStart: { Activity.start(items, twoPlayer) }
         onStop: { Activity.stop() }
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(drop.running || bonus.isPlaying || (items.counter % 2 != 0 && !twoPlayer))
                 return
             if(items.gameDone && !bonus.isPlaying)
@@ -93,50 +98,93 @@ ActivityBase {
             }
         }
 
-        Grid {
-            id: grid
-            z: 2
-            anchors.horizontalCenter: parent.horizontalCenter
+        Item {
+            id: layoutArea1
+            width: background.width - 4 * items.baseMargins - 2.8 * player1score.width
+            anchors.top: background.top
+            anchors.bottom: background.bottom
+            anchors.topMargin: player1score.height * 0.5
+            anchors.bottomMargin: bar.height * 1.2
+            anchors.horizontalCenter: background.horizontalCenter
+        }
+
+        Item {
+            id: layoutArea2
             anchors {
-                verticalCenter: parent.verticalCenter
-                horizontalCenter: parent.horizontalCenter
+                fill: parent
+                bottomMargin: bar.height * 1.2
+                topMargin: player1score.height * 1.4 + 2 * items.baseMargins
+                leftMargin: items.baseMargins
+                rightMargin: items.baseMargins
+
             }
+        }
 
-            spacing: 5
-            columns: 7
-            rows: 6
-
-            Repeater {
-                id: repeater
-                model: pieces
-                delegate: blueSquare
-
-                Component {
-                    id: blueSquare
-                    Rectangle {
-                        color: "#DDAAAAAA";
-                        width: items.cellSize
-                        height: items.cellSize
-                        radius: width / 2
-                        border.color: "#FFFFFFFF"
-                        border.width: 0
-                        Piece {
-                            anchors.fill: parent
-                            state: stateTemp
-                            sourceSize.width: items.cellSize
-                        }
+        Item {
+            id: gridContainer
+            z: 2
+            width: items.cellSize * grid.columns + 6 * items.smallMargins
+            height: items.cellSize * grid.rows + 5 * items.smallMargins
+            anchors.verticalCenterOffset: items.cellSize * 0.5
+            states: [
+                State {
+                    name: "isHorizontalLayout"
+                    when: background.horizontalLayout
+                    AnchorChanges {
+                        target: gridContainer
+                        anchors.verticalCenter: layoutArea1.verticalCenter
+                        anchors.horizontalCenter: layoutArea1.horizontalCenter
+                    }
+                },
+                State {
+                    name: "isVerticalLayout"
+                    when: !background.horizontalLayout
+                    AnchorChanges {
+                        target: gridContainer
+                        anchors.verticalCenter: layoutArea2.verticalCenter
+                        anchors.horizontalCenter: layoutArea2.horizontalCenter
                     }
                 }
-            }
+            ]
 
             Piece {
                 id: fallingPiece
+                z: 100
                 state: items.counter % 2 ? "2": "1"
                 sourceSize.width: items.cellSize
 
                 Behavior on x { PropertyAnimation { duration: 200 } }
             }
 
+            Grid {
+                id: grid
+                spacing: items.smallMargins
+                columns: 7
+                rows: 6
+
+                Repeater {
+                    id: repeater
+                    model: pieces
+                    delegate: blueSquare
+
+                    Component {
+                        id: blueSquare
+                        Rectangle {
+                            color: "#DDAAAAAA";
+                            width: items.cellSize
+                            height: items.cellSize
+                            radius: width / 2
+                            border.color: "#FFFFFFFF"
+                            border.width: 0
+                            Piece {
+                                anchors.fill: parent
+                                state: stateTemp
+                                sourceSize.width: items.cellSize
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         PropertyAnimation {
@@ -204,9 +252,9 @@ ActivityBase {
             width: height*11/8
             anchors {
                 top: background.top
-                topMargin: 5
+                topMargin: items.baseMargins
                 left: background.left
-                leftMargin: 5
+                leftMargin: items.baseMargins
             }
             playerImageSource: "qrc:/gcompris/src/core/resource/player_1.svg"
             backgroundImageSource: Activity.url + "score_1.svg"
@@ -220,9 +268,9 @@ ActivityBase {
             width: height*11/8
             anchors {
                 top: background.top
-                topMargin: 5
+                topMargin: items.baseMargins
                 right: background.right
-                rightMargin: 5
+                rightMargin: items.baseMargins
             }
             playerImageSource: "qrc:/gcompris/src/core/resource/player_2.svg"
             backgroundImageSource: Activity.url + "score_2.svg"

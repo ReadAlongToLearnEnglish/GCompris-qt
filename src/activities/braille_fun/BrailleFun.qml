@@ -38,7 +38,7 @@ ActivityBase {
             activity.stop.connect(stop)
         }
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(event.key === Qt.Key_Space)
                 brailleMap.clicked();
         }
@@ -123,7 +123,7 @@ ActivityBase {
 
             property int charWidth: Math.min(120 * ApplicationInfo.ratio, width * 0.3)
 
-            function clickable(status) {
+            function clickable(status: bool) {
                 for(var i=0 ; i < cardRepeater.model ; i++) {
                     cardRepeater.itemAt(i).ins.clickable = status
                 }

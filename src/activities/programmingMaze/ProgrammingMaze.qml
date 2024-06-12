@@ -111,10 +111,10 @@ ActivityBase {
         onAreaWithKeyboardInputChanged: activeCodeAreaIndicator.changeActiveCodeAreaIndicator(areaWithKeyboardInput)
 
         // Needed to get keyboard focus on Tutorial
-        Keys.forwardTo: tutorialSection
+        Keys.forwardTo: [tutorialSection]
 
         Keys.enabled: items.isRunCodeEnabled
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             activity.keyboardNavigationVisible = true
             if(event.key === Qt.Key_Left)
                 areaWithKeyboardInput.moveCurrentIndexLeft()

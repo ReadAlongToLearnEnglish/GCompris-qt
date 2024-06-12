@@ -53,7 +53,7 @@ ActivityBase {
         onStop: { Activity.stop() }
 
         Keys.enabled: !items.buttonsBlocked
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if((event.key === Qt.Key_Space || event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && items.view.currentItem !== null) {
                 Activity.verifyAnswer()
                 event.accepted = true
@@ -80,7 +80,7 @@ ActivityBase {
             }
         }
 
-        Keys.onReleased: {
+        Keys.onReleased: (event) => {
             keyboardMode = true
             event.accepted = false
         }
@@ -118,8 +118,9 @@ ActivityBase {
                         name: "verticalScreen"
                         when: !mainScreen.horizontalLayout
                         PropertyChanges {
-                            target: backgroundScreen
-                            height: parent.height * 0.5
+                            backgroundScreen {
+                                height: parent.height * 0.5
+                            }
                         }
                     }
                 ]
@@ -180,8 +181,9 @@ ActivityBase {
                         name: "verticalScreen"
                         when: !mainScreen.horizontalLayout
                         PropertyChanges {
-                            target: answerViews
-                            height: mainScreen.height * 0.3
+                            answerViews {
+                                height: mainScreen.height * 0.3
+                            }
                         }
                     }
                 ]

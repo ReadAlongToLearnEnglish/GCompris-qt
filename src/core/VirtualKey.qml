@@ -9,8 +9,8 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
-import QtQuick.Controls 2.12
+import Qt5Compat.GraphicalEffects 1.0
+import QtQuick.Controls.Basic
 
 Item {
     id: virtualKey

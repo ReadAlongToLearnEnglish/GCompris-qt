@@ -39,7 +39,7 @@ DownloadManager::DownloadManager() :
     QFile file(":/gcompris/src/core/resource/isrgrootx1.pem");
     QIODevice::OpenMode openMode = QIODevice::ReadOnly | QIODevice::Text;
     if (!file.open(openMode)) {
-        qDebug() << "Error opening " << file;
+        qDebug() << "Error opening " << file.fileName();
     }
     else {
         certificates << QSslCertificate::fromData(file.readAll(), QSsl::Pem);
@@ -94,9 +94,8 @@ void DownloadManager::abortDownloads()
         while (iter.hasNext()) {
             DownloadJob *job = iter.next();
             if (!job->downloadFinished && job->reply != nullptr) {
-                disconnect(job->reply, SIGNAL(finished()), this, SLOT(finishDownload()));
-                disconnect(job->reply, SIGNAL(error(QNetworkReply::NetworkError)),
-                           this, SLOT(handleError(QNetworkReply::NetworkError)));
+                disconnect(job->reply, &QNetworkReply::finished, this, &DownloadManager::finishDownload);
+                disconnect(job->reply, &QNetworkReply::errorOccurred, this, &DownloadManager::handleError);
                 if (job->reply->isRunning()) {
                     qDebug() << "Aborting download job:" << job->url << job->resourceType;
                     job->reply->abort();
@@ -171,11 +170,7 @@ inline QString DownloadManager::getAbsoluteResourcePath(const QString &path) con
 // @FIXME should support a variable subpath length like data2/full.rcc"
 inline QString DownloadManager::getRelativeResourcePath(const QString &path) const
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
     QStringList parts = path.split('/', Qt::SkipEmptyParts);
-#else
-    QStringList parts = path.split('/', QString::SkipEmptyParts);
-#endif
     if (parts.size() < 3)
         return QString();
     return QString(parts[parts.size() - 3] + '/' + parts[parts.size() - 2]
@@ -351,10 +346,10 @@ bool DownloadManager::download(DownloadJob *job)
     qDebug() << "Now downloading" << job->url << "to" << fi.filePath() << "...";
     QNetworkReply *reply = accessManager.get(request);
     job->reply = reply;
-    connect(reply, SIGNAL(finished()), this, SLOT(finishDownload()));
+    connect(reply, &QNetworkReply::finished, this, &DownloadManager::finishDownload);
     connect(reply, &QNetworkReply::readyRead, this, &DownloadManager::downloadReadyRead);
-    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)),
-            this, SLOT(handleError(QNetworkReply::NetworkError)));
+    connect(reply, &QNetworkReply::errorOccurred,
+            this, &DownloadManager::handleError);
     if (job->url.fileName() != contentsFilename) {
         connect(reply, &QNetworkReply::downloadProgress,
                 this, &DownloadManager::downloadInProgress);
@@ -469,11 +464,7 @@ bool DownloadManager::parseContents(DownloadJob *job)
     QTextStream in(&job->file);
     while (!in.atEnd()) {
         QString line = in.readLine();
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
         QStringList parts = line.split(' ', Qt::SkipEmptyParts);
-#else
-        QStringList parts = line.split(' ', QString::SkipEmptyParts);
-#endif
         if (parts.size() != 2) {
             qWarning() << "Invalid format of Contents file!";
             return false;
@@ -892,9 +883,8 @@ void DownloadManager::registerLocalResources()
         return;
     }
 
-    QList<QString>::const_iterator iter;
-    for (iter = filenames.constBegin(); iter != filenames.constEnd(); iter++)
-        registerResource(*iter);
+    for (const QString &file: filenames)
+        registerResource(file);
 }
 
 bool DownloadManager::checkForUpdates()
@@ -911,10 +901,9 @@ bool DownloadManager::checkForUpdates()
         return false;
     }
 
-    QList<QString>::const_iterator iter;
     DownloadJob *job = new DownloadJob();
-    for (iter = filenames.constBegin(); iter != filenames.constEnd(); iter++) {
-        QUrl url = getUrlForFilename(*iter);
+    for (const QString &file: filenames) {
+        QUrl url = getUrlForFilename(file);
         qDebug() << "Scheduling resource for update: " << url;
         job->queue.append(url);
     }

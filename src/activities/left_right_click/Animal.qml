@@ -52,7 +52,7 @@ Item {
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton | Qt.RightButton
             enabled: !animal.clicked
-            onClicked: {
+            onClicked: (mouse) => {
                 // if left target animal is clicked with left click
                 if((mouse.button === Qt.LeftButton) && (animalIdentifier === Activity.Position.left)) {
                     animal.clicked = true
@@ -72,7 +72,7 @@ Item {
                 triggerClick(mouse.button)
             }
 
-            function triggerClick(mouseButton) {
+            function triggerClick(mouseButton: enumeration) {
                 if(mouseButton === Qt.LeftButton)
                     leftClickTrigger()
                 else
@@ -97,9 +97,10 @@ Item {
                 parent: leftArea
             }
             PropertyChanges {
-                target: animal
-                x: (leftArea.width - animal.width) * 0.5
-                y: (leftArea.height - animal.height) * 0.75
+                animal {
+                    x: (leftArea.width - animal.width) * 0.5
+                    y: (leftArea.height - animal.height) * 0.75
+                }
             }
         },
         State {
@@ -109,9 +110,10 @@ Item {
                 parent: rightArea
             }
             PropertyChanges {
-                target: animal
-                x: (leftArea.width - animal.width) * 0.5
-                y: (leftArea.height - animal.height) * 0.5
+                animal {
+                    x: (leftArea.width - animal.width) * 0.5
+                    y: (leftArea.height - animal.height) * 0.5
+                }
             }
         }
     ]

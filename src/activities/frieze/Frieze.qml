@@ -79,13 +79,13 @@ ActivityBase {
         ListModel { id: answerModel }
         ListModel {
             id: tokensModel
-            function randPosition() { return (Math.floor(Math.random() * count)) }                                      // choose a random position
+            function randPosition(): real { return (Math.floor(Math.random() * count)) }                                // choose a random position
             function shuffleModel() { for (var i = 0 ; i < count; i++) { move(randPosition(), randPosition(), 1) } }    // shuffle elements
         }
 
         File {
             id: file
-            onError: console.error("File error: " + msg)
+            onError: (msg) => console.error("File error: " + msg)
         }
 
         Rectangle {
@@ -254,10 +254,11 @@ ActivityBase {
                     State {
                         name: "moveto"
                         PropertyChanges {
-                            target: animationToken
-                            visible: true
-                            x: tokens.mapFromItem(answer.children[items.currentAnswer], 0, 0).x
-                            y: tokens.mapFromItem(answer.children[items.currentAnswer], 0, 0).y
+                            animationToken {
+                                visible: true
+                                x: tokens.mapFromItem(answer.children[items.currentAnswer], 0, 0).x
+                                y: tokens.mapFromItem(answer.children[items.currentAnswer], 0, 0).y
+                            }
                         }
                     }
                     ]
@@ -407,6 +408,6 @@ ActivityBase {
             onStop: (items.solution.visible = !items.levels[items.currentLevel].hidden)
         }
 
-        Keys.onPressed: Activity.handleKeys(event)
+        Keys.onPressed: (event) => { Activity.handleKeys(event) }
     }
 }

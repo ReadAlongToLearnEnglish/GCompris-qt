@@ -44,7 +44,7 @@ Item {
     }
 
     // Start the image review at wordList sublesson
-    function initLevel(wordListIndex_) {
+    function initLevel(wordListIndex_: int) {
         wordListIndex = wordListIndex_
         score.currentSubLevel = 1
         score.numberOfSubLevels = items.wordList[wordListIndex].length
@@ -85,7 +85,7 @@ Item {
     // Note: miniGame 2 (quiz on mode 3) can start only if at least the audio of 2 words
     // have been played on ImageReview step, else it skips to miniGame 3. So make sure
     // to view all the words on first step before loading miniGame 2.
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         if((event.modifiers & Qt.ControlModifier) && (event.key === Qt.Key_1)) {
             initLevel(wordListIndex)
             event.accepted = true
@@ -112,25 +112,25 @@ Item {
         Activity.launchMenuScreen()
     }
 
-    Keys.onLeftPressed: {
+    Keys.onLeftPressed: (event) => {
         if( score.currentSubLevel > 1 ) {
             imageReview.prevWord()
             event.accepted = true
         }
     }
-    Keys.onRightPressed: {
+    Keys.onRightPressed: (event) => {
         imageReview.nextWord()
         event.accepted = true
     }
-    Keys.onSpacePressed: {
+    Keys.onSpacePressed: (event) => {
         imageReview.nextWord()
         event.accepted = true
     }
-    Keys.onEnterPressed: {
+    Keys.onEnterPressed: (event) => {
         imageReview.nextWord()
         event.accepted = true
     }
-    Keys.onReturnPressed: {
+    Keys.onReturnPressed: (event) => {
         imageReview.nextWord()
         event.accepted = true
     }
@@ -138,7 +138,7 @@ Item {
         repeatItem.clicked()
     }
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         if (event.key === Qt.Key_Back) {
             event.accepted = true
             Activity.launchMenuScreen()
@@ -209,7 +209,7 @@ Item {
                 anchors.centerIn: parent
 
                 property string nextSource
-                function changeSource(nextSource_) {
+                function changeSource(nextSource_: string) {
                     nextSource = nextSource_
                     animImage.restart()
                 }
@@ -318,7 +318,7 @@ Item {
                 color: "#373737"
 
                 property string nextWord
-                function changeText(nextWord_) {
+                function changeText(nextWord_: string) {
                     nextWord = nextWord_
                     animWord.restart()
                 }
@@ -394,7 +394,7 @@ Item {
         --score.currentSubLevel
     }
 
-    function startMiniGame(miniGameIndex) {
+    function startMiniGame(miniGameIndex: int) {
         currentMiniGame = miniGameIndex
         var mode = miniGames[miniGameIndex][1];
         var itemToLoad = miniGames[miniGameIndex][2];
