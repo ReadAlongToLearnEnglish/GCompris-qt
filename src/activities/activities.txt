@@ -130,6 +130,7 @@ memory-sound
 memory-sound-tux
 memory-tux
 memory-wordnumber
+memory-wordpicture
 mining
 missing-letter
 money
