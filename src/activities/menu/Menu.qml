@@ -10,11 +10,11 @@
 import QtQuick 2.12
 import "../../core"
 import GCompris 1.0
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import "qrc:/gcompris/src/core/core.js" as Core
 
 // For TextField
-import QtQuick.Controls 2.12
+import QtQuick.Controls.Basic
 
 /**
  * GCompris' top level menu screen.
@@ -38,7 +38,7 @@ ActivityBase {
     focus: true
     activityInfo: ActivityInfoTree.rootMenu
     isMenu: true
-    onBack: {
+    onBack: (to) => {
         if (pageView.currentItem === activity) {
             // Restore focus that has been taken by the loaded activity
             focus = true
@@ -66,9 +66,9 @@ ActivityBase {
 
     enabled: ActivityInfoTree.startingActivity === ""
 
-    onDisplayDialog: pageView.pushElement(dialog)
+    onDisplayDialog: (dialog) => pageView.pushElement(dialog)
 
-    onDisplayDialogs: {
+    onDisplayDialogs: (dialogs) => {
         for (var i = 0; i < dialogs.length; i++) {
             pageView.pushElement(dialogs[i]);
         }
@@ -79,6 +79,7 @@ ActivityBase {
     signal newVoicesSignal
     onNewVoicesSignal: newVoicesDialogTimer.restart();
 
+    readonly property real applicationInfoRatio: ApplicationInfo.ratio
     Timer {
         id: newVoicesDialogTimer
         interval: 250
@@ -101,7 +102,7 @@ ActivityBase {
 
     // @cond INTERNAL_DOCS
     property string url: "qrc:/gcompris/src/activities/menu/resource/"
-    property var sections: [
+    readonly property var sections: [
         {
             icon: activity.url + "all.svg",
             tag: "favorite"
@@ -177,12 +178,6 @@ ActivityBase {
         fillMode: Image.PreserveAspectCrop
 
         function loadActivity() {
-            // @TODO init of item would be better in setsource but it crashes on Qt5.6
-            // https://bugreports.qt.io/browse/QTBUG-49793
-            activityLoader.item.audioVoices = audioVoices
-            activityLoader.item.audioEffects = audioEffects
-            activityLoader.item.loading = loading
-
             //take the focus away from textField before starting an activity
             searchTextField.focus = false
 
@@ -207,13 +202,13 @@ ActivityBase {
 
         // Filters
         property bool horizontal: main.width >= main.height
-        property int sectionIconWidth: Math.min(100 * ApplicationInfo.ratio, main.width / (sections.length + 1))
+        property int sectionIconWidth: Math.min(100 * activity.applicationInfoRatio, main.width / (sections.length + 1))
         property int sectionCellWidth: sectionIconWidth * 1.1
         property int categoriesHeight: currentCategory == "" ? 0 : sectionCellWidth - 2
 
         property var currentActiveGrid: activitiesGrid
         property bool keyboardMode: false
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(loading.active) {
                 return;
             }
@@ -233,11 +228,11 @@ ActivityBase {
                 currentActiveGrid.currentItem.selectCurrentItem()
             }
         }
-        Keys.onReleased: {
+        Keys.onReleased: (event) => {
             keyboardMode = true
             event.accepted = false
         }
-        Keys.onTabPressed: {
+        Keys.onTabPressed: (event) => {
             if(currentActiveGrid == section) {
                 if(currentTagCategories && currentTagCategories.length != 0) {
                     currentActiveGrid = categoriesGrid;
@@ -339,7 +334,7 @@ ActivityBase {
         }
 
         // Activities
-        property int iconWidth: 120 * ApplicationInfo.ratio
+        property int iconWidth: 120 * activity.applicationInfoRatio
         property int activityCellWidth:  activitiesGrid.width / Math.floor(activitiesGrid.width / iconWidth)
         property int activityCellHeight: iconWidth * 1.7
 
@@ -524,7 +519,7 @@ ActivityBase {
                         }
                         source: activityInfoTreeItem.createdInVersion > lastGCVersionRanCopy
                                 ? activity.url + "new.svg" : ""
-                        sourceSize.width: 25 * ApplicationInfo.ratio
+                        sourceSize.width: 25 * activity.applicationInfoRatio
                     }
                     GCText {
                         id: title
@@ -539,6 +534,7 @@ ActivityBase {
                         elide: Text.ElideRight
                         wrapMode: Text.WordWrap
                         text: activityInfoTreeItem.title
+                        textFormat: Text.PlainText
                     }
                 }
                 ParticleSystemStarLoader {
@@ -555,7 +551,7 @@ ActivityBase {
                     anchors {
                         top: parent.top
                         right: parent.right
-                        rightMargin: 4 * ApplicationInfo.ratio
+                        rightMargin: 4 * activity.applicationInfoRatio
                     }
                     sourceSize.width: iconWidth * 0.25
                     visible: ApplicationSettings.sectionVisible
@@ -609,7 +605,10 @@ ActivityBase {
                         {
                             'menu': activity,
                             'activityInfo': ActivityInfoTree.currentActivity,
-                            'levelFolder': currentLevels
+                            'levelFolder': currentLevels,
+                            'audioVoices': audioVoices,
+                            'audioEffects': audioEffects,
+                            'loading': loading
                         })
                         if (activityLoader.status == Loader.Ready) loadActivity()
                     }
@@ -666,9 +665,9 @@ ActivityBase {
         GCButtonScroll {
             visible: !ApplicationInfo.useOpenGL
             anchors.right: parent.right
-            anchors.rightMargin: 5 * ApplicationInfo.ratio
+            anchors.rightMargin: 5 * activity.applicationInfoRatio
             anchors.bottom: activitiesGrid.bottom
-            anchors.bottomMargin: 30 * ApplicationInfo.ratio
+            anchors.bottomMargin: 30 * activity.applicationInfoRatio
             onUp: activitiesGrid.flick(0, 1127)
             onDown: activitiesGrid.flick(0, -1127)
             upVisible: activitiesGrid.atYBeginning ? false : true
@@ -684,7 +683,7 @@ ActivityBase {
         Rectangle {
             id: searchBar
             visible: activity.currentTag === "search"
-            radius: 5 * ApplicationInfo.ratio
+            radius: 5 * activity.applicationInfoRatio
             border.width: 2
             border.color: "#80000000"
             gradient: Gradient {
@@ -698,11 +697,11 @@ ActivityBase {
                 // Force invisibility of Androids virtual keyboard:
                 target: (ApplicationInfo.isMobile && activity.currentTag === "search"
                          && ApplicationSettings.isVirtualKeyboard) ? Qt.inputMethod : null
-                onVisibleChanged: {
+                function onVisibleChanged() {
                     if (ApplicationSettings.isVirtualKeyboard && visible)
                         Qt.inputMethod.hide();
                 }
-                onAnimatingChanged: {
+                function onAnimatingChanged() {
                     // note: seems to be never fired!
                     if (ApplicationSettings.isVirtualKeyboard && Qt.inputMethod.visible)
                         Qt.inputMethod.hide();
@@ -711,7 +710,7 @@ ActivityBase {
 
             Connections {
                 target: activity
-                onCurrentTagChanged: {
+                function onCurrentTagChanged() {
                     if (activity.currentTag === 'search') {
                         if(ApplicationSettings.isVirtualKeyboard && !keyboard.isPopulated) {
                             keyboard.populate();
@@ -722,7 +721,7 @@ ActivityBase {
                         activity.focus = true;
                 }
 
-                onStartActivity: {
+                function onStartActivity(activityName: string, level: int) {
                     ActivityInfoTree.setCurrentActivityFromName(activityName)
                     var currentLevels = ApplicationSettings.currentLevels(ActivityInfoTree.currentActivity.name)
                     activityLoader.setSource("qrc:/gcompris/src/activities/" + ActivityInfoTree.currentActivity.name,
@@ -810,38 +809,45 @@ ActivityBase {
             State {
                 name: "horizontalState"; when: horizontal === true
                 PropertyChanges {
-                    target: background
-                    sectionIconWidth: Math.min(100 * ApplicationInfo.ratio, main.width / (sections.length + 1))
+                    background {
+                        sectionIconWidth: Math.min(100 * activity.applicationInfoRatio, main.width / (sections.length + 1))
+                    }
                 }
                 PropertyChanges {
-                    target: section
-                    width: main.width
-                    height: sectionCellWidth
+                    section {
+                        width: main.width
+                        height: sectionCellWidth
+                    }
                 }
                 PropertyChanges {
-                    target: categoriesGrid
-                    width: main.width
-                    height: categoriesHeight * 0.5
-                    x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) : 0
+                    categoriesGrid {
+                        width: main.width
+                        height: categoriesHeight * 0.5
+                        x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) : 0
+                    }
                 }
                 PropertyChanges {
-                    target: activitiesGrid
-                    width: background.width
+                    activitiesGrid {
+                        width: background.width
+                    }
                 }
                 PropertyChanges {
-                    target: categories
-                    width: background.width
+                    categories {
+                        width: background.width
+                    }
                 }
                 PropertyChanges {
-                    target: searchBar
-                    width: background.width * 0.5
-                    height: sectionCellWidth * 0.5
-                    anchors.topMargin: 0
-                    anchors.bottomMargin: 0
+                    searchBar {
+                        width: background.width * 0.5
+                        height: sectionCellWidth * 0.5
+                        anchors.topMargin: 0
+                        anchors.bottomMargin: 0
+                    }
                 }
                 PropertyChanges {
-                    target: activityConfigTextBar
-                    width: background.width * 0.5
+                    activityConfigTextBar {
+                        width: background.width * 0.5
+                    }
                 }
                 AnchorChanges {
                     target: warningOverlay
@@ -876,38 +882,45 @@ ActivityBase {
             State {
                 name: "verticalState"; when: horizontal === false
                 PropertyChanges {
-                    target: background
-                    sectionIconWidth: Math.min(100 * ApplicationInfo.ratio, (background.height - bar.height) / (sections.length + 1))
+                    background {
+                        sectionIconWidth: Math.min(100 * activity.applicationInfoRatio, (background.height - bar.height) / (sections.length + 1))
+                    }
                 }
                 PropertyChanges {
-                    target: section
-                    width: sectionCellWidth
-                    height: main.height - bar.height
+                    section {
+                        width: sectionCellWidth
+                        height: main.height - bar.height
+                    }
                 }
                 PropertyChanges {
-                    target: categoriesGrid
-                    width: main.width - section.width
-                    height: categoriesHeight
-                    x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) + section.width : 0
+                    categoriesGrid {
+                        width: main.width - section.width
+                        height: categoriesHeight
+                        x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) + section.width : 0
+                    }
                 }
                 PropertyChanges {
-                    target: activitiesGrid
-                    width: background.width - sectionCellWidth
+                    activitiesGrid {
+                        width: background.width - sectionCellWidth
+                    }
                 }
                 PropertyChanges {
-                    target: categories
-                    width: background.width - (section.width + 10)
+                    categories {
+                        width: background.width - (section.width + 10)
+                    }
                 }
                 PropertyChanges {
-                    target: searchBar
-                    width: background.width - (section.width + 10)
-                    height: sectionCellWidth
-                    anchors.topMargin: 4
-                    anchors.bottomMargin: 4
+                    searchBar {
+                        width: background.width - (section.width + 10)
+                        height: sectionCellWidth
+                        anchors.topMargin: 4
+                        anchors.bottomMargin: 4
+                    }
                 }
                 PropertyChanges {
-                    target: activityConfigTextBar
-                    width: background.width - (section.width + 10)
+                    activityConfigTextBar {
+                        width: background.width - (section.width + 10)
+                    }
                 }
                 AnchorChanges {
                     target: warningOverlay
@@ -942,38 +955,45 @@ ActivityBase {
             State {
                 name: "verticalWithSearch"; when: horizontal === false && activity.currentTag === "search" && ApplicationSettings.isVirtualKeyboard
                 PropertyChanges {
-                    target: background
-                    sectionIconWidth: Math.min(100 * ApplicationInfo.ratio, (background.height - (bar.height+keyboard.height)) / (sections.length + 1))
+                    background {
+                        sectionIconWidth: Math.min(100 * activity.applicationInfoRatio, (background.height - (bar.height+keyboard.height)) / (sections.length + 1))
+                    }
                 }
                 PropertyChanges {
-                    target: section
-                    width: main.width
-                    height: sectionCellWidth (sections.length + 1)
+                    section {
+                        width: main.width
+                        height: sectionCellWidth (sections.length + 1)
+                    }
                 }
                 PropertyChanges {
-                    target: categoriesGrid
-                    width: main.width - section.width
-                    height: categoriesHeight
-                    x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) + section.width : 0
+                    categoriesGrid {
+                        width: main.width - section.width
+                        height: categoriesHeight
+                        x: currentTagCategories ? categoriesGrid.width / (4 * (currentTagCategories.length + 1)) + section.width : 0
+                    }
                 }
                 PropertyChanges {
-                    target: activitiesGrid
-                    width: background.width - sectionCellWidth
+                    activitiesGrid {
+                        width: background.width - sectionCellWidth
+                    }
                 }
                 PropertyChanges {
-                    target: categories
-                    width: background.width - (section.width + 10)
+                    categories {
+                        width: background.width - (section.width + 10)
+                    }
                 }
                 PropertyChanges {
-                    target: searchBar
-                    width: background.width - (section.width + 10)
-                    height: sectionCellWidth
-                    anchors.topMargin: 4
-                    anchors.bottomMargin: 4
+                    searchBar {
+                        width: background.width - (section.width + 10)
+                        height: sectionCellWidth
+                        anchors.topMargin: 4
+                        anchors.bottomMargin: 4
+                    }
                 }
                 PropertyChanges {
-                    target: activityConfigTextBar
-                    width: background.width - (section.width + 10)
+                    activityConfigTextBar {
+                        width: background.width - (section.width + 10)
+                    }
                 }
                 AnchorChanges {
                     target: warningOverlay
@@ -1010,7 +1030,7 @@ ActivityBase {
             visible: activity.currentTag === "search" && ApplicationSettings.isVirtualKeyboard
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
-            onKeypress: {
+            onKeypress: (text) => {
                 var textArray = searchTextField.text.split("");
                 var cursorPosition = searchTextField.cursorPosition
                 if(text == keyboard.backspace) {
@@ -1029,17 +1049,18 @@ ActivityBase {
                 searchTextField.cursorPosition = cursorPosition;
             }
             function populate() {
-               var tmplayout = [];
-               var row = 0;
-               var offset = 0;
-               var cols;
-               while(offset < letter.length-1) {
-                   if(letter.length <= 100) {
-                       cols = Math.ceil((letter.length-offset) / (3 - row));
+                var tmplayout = [];
+                var row = 0;
+                var offset = 0;
+                var cols;
+                var numberOfLetters = letter.length
+                while(offset < numberOfLetters-1) {
+                   if(numberOfLetters <= 100) {
+                       cols = Math.ceil((numberOfLetters-offset) / (3 - row));
                    }
                    else {
-                       cols = background.horizontal ? (Math.ceil((letter.length-offset) / (15 - row)))
-                                                       :(Math.ceil((letter.length-offset) / (22 - row)))
+                       cols = background.horizontal ? (Math.ceil((numberOfLetters-offset) / (15 - row)))
+                                                       :(Math.ceil((numberOfLetters-offset) / (22 - row)))
                        if(row === 0) {
                            tmplayout[row] = [];
                            tmplayout[row].push({ label: keyboard.backspace });
@@ -1054,7 +1075,7 @@ ActivityBase {
                    offset += j;
                    row ++;
                }
-               if(letter.length <= 100) {
+               if(numberOfLetters <= 100) {
                    tmplayout[0].push({ label: keyboard.space });
                    tmplayout[row-1].push({ label: keyboard.backspace });
                }
@@ -1114,7 +1135,7 @@ ActivityBase {
                 ConfigurationItem {
                     id: configItem
                     parentActivity: activity
-                    width: dialogActivityConfig.width - 50 * ApplicationInfo.ratio
+                    width: dialogActivityConfig.width - 50 * activity.applicationInfoRatio
                 }
             }
 
@@ -1178,7 +1199,7 @@ ActivityBase {
             source: "qrc:/gcompris/src/core/resource/gcompris-logo-full.svg"
             anchors.bottom: parent.bottom
             anchors.right: parent.right
-            anchors.margins: 20 * ApplicationInfo.ratio
+            anchors.margins: 20 * activity.applicationInfoRatio
             width: parent.width * 0.3
             sourceSize.width: width
             fillMode: Image.PreserveAspectFit

@@ -12,7 +12,7 @@
  */
 
 import QtQuick 2.12
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 import GCompris 1.0
 
 import "../../core"
@@ -79,7 +79,7 @@ ActivityBase {
         property bool portrait: height >= width ? true : false
         property bool inLine: true
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if (items.buttonsBlocked){
                 return
             }
@@ -106,7 +106,7 @@ ActivityBase {
                 Activity.move("next")
         }
 
-        Keys.onReleased: {
+        Keys.onReleased: (event) => {
             up.opacity = 1
             down.opacity = 1
             left.opacity = 1
@@ -277,27 +277,31 @@ ActivityBase {
                 State {
                     name: "uninitialized"
                     PropertyChanges {
-                        target: selector
-                        x: 0
-                        y: 0
+                        selector {
+                            x: 0
+                            y: 0
+                        }
                     }
                     PropertyChanges {
-                        target: cable
-                        height: 0
-                        x: 0
+                        cable {
+                            height: 0
+                            x: 0
+                        }
                     }
                 },
                 State {
                     name: "initialized"
                     PropertyChanges {
-                        target: selector
-                        x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x : 0
-                        y: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y : 0
+                        selector {
+                            x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x : 0
+                            y: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y : 0
+                        }
                     }
                     PropertyChanges {
-                        target: cable
-                        height: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y - crane_top.y : 0
-                        x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x + items.gridBaseWidth / 2 : 0
+                        cable {
+                            height: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).y + board.y - crane_top.y : 0
+                            x: answerRepeater.itemAt(items.selected) ? answerRepeater.itemAt(items.selected).x + board.x + items.gridBaseWidth / 2 : 0
+                        }
                     }
                 }
             ]
@@ -485,11 +489,12 @@ ActivityBase {
             State {
                 name: "horizontal"
                 when: !background.portrait
-                PropertyChanges{
-                    target: crane_command
-                    width: boardBg.width
+                PropertyChanges {
+                    crane_command {
+                        width: boardBg.width
+                    }
                 }
-                AnchorChanges{
+                AnchorChanges {
                     target: crane_body
                     anchors.left: crane_vertical.left
                     anchors.right: undefined
@@ -515,11 +520,12 @@ ActivityBase {
             State {
                 name: "vertical"
                 when: background.portrait
-                PropertyChanges{
-                    target: crane_command
-                    width: undefined
+                PropertyChanges {
+                    crane_command {
+                        width: undefined
+                    }
                 }
-                AnchorChanges{
+                AnchorChanges {
                     target: crane_body
                     anchors.left: undefined
                     anchors.right: crane_vertical.right

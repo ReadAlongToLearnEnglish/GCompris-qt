@@ -39,9 +39,9 @@ ActivityBase {
         }
 
         // Needed to get keyboard focus on IntroMessage
-        Keys.forwardTo: tutorialInstruction
+        Keys.forwardTo: [tutorialInstruction]
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && okButton.enabled) {
                 Activity.checkAnswer()
             }
@@ -403,7 +403,7 @@ ActivityBase {
             property alias text: toolTipTxt.text
             Behavior on opacity { NumberAnimation { duration: 120 } }
 
-            function show(newText) {
+            function show(newText: string) {
                 if(newText) {
                     text = newText
                     opacity = 1

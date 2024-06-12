@@ -64,7 +64,7 @@ Item {
     // Emitted when previousButton is clicked
     signal previousPressed
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         if(event.key === Qt.Key_Left && previousButton.visible) {
             previousButton.clicked();
         } else if(event.key === Qt.Key_Right && nextButton.visible) {
@@ -81,12 +81,12 @@ Item {
         event.accepted = true;
     }
 
-    Keys.onEscapePressed: {
+    Keys.onEscapePressed: (event) => {
         skipButton.clicked();
         event.accepted = true;
     }
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         if(event.key === Qt.Key_Back) {
             skipButton.clicked();
             event.accepted = true;
@@ -97,19 +97,20 @@ Item {
     GCText {
         id: tutorialText
         anchors.verticalCenter: tutorialTextContainer.verticalCenter
-        anchors.left: tutorialSection.isLeftToRightLocale ? tutorialTextContainer.left : undefined
-        anchors.right: tutorialSection.isLeftToRightLocale ? undefined : tutorialTextContainer.right
-        anchors.leftMargin: 10 * tutorialSection.applicationInfoRatio
-        anchors.rightMargin: 10 * tutorialSection.applicationInfoRatio
-        text: tutorialSection.tutorialDetails ? tutorialSection.tutorialDetails[tutorialSection.tutorialNumber].instruction : ""
+        anchors.left: isLeftToRightLocale ? tutorialTextContainer.left : undefined
+        anchors.right: isLeftToRightLocale ? undefined : tutorialTextContainer.right
+        anchors.leftMargin: 10 * ApplicationInfo.ratio
+        anchors.rightMargin: 10 * ApplicationInfo.ratio
+        text: tutorialDetails ? tutorialDetails[tutorialNumber].instruction : ""
         fontSizeMode: Text.Fit
         minimumPixelSize: 10
-        horizontalAlignment: tutorialSection.isLeftToRightLocale ? Text.AlignLeft : Text.AlignRight
+        horizontalAlignment: isLeftToRightLocale ? Text.AlignLeft : Text.AlignRight
         verticalAlignment: Text.AlignVCenter
         width: parent.width - 40 * tutorialSection.applicationInfoRatio
         height: 0.25 * parent.height
         wrapMode: Text.WordWrap
         z: 2
+        readonly property bool isLeftToRightLocale: Core.isLeftToRightLocale(ApplicationSettings.locale)
     }
 
     MouseArea {

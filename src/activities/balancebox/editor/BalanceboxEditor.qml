@@ -9,7 +9,7 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import QtQuick.Controls 2.12
+import QtQuick.Controls.Basic
 
 import "../../../core"
 import ".."
@@ -34,7 +34,7 @@ Item {
     property bool isDialog: true
     property bool alwaysStart: true   // enforce start signal for configDialog-to-editor-transition
 
-    function handleBackEvent()
+    function handleBackEvent(): bool
     {
         if (!isTesting) {
             if (Activity.levelChanged)
@@ -50,9 +50,9 @@ Item {
 
     }
 
-    Keys.onEscapePressed: event.accepted = handleBackEvent();
+    Keys.onEscapePressed: (event) => event.accepted = handleBackEvent();
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         if (event.key === Qt.Key_Back) {
             event.accepted = handleBackEvent();
         } else
@@ -368,7 +368,7 @@ Item {
             id: editorWorker
 
             source: "editor_worker.js"
-            onMessage: {
+            onMessage: (messageObject) => {
                 // worker finished, update all changed values (except the model):
                 props.contactValue = messageObject.maxContactValue;
                 props.lastBallIndex = messageObject.lastBallIndex;
@@ -495,7 +495,6 @@ Item {
                             width: props.cellSize - props.wallSize
                             height: props.cellSize - props.wallSize
                             sourceComponent: BalanceItem {
-                                id: goal
                                 anchors.centerIn: parent
                                 z: 1
                                 imageSource: Activity.baseUrl + "/door.svg"
@@ -508,7 +507,6 @@ Item {
                             active: value & Activity.HOLE || (cell.highlighted && props.currentTool === Activity.TOOL_HOLE)
                             anchors.centerIn: parent
                             sourceComponent: BalanceItem {
-                                id: hole
                                 width: props.ballSize
                                 height:props.ballSize
                                 anchors.centerIn: parent
@@ -522,13 +520,12 @@ Item {
                             active: value & Activity.START || (cell.highlighted && props.currentTool === Activity.TOOL_BALL)
                             anchors.centerIn: parent
                             sourceComponent: BalanceItem {
-                                    id: ball
-                                    width: props.ballSize
-                                    height:props.ballSize
-                                    anchors.centerIn: parent
-                                    visible: true
-                                    imageSource: Activity.baseUrl + "/ball.svg"
-                                    z: 1
+                                width: props.ballSize
+                                height:props.ballSize
+                                anchors.centerIn: parent
+                                visible: true
+                                imageSource: Activity.baseUrl + "/ball.svg"
+                                z: 1
                             }
                         }
 
@@ -539,7 +536,6 @@ Item {
                             height: props.cellSize - props.wallSize
                             anchors.centerIn: parent
                             sourceComponent: BalanceContact {
-                                id: contact
                                 anchors.centerIn: parent
                                 visible: true
                                 pressed: false
@@ -567,7 +563,7 @@ Item {
                                 onExited: cell.highlighted = false
                                 onClicked: {
                                     editor.focus = true;
-                                    Activity.modifyMap(props, row, col);
+                                    Activity.modifyMap(props, row2, col);
                                 }
                             }
                         }

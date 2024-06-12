@@ -11,7 +11,7 @@
  *
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
-import QtQuick 2.12
+import QtQuick 2.15
 import "../../core"
 import "../../core/core.js" as Core
 import GCompris 1.0
@@ -172,7 +172,7 @@ ActivityBase {
         }
 
         Keys.enabled: !items.buttonsBlocked
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if ((event.key === Qt.Key_Enter) || (event.key === Qt.Key_Return)) {
                 if(firstScreen.visible) {
                     firstScreen.visible = false;
@@ -196,7 +196,7 @@ ActivityBase {
              "3" : "...--",  "4" : "....-", "5" : ".....", "6" : "-....",  "7" : "--...",  "8" : "---..",
              "9" : "----." , "0" : "-----"
             }
-            function morse2alpha(str) {
+            function morse2alpha(str: string): string {
                 var letters = ""
                 var input = []
                 input = str.split(' ')
@@ -215,7 +215,7 @@ ActivityBase {
                 return letters
             }
 
-            function alpha2morse(str) {
+            function alpha2morse(str: string): string {
                 var code = "";
 
                 for(var index in str) {
@@ -294,8 +294,7 @@ ActivityBase {
                 font.letterSpacing: ApplicationSettings.fontLetterSpacing
                 cursorVisible: true
                 wrapMode: TextInput.Wrap
-                // TODO Use RegularExpressionValidator when supporting Qt5.14 minimum
-                validator: RegExpValidator { regExp: items.toAlpha ?
+                validator: RegularExpressionValidator { regularExpression: items.toAlpha ?
                                                        /^[a-zA-Z0-9 ]+$/ :
                                                        /[\.\-\x00B7 ]+$/
                                            }
@@ -580,14 +579,14 @@ ActivityBase {
                 ] ]
             }
 
-            onKeypress: {
+            onKeypress: (text) => {
                 if(!items.buttonsBlocked) {
                     textInput.appendText(text)
                 }
                 // Set the focus back to the InputText for keyboard input
                 resetFocus();
             }
-            onError: console.log("VirtualKeyboard error: " + msg);
+            onError: (msg) => console.log("VirtualKeyboard error: " + msg);
         }
 
         FirstScreen {

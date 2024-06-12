@@ -31,14 +31,16 @@ bool loadAndroidTranslation(QTranslator &translator, const QString &locale)
 
     file.open(QIODevice::ReadOnly);
     QDataStream in(&file);
-    uchar *data = (uchar *)malloc(file.size());
+
+    qint64 fileSize = file.size();
+    uchar *data = (uchar *)malloc(fileSize);
 
     if (!file.exists())
         qDebug() << "file assets:/share/GCompris/gcompris_" << locale << ".qm does not exist";
 
-    in.readRawData((char *)data, file.size());
+    in.readRawData((char *)data, fileSize);
 
-    if (!translator.load(data, file.size())) {
+    if (!translator.load(data, fileSize)) {
         qDebug() << "Unable to load translation for locale " << locale << ", use en_US by default";
         free(data);
         return false;
@@ -292,18 +294,10 @@ int main(int argc, char *argv[])
     ApplicationInfo::getInstance()->setUseOpenGL(renderer != QLatin1String("software"));
 
     if (renderer == QLatin1String("software")) {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         QQuickWindow::setGraphicsApi(QSGRendererInterface::Software);
-#else
-        QQuickWindow::setSceneGraphBackend(QSGRendererInterface::Software);
-#endif
     }
     else if (renderer == QLatin1String("opengl")) {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
-#else
-        QQuickWindow::setSceneGraphBackend(QSGRendererInterface::OpenGL);
-#endif
     }
 
     // Start on specific activity
@@ -318,7 +312,7 @@ int main(int argc, char *argv[])
             }
         }
         // internally, levels start at 0
-        ActivityInfoTree::setStartingActivity(startingActivity, startingLevel - 1);
+        ActivityInfoTree::getInstance()->setStartingActivity(startingActivity, startingLevel - 1);
     }
 
     QQmlApplicationEngine engine;
@@ -328,7 +322,7 @@ int main(int argc, char *argv[])
     engine.addImportPath(QStringLiteral("%1/../lib/qml")
                              .arg(QCoreApplication::applicationDirPath()));
 
-#if __ANDROID__ && QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+#if __ANDROID__
     // Find box2d
     engine.addImportPath(QStringLiteral("assets:/"));
 #endif
@@ -388,12 +382,16 @@ int main(int argc, char *argv[])
 
     window->setIcon(QIcon(QPixmap(QString::fromUtf8(":/gcompris/src/core/resource/gcompris-icon.png"))));
 
+#if __ANDROID__
+    window->showMaximized();
+#else
     if (isFullscreen) {
         window->showFullScreen();
     }
     else {
         window->show();
     }
-
+#endif
+    
     return app.exec();
 }

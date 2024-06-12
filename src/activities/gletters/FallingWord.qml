@@ -10,7 +10,7 @@
  *   SPDX-License-Identifier: GPL-3.0-or-later
  */
 import QtQuick 2.12
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 import GCompris 1.0
 
 import "../../core"
@@ -67,7 +67,7 @@ Item {
         onStopped: Activity.deleteWord(word);
     }
 
-    function checkMatch(c)
+    function checkMatch(c): bool
     {
         // We are in the ending animation
         if (wonState)
@@ -83,13 +83,13 @@ Item {
         }
     }
 
-    function startMoving(dur)
+    function startMoving(dur: int)
     {
         down.duration = dur;
         down.restart();
     }
 
-    function isCompleted()
+    function isCompleted(): bool
     {
         return (unmatchedIndex === text.length);
     }

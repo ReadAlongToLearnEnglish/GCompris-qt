@@ -20,7 +20,7 @@ ActivityBase {
     onStart: focus = true
     onStop: {}
 
-    property var dataset: Dataset
+    property var dataset: Dataset.get()
 
     pageComponent: Image {
         id: background
@@ -36,7 +36,7 @@ ActivityBase {
             activity.stop.connect(stop)
         }
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(items.buttonsBlocked) {
                 return
             }

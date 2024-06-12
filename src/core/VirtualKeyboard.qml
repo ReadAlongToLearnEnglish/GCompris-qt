@@ -231,7 +231,7 @@ Item {
         id: keyboardWorker
 
         source: "virtualkeyboard_worker.js"
-        onMessage: {
+        onMessage: (messageObject) => {
             // worker finished
             activity.loading.stop();
             if (messageObject.error !== "") {
@@ -334,7 +334,7 @@ Item {
                         // update index to allow for updating z value of the rows
                         onEntered: rowList.currentIndex = index;
 
-                        onPressed: {
+                        onPressed: (mouse) => {
                             // same onPress for mobile
                             rowList.currentIndex = index;
                             // need to propagate through to the key for mobile!
@@ -370,9 +370,9 @@ Item {
                                 specialKey: specialKeyValue
                             }
 
-                            onItemAdded: item.pressed.connect(keyboard.handleVirtualKeyPress);
+                            onItemAdded: (index, item) => item.pressed.connect(keyboard.handleVirtualKeyPress);
 
-                            onItemRemoved: item.pressed.disconnect(keyboard.handleVirtualKeyPress);
+                            onItemRemoved: (index, item) => item.pressed.disconnect(keyboard.handleVirtualKeyPress);
                         } // Repeater
                     } // Row
             } // Item

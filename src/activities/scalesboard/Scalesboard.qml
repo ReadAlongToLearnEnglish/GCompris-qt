@@ -349,10 +349,11 @@ ActivityBase {
                     anchors.left: undefined
                 }
                 PropertyChanges {
-                    target: okButton
-                    anchors.bottomMargin: 0
-                    anchors.rightMargin: okButton.width * 0.5
-                    anchors.verticalCenterOffset: -10
+                    okButton {
+                        anchors.bottomMargin: 0
+                        anchors.rightMargin: okButton.width * 0.5
+                        anchors.verticalCenterOffset: -10
+                    }
                 }
             },
             State {
@@ -373,10 +374,11 @@ ActivityBase {
                     anchors.left: background.horizontalCenter
                 }
                 PropertyChanges {
-                    target: okButton
-                    anchors.bottomMargin: okButton.height * 0.5
-                    anchors.rightMargin: 0
-                    anchors.verticalCenterOffset: 0
+                    okButton {
+                        anchors.bottomMargin: okButton.height * 0.5
+                        anchors.rightMargin: 0
+                        anchors.verticalCenterOffset: 0
+                    }
                 }
             }
         ]
@@ -391,7 +393,7 @@ ActivityBase {
         }
 
         Keys.enabled: !items.buttonsBlocked
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(okButton.enabled && (event.key === Qt.Key_Enter || event.key === Qt.Key_Return)) {
                     Activity.checkAnswer()
             }
@@ -400,7 +402,7 @@ ActivityBase {
             }
         }
 
-        Keys.onReleased: {
+        Keys.onReleased: (event) => {
             if(question.visible) {
                 numpad.updateAnswer(event.key, false);
             }

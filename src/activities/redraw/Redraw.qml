@@ -10,7 +10,7 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 
 import "../../core"
 import "redraw.js" as Activity
@@ -69,7 +69,7 @@ ActivityBase {
         }
 
         Keys.enabled: !items.buttonsBlocked
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(event.key >= Qt.Key_0 && event.key < Qt.Key_0 + items.numberOfColor)
                 items.colorSelector = event.key - Qt.Key_0
 
@@ -426,8 +426,8 @@ ActivityBase {
             y: drawingArea.y
             width: background.cellSize * items.numberOfColumn
             height: background.cellSize * items.numberOfLine
-            onPressed: checkTouchPoint(touchPoints)
-            onTouchUpdated: checkTouchPoint(touchPoints)
+            onPressed: (touchPoints) => checkTouchPoint(touchPoints)
+            onTouchUpdated: (touchPoints) => checkTouchPoint(touchPoints)
             enabled: !items.buttonsBlocked
 
             function checkTouchPoint(touchPoints) {

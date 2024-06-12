@@ -42,9 +42,9 @@ ActivityBase {
         }
 
         // Needed to get keyboard focus on IntroMessage
-        Keys.forwardTo: introMessage
+        Keys.forwardTo: [introMessage]
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             var keyNoteBindings = {}
             keyNoteBindings[Qt.Key_1] = 'C'
             keyNoteBindings[Qt.Key_2] = 'D'
@@ -164,7 +164,7 @@ ActivityBase {
 
             function getTranslatedNoteName(noteName) {
                 for(var i = 0; i < doubleOctave.keyNames.length; i++) {
-                    if(doubleOctave.keyNames[i][0] == noteName)
+                    if(doubleOctave.keyNames[i][0] === noteName)
                         return doubleOctave.keyNames[i][1]
                 }
                 return ""
@@ -312,7 +312,7 @@ ActivityBase {
                     blackLabelsVisible: false
                     blackKeysEnabled: blackLabelsVisible
                     whiteKeysEnabled: !messageBox.visible && multipleStaff.musicElementModel.count > 1
-                    onNoteClicked: Activity.checkAnswer(note)
+                    onNoteClicked: (note) => Activity.checkAnswer(note)
                     currentOctaveNb: doubleOctave.currentOctaveNb
                     anchors.top: (index === 1) ? octaveRepeater.top : undefined
                     anchors.topMargin: horizontalLayout ? 0 : -15

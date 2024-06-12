@@ -263,18 +263,20 @@ Rectangle {
                 name: "button1Selected"
                 when: button1.selected
                 PropertyChanges {
-                    target: buttonSelector
-                    anchors.centerIn: button1
-                    visible: true
+                    buttonSelector {
+                        anchors.centerIn: button1
+                        visible: true
+                    }
                 }
             },
             State {
                 name: "button2Selected"
                 when: button2.selected
                 PropertyChanges {
-                    target: buttonSelector
-                    anchors.centerIn: button2
-                    visible: true
+                    buttonSelector {
+                        anchors.centerIn: button2
+                        visible: true
+                    }
                 }
             }
         ]
@@ -288,7 +290,7 @@ Rectangle {
         return;
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) => {
         if(event.key === Qt.Key_Up || event.key === Qt.Key_Left) {
             if(button2.visible && !button1.selected && !button2.selected) {
                 button2.selected = true;
@@ -321,7 +323,7 @@ Rectangle {
         }
     }
 
-    Keys.onReleased: {
+    Keys.onReleased: (event) => {
         if(event.key === Qt.Key_Back) {
             buttonCancel.close();
             event.accepted = true;

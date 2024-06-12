@@ -10,7 +10,7 @@
  */
 import QtQuick 2.12
 import GCompris 1.0
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 
 import "../../core"
 import "hangman.js" as Activity
@@ -198,7 +198,7 @@ ActivityBase {
 
                 anchors.fill: parent
                 property string nextSource
-                function changeSource(nextSource_) {
+                function changeSource(nextSource_: string) {
                     nextSource = nextSource_
                     animImage.start()
                 }
@@ -329,7 +329,7 @@ ActivityBase {
 
         JsonParser {
             id: parser
-            onError: console.error("Hangman: Error parsing json: " + msg);
+            onError: (msg) => console.error("Hangman: Error parsing json: " + msg);
         }
 
         Image {
@@ -341,7 +341,15 @@ ActivityBase {
             }
             sourceSize.width: 66 * bar.barZoom
             property int remainingLife: items.remainingLife
-            onRemainingLifeChanged: if(remainingLife >= 0) clockAnim.restart()
+            onRemainingLifeChanged: {
+                if(remainingLife >= 0) {
+                    petalCount = "qrc:/gcompris/src/activities/reversecount/resource/" +
+                           "flower" + remainingLife + ".svg"
+                    clockAnim.restart()
+                }
+            }
+
+            property string petalCount
 
             SequentialAnimation {
                 id: clockAnim
@@ -358,8 +366,7 @@ ActivityBase {
                 }
                 PropertyAction {
                     target: clock; property: 'source';
-                    value: "qrc:/gcompris/src/activities/reversecount/resource/" +
-                           "flower" + items.remainingLife + ".svg"
+                    value: clock.petalCount
                 }
                 ParallelAnimation {
                     NumberAnimation {
@@ -384,7 +391,7 @@ ActivityBase {
                 // Set the focus back to the InputText for keyboard input
                 Activity.focusTextInput();
             }
-            onError: console.log("VirtualKeyboard error: " + msg);
+            onError: (msg) => console.log("VirtualKeyboard error: " + msg);
         }
 
         Bonus {

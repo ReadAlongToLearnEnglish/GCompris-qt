@@ -63,7 +63,7 @@ ActivityBase {
 
         GCCreationHandler {
             id: creationHandler
-            onFileLoaded: {
+            onFileLoaded: (data, filePath) => {
                 isLoadingCreation = true
                 edit.clear()
                 edit.text = data["text"]
@@ -166,7 +166,7 @@ ActivityBase {
             maximumFlickVelocity: activity.height
             boundsBehavior: Flickable.StopAtBounds
 
-            function ensureVisible(r)
+            function ensureVisible(r: real)
             {
                 if (contentX >= r.x)
                     contentX = r.x;
@@ -217,10 +217,10 @@ ActivityBase {
                 }
 
                 property string previousText: text;
-                function getDiffBetweenTexts(previousText, newText) {
+                function getDiffBetweenTexts(previousText: string, newText: string) {
                     var diff = "";
                     newText.split('').forEach(function(val, i) {
-                        if(val != previousText.charAt(i) && diff === "") {
+                        if(val !== previousText.charAt(i) && diff === "") {
                             diff = val;
                         }
                     });
@@ -239,7 +239,7 @@ ActivityBase {
                     }
                     previousText = newText;
                 }
-                function insertText(text) {
+                function insertText(text: string) {
                     edit.insert(cursorPosition, text)
                 }
                 function backspace() {
@@ -251,7 +251,7 @@ ActivityBase {
                 function newline() {
                     insert(cursorPosition, "<br></br>")
                 }
-                function formatLineWith(tag) {
+                function formatLineWith(tag: string) {
                     var text = getText(0, length)
                     var initialPosition = cursorPosition
                     var first = cursorPosition - 1
@@ -329,7 +329,7 @@ ActivityBase {
                 }
             }
             shiftKey: true
-            onError: console.log("VirtualKeyboard error: " + msg);
+            onError: (msg) => console.log("VirtualKeyboard error: " + msg);
             readonly property string newline: "\u21B2"
 
             function populate() {

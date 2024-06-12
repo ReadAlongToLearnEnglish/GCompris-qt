@@ -34,18 +34,19 @@ import "qrc:/gcompris/src/core/core.js" as Core
 Item {
     id: bar
 
+    readonly property real applicationInfoRatio: ApplicationInfo.ratio
     /**
       * type: real
       * Minimum size for BarZoom
       */
     readonly property real minWidth: (parent.width - 20 -
-                                      10 * ApplicationInfo.ratio) / (totalWidth + textLength)
+                                      10 * applicationInfoRatio) / (totalWidth + textLength)
 
     /**
       * type: real
       * Maximum size for barZoom
       */
-    readonly property real maxWidth: 1.2 * ApplicationInfo.ratio
+    readonly property real maxWidth: 1.2 * applicationInfoRatio
 
     /**
       * type: real
@@ -58,7 +59,7 @@ Item {
       * The maximum size allowed for the bar
       */
     readonly property real maxBarWidth: (totalWidth+textLength) * maxWidth +
-                               (numberOfButtons - 1) * 5 + 10 * ApplicationInfo.ratio
+                               (numberOfButtons - 1) * 5 + 10 * applicationInfoRatio
     /**
       * type: real
       * Font size for text level
@@ -268,9 +269,15 @@ Item {
     Connections {
         target: DownloadManager
 
-        onDownloadStarted: content.value |= content.download
-        onAllDownloadsFinished: content.value &= ~content.download
-        onError: content.value &= ~content.download
+        function onDownloadStarted() {
+            content.value |= content.download
+        }
+        function onAllDownloadsFinished() {
+            content.value &= ~content.download
+        }
+        function onError() {
+            content.value &= ~content.download
+        }
     }
 
     Image {
@@ -298,7 +305,7 @@ Item {
     }
 
     function updateContent() {
-        var newButtonModel = new Array()
+        var newButtonModel = []
         numberOfButtons = 0
         totalWidth = 66;
         for(var def in buttonList) {
@@ -314,7 +321,9 @@ Item {
 
     Connections {
         target: content
-        onValueChanged: updateContent()
+        function onValueChanged() {
+            updateContent()
+        }
     }
 
     onContentChanged: {
@@ -327,7 +336,7 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 10
         anchors.left: openBar.right
-        anchors.leftMargin: 10 * ApplicationInfo.ratio
+        anchors.leftMargin: 10 * applicationInfoRatio
         property bool isHidden: false
         Repeater {
             model: buttonModel
@@ -394,7 +403,7 @@ Item {
             source: "qrc:/gcompris/src/core/resource/bar_exit.svg";
             sourceSize.width: fullButtonScaled
             visible: barRow.isHidden === false
-            onClicked: Core.quit(bar.parent);
+            onClicked: Core.quit(bar.parent.parent);
         }
     }
     Component {
